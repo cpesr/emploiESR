@@ -15,6 +15,7 @@ Etude de l’emploi dans l’ESR
     <https://www.galaxie.enseignementsup-recherche.gouv.fr/ensup/ListesPostesPublies/Emplois_publies_TrieParCorps.html>
   - Mise à jour : 26-02-2021
   - Nombre d’observations : 6659
+  - Période : 2018 2021
   - Variables :
       - UAI
       - Etablissement
@@ -42,6 +43,7 @@ Etude de l’emploi dans l’ESR
     <https://www.enseignementsup-recherche.gouv.fr/cid118435/personnels-enseignants-du-superieur-bilans-et-statistiques.html>
   - Mise à jour : 23-11-2020
   - Nombre d’observations : 855
+  - Période : 2005 2019
   - Variables :
       - TypeRecrutement
       - GrandeDisciplineCNU
@@ -70,6 +72,7 @@ Etude de l’emploi dans l’ESR
     <https://www.enseignementsup-recherche.gouv.fr/cid118435/personnels-enseignants-du-superieur-bilans-et-statistiques.html>
   - Mise à jour : 23-11-2020
   - Nombre d’observations : 474
+  - Période : 2004 2019
   - Variables :
       - Academie
       - Annee
@@ -84,6 +87,7 @@ Etude de l’emploi dans l’ESR
     <https://www.enseignementsup-recherche.gouv.fr/cid118435/personnels-enseignants-du-superieur-bilans-et-statistiques.html>
   - Mise à jour : 23-11-2020
   - Nombre d’observations : 8170
+  - Période : 2014 2019
   - Variables :
       - Annee
       - Academie.origine

@@ -8,6 +8,7 @@ knitr::opts_chunk$set(echo = FALSE)
 
 descdata <- function(df) {
   cat("- Nombre d'observations : ",nrow(df),"\n")
+  cat("- Période : ",range(df$Annee),"\n")
   cat("- Variables : \n")
   for(col in colnames(df))
     cat("  - ",col,"\n")
