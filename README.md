@@ -32,7 +32,7 @@ Etude de l’emploi dans l’ESR
       - Profil
       - Localisation
       - Etat.de.vacance
-      - Rentrée
+      - Annee
 
 ### Qualifications et recrutements
 
@@ -79,7 +79,7 @@ Etude de l’emploi dans l’ESR
 
 ### Mutations régionales flux
 
-  - Données : [DB\_Academies.csv](data/mutations_flux.csv)
+  - Données : [mutations\_flux.csv](data/mutations_flux.csv)
   - Source :
     <https://www.enseignementsup-recherche.gouv.fr/cid118435/personnels-enseignants-du-superieur-bilans-et-statistiques.html>
   - Mise à jour : 23-11-2020

@@ -55,7 +55,7 @@ descdata(mutations.ES)
 
 ### Mutations régionales flux
 
-- Données : [DB_Academies.csv](data/mutations_flux.csv) 
+- Données : [mutations_flux.csv](data/mutations_flux.csv) 
 - Source : https://www.enseignementsup-recherche.gouv.fr/cid118435/personnels-enseignants-du-superieur-bilans-et-statistiques.html
 - Mise à jour : 23-11-2020
 ```{r results='asis'}
