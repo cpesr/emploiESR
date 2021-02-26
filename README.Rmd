@@ -1,0 +1,69 @@
+---
+title: "Etude de l'emploi dans l'ESR"
+output: github_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+
+descdata <- function(df) {
+  cat("- Nombre d'observations : ",nrow(df),"\n")
+  cat("- Variables : \n")
+  for(col in colnames(df))
+    cat("  - ",col,"\n")
+}
+
+galaxie <- read.csv2("data/galaxie.csv")
+recrutements <- read.csv2("data/qualifications_recrutements.csv")
+mutations.ES <- read.csv2("data/mutations_ES.csv")
+mutations.flux <- read.csv2("data/mutations_flux.csv")
+```
+
+## Organisation
+
+- [data](data/) : jeux de données
+- [galaxie](galaxie/) : outil d'extraction des données de Galaxie
+
+## Jeux de données 
+
+### Extraction des données Galaxie
+
+- Données : [galaxie.csv](data/galaxie.csv) 
+- Source : https://www.galaxie.enseignementsup-recherche.gouv.fr/ensup/ListesPostesPublies/Emplois_publies_TrieParCorps.html
+- Mise à jour : 26-02-2021
+```{r results='asis'}
+descdata(galaxie)
+```
+
+### Qualifications et recrutements
+
+- Données : [qualifications_recrutements.csv](data/qualifications_recrutements.csv) 
+- Source : https://www.enseignementsup-recherche.gouv.fr/cid118435/personnels-enseignants-du-superieur-bilans-et-statistiques.html
+- Mise à jour : 23-11-2020
+```{r results='asis'}
+descdata(recrutements)
+```
+
+### Mutations régionales entrantes et sortantes
+
+- Données : [mutations_ES.csv](data/mutations_ES.csv) 
+- Source : https://www.enseignementsup-recherche.gouv.fr/cid118435/personnels-enseignants-du-superieur-bilans-et-statistiques.html
+- Mise à jour : 23-11-2020
+```{r results='asis'}
+descdata(mutations.ES)
+```
+
+### Mutations régionales flux
+
+- Données : [DB_Academies.csv](data/mutations_flux.csv) 
+- Source : https://www.enseignementsup-recherche.gouv.fr/cid118435/personnels-enseignants-du-superieur-bilans-et-statistiques.html
+- Mise à jour : 23-11-2020
+```{r results='asis'}
+descdata(mutations.flux)
+```
+
+### Effectifs enseignants titulaires
+
+- Données : [fr-esr-enseignants-titulaires-esr-public.csv](https://data.enseignementsup-recherche.gouv.fr/explore/dataset/fr-esr-enseignants-titulaires-esr-public/download/?format=csv&timezone=Europe/Berlin&lang=fr&use_labels_for_header=true&csv_separator=%3B) (à récupérer)
+- Source : https://data.enseignementsup-recherche.gouv.fr/explore/dataset/fr-esr-enseignants-titulaires-esr-public/
+- Mise à jour : 28-10-2020
