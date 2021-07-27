@@ -6,18 +6,19 @@ output: github_document
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE)
 
-descdata <- function(df) {
+descdata <- function(df, periode = TRUE) {
   cat("- Nombre d'observations : ",nrow(df),"\n")
-  cat("- Période : ",range(df$Annee),"\n")
+  if(periode) cat("- Période : ",range(df$Annee),"\n")
   cat("- Variables : \n")
   for(col in colnames(df))
     cat("  - ",col,"\n")
 }
 
-galaxie <- read.csv2("data/galaxie.csv")
-recrutements <- read.csv2("data/qualifications_recrutements.csv")
-mutations.ES <- read.csv2("data/mutations_ES.csv")
-mutations.flux <- read.csv2("data/mutations_flux.csv")
+galaxie <- read.csv2("data/cpesr-emplois-galaxie.csv")
+recrutements <- read.csv2("data/cpesr-emplois-cnu-mcf-qualification-recrutement.csv")
+mutations.ES <- read.csv2("data/cpesr-emplois-mutations-ES.csv")
+mutations.flux <- read.csv2("data/cpesr-emplois-mutations-flux.csv")
+cnu.sections <- read.csv2("data/cpesr-cnu-sections.csv")
 ```
 
 ## Organisation
@@ -29,16 +30,16 @@ mutations.flux <- read.csv2("data/mutations_flux.csv")
 
 ### Extraction des données Galaxie
 
-- Données : [galaxie.csv](data/galaxie.csv) 
+- Données : [cpesr-emplois-galaxie.csv](data/cpesr-emplois-galaxie.csv) 
 - Source : https://www.galaxie.enseignementsup-recherche.gouv.fr/ensup/ListesPostesPublies/Emplois_publies_TrieParCorps.html
 - Mise à jour : 26-02-2021
 ```{r results='asis'}
 descdata(galaxie)
 ```
 
-### Qualifications et recrutements
+### Qualifications et recrutements MCF par section CNU
 
-- Données : [qualifications_recrutements.csv](data/qualifications_recrutements.csv) 
+- Données : [cpesr-emplois-cnu-mcf-qualification-recrutement.csv](data/cpesr-emplois-cnu-mcf-qualification-recrutement.csv) 
 - Source : https://www.enseignementsup-recherche.gouv.fr/cid118435/personnels-enseignants-du-superieur-bilans-et-statistiques.html
 - Mise à jour : 23-11-2020
 ```{r results='asis'}
@@ -47,7 +48,7 @@ descdata(recrutements)
 
 ### Mutations régionales entrantes et sortantes
 
-- Données : [mutations_ES.csv](data/mutations_ES.csv) 
+- Données : [cpesr-emplois-mutations-ES.csv](data/cpesr-emplois-mutations-ES.csv) 
 - Source : https://www.enseignementsup-recherche.gouv.fr/cid118435/personnels-enseignants-du-superieur-bilans-et-statistiques.html
 - Mise à jour : 23-11-2020
 ```{r results='asis'}
@@ -56,15 +57,22 @@ descdata(mutations.ES)
 
 ### Mutations régionales flux
 
-- Données : [mutations_flux.csv](data/mutations_flux.csv) 
+- Données : [cpesr-emplois-mutations-flux.csv](data/cpesr-emplois-mutations-flux.csv) 
 - Source : https://www.enseignementsup-recherche.gouv.fr/cid118435/personnels-enseignants-du-superieur-bilans-et-statistiques.html
 - Mise à jour : 23-11-2020
 ```{r results='asis'}
 descdata(mutations.flux)
 ```
 
+### Sections CNU
+
+- Données : [cpesr-cnu-sections.csv](data/cpesr-cnu-sections.csv) 
+- Mise à jour : 27-07-0201
+```{r results='asis'}
+descdata(cnu.sections, periode=FALSE)
+```
+
 ### Effectifs enseignants titulaires
 
 - Données : [fr-esr-enseignants-titulaires-esr-public.csv](https://data.enseignementsup-recherche.gouv.fr/explore/dataset/fr-esr-enseignants-titulaires-esr-public/download/?format=csv&timezone=Europe/Berlin&lang=fr&use_labels_for_header=true&csv_separator=%3B) (à récupérer)
 - Source : https://data.enseignementsup-recherche.gouv.fr/explore/dataset/fr-esr-enseignants-titulaires-esr-public/
-- Mise à jour : 28-10-2020
