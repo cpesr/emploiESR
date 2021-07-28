@@ -1,17 +1,18 @@
-Etude de l’emploi dans l’ESR
+Emploi dans l’ESR
 ================
 
 ## Organisation
 
 -   [data](data/) : jeux de données
--   [galaxie](galaxie/) : outil d’extraction des données de Galaxie
+-   [galaxie-excavator](galaxie-excavator/) : outil d’extraction des
+    données de Galaxie
 
 ## Jeux de données
 
 ### Extraction des données Galaxie
 
 -   Données :
-    [cpesr-emplois-galaxie.csv](data/cpesr-emplois-galaxie.csv)
+    [cpesr-emplois-galaxie](data/%20cpesr-emplois-galaxie%20.csv)
 -   Source :
     <https://www.galaxie.enseignementsup-recherche.gouv.fr/ensup/ListesPostesPublies/Emplois_publies_TrieParCorps.html>
 -   Mise à jour : 26-02-2021
@@ -39,16 +40,15 @@ Etude de l’emploi dans l’ESR
 ### Qualifications et recrutements MCF par section CNU
 
 -   Données :
-    [cpesr-emplois-cnu-mcf-qualification-recrutement.csv](data/cpesr-emplois-cnu-mcf-qualification-recrutement.csv)
+    [cpesr-emplois-cnu-mcf-qualification-recrutement](data/%20cpesr-emplois-cnu-mcf-qualification-recrutement%20.csv)
 -   Source :
     <https://www.enseignementsup-recherche.gouv.fr/cid118435/personnels-enseignants-du-superieur-bilans-et-statistiques.html>
 -   Mise à jour : 23-11-2020
 -   Nombre d’observations : 1024
 -   Période : 2002 2019
 -   Variables :
-    -   TypeRecrutement
-    -   SectionCNU.ID
     -   Annee
+    -   SectionCNU.ID
     -   QualificationDossiers.MCF
     -   QualificationQualifies.MCF
     -   PostesPublies.MCF
@@ -61,11 +61,20 @@ Etude de l’emploi dans l’ESR
     -   Candidats.MCF.H
     -   Recrutes.MCF.F
     -   Recrutes.MCF.H
+-   Notes :
+    -   Changement en 2005 des numéros de section CNU de Pharmacie : 39
+        à 41 deviennent 85 à 87.
+        -   Le changement est appliqué de façon rétroactive dans tout le
+            jeu.
+    -   Ventilation par section CNU pour la deuxième session manquante
+        pour 2008.
+        -   Cette année présente un nombre de postes incorrectement plus
+            faible d’environ 10%.
 
 ### Mutations régionales entrantes et sortantes
 
 -   Données :
-    [cpesr-emplois-mutations-ES.csv](data/cpesr-emplois-mutations-ES.csv)
+    [cpesr-emplois-mutations-ES](data/%20cpesr-emplois-mutations-ES%20.csv)
 -   Source :
     <https://www.enseignementsup-recherche.gouv.fr/cid118435/personnels-enseignants-du-superieur-bilans-et-statistiques.html>
 -   Mise à jour : 23-11-2020
@@ -81,7 +90,7 @@ Etude de l’emploi dans l’ESR
 ### Mutations régionales flux
 
 -   Données :
-    [cpesr-emplois-mutations-flux.csv](data/cpesr-emplois-mutations-flux.csv)
+    [cpesr-emplois-mutations-flux](data/%20cpesr-emplois-mutations-flux%20.csv)
 -   Source :
     <https://www.enseignementsup-recherche.gouv.fr/cid118435/personnels-enseignants-du-superieur-bilans-et-statistiques.html>
 -   Mise à jour : 23-11-2020
@@ -96,7 +105,8 @@ Etude de l’emploi dans l’ESR
 
 ### Sections CNU
 
--   Données : [cpesr-cnu-sections.csv](data/cpesr-cnu-sections.csv)
+-   Données : [cpesr-cnu-sections](data/%20cpesr-cnu-sections%20.csv)
+-   Source : manuelle
 -   Mise à jour : 27-07-0201
 -   Nombre d’observations : 58
 -   Variables :

@@ -1,0 +1,5 @@
+- Notes :
+  - Changement en 2005 des numéros de section CNU de Pharmacie : 39 à 41 deviennent 85 à 87.
+    - Le changement est appliqué de façon rétroactive dans tout le jeu.
+  - Ventilation par section CNU pour la deuxième session manquante pour 2008.
+    - Cette année présente un nombre de postes incorrectement plus faible d'environ 10%.
