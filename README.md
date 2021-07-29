@@ -108,7 +108,7 @@ Emploi dans l’ESR
 -   Données : [cpesr-cnu-sections](data/%20cpesr-cnu-sections%20.csv)
 -   Source : manuelle
 -   Mise à jour : 27-07-0201
--   Nombre d’observations : 58
+-   Nombre d’observations : 59
 -   Variables :
     -   SectionCNU.ID
     -   SectionCNU

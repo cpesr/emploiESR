@@ -1,0 +1,61 @@
+---
+title: "Emploi des enseignants-chercheurs"
+output: github_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+knitr::opts_chunk$set(message = FALSE, warning = FALSE)
+
+knitr::opts_chunk$set(fig.width = 8, fig.height = 4.5)
+
+
+library(tidyverse)
+library(ggcpesrthemes)
+
+options(dplyr.summarise.inform = FALSE)
+options(tidyverse.quiet = TRUE)
+
+source("../R/emploiEC.R",chdir=TRUE)
+source("../R/emploiEC-metriques.R")
+
+write.csv2(emploisEC, "cpesr-emploi-ec.csv")
+
+theme_cpesr_setup(authors = "Florent Figon, Julien Gossa", source = "https://github.com/cpesr/emploiESR")
+```
+## Series de données principales
+
+Données aggrégées : [cpesr-emplois-ec.csv](cpesr-emplois-ec.csv)
+
+### Toutes disciplines confondues
+
+```{r etapes.tout}
+plot_etapes(disciplines=FALSE,norm=FALSE) + ggtitle("Les différentes étapes du recrutement des Maîtres⋅ses de Conférences")
+```
+
+```{r etapes.tout.norm}
+plot_etapes(disciplines=FALSE,norm=TRUE) + ggtitle("Les différentes étapes du recrutement des Maîtres⋅ses de Conférences", subtitle = "base 100 pour la première année)")
+```
+
+### Par secteur disciplinaire
+
+```{r etapes.discipline}
+plot_etapes(disciplines=TRUE,norm=FALSE) + ggtitle("Les différentes étapes du recrutement des Maîtres⋅ses de Conférences")
+```
+
+```{r etapes.discipline.norm}
+plot_etapes(disciplines=TRUE,norm=TRUE) + ggtitle("Les différentes étapes du recrutement des Maîtres⋅ses de Conférences", subtitle = "base 100 pour la première année)")
+```
+
+## Métriques
+
+```{r metriques, results='asis'}
+for(m in metriques) {
+  cat("### ", m$titre, "\n")
+  cat(m$desc, "\n")
+  plot_metrique_all_github(m$nom,m$lab,m$titre,percentlab=m$percentlab)
+  cat("\n\n")
+}
+```
+
+
