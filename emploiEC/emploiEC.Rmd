@@ -30,21 +30,21 @@ Données aggrégées : [cpesr-emplois-ec.csv](cpesr-emplois-ec.csv)
 ### Toutes disciplines confondues
 
 ```{r etapes.tout}
-plot_etapes(disciplines=FALSE,norm=FALSE) + ggtitle("Les différentes étapes du recrutement des Maîtres⋅ses de Conférences")
+plot_serie_MCF(périm="Ensemble",norm=FALSE) + ggtitle("Les différentes étapes du recrutement des Maîtres⋅ses de Conférences")
 ```
 
 ```{r etapes.tout.norm}
-plot_etapes(disciplines=FALSE,norm=TRUE) + ggtitle("Les différentes étapes du recrutement des Maîtres⋅ses de Conférences", subtitle = "base 100 pour la première année)")
+plot_serie_MCF(périm="Ensemble",norm=TRUE) + ggtitle("Les différentes étapes du recrutement des Maîtres⋅ses de Conférences", subtitle = "base 100 pour la première année)")
 ```
 
 ### Par secteur disciplinaire
 
 ```{r etapes.discipline}
-plot_etapes(disciplines=TRUE,norm=FALSE) + ggtitle("Les différentes étapes du recrutement des Maîtres⋅ses de Conférences")
+plot_serie_MCF(périm="Grande discipline",norm=FALSE) + ggtitle("Les différentes étapes du recrutement des Maîtres⋅ses de Conférences")
 ```
 
 ```{r etapes.discipline.norm}
-plot_etapes(disciplines=TRUE,norm=TRUE) + ggtitle("Les différentes étapes du recrutement des Maîtres⋅ses de Conférences", subtitle = "base 100 pour la première année)")
+plot_serie_MCF(périm="Grande discipline",norm=TRUE) + ggtitle("Les différentes étapes du recrutement des Maîtres⋅ses de Conférences", subtitle = "base 100 pour la première année)")
 ```
 
 ## Métriques

@@ -62,9 +62,9 @@ comme le nombre de candidats évincés par la qualification par le nombre
 de candidats évincés par la qualification et le concours.  
 ![](emploiEC_files/figure-gfm/metriques-25.png)<!-- -->![](emploiEC_files/figure-gfm/metriques-26.png)<!-- -->![](emploiEC_files/figure-gfm/metriques-27.png)<!-- -->![](emploiEC_files/figure-gfm/metriques-28.png)<!-- -->
 
-### Délais de renouvellement des effectifs enseignant-chercheur titulaire
+### Période nécessaire au renouvellement des effectifs enseignant-chercheur titulaire
 
-Le délais de renouvellement est défini comme les effectifs
+La période de renouvellement est définie comme les effectifs
 enseignants-chercheurs titulaires par poste publié. Il mesure le nombre
 d’années nécessaires au renouvellement de la totalité des effectifs
 actuels, au rythme de recrutement actuel.
