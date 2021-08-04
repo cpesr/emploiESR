@@ -104,7 +104,7 @@ plot_serie_MCF <- function(périm="Ensemble", norm=FALSE, legend=TRUE) {
       xlab("Année") +
       facet_wrap(Périmètre.ID~.) +
       { if(norm) scale_y_continuous(breaks = seq(50,150,25)) } +
-      scale_x_discrete(breaks = seq(2002,2020,2)) +
+      { if(périm != "Ensemble") scale_x_discrete(breaks = seq(2001,2020,2)) } +
       theme_cpesr_cap() + theme(legend.direction = "vertical", legend.position = "right") +
       { if(!legend) theme(legend.position = "None")}
 }
@@ -141,7 +141,7 @@ plot_metrique <- function(metrique, metriclab = "Valeur", périm="Ensemble", nor
       ylab(metriclab) +
       coord_cartesian(clip="off") +
       scale_color_gdcnu() +
-      scale_x_discrete(breaks = seq(2002,2020,2)) +
+      { if(périm != "Ensemble") scale_x_discrete(breaks = seq(2001,2020,2)) } +
       { if(!norm) expand_limits(y=c(0)) } +
       { if(percentlab & !norm) scale_y_continuous(labels=scales::percent) } +
       theme_cpesr_cap() + theme(legend.position = "None")
