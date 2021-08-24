@@ -15,7 +15,7 @@ Les grandes disciplines du CNU sont :
 - `DEG` : Droit, Economie, Gestion ;
 - `LLASHS` : Lettres, Langues, Arts, Sciences Humaines et Sociales ;
 - `Pharma` : Pharmacie ;
-- `ST` : Sciences et Technologies
+- `ST` : Sciences et Technologies, parfois aussi appelée `SI`, Sciences et sciences de l'Ingénieur.
 
 Les disciplines de santé et médecine ont un système de recrutement différent qui
 n'est pas traité dans ce document.

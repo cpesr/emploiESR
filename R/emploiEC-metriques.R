@@ -76,7 +76,7 @@ concours.
 _Attention_ :
 les qualifiés de l'année ne candidatent pas forcément dans l'année, 
 et les candidats ne sont pas forcément qualifiés dans l'année, mais
-cette mesure est moins sensible à l'accumulmation de candidats sans postes qui 
+cette mesure est moins sensible à l'accumulation de candidats sans postes qui 
 recandidatent.
 "),
   
@@ -132,8 +132,8 @@ En dessous, le renouvellement se fait plus vite que de nécessaire pour conserve
 les mêmes effectifs, au dessus le renouvellement se fait plus lentement que de nécessaire 
 pour conserver les mêmes effectifs.
 
-_Attention_ : cette indicateur propose une lecture partielle, qui peut être complétée 
-notamment par le nombre de départs et la pyramide des âges.
+_Attention_ : cette indicateur propose une lecture partielle, si elle n'est pas 
+complétée notamment par le nombre de départs et la pyramide des âges.
 "
   )
 )

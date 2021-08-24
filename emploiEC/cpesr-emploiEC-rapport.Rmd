@@ -184,7 +184,7 @@ cowplot::plot_grid(ncol = 1, rel_heights = c(1,5,1,5),
 
 ::: {.datapageviz data-latex=""}
 ```{r contexte.evol.etu}
-p_contexte.evol 
+p_contexte.evol + theme(legend.position = "top")
 ```
 :::
 ::::::
@@ -272,7 +272,7 @@ cowplot::plot_grid(ncol = 2,
 ::: {.datapagecom data-latex=''}
 ### Représentation en segments
 
-`r description.flux$lignes`Small
+`r description.flux$lignes`
 
 :::
 

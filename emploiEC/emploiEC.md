@@ -75,7 +75,8 @@ Les grandes disciplines du CNU sont :
 -   `DEG` : Droit, Economie, Gestion ;
 -   `LLASHS` : Lettres, Langues, Arts, Sciences Humaines et Sociales ;
 -   `Pharma` : Pharmacie ;
--   `ST` : Sciences et Technologies
+-   `ST` : Sciences et Technologies, parfois aussi appelée `SI`,
+    Sciences et sciences de l’Ingénieur.
 
 Les disciplines de santé et médecine ont un système de recrutement
 différent qui n’est pas traité dans ce document.
@@ -163,15 +164,15 @@ La série `Ensemble` contient tous les effectifs. Les séries
 disciplinaires sont limitées au périmètre des fiches démographiques du
 CNU. \`
 
-![](emploiEC_files/figure-gfm/contexte_ec.norm-1.png)<!-- -->
+<img src="emploiEC_files/figure-gfm/contexte_ec.norm-1.png" width="768" />
 
-![](emploiEC_files/figure-gfm/contexte_ec-1.png)<!-- -->
+<img src="emploiEC_files/figure-gfm/contexte_ec-1.png" width="768" />
 
 ### Effectifs étudiants
 
-![](emploiEC_files/figure-gfm/p_contexte_etu-1.png)<!-- -->
+<img src="emploiEC_files/figure-gfm/p_contexte_etu-1.png" width="768" />
 
-![](emploiEC_files/figure-gfm/p_contexte_etu.norm-1.png)<!-- -->
+<img src="emploiEC_files/figure-gfm/p_contexte_etu.norm-1.png" width="768" />
 
 ### Taux d’encadrement
 
@@ -185,13 +186,13 @@ d’autres disciplines, ce que ne permet pas de détecter les données.
 En particulier, le taux `LLASHS` doit être pris avec beaucoup de
 précaution.
 
-![](emploiEC_files/figure-gfm/p_contexte_te-1.png)<!-- -->
+<img src="emploiEC_files/figure-gfm/p_contexte_te-1.png" width="768" />
 
-![](emploiEC_files/figure-gfm/p_contexte_te.norm-1.png)<!-- -->
+<img src="emploiEC_files/figure-gfm/p_contexte_te.norm-1.png" width="768" />
 
-![](emploiEC_files/figure-gfm/p_contexte_ec.etu.te-1.png)<!-- -->
+<img src="emploiEC_files/figure-gfm/p_contexte_ec.etu.te-1.png" width="768" />
 
-![](emploiEC_files/figure-gfm/p_contexte_ec.etu.te.disc-1.png)<!-- -->
+<img src="emploiEC_files/figure-gfm/p_contexte_ec.etu.te.disc-1.png" width="768" />
 
 ### Evolution de l’effectif enseignant-chercheur titulaire
 
@@ -205,7 +206,7 @@ recrutements qu’il aurait fallu faire, en plus des renouvellement de
 départ, pour conserver les conditions de travail et d’étude sur la
 dernière décennie.
 
-![](emploiEC_files/figure-gfm/contexte.evol.etu-1.png)<!-- -->
+<img src="emploiEC_files/figure-gfm/contexte.evol.etu-1.png" width="768" />
 
 ## Principales Series de données
 
@@ -224,15 +225,15 @@ Les principales séries de données utilisées dans ce document sont :
 
 ### Toutes disciplines confondues
 
-![](emploiEC_files/figure-gfm/etapes.tout-1.png)<!-- -->
+<img src="emploiEC_files/figure-gfm/etapes.tout-1.png" width="768" />
 
-![](emploiEC_files/figure-gfm/etapes.tout.norm-1.png)<!-- -->
+<img src="emploiEC_files/figure-gfm/etapes.tout.norm-1.png" width="768" />
 
 ### Par secteur disciplinaire
 
-![](emploiEC_files/figure-gfm/etapes.discipline-1.png)<!-- -->
+<img src="emploiEC_files/figure-gfm/etapes.discipline-1.png" width="768" />
 
-![](emploiEC_files/figure-gfm/etapes.discipline.norm-1.png)<!-- -->
+<img src="emploiEC_files/figure-gfm/etapes.discipline.norm-1.png" width="768" />
 
 ## Représentation des flux
 
@@ -244,9 +245,9 @@ disponible.
 
 Cette représentation propose un profil visuel de la sélection.
 
-![](emploiEC_files/figure-gfm/flux.col-1.png)<!-- -->
+<img src="emploiEC_files/figure-gfm/flux.col-1.png" width="768" />
 
-![](emploiEC_files/figure-gfm/flux.col.discipline-1.png)<!-- -->
+<img src="emploiEC_files/figure-gfm/flux.col.discipline-1.png" width="768" />
 
 #### Diagramme de Sankey
 
@@ -257,9 +258,9 @@ disponible.
 Le flux « échec » (en rouge) cumule l’échec à la qualification et au
 concours.
 
-![](emploiEC_files/figure-gfm/flux.alluvial-1.png)<!-- -->
+<img src="emploiEC_files/figure-gfm/flux.alluvial-1.png" width="768" />
 
-![](emploiEC_files/figure-gfm/flux.alluvial.discipline-1.png)<!-- -->
+<img src="emploiEC_files/figure-gfm/flux.alluvial.discipline-1.png" width="768" />
 
 #### Représentation en segments
 
@@ -270,13 +271,13 @@ disponibles.
 Moins facile à lire, cette représentation permet cependant d’apprécier
 l’évolution dans le temps des effectifs.
 
-![](emploiEC_files/figure-gfm/flux.lignes-1.png)<!-- -->
+<img src="emploiEC_files/figure-gfm/flux.lignes-1.png" width="768" />
 
-![](emploiEC_files/figure-gfm/flux.lignes.discipline-1.png)<!-- -->
+<img src="emploiEC_files/figure-gfm/flux.lignes.discipline-1.png" width="768" />
 
-![](emploiEC_files/figure-gfm/flux.lignes.norm-1.png)<!-- -->
+<img src="emploiEC_files/figure-gfm/flux.lignes.norm-1.png" width="768" />
 
-![](emploiEC_files/figure-gfm/flux.lignes.discipline.norm-1.png)<!-- -->
+<img src="emploiEC_files/figure-gfm/flux.lignes.discipline.norm-1.png" width="768" />
 
 ## Métriques
 
@@ -301,7 +302,7 @@ Le risque systémique principal est « l’effet accordéon » : des périodes
 avec très peu de postes pour beaucoup de candidats, suivies de périodes
 avec beaucoup de postes pour très peu de candidats.
 
-![](emploiEC_files/figure-gfm/metriques-1.png)<!-- -->![](emploiEC_files/figure-gfm/metriques-2.png)<!-- -->![](emploiEC_files/figure-gfm/metriques-3.png)<!-- -->![](emploiEC_files/figure-gfm/metriques-4.png)<!-- -->
+<img src="emploiEC_files/figure-gfm/metriques-1.png" width="768" /><img src="emploiEC_files/figure-gfm/metriques-2.png" width="768" /><img src="emploiEC_files/figure-gfm/metriques-3.png" width="768" /><img src="emploiEC_files/figure-gfm/metriques-4.png" width="768" />
 
 ### Taux de réussite à l’entrée dans la carrière d’enseignant-chercheur
 
@@ -318,7 +319,7 @@ Le taux de réussite est proche de l’inverse du taux de tension :
 
 Les mêmes observations s’appliquent qu’au Taux de tension.
 
-![](emploiEC_files/figure-gfm/metriques-5.png)<!-- -->![](emploiEC_files/figure-gfm/metriques-6.png)<!-- -->![](emploiEC_files/figure-gfm/metriques-7.png)<!-- -->![](emploiEC_files/figure-gfm/metriques-8.png)<!-- -->
+<img src="emploiEC_files/figure-gfm/metriques-5.png" width="768" /><img src="emploiEC_files/figure-gfm/metriques-6.png" width="768" /><img src="emploiEC_files/figure-gfm/metriques-7.png" width="768" /><img src="emploiEC_files/figure-gfm/metriques-8.png" width="768" />
 
 ### Candidats sans poste à l’entrée dans la carrière d’enseignant-chercheur
 
@@ -329,7 +330,7 @@ recrutement potentiel. Il varie en fonction de l’attractivité des
 carrières et du nombre de postes ouverts au concours, mais aussi des
 opportunités d’embauche en dehors du milieu académique.
 
-![](emploiEC_files/figure-gfm/metriques-9.png)<!-- -->![](emploiEC_files/figure-gfm/metriques-10.png)<!-- -->![](emploiEC_files/figure-gfm/metriques-11.png)<!-- -->![](emploiEC_files/figure-gfm/metriques-12.png)<!-- -->
+<img src="emploiEC_files/figure-gfm/metriques-9.png" width="768" /><img src="emploiEC_files/figure-gfm/metriques-10.png" width="768" /><img src="emploiEC_files/figure-gfm/metriques-11.png" width="768" /><img src="emploiEC_files/figure-gfm/metriques-12.png" width="768" />
 
 ### Taux de sélection à l’entrée dans la carrière d’enseignant-chercheur
 
@@ -341,10 +342,10 @@ sélection : qualification et concours.
 
 *Attention* : les qualifiés de l’année ne candidatent pas forcément dans
 l’année, et les candidats ne sont pas forcément qualifiés dans l’année,
-mais cette mesure est moins sensible à l’accumulmation de candidats sans
+mais cette mesure est moins sensible à l’accumulation de candidats sans
 postes qui recandidatent.
 
-![](emploiEC_files/figure-gfm/metriques-13.png)<!-- -->![](emploiEC_files/figure-gfm/metriques-14.png)<!-- -->![](emploiEC_files/figure-gfm/metriques-15.png)<!-- -->![](emploiEC_files/figure-gfm/metriques-16.png)<!-- -->
+<img src="emploiEC_files/figure-gfm/metriques-13.png" width="768" /><img src="emploiEC_files/figure-gfm/metriques-14.png" width="768" /><img src="emploiEC_files/figure-gfm/metriques-15.png" width="768" /><img src="emploiEC_files/figure-gfm/metriques-16.png" width="768" />
 
 ### Taux de sélection par la qualification à l’entrée dans la carrière d’enseignant-chercheur
 
@@ -353,7 +354,7 @@ Définition : nombre de qualifiés par candidats à la qualification.
 Le taux de sélection par la qualification mesure la part des lauréats
 lors de cette étape de sélection.
 
-![](emploiEC_files/figure-gfm/metriques-17.png)<!-- -->![](emploiEC_files/figure-gfm/metriques-18.png)<!-- -->![](emploiEC_files/figure-gfm/metriques-19.png)<!-- -->![](emploiEC_files/figure-gfm/metriques-20.png)<!-- -->
+<img src="emploiEC_files/figure-gfm/metriques-17.png" width="768" /><img src="emploiEC_files/figure-gfm/metriques-18.png" width="768" /><img src="emploiEC_files/figure-gfm/metriques-19.png" width="768" /><img src="emploiEC_files/figure-gfm/metriques-20.png" width="768" />
 
 ### Taux de sélection par le concours à l’entrée dans la carrière d’enseignant-chercheur
 
@@ -362,7 +363,7 @@ Définition : nombre de recrutés par qualifiés.
 Le taux de sélection par le concours mesure la part des lauréats lors de
 cette étape de sélection.
 
-![](emploiEC_files/figure-gfm/metriques-21.png)<!-- -->![](emploiEC_files/figure-gfm/metriques-22.png)<!-- -->![](emploiEC_files/figure-gfm/metriques-23.png)<!-- -->![](emploiEC_files/figure-gfm/metriques-24.png)<!-- -->
+<img src="emploiEC_files/figure-gfm/metriques-21.png" width="768" /><img src="emploiEC_files/figure-gfm/metriques-22.png" width="768" /><img src="emploiEC_files/figure-gfm/metriques-23.png" width="768" /><img src="emploiEC_files/figure-gfm/metriques-24.png" width="768" />
 
 ### Equilibre de la sélection qualification/concours à l’entrée dans la carrière d’enseignant-chercheur
 
@@ -374,7 +375,7 @@ la sélection à l’entrée de la carrière d’enseignant-chercheur : à 50%,
 qualification et concours ont la même part ; plus le taux est élevé,
 plus le concours occupe une grande part.
 
-![](emploiEC_files/figure-gfm/metriques-25.png)<!-- -->![](emploiEC_files/figure-gfm/metriques-26.png)<!-- -->![](emploiEC_files/figure-gfm/metriques-27.png)<!-- -->![](emploiEC_files/figure-gfm/metriques-28.png)<!-- -->
+<img src="emploiEC_files/figure-gfm/metriques-25.png" width="768" /><img src="emploiEC_files/figure-gfm/metriques-26.png" width="768" /><img src="emploiEC_files/figure-gfm/metriques-27.png" width="768" /><img src="emploiEC_files/figure-gfm/metriques-28.png" width="768" />
 
 ### Période nécessaire au renouvellement des effectifs enseignant-chercheur titulaire
 
@@ -391,11 +392,11 @@ renouvellement se fait plus vite que de nécessaire pour conserver les
 mêmes effectifs, au dessus le renouvellement se fait plus lentement que
 de nécessaire pour conserver les mêmes effectifs.
 
-*Attention* : cette indicateur propose une lecture partielle, qui peut
-être complétée notamment par le nombre de départs et la pyramide des
-âges.
+*Attention* : cette indicateur propose une lecture partielle, si elle
+n’est pas complétée notamment par le nombre de départs et la pyramide
+des âges.
 
-![](emploiEC_files/figure-gfm/metriques-29.png)<!-- -->![](emploiEC_files/figure-gfm/metriques-30.png)<!-- -->![](emploiEC_files/figure-gfm/metriques-31.png)<!-- -->![](emploiEC_files/figure-gfm/metriques-32.png)<!-- -->
+<img src="emploiEC_files/figure-gfm/metriques-29.png" width="768" /><img src="emploiEC_files/figure-gfm/metriques-30.png" width="768" /><img src="emploiEC_files/figure-gfm/metriques-31.png" width="768" /><img src="emploiEC_files/figure-gfm/metriques-32.png" width="768" />
 
 [1] <https://www.conseil-national-des-universites.fr/>
 
