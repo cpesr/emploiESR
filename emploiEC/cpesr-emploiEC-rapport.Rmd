@@ -1,0 +1,441 @@
+---
+author: "Julien Gossa et Florent Figon \n gossa@unistra.fr"
+date: "30/07/2021"
+output:
+  pdf_document:
+    number_sections: yes
+    includes:
+      in_header: header.tex
+      before_body: before_body.tex
+    keep_tex: yes
+  html_document:
+    df_print: paged
+urlcolor: blue
+linkcolor: blue
+fontsize: 11pt
+geometry: margin=1.5cm
+documentclass: report
+classoption: landscape, legalpaper
+---
+
+```{r setup, include=FALSE, warning = FALSE}
+knitr::opts_chunk$set(echo = FALSE, warning = FALSE)
+knitr::opts_chunk$set(fig.width = 10, fig.height = 7.5, out.width = "100%", fig.align = "center")
+knitr::opts_chunk$set(dev = "cairo_pdf")
+knitr::opts_chunk$set(pdf.options(encoding = "CP1250"))
+
+library(kableExtra)
+library(tidyverse)
+library(cowplot)
+library(pander)
+library(ggcpesrthemes)
+
+#source("../R/emploiEC.R",chdir=TRUE)
+
+emploisEC <- read.csv2("../data/cpesr-emploi-ec.csv", stringsAsFactors = TRUE) %>%
+  mutate(Année = as.factor(Année))
+cnu.sections <- read.csv2("../data/cpesr-cnu-sections.csv")
+
+
+source("../R/emploiEC-metriques.R")
+source("../R/emploiEC-plot-series.R")
+source("../R/emploiEC-plot-metrique.R")
+source("../R/emploiEC-plot-flux.R")
+source("../R/emploiEC-plot-sections.R")
+source("../R/emploiEC-plot-contexte.R")
+
+theme_cpesr_setup(authors = "Florent Figon, Julien Gossa", source = "https://github.com/cpesr/emploiESR")
+theme_rapport <- function() { theme_cpesr() + theme(
+  legend.position = "none",
+  plot.margin = unit(c(0.5,0.5,0.5,0.5), "lines"), 
+  axis.ticks.y = element_blank(),
+  axis.title.y = element_text(margin = margin(t = 0, r = 10, b = 0, l = 0))) }
+theme_rapport_small <- function() { theme(
+  axis.text = element_text(size=rel(0.5)),
+  axis.title = element_text(size=rel(0.5))) }
+
+theme_set(theme_rapport())
+```
+
+
+## Avant-propos {-}
+
+```{r child = 'avantpropos.md', echo = FALSE, warning = FALSE}
+```
+
+```{=latex}
+\vspace*{\fill}
+```
+
+```{r, out.width = "200px"}
+knitr::include_graphics("files/589px-Knowledge-Reid-Highsmith.png")
+```
+
+
+```{=latex}
+\newpage
+\begin{multicols}{2}
+\setcounter{tocdepth}{3}
+\tableofcontents
+\newpage
+```
+
+# Méthodologie, données et contexte
+
+
+
+## Méthodologie
+
+```{r, child="emploiEC-methodologie.md"}
+```
+
+```{=latex}
+\end{multicols}
+%\begin{changemargin}{-1cm}{-1cm}
+```
+
+
+```{=latex}
+\newpage
+```
+
+:::::: {.datapage data-latex=""}
+
+::: {.datapagecom data-latex=""}
+## Contexte
+
+### Effectifs enseignants-chercheurs titulaires
+
+`r description.contexte$ec``
+
+\ 
+
+### Effectifs étudiants 
+
+`r description.contexte$etu`
+:::
+
+::: {.datapageviz data-latex=""}
+```{r contexte.ec.etu}
+l <- get_legend(p_contexte_ec +
+                  guides(color = guide_legend(nrow = 1)) +
+                  theme(legend.position = "bottom", legend.direction = "horizontal"))
+
+cowplot::plot_grid(ncol = 1, rel_heights = c(1,10), l,
+  cowplot::plot_grid(ncol = 2, 
+    p_contexte_ec,p_contexte_ec.norm,
+    p_contexte_etu,p_contexte_etu.norm
+  ))
+```
+:::
+::::::
+
+
+
+
+:::::: {.datapage data-latex=""}
+
+::: {.datapagecom data-latex=""}
+
+### Taux d'encadrement
+
+`r description.contexte$te`
+
+:::
+
+::: {.datapageviz data-latex=""}
+```{r contexte.te}
+l1 <- get_legend(p_contexte_te +
+                  guides(color = guide_legend(nrow = 1)) +
+                  theme(legend.position = "bottom", legend.direction = "horizontal"))
+
+l2 <- get_legend(p_contexte_ec.etu.te +
+                  guides(color = guide_legend(nrow = 1)) +
+                  theme(legend.position = "bottom", legend.direction = "horizontal"))
+
+
+cowplot::plot_grid(ncol = 1, rel_heights = c(1,5,1,5), 
+  l1,
+  cowplot::plot_grid(ncol = 2, p_contexte_te, p_contexte_te.norm),
+  l2,
+  cowplot::plot_grid(ncol = 2, p_contexte_ec.etu.te, p_contexte_ec.etu.te.disc)
+  )
+```
+:::
+::::::
+
+
+
+:::::: {.datapage data-latex=""}
+
+::: {.datapagecom data-latex=""}
+
+### Evolution de l'effectif enseignant-chercheur titulaire
+
+`r description.contexte$evol`
+
+:::
+
+::: {.datapageviz data-latex=""}
+```{r contexte.evol.etu}
+p_contexte.evol 
+```
+:::
+::::::
+
+
+
+# Séries de données et indicateurs
+
+## Présentation des séries de données
+
+```{r, child="emploiEC-intro.md"}
+```
+
+```{=latex}
+\newpage
+```
+
+
+:::::: {.datapage data-latex=""}
+
+::: {.datapagecom data-latex=""}
+## Principales séries de données
+```{r, child="emploiEC-donnees.md"}
+```
+:::
+
+::: {.datapageviz data-latex=""}
+```{r séries.tout}
+p1 <- plot_series(séries.MCF, séries.MCF.lab, périm="Ensemble",norm=FALSE)  
+p2 <- plot_series(séries.MCF, séries.MCF.lab, périm="Grande discipline",norm=FALSE) + theme_rapport_small()
+p3 <- plot_series(séries.MCF, séries.MCF.lab, périm="Ensemble",norm=TRUE)
+p4 <- plot_series(séries.MCF, séries.MCF.lab, périm="Grande discipline",norm=TRUE)  + theme_rapport_small()
+
+l <- get_legend(p1 +
+                  guides(color = guide_legend(nrow = 1)) +
+                  theme(legend.position = "bottom", legend.direction = "horizontal"))
+
+cowplot::plot_grid(ncol = 1, rel_heights = c(1,10), l,
+  cowplot::plot_grid(ncol = 2, 
+    p1,p2,
+    p3,p4
+  ))
+```
+:::
+::::::
+
+
+
+:::::: {.datapage data-latex=''} 
+
+::: {.datapagecom data-latex=''}
+
+### Représentation en colonne
+
+`r description.flux$col`
+
+\ 
+
+### Diagramme de Sankey
+
+`r description.flux$alluvial`
+
+:::
+
+::: {.datapageviz data-latex=''}
+
+```{r flux.colsankey}
+p1 <- plot_flux_col(périm="Ensemble")
+p2 <- plot_flux_col(périm="Grande discipline", sizemult = 0.5) + theme_rapport_small()
+p3 <- plot_flux_alluvial(périm="Ensemble")
+p4 <- plot_flux_alluvial(périm="Grande discipline", sizemult = 0.5) + theme_rapport_small()
+
+cowplot::plot_grid(ncol = 2, 
+                   p1, p2, p3, p4)
+```
+
+
+:::
+::::::
+    
+
+
+:::::: {.datapage data-latex=''} 
+
+::: {.datapagecom data-latex=''}
+### Représentation en segments
+
+`r description.flux$lignes`Small
+
+:::
+
+::: {.datapageviz data-latex=''}
+
+```{r flux.lignes}
+p1 <- plot_flux_lignes(périm="Ensemble")  + theme(legend.position = "none")
+p2 <- plot_flux_lignes(périm="Grande discipline", sizemult = 0.5) + theme(legend.position = "none", axis.text.x = element_blank()) + theme_rapport_small()
+p3 <- plot_flux_lignes(périm="Ensemble", norm = TRUE) + theme(legend.position = "none")
+p4 <- plot_flux_lignes(périm="Grande discipline", norm = TRUE, sizemult = 0.5) + theme(legend.position = "none", axis.text.x = element_blank()) + theme_rapport_small()
+l <- get_legend(p1 +
+                  #guides(color = guide_legend(nrow = 1)) +
+                  theme(legend.position = "right", legend.direction = "vertical"))
+
+
+cowplot::plot_grid(ncol = 2, rel_widths = c(10,1),
+  cowplot::plot_grid(ncol = 2, 
+    p1, p2, p3, p4), 
+  l
+)
+```
+
+
+:::
+::::::
+
+
+```{r}
+plot_metrique_MCF_all <- function(métrique, métriquelab = "", titre = "", ...) {
+  p1 <- plot_metrique(métrique,métriquelab, ...)
+  p2 <- plot_metrique(métrique,métriquelab, périm="Grande discipline", sizemult=0.5, ...)  + theme_rapport_small()
+  p3 <- plot_metrique(métrique,métriquelab, norm=TRUE, ...)
+  p4 <- plot_metrique(métrique,métriquelab, périm="Grande discipline", norm=TRUE, sizemult=0.5, ...)  + theme_rapport_small() 
+
+  cowplot::plot_grid(ncol = 2, 
+    p1, p2, p3, p4
+  )
+}
+```
+
+```{r métriques, results='asis'}
+for(m in kpis) {
+cat(sep = '',"
+:::::: {.datapage data-latex=''} 
+
+::: {.datapagecom data-latex=''}
+## ",m$titre,"
+
+__Définition__ : _",m$def,"_
+
+\\ \\
+ 
+",m$desc,"
+:::
+
+::: {.datapageviz data-latex=''}
+")
+
+print(plot_metrique_MCF_all(m$nom,m$lab,m$titre,percentlab=m$percentlab))
+
+cat("
+:::
+::::::
+    
+")
+}
+```
+
+
+
+# Sections CNU
+
+```{r sections.fun}
+
+plot_sections <- function(section,gd) {
+
+  p_flux_col <- plot_flux_col(périm="Section", périmid=section, sizemult = 0.5) + 
+    theme_rapport_small() +
+    theme(legend.position = "none", strip.background = element_blank(), strip.text = element_blank())
+  
+  p_flux_alluvial <- plot_flux_alluvial(périm="Section", périmid=section, sizemult = 0.5) + 
+    theme_rapport_small() +
+    theme(legend.position = "none", strip.background = element_blank(), strip.text = element_blank())
+  
+  p_séries <- plot_series(séries.MCF, séries.MCF.lab, périm="Section", périmid=section, norm=FALSE) +  
+    theme(legend.position = "none",  strip.background = element_blank(), strip.text = element_blank())
+  
+  p_norm <- plot_all_section(section,gd,
+                     metriques = c("Qualification.Candidats.MCF","Qualification.Qualifiés.MCF",
+                       "Concours.Candidats.MCF","Concours.Recrutés.MCF"),
+                     labs = c("Candidats qualification","Candidats qualifiés",
+                              "Candidats concours","Candidats recrutés"),
+                     facet_nrow = 4,
+                     norm = TRUE,
+                     zeroing = FALSE,
+                     sizemult = 0.5,
+                     colors = séries.MCF.palette)  +
+    theme_rapport_small() +
+    theme(legend.position = "none",strip.text = element_text(size=6, margin=margin(0.1, 0, 0.1, 0, "cm")))
+
+  p_metriques <- plot_all_section(section, gd,
+                   metriques = metriques$nom,
+                   labs = metriques$lab,
+                   facet_nrow = 2,
+                   norm=FALSE,
+                   sizemult = 0.5)  + theme_rapport_small()
+
+  p_legend1 <- get_legend(p_séries + theme(legend.position = "top", legend.direction = "horizontal"))
+  p_legend2 <- get_legend(p_metriques + theme(legend.position = "top", legend.direction = "horizontal", legend.spacing.x = unit(0.3, "cm")))
+  
+
+        
+  cowplot::plot_grid(cols=1, rel_heights = c(10,10,1,1),
+    cowplot::plot_grid(cols=3,
+      cowplot::plot_grid(cols = 1, p_flux_col, p_flux_alluvial),
+      p_séries,
+      p_norm),
+    p_metriques,
+    p_legend1,
+    p_legend2
+  )
+}
+
+```
+
+```{r sections, results='asis', cache=TRUE}
+#knitr::opts_chunk$set(fig.width = 12, fig.height = 7.5, out.width = "100%", fig.align = "center")
+
+metriques <- bind_rows(kpis)
+
+for (s in 2:min(nrow(cnu.sections),1000)) { 
+  gd <- cnu.sections[s,"GrandeDisciplineCNU.ID"]
+  section <- cnu.sections[s,"SectionCNU.ID"]
+  section.lab <- cnu.sections[s,"SectionCNU"]
+
+if (section %in% c(42:58,75:77,80:82,91:92)) next()  
+cat(sep = '',"
+:::::: {.datapage data-latex=''} 
+
+::: {.datapagecom data-latex=''}
+## Section ",section," ",section.lab," (",gd,")
+
+\\ \\ 
+
+
+\\footnotesize
+Définition des métriques :
+
+")
+
+for(m in kpis) {
+  cat("- ",m$lab," : ",m$def,"\n\n")
+} 
+
+cat(sep = '',"
+
+:::
+
+::: {.datapageviz data-latex=''}
+")
+
+print(plot_sections(section,gd))
+
+cat("
+:::
+::::::
+    
+")
+
+}
+```
+

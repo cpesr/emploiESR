@@ -21,12 +21,33 @@ ens <- read.csv2("../data/fr-esr-enseignants-titulaires-esr-public.csv") %>%
     ) %>%
   left_join(cnu.sections)
 
+etu <- read.csv2("../data/fr-esr-statistiques-sur-les-effectifs-d-etudiants-inscrits-par-etablissement-hcp.csv") %>%
+    filter(Attention == "") %>%
+    transmute(
+      Année = rentree-1,
+      Ensemble = Nombre.d.étudiants.inscrits..inscriptions.principales..hors.doubles.inscriptions.CPGE - replace_na(Diplôme.préparé...Diplôme.d.État.d.infirmier,0),
+      DEG=Grande.discipline...Droit..sciences.économiques..AES,
+      Sans=Grande.discipline...Interdisciplinaire,
+      LLASHS=Grande.discipline...Lettres..langues.et.sciences.humaines + Grande.discipline...STAPS,
+      Santé = Grande.discipline...Santé,
+      ST = Grande.discipline...Sciences.et.sciences.de.l.ingénieur,
+      Pharma = Discipline...Pharmacie      
+      ) %>% 
+    pivot_longer(-c(Année), names_to = "Périmètre.ID", values_to = "Effectif.ETU") %>%
+    group_by(Année, Périmètre.ID) %>%
+    summarise(Effectif.ETU = sum(Effectif.ETU, na.rm = TRUE)) %>%
+    mutate(
+      Périmètre.ID = na_if(Périmètre.ID,"NA"),
+      Périmètre=ifelse(Périmètre.ID == "Ensemble", "Ensemble","Grande discipline"))
+  
+
+
+
 ens <- bind_rows(
 ens %>%
   transmute(
     Périmètre = "Section",
     Périmètre.ID = as.character(SectionCNU.ID),
-    Périmètre.label = SectionCNU,
     Année,
     Effectif.MCF,
     Effectif.PR
@@ -35,7 +56,6 @@ ens %>%
   group_by(
     Périmètre = "Groupe",
     Périmètre.ID = as.character(GroupeCNU.ID),
-    Périmètre.label = GroupeCNU,
     Année) %>%
   summarise(
     Effectif.MCF = sum(Effectif.MCF, na.rm = T),
@@ -45,7 +65,6 @@ ens %>%
   group_by(
     Périmètre = "Grande discipline",
     Périmètre.ID = as.character(GrandeDisciplineCNU.ID),
-    Périmètre.label = GrandeDisciplineCNU,
     Année) %>%
   summarise(
     Effectif.MCF = sum(Effectif.MCF, na.rm = T),
@@ -55,7 +74,6 @@ ens %>%
   group_by(
     Périmètre = "Ensemble",
     Périmètre.ID = "Ensemble",
-    Périmètre.label = "Ensemble",
     Année) %>%
   summarise(
     Effectif.MCF = sum(Effectif.MCF, na.rm = T),
@@ -63,96 +81,54 @@ ens %>%
   )
 ) 
 
+cnu.périmètres <- bind_rows(
+  cnu.sections %>% transmute(Périmètre = "Section", Périmètre.ID = as.character(SectionCNU.ID), Périmètre.label = SectionCNU),
+  cnu.sections %>% transmute(Périmètre = "Groupe", Périmètre.ID = GroupeCNU.ID, Périmètre.label = GroupeCNU) %>% unique(),
+  cnu.sections %>% transmute(Périmètre = "Grande discipline", Périmètre.ID = GrandeDisciplineCNU.ID, Périmètre.label = GrandeDisciplineCNU) %>% unique(),
+  data.frame("Périmètre" = "Ensemble", Périmètre.ID = "Ensemble", Périmètre.label = "Ensemble")) %>%
+  na.omit()
+  
 
-emploisEC <- right_join(ens,read.csv2("../data/cpesr-emplois-cnu-qualification-concours.csv")) %>%
+emploisEC <- cnu.périmètres %>%
+  right_join(read.csv2("../data/cpesr-emplois-cnu-qualification-concours.csv")) %>%
+  left_join(ens) %>%
+  left_join(etu) %>%
   mutate(
     Année = as.factor(Année),
     Périmètre = factor(Périmètre, levels=c("Ensemble","Grande discipline","Groupe","Section"))) %>%
   arrange(Périmètre,Périmètre.ID,Année) %>%
+  group_by(Périmètre,Périmètre.ID) %>%
   mutate(
-    TauxTension.MCF = Concours.Candidats.MCF / Concours.Postes.MCF,
-    TauxRéussite.MCF = Concours.Postes.MCF / Concours.Candidats.MCF,
-    SansPoste.MCF = Concours.Candidats.MCF - Concours.Recrutés.MCF,
-    TauxTitularisation.MCF = Concours.Recrutés.MCF / Qualification.Candidats.MCF,
-    Qualification.TauxSélection.MCF = Qualification.Qualifiés.MCF / Qualification.Candidats.MCF,
-    Concours.TauxSélection.MCF = Concours.Recrutés.MCF / Qualification.Qualifiés.MCF,
-    QualifVsConcours.MCF = (Qualification.Candidats.MCF - Qualification.Qualifiés.MCF) / (Qualification.Candidats.MCF-Concours.Postes.MCF),
-    PériodeRenouvellement = (Effectif.MCF+Effectif.PR) / Concours.Recrutés.MCF
-  )
+    Effectif.EC = Effectif.MCF+Effectif.PR,
+    Contexte.TauxEncadrement = Effectif.EC / Effectif.ETU * 100,
+    Contexte.EvolRéelle = Effectif.EC - first(Effectif.EC),
+    Contexte.EvolNécessaire = (Effectif.ETU / first(Effectif.ETU) - 1) * first(Effectif.EC) 
+  ) %>%
+  mutate(
+    kpi.MCF.TauxTension = Concours.Candidats.MCF / Concours.Postes.MCF,
+    kpi.MCF.TauxRéussite = Concours.Recrutés.MCF / Concours.Candidats.MCF,
+    kpi.MCF.SansPoste = Concours.Candidats.MCF - Concours.Recrutés.MCF,
+    kpi.MCF.TauxSélection = Concours.Recrutés.MCF / Qualification.Candidats.MCF,
+    kpi.MCF.TauxSélection.Qualification = Qualification.Qualifiés.MCF / Qualification.Candidats.MCF,
+    kpi.MCF.TauxSélection.Concours = Concours.Recrutés.MCF / Qualification.Qualifiés.MCF,
+    kpi.MCF.TauxSélection.QualifVsConcours = (Qualification.Qualifiés.MCF - Concours.Recrutés.MCF) / (Qualification.Candidats.MCF-Concours.Recrutés.MCF),
+    kpi.PériodeRenouvellement = (Effectif.MCF+Effectif.PR) / Concours.Recrutés.MCF
+  ) %>%
+  ungroup()
+
+check_emploisEC <- function() {
+  emploisEC %>%
+    group_by(Périmètre,Périmètre.ID,Périmètre.label) %>%
+    summarise(nb_lignes = n()) %>%
+    filter(nb_lignes != 11)
   
-
-plot_serie_MCF <- function(périm="Ensemble", norm=FALSE, legend=TRUE) {
   emploisEC %>%
-    filter(Périmètre == périm) %>%
-    select(Année,Périmètre.ID,
-           Qualification.Candidats.MCF,Qualification.Qualifiés.MCF,
-           Concours.Postes.MCF,Concours.Candidats.MCF,Concours.Recrutés.MCF)%>%
-    pivot_longer(-c(Année,Périmètre.ID), names_to = "Serie", values_to = "Nombre") %>%
-    na_if(0) %>%
-    mutate(Serie = factor(Serie, 
-                          levels=c("Qualification.Candidats.MCF","Qualification.Qualifiés.MCF",
-                                   "Concours.Candidats.MCF","Concours.Postes.MCF","Concours.Recrutés.MCF"),
-                          labels=c("Candidats à la qualification","Candidats qualifiés",
-                                   "Candidats au concours","Postes publiés","Candidats recrutés")
-                          )) %>%
-    { if(norm) 
-       group_by(., Périmètre.ID,Serie) %>% mutate(Nombre = Nombre / first(Nombre) * 100)
-    else .  } %>%
-
-    ggplot(aes(x=Année,y=Nombre,color=Serie)) +
-      geom_line(aes(group=Serie)) + geom_point() +
-      xlab("Année") +
-      facet_wrap(Périmètre.ID~.) +
-      { if(norm) scale_y_continuous(breaks = seq(50,150,25)) } +
-      { if(périm != "Ensemble") scale_x_discrete(breaks = seq(2001,2020,2)) } +
-      theme_cpesr_cap() + theme(legend.direction = "vertical", legend.position = "right") +
-      { if(!legend) theme(legend.position = "None")}
+    group_by(Périmètre,Périmètre.ID,Périmètre.label) %>%
+    summarise(nb_lignes = n()) %>%
+    filter(nb_lignes != 10)
 }
+  
+check_emploisEC() %>% filter(nb_lignes != 11)
 
-plot_serie_MCF(périm="Grande discipline",norm=TRUE,legend = TRUE)
+write.csv2(emploisEC, "../data/cpesr-emploi-ec.csv", row.names = FALSE)
 
-scale_color_gdcnu <- function(...){
-  ggplot2:::manual_scale(
-    'color', 
-    values = setNames(RColorBrewer::brewer.pal(5, "Set1") , rev(c("Ensemble","DEG","LLASHS","Pharma","ST"))), 
-    ...
-  )
-}
-
-plot_metrique <- function(metrique, metriclab = "Valeur", périm="Ensemble", norm=FALSE, labels=TRUE, percentlab=FALSE) {
-  emploisEC %>%
-    filter(Périmètre == périm) %>%
-    mutate(val = !!as.name(metrique)) %>%
-    filter(!is.na(val) & val != 0) %>%
-    { if(norm) group_by(., Périmètre.ID) %>% mutate(val = val / first(val) * 100) else . } %>%
-    { if(percentlab & !norm)
-        mutate(., lab = scales::percent(val, accuracy=1))
-      else if(norm)
-        mutate(., lab = round(val,0))
-      else
-        mutate(., lab = round(val,1)) } %>%
-      mutate(lab = ifelse(Année == first(Année) |  Année == last(Année), lab, NA)) %>%
-      
-    ggplot(aes(x=Année,y=val,color=Périmètre.ID)) +  
-      geom_line(aes(group=Périmètre.ID), size=1) + geom_point(size=3) +
-      { if(labels) geom_label(aes(label=lab), size=5, fontface="bold", direction="y") } +
-      facet_wrap(Périmètre.ID~.) +
-      xlab("Année") +
-      ylab(metriclab) +
-      coord_cartesian(clip="off") +
-      scale_color_gdcnu() +
-      { if(périm != "Ensemble") scale_x_discrete(breaks = seq(2001,2020,2)) } +
-      { if(!norm) expand_limits(y=c(0)) } +
-      { if(percentlab & !norm) scale_y_continuous(labels=scales::percent) } +
-      theme_cpesr_cap() + theme(legend.position = "None")
-}
-
-plot_metrique("TauxTension.MCF", percentlab = FALSE)
-# plot_metrique("Tension", metriclab = "Tension", disciplines = TRUE, norm = TRUE)
-
-plot_metrique_all_github <- function(metrique, metriquelab = "", titre = "", ...) {
-  print(plot_metrique(metrique,metriquelab, ...) + ggtitle(titre))
-  print(plot_metrique(metrique,metriquelab, norm=TRUE, ...) + ggtitle(titre, subtitle = "base 100 pour la première année"))
-  print(plot_metrique(metrique,metriquelab, périm="Grande discipline", ...) + ggtitle(titre))
-  print(plot_metrique(metrique,metriquelab, périm="Grande discipline", norm=TRUE, ...) + ggtitle(titre, subtitle = "base 100 pour la première année"))
-}
