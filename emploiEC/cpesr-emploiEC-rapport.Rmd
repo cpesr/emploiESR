@@ -60,10 +60,16 @@ theme_set(theme_rapport())
 
 ## Avant-propos {-}
 
+
+```{=latex}
+\begin{large}
+```
+
 ```{r child = 'avantpropos.md', echo = FALSE, warning = FALSE}
 ```
 
 ```{=latex}
+\end{large}
 \vspace*{\fill}
 ```
 
