@@ -1,0 +1,79 @@
+
+\newcommand\titre{L'entrée dans la carrière\\ des enseignants-chercheurs}
+\newcommand\auteur{Julien Gossa, Florent Figon}
+\newcommand\rentree{Edition 2021}
+\newcommand\ladate{Septembre 2021}
+\newcommand\reportid{emploimcf-2021-v0.9}
+
+\definecolor{royalblue(traditional)}{rgb}{0.0, 0.14, 0.4}
+\definecolor{royalblue(web)}{rgb}{0.25, 0.41, 0.88}
+
+\newcommand\titleY{0cm}
+\newcommand\titleS{3}
+\newcommand\titleBoxW{19cm}
+\newcommand\titleBoxH{11cm}
+\newcommand\titleBoxR{7}
+
+
+\begin{titlepage}
+
+\begin{tikzpicture}[overlay,remember picture]
+
+  \coordinate (logo) at (current page.north west);
+  \coordinate (title) at ($(current page.center) + (0,\titleY)$);
+  \coordinate (author) at (current page.south east);
+
+\node (nlogo) [inner sep=20pt, anchor=north west] at (logo)
+  {\includegraphics[width=8cm]{files/logo_cpesr_sackersgothic}};
+
+\node (bandeau) at (title) 
+  [draw, minimum width=\titleBoxW, minimum height=\titleBoxH, rotate=\titleBoxR, color=royalblue(web), fill=royalblue(web)] {};
+
+\node (ntitle) at (title) 
+  [inner sep=0pt, anchor=center, align=center, font=\bfseries, scale=\titleS, align=center, color=white]  
+  {\titre};
+
+\node (nrentree) at ($(bandeau.south west)!0.95!(bandeau.south east)$)
+  [inner sep=10pt, anchor=south east, rotate=\titleBoxR, font=\Huge, color=white]
+  {\rentree};
+
+\node (num) at ($(bandeau.south west)!0.94!(bandeau.south east)$)
+  [inner sep=5pt, anchor=north east, rotate=\titleBoxR, font=\large]
+  {\reportid};
+
+\node (nauteur) at (author) 
+  [inner sep=50pt, anchor=south east, align=center, font=\huge, align=left, color =black]
+  {\textbf{\ladate} \\ \auteur};
+
+  
+\end{tikzpicture}
+
+\end{titlepage}
+
+
+
+\newlength{\graphesX}
+\setlength{\graphesX}{30pt}
+\newlength{\graphesY}
+\setlength{\graphesY}{-7cm}
+\newlength{\graphesW}
+\setlength{\graphesW}{0.52\textwidth}
+
+\newcommand\maketdb[4]{
+  \begin{tikzpicture}[overlay,remember picture]
+    \node (ancetres) [inner sep=0pt, anchor=north west, xshift=\graphesX, yshift=\graphesY] at (current page.north west)
+      {\includegraphics[width=0.5\graphesW]{#1}};
+    \node (associations) [inner sep=0pt, anchor=west] at (ancetres.east)
+      {\includegraphics[width=0.5\graphesW]{#2}};
+    \node (composantes) [inner sep=0pt, anchor=north west,yshift=-30pt] at (ancetres.south west)
+      {\includegraphics[width=\graphesW]{#3}};
+      
+    \node (kpi) [inner sep=30pt, anchor=north east] at (current page.north east)
+      {\includegraphics[width=\graphesW]{#4}};
+
+    \node (ancetres-tit) [inner sep=0pt, anchor=south] at (ancetres.north) {\bf Filiation};
+    \node (associations-tit) [inner sep=0pt, anchor=south] at (associations.north) {\bf Association};
+    \node (composantes-tit) [inner sep=0pt, anchor=south] at (composantes.north) {\bf Composition};
+
+  \end{tikzpicture}
+}

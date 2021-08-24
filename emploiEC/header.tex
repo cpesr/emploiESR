@@ -1,0 +1,111 @@
+%\usepackage[utf8x]{inputenc}
+\usepackage{eurosym}
+%\usepackage{draftwatermark}
+\usepackage[french]{babel}
+\usepackage[default]{raleway}
+\usepackage[strict]{changepage}
+\usepackage{multicol}
+\usepackage{calc}
+\usepackage{tikz}
+\usepackage[absolute,overlay]{textpos}
+  \setlength{\TPHorizModule}{1mm}
+  \setlength{\TPVertModule}{1mm}
+\usetikzlibrary{
+  calc,
+  positioning
+}
+
+\DeclareUnicodeCharacter{22C5}{\textperiodcentered}
+
+\def\arraystretch{1.5}
+
+\usepackage{fancyhdr}
+\makeatletter
+\renewcommand{\@chapapp}{Partie}
+\renewcommand\tableofcontents{%
+    \if@twocolumn
+      \@restonecoltrue\onecolumn
+    \else
+      \@restonecolfalse
+    \fi
+    \section*{\contentsname
+        \@mkboth{%
+           \MakeUppercase\contentsname}{\MakeUppercase\contentsname}}%
+      \footnotesize
+      \@starttoc{toc}%
+    \if@restonecol\twocolumn\fi
+    }
+\makeatother
+
+%\usepackage[Lenny]{fncychap}
+
+%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\definecolor{royalblue(traditional)}{rgb}{0.0, 0.14, 0.4}
+\definecolor{royalblue(web)}{rgb}{0.25, 0.41, 0.88}
+
+
+\newcommand\vshift{0.15\paperheight}
+
+\usepackage[explicit]{titlesec}
+\titleformat{\chapter}
+  {\gdef\chapterlabel{}
+   \Huge\bfseries}
+  {\gdef\chapterlabel{\thechapter\ }}{0pt}
+  {\begin{tikzpicture}[remember picture,overlay]
+    \node (bandeauTop) at (current page) 
+      [draw, yshift=\vshift,anchor=south, minimum width=\paperwidth, minimum height=0.5\paperheight, color=royalblue(traditional), fill=royalblue(traditional)] {};
+    \node (chapterNul) at (bandeauTop.south west) 
+      [anchor=south west, xshift=3cm, yshift=-0.5cm, font=\Huge, color=white, scale=10, inner sep=0] {\chapterlabel};
+    \node (bandeauBottom) at (current page) 
+      [draw, yshift=\vshift, anchor=north, minimum width=\paperwidth, minimum height=0.65\paperheight, color=white, fill=white] {};
+    \node (chapterNul) at (bandeauBottom.east) 
+      [anchor=south east, xshift=-3cm, font=\Huge, color=royalblue(traditional), scale=1.5] {#1};
+   \end{tikzpicture}
+   \newpage
+  }
+\titlespacing*{\chapter}{0pt}{50pt}{-60pt}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%% 
+
+\def\useignorespacesandallpars#1\ignorespaces\fi{%
+#1\fi\ignorespacesandallpars}
+
+\makeatletter
+\def\ignorespacesandallpars{%
+  \@ifnextchar\par
+    {\expandafter\ignorespacesandallpars\@gobble}%
+    {}%
+}
+\makeatother
+
+
+\newenvironment{datapage}[1][]{}{\newpage}
+
+\newenvironment{datapagecom}[1][]
+{%
+  \begin{tikzpicture}[overlay,remember picture]
+    \node (combandeau) at (current page.north west) 
+      [draw, minimum width=100mm, minimum height=\paperheight, anchor=north west, color=royalblue(web), fill=royalblue(traditional)] {};
+  \end{tikzpicture}
+
+  \begin{minipage}[t]{70mm}
+  \color{white}
+}%
+{%
+  \end{minipage}
+  \ifhmode\unskip\fi
+  \aftergroup\useignorespacesandallpars
+  \hspace{2cm}
+}%
+
+\newenvironment{datapageviz}[1][]
+{%
+  \begin{textblock}{240}(105,20)
+}%
+{%
+  \end{textblock}
+}%
+
