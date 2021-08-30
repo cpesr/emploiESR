@@ -29,7 +29,7 @@ source("../R/emploiEC-plot-flux.R")
 source("../R/emploiEC-plot-sections.R")
 source("../R/emploiEC-plot-contexte.R")
 
-theme_cpesr_setup(authors = "Florent Figon, Julien Gossa", source = "https://github.com/cpesr/emploiESR")
+theme_cpesr_setup(authors = "Julien Gossa, Florent Figon", source = "https://github.com/cpesr/emploiESR")
 
 theme_set(theme_cpesr())
 
@@ -202,10 +202,10 @@ p4 + ggtitle("Effectifs aux différentes étapes de la sélection lors\ndu recru
 
 ```{r metriques, results='asis'}
 plot_metrique_all_github <- function(metrique, metriquelab = "", titre = "", ...) {
-  print(plot_metrique(metrique,metriquelab, ...) + ggtitle(titre)) + cpesr_cap()
-  print(plot_metrique(metrique,metriquelab, norm=TRUE, ...) + ggtitle(titre, subtitle = "(base 100 pour la première année")) + cpesr_cap()
-  print(plot_metrique(metrique,metriquelab, périm="Grande discipline", ...) + ggtitle(titre)) + cpesr_cap()
-  print(plot_metrique(metrique,metriquelab, périm="Grande discipline", norm=TRUE, ...) + ggtitle(titre, subtitle = "(base 100 pour la première année")) + cpesr_cap()
+  print(plot_metrique(metrique,metriquelab, ...) + ggtitle(titre)+ cpesr_cap()) 
+  print(plot_metrique(metrique,metriquelab, norm=TRUE, ...) + ggtitle(titre, subtitle = "(base 100 pour la première année")+ cpesr_cap())
+  print(plot_metrique(metrique,metriquelab, périm="Grande discipline", ...) + ggtitle(titre)+ cpesr_cap()) 
+  print(plot_metrique(metrique,metriquelab, périm="Grande discipline", norm=TRUE, ...) + ggtitle(titre, subtitle = "(base 100 pour la première année")+ cpesr_cap())
 }
   
 for(m in kpis) {

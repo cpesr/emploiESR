@@ -285,17 +285,17 @@ l’évolution dans le temps des effectifs.
 
 Définition : nombre de candidats par poste ouvert au concours
 
-Le taux de tension présente une triple interprétation :
+La tension présente une triple interprétation :
 
--   pour l’Etat, il mesure l’attractivité des carrières ;
--   pour les établissement, il mesure l’attractivité des postes mis au
+-   pour l’Etat, elle mesure l’attractivité des carrières ;
+-   pour les établissement, elle mesure l’attractivité des postes mis au
     concours ;
--   pour les candidats, il mesure la compétition.
+-   pour les candidats, elle mesure la compétition.
 
-Des carrières attractives augmentent le taux de tension, mais un haut
-taux de tension diminue l’attractivité des carrières. Cette dynamique
-est soumise à un décalage temporel d’environ 5 à 10 ans, temps entre la
-décision de s’inscrire en doctorat et celle de participer au concours de
+Des carrières attractives augmentent la tension, mais une tension haute
+diminue l’attractivité des carrières. Cette dynamique est soumise à un
+décalage temporel d’environ 5 à 10 ans, temps entre la décision de
+s’inscrire en doctorat et celle de participer au concours de
 recrutement.
 
 Le risque systémique principal est « l’effet accordéon » : des périodes

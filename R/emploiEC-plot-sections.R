@@ -1,5 +1,4 @@
 
-
 emploisEC_section <- function(sectionID,grandedisciplineID) {
   bind_rows(
     emploisEC %>% filter(Périmètre == "Section", Périmètre.ID == sectionID),
@@ -14,9 +13,15 @@ hacklabels <- function(x) {
          round(x))
 }
 
+labeller_100 <- function(x)  paste(x, "(base 100)")
+
+
 plot_all_section <- function(sectionID, grandedisciplineID, metriques, egd=TRUE,
                              labs, norm=FALSE, labels=TRUE, sizemult=1, percentlab=FALSE, zeroing=TRUE,
                              facet_nrow=NULL, colors = NULL) {
+  
+  labellerfun <- ifelse(norm,labeller_100,identity)
+  
   { if (egd) emploisEC_section(sectionID,grandedisciplineID) 
     else emploisEC %>% filter(Périmètre == "Section", Périmètre.ID == sectionID) } %>%
     pivot_longer(
@@ -39,7 +44,9 @@ plot_all_section <- function(sectionID, grandedisciplineID, metriques, egd=TRUE,
     geom_line(aes(group=Périmètre, linetype=Périmètre), se=FALSE) + 
     geom_point(aes(alpha=Périmètre)) +
     { if(labels) geom_label(aes(label=lab), size=5*sizemult, fontface="bold", direction="y") } +
-    facet_wrap(Métrique~.,nrow=facet_nrow, scales=ifelse(norm,"fixed","free_y")) +
+    facet_wrap(Métrique~.,nrow=facet_nrow, 
+               scales=ifelse(norm,"fixed","free_y"), 
+               labeller = labeller(Métrique=labellerfun)) +
     xlab("") + #xlab("Année") +
     ylab("") +
     coord_cartesian(clip="off") +
