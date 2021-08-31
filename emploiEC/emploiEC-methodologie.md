@@ -27,7 +27,7 @@ n'est pas traité dans ce document.
   - [Fiches démographiques du CNU](https://www.enseignementsup-recherche.gouv.fr/pid24672-cid85019/fiches-demographiques-des-sections-du-cnu.html)
   - [Bilans de campagne de recrutement](https://www.enseignementsup-recherche.gouv.fr/cid118435/personnels-enseignants-du-superieur-bilans-et-statistiques.html#recrutement)
 
-- Données aggrégées : 
+- Données agrégées : 
   - [cpesr-emplois-cnu-qualification-concours.csv](../data/cpesr-emplois-cnu-qualification-concours.csv)
   - [cpesr-emplois-ec.csv](cpesr-emplois-ec.csv)
 
@@ -63,13 +63,13 @@ n'est pas traité dans ce document.
 
 ## Avertissement global
 
-Ce document est présente un travail de traitement et de représentation de données ouvertes.
+Ce document constitue un travail de traitement et de représentation de données ouvertes.
 Ces traitements et représentations, aussi bien que les données sources, peuvent 
 faire l'objet d'erreurs, y compris d'interprétation.
 
 La plus grande prudence dans leur utilisation est indispensable.
 
-La totalité des données et traitement est disponible à l'adresse :
+La totalité des données et traitements est disponible à l'adresse :
 
 https://github.com/cpesr/emploiESR/
 

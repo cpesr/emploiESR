@@ -43,8 +43,8 @@ la recherche de 2020[4], qui introduit plusieurs dérogations.
     audition, organisée par chaque établissement pour chaque poste
     ouvert. Les qualifiés peuvent candidater sur plusieurs postes,
     pendant toute la période de validité de leur qualification. Les
-    candidats sont classés indépendamment sur chaque concours locaux.
-    Des postes ouverts peuvent ne pas être pourvus, soit parce qu’aucun
+    candidats sont classés indépendamment sur chaque concours local. Des
+    postes ouverts peuvent ne pas être pourvus, soit parce qu’aucun
     candidat n’a été classé, soit parce que tous les candidats classés
     ont préféré un autre poste.
 
@@ -54,7 +54,7 @@ un an, avant d’être titularisés sous conditions.
 L’âge moyen d’obtention d’un poste est de 34 ans, et celui de la
 titularisation de 35 ans.
 
-l’âge moyen de départ à la retraite est de 63 ans[5]).
+L’âge moyen de départ à la retraite est de 63 ans[5].
 
 ### Méthodologie
 
@@ -88,7 +88,7 @@ différent qui n’est pas traité dans ce document.
         CNU](https://www.enseignementsup-recherche.gouv.fr/pid24672-cid85019/fiches-demographiques-des-sections-du-cnu.html)
     -   [Bilans de campagne de
         recrutement](https://www.enseignementsup-recherche.gouv.fr/cid118435/personnels-enseignants-du-superieur-bilans-et-statistiques.html#recrutement)
--   Données aggrégées :
+-   Données agrégées :
     -   [cpesr-emplois-cnu-qualification-concours.csv](../data/cpesr-emplois-cnu-qualification-concours.csv)
     -   [cpesr-emplois-ec.csv](cpesr-emplois-ec.csv)
 -   Autres données :
@@ -142,14 +142,14 @@ différent qui n’est pas traité dans ce document.
 
 ## Avertissement global
 
-Ce document est présente un travail de traitement et de représentation
-de données ouvertes. Ces traitements et représentations, aussi bien que
-les données sources, peuvent faire l’objet d’erreurs, y compris
+Ce document constitue un travail de traitement et de représentation de
+données ouvertes. Ces traitements et représentations, aussi bien que les
+données sources, peuvent faire l’objet d’erreurs, y compris
 d’interprétation.
 
 La plus grande prudence dans leur utilisation est indispensable.
 
-La totalité des données et traitement est disponible à l’adresse :
+La totalité des données et traitements est disponible à l’adresse :
 
 <https://github.com/cpesr/emploiESR/>
 

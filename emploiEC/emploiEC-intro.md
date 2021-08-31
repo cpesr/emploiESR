@@ -33,7 +33,7 @@ de 2020^[https://cpesr.fr/dossier-lppr/], qui introduit plusieurs dérogations.
 organisée par chaque établissement pour chaque poste ouvert. Les qualifiés 
 peuvent candidater sur plusieurs postes, pendant toute la période de validité de 
 leur qualification. Les candidats sont classés indépendamment sur chaque concours
-locaux. Des postes ouverts peuvent ne pas être pourvus, soit parce qu'aucun 
+local. Des postes ouverts peuvent ne pas être pourvus, soit parce qu'aucun 
 candidat n'a été classé, soit parce que tous les candidats classés ont préféré un
 autre poste. 
 
@@ -42,5 +42,5 @@ avant d'être titularisés sous conditions.
 
 L'âge moyen d'obtention d'un poste est de 34 ans, et celui de la titularisation de 35 ans.
 
-l'âge moyen de départ à la retraite est de 63 ans^[https://cache.media.enseignementsup-recherche.gouv.fr/file/2020/89/3/NI_2020_06_Retraites_1278893.pdf]).
+L'âge moyen de départ à la retraite est de 63 ans^[https://cache.media.enseignementsup-recherche.gouv.fr/file/2020/89/3/NI_2020_06_Retraites_1278893.pdf].
 

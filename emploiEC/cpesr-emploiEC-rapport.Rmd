@@ -103,6 +103,7 @@ knitr::include_graphics("files/589px-Knowledge-Reid-Highsmith.png")
 
 ```{=latex}
 \newpage
+
 ```
 
 :::::: {.datapage data-latex=""}
@@ -413,7 +414,7 @@ cat(sep = '',"
 :::::: {.datapage data-latex=''} 
 
 ::: {.datapagecom data-latex=''}
-## Section ",section," ",section.lab," (",gd,")
+## Section ",section," - ",section.lab," (",gd,")
 
 \\ \\ 
 
