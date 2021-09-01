@@ -4,7 +4,7 @@ Apparaissant dès le XIIIe siècle, les universités sont des organisations à l
  - Onze universités sont sélectionnées pour l'Initiative d'excellence (IDEX) sur un projet de gouvernance différenciant dans le cadre du Plan d'investissement d'avenir (PIA).
  - Un nombre exceptionnel de fusions et regroupements est organisé, d'abord autour des Pôles de recherche et d'enseignement supérieur (PRES) puis des Communautés d'universités et d'établissements (COMUE).
  - Les modèles d'allocation des moyens entre les établissements San Remo (Système analytique de Répartition des Moyens) puis SYMPA et SYMPA 2 (SYstème de répartition des Moyens à l'Activité et à la Performance) sont progressivement abandonnés, pour laisser place à des « dialogues stratégique et de gestion » peu formalisés.
- - La LPPR (loi de programmation de la recherche) de 2019 modifie le recrutement et la carrière des chercheurs et enseignants-chercheurs.
+ - La LPPR (loi de programmation de la recherche) du 24 décembre 2020 modifie le recrutement et la carrière des chercheurs et enseignants-chercheurs.
  
 Alliées aux réformes de retraites qui retardent les départs et donc la libération des postes, dans un contexte de forte croissance démographique étudiante, ces transformations conduisent à une baisse des recrutements et une montée de la précarité chez les jeunes universitaires. 
 
