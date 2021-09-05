@@ -23,12 +23,13 @@ ens <- read.csv2("../data/fr-esr-enseignants-titulaires-esr-public.csv") %>%
 
 etu <- read.csv2("../data/fr-esr-statistiques-sur-les-effectifs-d-etudiants-inscrits-par-etablissement-hcp.csv") %>%
     filter(Attention == "") %>%
+    #filter(Type.d.établissement == "Université" ) %>%
     transmute(
       Année = rentree-1,
-      Ensemble = Nombre.d.étudiants.inscrits..inscriptions.principales..hors.doubles.inscriptions.CPGE - replace_na(Diplôme.préparé...Diplôme.d.État.d.infirmier,0),
+      Ensemble = replace_na(Nombre.d.étudiants.inscrits..inscriptions.principales..hors.doubles.inscriptions.CPGE,0) - replace_na(Diplôme.préparé...Diplôme.d.État.d.infirmier,0),
       DEG=Grande.discipline...Droit..sciences.économiques..AES,
       Sans=Grande.discipline...Interdisciplinaire,
-      LLASHS=Grande.discipline...Lettres..langues.et.sciences.humaines + Grande.discipline...STAPS,
+      LLASHS=replace_na(Grande.discipline...Lettres..langues.et.sciences.humaines,0) + replace_na(Grande.discipline...STAPS,0),
       Santé = Grande.discipline...Santé,
       ST = Grande.discipline...Sciences.et.sciences.de.l.ingénieur,
       Pharma = Discipline...Pharmacie      

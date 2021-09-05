@@ -5,7 +5,7 @@ p_contexte_ec <- plot_metrique("Effectif.EC", métriquelab = "Enseignants-cherch
 p_contexte_ec.norm <-plot_metrique("Effectif.EC", métriquelab = "Enseignants-chercheurs titulaire\n(base 100)", périm = c("Ensemble","Grande discipline"), norm = TRUE, facetting = FALSE, sizemul=context_sizemul)
 
 emploisEC <- emploisEC %>%
-  mutate(Effectif.ETU.k = round(Effectif.ETU / 1000))
+  mutate(Effectif.ETU.k = Effectif.ETU / 1000)
 
 p_contexte_etu <- plot_metrique("Effectif.ETU.k", métriquelab = "Etudiants (milliers)", périm = c("Ensemble","Grande discipline"), norm = FALSE, facetting = FALSE, sizemul=context_sizemul)
 p_contexte_etu.norm <- plot_metrique("Effectif.ETU.k", métriquelab = "Etudiants (base 100)", périm = c("Ensemble","Grande discipline"), norm = TRUE, facetting = FALSE, sizemul=context_sizemul)
