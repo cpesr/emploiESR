@@ -61,6 +61,18 @@ n'est pas traité dans ce document.
 1. Production et mise en ligne des visualisations pour commentaires : [visualisations](https://github.com/cpesr/emploiESR/blob/main/emploiEC/emploiEC.md) ;
 1. Production de ce rapport.
 
+## Note sur les qualifications multiples
+
+Une proportion non négligeable de candidats postule dans plusieurs sections. 
+Les candidats dans ce cas apparaissent dans les données une fois par section, 
+une fois par grande discipline, et une fois dans l'ensemble.
+Ceci explique que la somme du nombre de candidats par section ne correspond pas 
+au nombre de candidats par grande discipline et dans l'ensemble.
+
+En revanche, les postes ne sont comptabilisés que pour une seule section, et les
+sommes osnt cohérentes.
+
+
 ## Avertissement global
 
 Ce document constitue un travail de traitement et de représentation de données ouvertes.

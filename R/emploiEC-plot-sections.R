@@ -1,8 +1,9 @@
 
-emploisEC_section <- function(sectionID,grandedisciplineID) {
+emploisEC_section <- function(sectionID, groupeID, grandedisciplineID) {
   bind_rows(
     emploisEC %>% filter(Périmètre == "Section", Périmètre.ID == sectionID),
     emploisEC %>% filter(Périmètre == "Grande discipline", Périmètre.ID == grandedisciplineID),
+    emploisEC %>% filter(Périmètre == "Groupe", Périmètre.ID == groupeID),
     emploisEC %>% filter(Périmètre == "Ensemble", Périmètre.ID == "Ensemble")) 
 }
 
@@ -16,13 +17,13 @@ hacklabels <- function(x) {
 labeller_100 <- function(x)  paste(x, "(base 100)")
 
 
-plot_all_section <- function(sectionID, grandedisciplineID, metriques, egd=TRUE,
+plot_all_section <- function(sectionID, groupeID, grandedisciplineID, metriques, egd=TRUE,
                              labs, norm=FALSE, labels=TRUE, sizemult=1, percentlab=FALSE, zeroing=TRUE,
                              facet_nrow=NULL, colors = NULL) {
   
   labellerfun <- ifelse(norm,labeller_100,identity)
   
-  { if (egd) emploisEC_section(sectionID,grandedisciplineID) 
+  { if (egd) emploisEC_section(sectionID,groupeID, grandedisciplineID) 
     else emploisEC %>% filter(Périmètre == "Section", Périmètre.ID == sectionID) } %>%
     pivot_longer(
       cols = all_of(metriques),
@@ -50,8 +51,8 @@ plot_all_section <- function(sectionID, grandedisciplineID, metriques, egd=TRUE,
     xlab("") + #xlab("Année") +
     ylab("") +
     coord_cartesian(clip="off") +
-    scale_alpha_manual(values=c(0,0,1)) +
-    scale_linetype_manual(values=c(3,2,1)) +
+    scale_alpha_manual(values=c(0,0,0,1)) +
+    scale_linetype_manual(values=c(3,4,2,1)) +
     { if (!is.null(colors)) scale_color_manual(values=colors) } +
     #{ if(périm != "Ensemble") scale_x_discrete(breaks = seq(2001,2020,2)) } +
     { if (zeroing) expand_limits(y=c(0)) } +
@@ -60,8 +61,8 @@ plot_all_section <- function(sectionID, grandedisciplineID, metriques, egd=TRUE,
     theme(axis.text.x = element_text(angle = 45, vjust = 1, hjust=1)) +
     guides(color="none")
 }
-# 
-# plot_all_section("27","ST", 
+
+# plot_all_section("27","5","ST",
 #                  metriques = c("Qualification.Candidats.MCF","Qualification.Qualifiés.MCF",
 #                    "Concours.Candidats.MCF","Concours.Recrutés.MCF"),
 #                  labs = c("Candidats qualification","Candidats qualifiés",
@@ -69,7 +70,7 @@ plot_all_section <- function(sectionID, grandedisciplineID, metriques, egd=TRUE,
 #                  facet_nrow = 2,
 #                  norm=TRUE,
 #                  colors = séries.MCF.palette)
-# 
+
 # metriques <- bind_rows(kpis)
 # 
 # sous_metriques <- bind_rows(kpis) %>%

@@ -67,8 +67,7 @@ base SISE, hors double-inscriptions CPGE, et hors IFSI.
 
 Le jeu de données ne 
 permet pas d'exclure les doctorants. Les séries disciplinaires peuvent être affectées 
-par des changements de périmètre, et doivent donc être prises avec précaution 
-(notamment la série `LLASHS`).
+par des changements de périmètre, et doivent donc être prises avec précaution.
 ",
   "te"=
 "Le taux d'encadrement est défini comme le nombre d'enseignants-chercheurs 
@@ -77,8 +76,6 @@ titulaires pour 100 étudiants.
 Ce taux est (très) approximatif pour les séries disciplinaires, puisque les étudiants
 dans une discipline donnée ont des enseignants venus d'autres disciplines, ce que
 ne permet pas de détecter les données.
-
-En particulier, le taux `LLASHS` doit être pris avec beaucoup de précaution.
 ",
   "evol"=
 "L'évolution annuelle des effectifs indique la différence d'une année sur l'autre

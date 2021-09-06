@@ -348,7 +348,7 @@ cat("
 
 ```{r sections.fun}
 
-plot_sections <- function(section,gd) {
+plot_sections <- function(section,groupe,gd) {
 
   p_flux_col <- plot_flux_col(périm="Section", périmid=section, sizemult = 0.5) + 
     theme_rapport_small() +
@@ -361,7 +361,7 @@ plot_sections <- function(section,gd) {
   p_séries <- plot_series(séries.MCF, séries.MCF.lab, périm="Section", périmid=section, norm=FALSE) +  
     theme(legend.position = "none",  strip.background = element_blank(), strip.text = element_blank())
   
-  p_norm <- plot_all_section(section,gd,
+  p_norm <- plot_all_section(section,groupe,gd,
                      metriques = c("Qualification.Candidats.MCF","Qualification.Qualifiés.MCF",
                        "Concours.Candidats.MCF","Concours.Recrutés.MCF"),
                      labs = c("Candidats qualification","Candidats qualifiés",
@@ -374,7 +374,7 @@ plot_sections <- function(section,gd) {
     theme_rapport_small() +
     theme(legend.position = "none",strip.text = element_text(size=6, margin=margin(0.1, 0, 0.1, 0, "cm")))
 
-  p_metriques <- plot_all_section(section, gd,
+  p_metriques <- plot_all_section(section, groupe, gd,
                    metriques = metriques$nom,
                    labs = metriques$lab,
                    facet_nrow = 2,
@@ -406,6 +406,8 @@ metriques <- bind_rows(kpis)
 
 for (s in 2:min(nrow(cnu.sections),1000)) { 
   gd <- cnu.sections[s,"GrandeDisciplineCNU.ID"]
+  groupe <- cnu.sections[s,"GroupeCNU.ID"]
+  groupe.lab <- cnu.sections[s,"GroupeCNU"]
   section <- cnu.sections[s,"SectionCNU.ID"]
   section.lab <- cnu.sections[s,"SectionCNU"]
 
@@ -414,7 +416,7 @@ cat(sep = '',"
 :::::: {.datapage data-latex=''} 
 
 ::: {.datapagecom data-latex=''}
-## Section ",section," - ",section.lab," (",gd,")
+## Section ",section," - ",section.lab," (Groupe ",groupe," - ", groupe.lab," - ",gd,")
 
 \\ \\ 
 
@@ -435,7 +437,7 @@ cat(sep = '',"
 ::: {.datapageviz data-latex=''}
 ")
 
-print(plot_sections(section,gd))
+print(plot_sections(section,groupe,gd))
 
 cat("
 :::
