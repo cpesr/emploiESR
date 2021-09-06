@@ -1,13 +1,23 @@
 
+
+Ce document constitue un travail de traitement et de représentation de données ouvertes.
+Ces traitements et représentations, aussi bien que les données sources, peuvent 
+faire l'objet d'erreurs, y compris d'interprétation.
+
+La plus grande prudence dans leur utilisation est indispensable.
+
+Traitements et données : https://github.com/cpesr/emploiESR/
+
+
 ## Présentation des données 
 
 
 Les données temporelles sont systématiquement présentées sous quatre formes :
 
 - `Ensemble` : toutes disciplines confondues ;
-- `Ensemble en base 100` : toutes disciplines confondues, en base 100 pour la première année ;
+- `Ensemble en base 100` : ensemble, en base 100 pour la première année ;
 - `Disciplinaire` : par grandes disciplines du CNU ;
-- `Disciplinaire en base 100` : par grandes disciplines du CNU, en base 100 pour la première année.
+- `Disciplinaire en base 100` : disciplinaire, en base 100 pour la première année.
 
 
 Les grandes disciplines du CNU sont :
@@ -15,7 +25,7 @@ Les grandes disciplines du CNU sont :
 - `DEG` : Droit, Economie, Gestion ;
 - `LLASHS` : Lettres, Langues, Arts, Sciences Humaines et Sociales ;
 - `Pharma` : Pharmacie ;
-- `ST` : Sciences et Technologies, parfois aussi appelée `SI`, Sciences et sciences de l'Ingénieur.
+- `ST` : Sciences et Technologies (aussi appelée `SI`, Sciences et sciences de l'Ingénieur).
 
 Les disciplines de santé et médecine ont un système de recrutement différent qui
 n'est pas traité dans ce document.
@@ -28,17 +38,12 @@ n'est pas traité dans ce document.
   - [Bilans de campagne de recrutement](https://www.enseignementsup-recherche.gouv.fr/cid118435/personnels-enseignants-du-superieur-bilans-et-statistiques.html#recrutement)
 
 - Données agrégées : 
-  - [cpesr-emplois-cnu-qualification-concours.csv](../data/cpesr-emplois-cnu-qualification-concours.csv)
-  - [cpesr-emplois-ec.csv](cpesr-emplois-ec.csv)
+  - [cpesr-emplois-cnu-qualification-concours.csv](https://github.com/cpesr/emploiESR/tree/main/data/data/cpesr-emplois-cnu-qualification-concours.csv)
+  - [cpesr-emplois-ec.csv](https://github.com/cpesr/emploiESR/tree/main/data/cpesr-emplois-ec.csv)
 
 - Autres données :
-  - [Les enseignants titulaires dans les établissements publics de l'enseignement supérieur](https://data.enseignementsup-recherche.gouv.fr/explore/dataset/fr-esr-enseignants-titulaires-esr-public/export/?flg=fr&disjunctive.annee)
+  - [Les enseignants titulaires dans les établissements publics de l'ESR](https://data.enseignementsup-recherche.gouv.fr/explore/dataset/fr-esr-enseignants-titulaires-esr-public/export/?flg=fr&disjunctive.annee)
   - [Statistiques sur les effectifs d'étudiants inscrits par établissement public sous tutelle du ministère en charge de l'Enseignement supérieur (hors doubles inscriptions université-CPGE)](https://data.enseignementsup-recherche.gouv.fr/explore/dataset/fr-esr-statistiques-sur-les-effectifs-d-etudiants-inscrits-par-etablissement-hcp/)
-
-```{=latex}
-\vfill\null
-\columnbreak
-```
 
 ## Acquisition et traitement des données
 
@@ -73,16 +78,5 @@ En revanche, les postes ne sont comptabilisés que pour une seule section, et le
 sommes osnt cohérentes.
 
 
-## Avertissement global
-
-Ce document constitue un travail de traitement et de représentation de données ouvertes.
-Ces traitements et représentations, aussi bien que les données sources, peuvent 
-faire l'objet d'erreurs, y compris d'interprétation.
-
-La plus grande prudence dans leur utilisation est indispensable.
-
-La totalité des données et traitements est disponible à l'adresse :
-
-https://github.com/cpesr/emploiESR/
 
 
