@@ -41,8 +41,8 @@ plot_metrique <- function(métrique, métriquelab = "Valeur", périm="Ensemble",
     theme(axis.text.x = element_text(angle = 45, vjust = 1, hjust=1))
 }
 
-plot_metrique("kpi.MCF.TauxTension", percentlab = FALSE, norm = FALSE, sizemult = 1)
-plot_metrique("kpi.MCF.TauxTension", métriquelab = "Tension", périm = "Grande discipline", norm = TRUE, facetting = TRUE)
+# plot_metrique("kpi.MCF.TauxTension", percentlab = FALSE, norm = FALSE, sizemult = 1)
+# plot_metrique("kpi.MCF.TauxTension", métriquelab = "Tension", périm = "Grande discipline", norm = TRUE, facetting = TRUE)
 # 
 # plot_metrique("Effectif.EC", métriquelab = "Tension", périm = c("Ensemble","Grande discipline"), norm = FALSE, facetting = FALSE)
 

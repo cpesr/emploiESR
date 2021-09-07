@@ -75,7 +75,7 @@ Ceci explique que la somme du nombre de candidats par section ne correspond pas
 au nombre de candidats par grande discipline et dans l'ensemble.
 
 En revanche, les postes ne sont comptabilisés que pour une seule section, et les
-sommes osnt cohérentes.
+sommes sont cohérentes.
 
 
 
