@@ -42,6 +42,7 @@ source("../R/emploiEC-plot-series.R")
 source("../R/emploiEC-plot-metrique.R")
 source("../R/emploiEC-plot-flux.R")
 source("../R/emploiEC-plot-sections.R")
+source("../R/emploiEC-plot-groupes.R")
 source("../R/emploiEC-plot-contexte.R")
 
 theme_cpesr_setup(authors = "Florent Figon, Julien Gossa", source = "https://github.com/cpesr/emploiESR")
@@ -344,9 +345,120 @@ cat("
 
 
 
+
+# Groupes CNU
+
+
+```{r groupes.fun}
+
+metriques <- bind_rows(kpis)
+
+
+plot_groupes <- function(groupe,gd) {
+
+  p_flux_col <- plot_flux_col(périm="Groupe", périmid=groupe, sizemult = 0.5) + 
+    theme_rapport_small() +
+    theme(legend.position = "none", strip.background = element_blank(), strip.text = element_blank())
+
+  p_flux_alluvial <- plot_flux_alluvial(périm="Groupe", périmid=groupe, sizemult = 0.5) + 
+    theme_rapport_small() +
+    theme(legend.position = "none", strip.background = element_blank(), strip.text = element_blank())
+  p_séries <- plot_series(séries.MCF, séries.MCF.lab, périm="Groupe", périmid=groupe, norm=FALSE) +  
+    theme(legend.position = "none",  strip.background = element_blank(), strip.text = element_blank())
+  
+  p_norm <- plot_all_groupe(groupe,gd,
+                     metriques = c("Qualification.Candidats.MCF","Qualification.Qualifiés.MCF",
+                       "Concours.Candidats.MCF","Concours.Recrutés.MCF"),
+                     labs = c("Candidats qualification","Candidats qualifiés",
+                              "Candidats concours","Candidats recrutés"),
+                     facet_nrow = 4,
+                     norm = TRUE,
+                     zeroing = FALSE,
+                     sizemult = 0.5,
+                     colors = séries.MCF.palette)  +
+    theme_rapport_small() +
+    theme(legend.position = "none",strip.text = element_text(size=6, margin=margin(0.1, 0, 0.1, 0, "cm")))
+
+  p_metriques <- plot_all_groupe(groupe, gd,
+                   metriques = metriques$nom,
+                   labs = metriques$lab,
+                   facet_nrow = 2,
+                   norm=FALSE,
+                   sizemult = 0.5)  + theme_rapport_small()
+
+  p_legend1 <- get_legend(p_séries + theme(legend.position = "top", legend.direction = "horizontal"))
+  p_legend2 <- get_legend(p_metriques + theme(legend.position = "top", legend.direction = "horizontal", legend.spacing.x = unit(0.3, "cm")))
+  
+
+        
+  cowplot::plot_grid(cols=1, rel_heights = c(10,1,1,10),
+    cowplot::plot_grid(cols=3,
+      cowplot::plot_grid(cols = 1, p_flux_col, p_flux_alluvial),
+      p_séries,
+      p_norm),
+    p_legend1,
+    p_legend2,
+    p_metriques
+  )
+}
+
+```
+
+```{r groupes, results='asis', cache=TRUE}
+#knitr::opts_chunk$set(fig.width = 12, fig.height = 7.5, out.width = "100%", fig.align = "center")
+
+cnu.gd <- cnu.sections %>% select(GrandeDisciplineCNU.ID,GroupeCNU.ID,GroupeCNU) %>% unique()
+
+for (s in 2:9) { 
+  gd <- cnu.gd[s,"GrandeDisciplineCNU.ID"]
+  groupe <- cnu.gd[s,"GroupeCNU.ID"]
+  groupe.lab <- cnu.gd[s,"GroupeCNU"]
+
+cat(sep = '',"
+:::::: {.datapage data-latex=''} 
+
+::: {.datapagecom data-latex=''}
+## Groupe ",groupe," - ", groupe.lab," (",gd,")
+
+\\ \\ 
+
+
+\\footnotesize
+Définition des métriques :
+
+")
+
+for(m in kpis) {
+  cat("- ",m$lab," : ",m$def,"\n\n")
+} 
+
+cat(sep = '',"
+
+:::
+
+::: {.datapageviz data-latex=''}
+")
+
+print(plot_groupes(groupe,gd))
+
+cat("
+:::
+::::::
+    
+")
+
+}
+```
+
+
+
+
+
 # Sections CNU
 
 ```{r sections.fun}
+
+metriques <- bind_rows(kpis)
 
 plot_sections <- function(section,groupe,gd) {
 
