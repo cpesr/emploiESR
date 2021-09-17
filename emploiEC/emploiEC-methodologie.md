@@ -56,6 +56,7 @@ n'est pas traité dans ce document.
     + `3.2 - Recrutement des enseignants-chercheurs - Postes publiés et pourvus, taux de pression et part des postes non pourvus - Session synchronisée et "au fil de l'eau"` ;
 1. Correction des erreurs détectées :
     + Inversion du nombre de candidats en 2019 entre les groupes Pharma. et ST ;
+    + Erreur manifeste dans le nombre de candidats en 2018 pour le groupe 10 ;
     + Changement de méthodologie pour les candidats à la qualification entre les fiches 2013 (candidatures totales) et 2015 (candidatures recevables seulement) :
         - Calcul d'un ratio moyen candidatures recevables / candidatures sur les années 2011 à 2013, pour chaque section indépendamment ;
         - Application de ce ratio aux données de la fiche 2013 (donc pour les années 2009 et 2010, les suivantes étant dans la fiche 2015) ;

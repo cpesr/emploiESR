@@ -129,7 +129,9 @@ recrut <- bind_rows(
 cnu <- full_join(qualif,recrut) %>%
   # Suppression des sans groupe
   filter(!is.na(Périmètre.ID)) %>% 
-  # Erreur : inversion du nombre de candidats Pharma/ST en 2019 
+  # Erreurs : 
+  #  - inversion du nombre de candidats Pharma/ST en 2019 
+  #  - erreur nombre de candidats groupe 10 pour 2018
   mutate(
     Concours.Candidats.PR = case_when(
       Année == 2019 & Périmètre == "Grande discipline" & Périmètre.ID == "ST" ~ 942,
@@ -138,6 +140,7 @@ cnu <- full_join(qualif,recrut) %>%
     Concours.Candidats.MCF = case_when(
       Année == 2019 & Périmètre == "Grande discipline" & Périmètre.ID == "ST" ~ 2719,
       Année == 2019 & Périmètre == "Grande discipline" & Périmètre.ID == "Pharma" ~ 209,
+      Année == 2018 & Périmètre == "Groupe" & Périmètre.ID == "10" ~ 645,
       TRUE ~ Concours.Candidats.MCF)
   )
   

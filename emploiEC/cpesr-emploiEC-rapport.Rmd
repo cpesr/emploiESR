@@ -428,9 +428,9 @@ plot_groupes <- function(groupe,gd) {
 ```{r groupes, results='asis', cache=TRUE}
 #knitr::opts_chunk$set(fig.width = 12, fig.height = 7.5, out.width = "100%", fig.align = "center")
 
-cnu.gd <- cnu.sections %>% select(GrandeDisciplineCNU.ID,GroupeCNU.ID,GroupeCNU) %>% unique()
+cnu.gd <- cnu.sections %>% select(GrandeDisciplineCNU.ID,GroupeCNU.ID,GroupeCNU) %>% unique() %>% arrange(as.numeric(GroupeCNU.ID))
 
-for (s in 2:9) { 
+for (s in 1:11) { 
   gd <- cnu.gd[s,"GrandeDisciplineCNU.ID"]
   groupe <- cnu.gd[s,"GroupeCNU.ID"]
   groupe.lab <- cnu.gd[s,"GroupeCNU"]
