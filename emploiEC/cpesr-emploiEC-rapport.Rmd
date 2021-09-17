@@ -315,6 +315,27 @@ plot_metrique_MCF_all <- function(métrique, métriquelab = "", titre = "", ...)
 }
 ```
 
+
+
+:::::: {.datapage data-latex=''} 
+
+::: {.datapagecom data-latex=''}
+## Nombre de postes MCF ouverts au concours
+
+__Définition__ : _Nombre de postes de Maître de Conférences ouverts au concours 
+en sessions synchronisée et au fil de l'eau._
+:::
+
+::: {.datapageviz data-latex=''}
+
+```{r nbpostes}
+plot_metrique_MCF_all("Concours.Postes.MCF","Postes","Nombre de postes MCF ouverts au concours",percentlab=FALSE)
+```
+
+:::
+::::::
+
+
 ```{r métriques, results='asis'}
 for(m in kpis) {
 cat(sep = '',"
