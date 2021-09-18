@@ -533,6 +533,7 @@ plot_sections <- function(section,groupe,gd) {
 ```
 
 ```{r sections, results='asis', cache=TRUE}
+
 #knitr::opts_chunk$set(fig.width = 12, fig.height = 7.5, out.width = "100%", fig.align = "center")
 
 metriques <- bind_rows(kpis)

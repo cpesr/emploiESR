@@ -36,7 +36,7 @@ plot_all_groupe <- function(groupeID, grandedisciplineID, metriques,
                                  (Métrique=="Période de renouvellement (ans)" & Année == "2018")), 
       hacklabels(val), NA)) %>%
     mutate(seclab = ifelse(Périmètre == "Section" & (Année == last(Année) | (Métrique=="Période de renouvellement (ans)" & Année == "2018")),
-                           Périmètre.ID, NA)) %>%
+                           as.character(Périmètre.ID), NA)) %>%
       { if(norm)
       group_by(., Périmètre.ID,Métrique) %>% 
         mutate(val = val / first(val) * 100) %>%
@@ -64,15 +64,15 @@ plot_all_groupe <- function(groupeID, grandedisciplineID, metriques,
     theme(axis.text.x = element_text(angle = 45, vjust = 1, hjust=1)) +
     guides(color="none")
 }
-
-plot_all_groupe("1","DEG",
-                 metriques = c("Qualification.Candidats.MCF","Qualification.Qualifiés.MCF",
-                   "Concours.Candidats.MCF","Concours.Recrutés.MCF"),
-                 labs = c("Candidats qualification","Candidats qualifiés",
-                          "Candidats concours","Candidats recrutés"),
-                 facet_nrow = 2,
-                 norm=FALSE,
-                 colors = séries.MCF.palette)
+# 
+# plot_all_groupe(5,"ST",
+#                  metriques = c("Qualification.Candidats.MCF","Qualification.Qualifiés.MCF",
+#                    "Concours.Candidats.MCF","Concours.Recrutés.MCF"),
+#                  labs = c("Candidats qualification","Candidats qualifiés",
+#                           "Candidats concours","Candidats recrutés"),
+#                  facet_nrow = 2,
+#                  norm=FALSE,
+#                  colors = séries.MCF.palette)
 
 # metriques <- bind_rows(kpis)
 # 
