@@ -31,22 +31,23 @@ plot_all_groupe <- function(groupeID, grandedisciplineID, metriques,
       values_to = "val"
     ) %>% 
     mutate(Métrique = factor(Métrique, levels=metriques, labels=labs)) %>%
+    mutate(seclab = ifelse(Périmètre == "Section" & (Année == last(Année) | (Métrique=="Période de renouvellement (ans)" & Année == "2018")),
+                           as.character(Périmètre.ID), NA)) %>%
+      { if(norm)
+      group_by(., Périmètre, Périmètre.ID, Métrique) %>% 
+        mutate(val = val / first(val) * 100) %>%
+        mutate(Périmètre.ID = paste(Périmètre.ID,"(base 100)"))
+      else . } %>% 
     mutate(lab = ifelse(
       Périmètre == "Groupe" & ((Année == first(Année) | Année == last(Année)) |
                                  (Métrique=="Période de renouvellement (ans)" & Année == "2018")), 
       hacklabels(val), NA)) %>%
-    mutate(seclab = ifelse(Périmètre == "Section" & (Année == last(Année) | (Métrique=="Période de renouvellement (ans)" & Année == "2018")),
-                           as.character(Périmètre.ID), NA)) %>%
-      { if(norm)
-      group_by(., Périmètre.ID,Métrique) %>% 
-        mutate(val = val / first(val) * 100) %>%
-        mutate(Périmètre.ID = paste(Périmètre.ID,"(base 100)"))
-      else . } %>% 
     
+        
     ggplot(aes(x=Année,y=val,color=Métrique)) +
     geom_line(aes(group=paste(Périmètre,Périmètre.ID), linetype=Périmètre), se=FALSE) + 
     geom_point(aes(alpha=Périmètre)) +
-    { if(labels) ggrepel::geom_text_repel(aes(label=seclab), size=4*sizemult, direction="y") } +
+    { if(labels) ggrepel::geom_text_repel(aes(label=seclab), size=4*sizemult, direction="y", color = "grey") } +
     { if(labels) geom_label(aes(label=lab), size=5*sizemult, fontface="bold", direction="y") } +
     facet_wrap(Métrique~.,nrow=facet_nrow, 
                scales=ifelse(norm,"fixed","free_y"), 
@@ -64,14 +65,14 @@ plot_all_groupe <- function(groupeID, grandedisciplineID, metriques,
     theme(axis.text.x = element_text(angle = 45, vjust = 1, hjust=1)) +
     guides(color="none")
 }
-# 
-# plot_all_groupe(5,"ST",
+
+# plot_all_groupe(1,"DEG",
 #                  metriques = c("Qualification.Candidats.MCF","Qualification.Qualifiés.MCF",
 #                    "Concours.Candidats.MCF","Concours.Recrutés.MCF"),
 #                  labs = c("Candidats qualification","Candidats qualifiés",
 #                           "Candidats concours","Candidats recrutés"),
 #                  facet_nrow = 2,
-#                  norm=FALSE,
+#                  norm=TRUE,
 #                  colors = séries.MCF.palette)
 
 # metriques <- bind_rows(kpis)
