@@ -38,7 +38,7 @@ plot_evolution_EC <- function(périm="Ensemble") {
     ggplot(aes(x=Année,y=val,fill=Série)) + 
     geom_col(position="dodge") + 
     facet_wrap(Périmètre.ID~.) +
-    xlab("") + ylab("Evolution annuelle des effectifs enseignant-chercheur")
+    xlab("") + ylab("Evolution annuelle des effectifs EC")
 }
 
 p_contexte.evol <- plot_evolution_EC() 
