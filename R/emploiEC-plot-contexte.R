@@ -10,16 +10,16 @@ emploisEC <- emploisEC %>%
 p_contexte_etu <- plot_metrique("Effectif.ETU.k", métriquelab = "Etudiants (milliers)", périm = c("Ensemble","Grande discipline"), norm = FALSE, facetting = FALSE, sizemul=context_sizemul)
 p_contexte_etu.norm <- plot_metrique("Effectif.ETU.k", métriquelab = "Etudiants (base 100)", périm = c("Ensemble","Grande discipline"), norm = TRUE, facetting = FALSE, sizemul=context_sizemul)
 
-p_contexte_te <- plot_metrique("Contexte.TauxEncadrement", métriquelab = "Taux d'encadrement", périm = c("Ensemble","Grande discipline"), norm = FALSE, facetting = FALSE, sizemul=context_sizemul)
-p_contexte_te.norm <- plot_metrique("Contexte.TauxEncadrement", métriquelab = "Taux d'encadrement (base 100)", périm = c("Ensemble","Grande discipline"), norm = TRUE, facetting = FALSE, sizemul=context_sizemul)
+p_contexte_te <- plot_metrique("Contexte.TauxEncadrement", métriquelab = "Taux d'encadrement", périm = c("Ensemble","Grande discipline"), norm = FALSE, facetting = FALSE, sizemul=context_sizemul, maxannée = "2018")
+p_contexte_te.norm <- plot_metrique("Contexte.TauxEncadrement", métriquelab = "Taux d'encadrement (base 100)", périm = c("Ensemble","Grande discipline"), norm = TRUE, facetting = FALSE, sizemul=context_sizemul, maxannée = "2018")
 
 
 levels_context <- c("Effectif.EC","Effectif.ETU","Contexte.TauxEncadrement")
 labs_context <- c("Effectif EC","Effectif étudiant","Taux d'encadrement")
 palette_context <- setNames(RColorBrewer::brewer.pal(3, "Set2"), labs_context)
 
-p_contexte_ec.etu.te <- plot_series(levels_context, labs_context, périm="Ensemble",norm=TRUE, colors=palette_context, normbreaks = seq(50,150,5))
-p_contexte_ec.etu.te.disc <- plot_series(levels_context, labs_context, périm="Grande discipline",norm=TRUE, colors=palette_context) + theme_cpesr()
+p_contexte_ec.etu.te <- plot_series(levels_context, labs_context, périm="Ensemble",norm=TRUE, colors=palette_context, normbreaks = seq(50,150,5), sizemul=context_sizemul, maxannée = "2018")
+p_contexte_ec.etu.te.disc <- plot_series(levels_context, labs_context, périm="Grande discipline",norm=TRUE, colors=palette_context, sizemul=context_sizemul, maxannée = "2018") + theme_cpesr()
 
 
 
@@ -44,12 +44,43 @@ plot_evolution_EC <- function(périm="Ensemble") {
 p_contexte.evol <- plot_evolution_EC() 
 p_contexte.evol.disc <- plot_evolution_EC(périm="Grande discipline") 
 
+### Emplois longs
 
+plot_emplois_long <- function() {
+
+  postes <- read.csv2("../data/cpesr-emplois-cnu-mcf-qualification-recrutement.csv") %>%
+    left_join(cnu.sections) %>%
+    filter(!is.na(PostesPublies.MCF)) %>%
+    group_by(Année = Annee, GrandeDisciplineCNU.ID) %>%
+    summarise(Concours.Postes.MCF = sum(PostesPublies.MCF,na.rm = TRUE)) 
+  
+  postes.tot <- postes %>%
+    group_by(Année) %>%
+    summarise(Concours.Postes.MCF = sum(Concours.Postes.MCF,na.rm = TRUE)) %>%
+    ungroup() %>%
+    mutate(evol = round(Concours.Postes.MCF / first(Concours.Postes.MCF) * 100))
+    
+  ggplot(postes, aes(x=Année, y=Concours.Postes.MCF)) +
+    geom_col(aes(fill=factor(GrandeDisciplineCNU.ID,levels=rev(levels_gdcnu)))) +
+    geom_text(data=postes.tot, aes(label=Concours.Postes.MCF), color="black", vjust=-0.3) +
+    geom_text(data=postes.tot, aes(label=evol), color="white", vjust=1.3) +
+    xlab("") + ylab("Nombre de postes MCF ouverts") +
+    scale_fill_manual(breaks=rev(levels_gdcnu[-1]), values=rev(palette_gdcnu[-1]), name="")
+}
+
+plot_emplois_long()
+
+
+
+### Descriptions
 
 description.contexte=list(
   "global"=
-"Le nombre de recutements d'enseignants-chercheurs est un flux partiel des stocks
-d'enseignants universitaires. Il ne permet donc pas de saisir à lui seul l'évolution 
+"Le nombre de postes de Maîtres de conférences (MCF) ouverts au concours 
+reoprésente le nombre de recrutements de nouveaux enseignants-chercheurs titulaires.
+
+C'est un flux partiel des stocks d'enseignants universitaires. 
+Il ne permet donc pas de saisir à lui seul l'évolution 
 des effectifs enseignants, et notamment donc d'être comparé à l'évolution des
 effectifs étudiants. C'est pourquoi une mise en contexte est nécessaire. 
 ",

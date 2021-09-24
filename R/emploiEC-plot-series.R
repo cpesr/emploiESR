@@ -2,11 +2,12 @@
 labeller_100 <- function(x)  paste(x, "(base 100)")
 
 plot_series <- function(métriques, métriqueslab, périm=NULL, périmid=NULL, norm=FALSE, labels=TRUE, sizemult=1,
-                        colors=séries.MCF.palette, normbreaks=seq(50,150,25)) {
+                        colors=séries.MCF.palette, normbreaks=seq(50,150,25), maxannée = "2030") {
   
   labellerfun <- ifelse(norm,labeller_100,identity)
   
   emploisEC %>%
+    filter(as.character(Année) <= maxannée) %>%
     { if(!is.null(périm)) filter(.,Périmètre == périm) else . } %>%
     { if(!is.null(périmid)) filter(.,Périmètre.ID == périmid) else . } %>%
     select("Année","Périmètre.ID",all_of(métriques))%>%

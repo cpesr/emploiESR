@@ -6,11 +6,12 @@ labeller_100 <- function(x) paste(x, "(base 100)")
 
 plot_metrique <- function(métrique, métriquelab = "Valeur", périm="Ensemble", 
                           norm=FALSE, labels=TRUE, sizemult=1, percentlab=FALSE,
-                          facetting=TRUE) {
+                          facetting=TRUE, maxannée = "2030") {
   
   labellerfun <- ifelse(norm,labeller_100,identity)
   
   emploisEC %>%
+    filter(as.character(Année) <= maxannée) %>%
     filter(Périmètre %in% périm) %>%
     mutate(val = !!as.name(métrique)) %>%
     filter(!is.na(val) & val != 0) %>%

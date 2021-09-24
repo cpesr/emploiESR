@@ -58,25 +58,34 @@ L’âge moyen de départ à la retraite est de 63 ans[5].
 
 ### Méthodologie
 
+Ce document constitue un travail de traitement et de représentation de
+données ouvertes. Ces traitements et représentations, aussi bien que les
+données sources, peuvent faire l’objet d’erreurs, y compris
+d’interprétation.
+
+La plus grande prudence dans leur utilisation est indispensable.
+
+Traitements et données : <https://github.com/cpesr/emploiESR/>
+
 ## Présentation des données
 
 Les données temporelles sont systématiquement présentées sous quatre
 formes :
 
 -   `Ensemble` : toutes disciplines confondues ;
--   `Ensemble en base 100` : toutes disciplines confondues, en base 100
-    pour la première année ;
+-   `Ensemble en base 100` : ensemble, en base 100 pour la première
+    année ;
 -   `Disciplinaire` : par grandes disciplines du CNU ;
--   `Disciplinaire en base 100` : par grandes disciplines du CNU, en
-    base 100 pour la première année.
+-   `Disciplinaire en base 100` : disciplinaire, en base 100 pour la
+    première année.
 
 Les grandes disciplines du CNU sont :
 
 -   `DEG` : Droit, Economie, Gestion ;
 -   `LLASHS` : Lettres, Langues, Arts, Sciences Humaines et Sociales ;
 -   `Pharma` : Pharmacie ;
--   `ST` : Sciences et Technologies, parfois aussi appelée `SI`,
-    Sciences et sciences de l’Ingénieur.
+-   `ST` : Sciences et Technologies (aussi appelée `SI`, Sciences et
+    sciences de l’Ingénieur).
 
 Les disciplines de santé et médecine ont un système de recrutement
 différent qui n’est pas traité dans ce document.
@@ -89,12 +98,11 @@ différent qui n’est pas traité dans ce document.
     -   [Bilans de campagne de
         recrutement](https://www.enseignementsup-recherche.gouv.fr/cid118435/personnels-enseignants-du-superieur-bilans-et-statistiques.html#recrutement)
 -   Données agrégées :
-    -   [cpesr-emplois-cnu-qualification-concours.csv](../data/cpesr-emplois-cnu-qualification-concours.csv)
-    -   [cpesr-emplois-ec.csv](cpesr-emplois-ec.csv)
+    -   [cpesr-emplois-cnu-qualification-concours.csv](https://github.com/cpesr/emploiESR/tree/main/data/data/cpesr-emplois-cnu-qualification-concours.csv)
+    -   [cpesr-emplois-ec.csv](https://github.com/cpesr/emploiESR/tree/main/data/cpesr-emplois-ec.csv)
 -   Autres données :
     -   [Les enseignants titulaires dans les établissements publics de
-        l’enseignement
-        supérieur](https://data.enseignementsup-recherche.gouv.fr/explore/dataset/fr-esr-enseignants-titulaires-esr-public/export/?flg=fr&disjunctive.annee)
+        l’ESR](https://data.enseignementsup-recherche.gouv.fr/explore/dataset/fr-esr-enseignants-titulaires-esr-public/export/?flg=fr&disjunctive.annee)
     -   [Statistiques sur les effectifs d’étudiants inscrits par
         établissement public sous tutelle du ministère en charge de
         l’Enseignement supérieur (hors doubles inscriptions
@@ -121,6 +129,8 @@ différent qui n’est pas traité dans ce document.
 4.  Correction des erreurs détectées :
     -   Inversion du nombre de candidats en 2019 entre les groupes
         Pharma. et ST ;
+    -   Erreur manifeste dans le nombre de candidats en 2018 pour le
+        groupe 10 ;
     -   Changement de méthodologie pour les candidats à la qualification
         entre les fiches 2013 (candidatures totales) et 2015
         (candidatures recevables seulement) :
@@ -140,20 +150,23 @@ différent qui n’est pas traité dans ce document.
     ;
 7.  Production de ce rapport.
 
-## Avertissement global
+## Note sur les qualifications multiples
 
-Ce document constitue un travail de traitement et de représentation de
-données ouvertes. Ces traitements et représentations, aussi bien que les
-données sources, peuvent faire l’objet d’erreurs, y compris
-d’interprétation.
+Une proportion non négligeable de candidats postule dans plusieurs
+sections. Les candidats dans ce cas apparaissent dans les données une
+fois par section, une fois par grande discipline, et une fois dans
+l’ensemble. Ceci explique que la somme du nombre de candidats par
+section ne correspond pas au nombre de candidats par grande discipline
+et dans l’ensemble.
 
-La plus grande prudence dans leur utilisation est indispensable.
-
-La totalité des données et traitements est disponible à l’adresse :
-
-<https://github.com/cpesr/emploiESR/>
+En revanche, les postes ne sont comptabilisés que pour une seule
+section, et les sommes sont cohérentes.
 
 ## Contexte
+
+### Nombre de postes de MCF ouverts au concours
+
+<img src="emploiEC_files/figure-gfm/contexte_postes-1.png" width="768" />
 
 ### Effectifs enseignants-chercheurs titulaires
 
@@ -182,9 +195,6 @@ d’enseignants-chercheurs titulaires pour 100 étudiants.
 Ce taux est (très) approximatif pour les séries disciplinaires, puisque
 les étudiants dans une discipline donnée ont des enseignants venus
 d’autres disciplines, ce que ne permet pas de détecter les données.
-
-En particulier, le taux `LLASHS` doit être pris avec beaucoup de
-précaution.
 
 <img src="emploiEC_files/figure-gfm/p_contexte_te-1.png" width="768" />
 
@@ -217,11 +227,12 @@ Les principales séries de données utilisées dans ce document sont :
 -   `Candidats qualififés` : nombre de docteurs ayant été qualifiés dans
     l’année ;
 -   `Candidats au concours` : nombre de qualifiés (pas nécessairement
-    dans l’année) ayant participé au concours dans l’année ;
--   `Postes publiés` : nombre de postes ouverts au concours dans l’année
-    ;
--   `Candidats recrutés` : nombre de candidats au concours qui
-    obtiennent finalement un poste.
+    dans l’année) ayant participé au concours Maîtres de Conférences
+    (MCF) dans l’année ;
+-   `Postes publiés` : nombre de postes de Maîtres de Conférences (MCF)
+    ouverts au concours dans l’année ;
+-   `Candidats recrutés` : nombre de candidats au concours Maîtres de
+    Conférents (MCF) qui obtiennent finalement un poste.
 
 ### Toutes disciplines confondues
 

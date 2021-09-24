@@ -19,15 +19,17 @@ options(tidyverse.quiet = TRUE)
 
 emploisEC <- read.csv2("../data/cpesr-emploi-ec.csv", stringsAsFactors = TRUE) %>%
   mutate(Année = as.factor(Année))
+cnu.sections <- read.csv2("../data/cpesr-cnu-sections.csv")
 
 
-# source("../R/emploiEC.R",chdir=TRUE)
 source("../R/emploiEC-metriques.R")
 source("../R/emploiEC-plot-series.R")
 source("../R/emploiEC-plot-metrique.R")
 source("../R/emploiEC-plot-flux.R")
 source("../R/emploiEC-plot-sections.R")
+source("../R/emploiEC-plot-groupes.R")
 source("../R/emploiEC-plot-contexte.R")
+
 
 theme_cpesr_setup(authors = "Julien Gossa, Florent Figon", source = "https://github.com/cpesr/emploiESR")
 
@@ -49,6 +51,16 @@ Une version plus complète du rapport est disponible [ici](cpesr-emploiEC-rappor
 
 
 ## Contexte
+
+
+### Nombre de postes de MCF ouverts au concours
+
+`r description.contexte$general`
+
+```{r contexte_postes}
+plot_emplois_long() + cpesr_cap() 
+```
+
 
 ### Effectifs enseignants-chercheurs titulaires
 

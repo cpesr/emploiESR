@@ -133,3 +133,5 @@ check_emploisEC() %>% filter(nb_lignes != 11)
 
 write.csv2(emploisEC, "../data/cpesr-emploi-ec.csv", row.names = FALSE)
 
+
+

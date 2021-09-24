@@ -19,7 +19,7 @@ classoption: landscape, legalpaper
 ---
 
 ```{r setup, include=FALSE, warning = FALSE}
-knitr::opts_chunk$set(echo = FALSE, warning = FALSE)
+knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message=FALSE)
 knitr::opts_chunk$set(fig.width = 10, fig.height = 7.5, out.width = "100%", fig.align = "center")
 knitr::opts_chunk$set(dev = "cairo_pdf")
 knitr::opts_chunk$set(pdf.options(encoding = "CP1250"))
@@ -107,10 +107,42 @@ knitr::include_graphics("files/589px-Knowledge-Reid-Highsmith.png")
 
 ```
 
+
+
 :::::: {.datapage data-latex=""}
 
 ::: {.datapagecom data-latex=""}
 ## Contexte
+
+### Nombre de postes de MCF ouverts au concours (série longue)
+
+`r description.contexte$global`
+
+```{=latex}
+\footnotesize
+```
+
+\ 
+
+
+Notes :
+```{r child="../data/cpesr-emplois-cnu-mcf-qualification-recrutement.md"}
+```
+
+:::
+
+::: {.datapageviz data-latex=""}
+```{r contexte.postes}
+plot_emplois_long()  + theme(legend.position = "top")
+```
+:::
+::::::
+
+
+
+:::::: {.datapage data-latex=""}
+
+::: {.datapagecom data-latex=""}
 
 ### Effectifs enseignants-chercheurs titulaires
 
