@@ -162,7 +162,7 @@ et dans l’ensemble.
 En revanche, les postes ne sont comptabilisés que pour une seule
 section, et les sommes sont cohérentes.
 
-    - twtexte:[#DataESR] \u1F4CA \u1F4C9 L'entrée dans la carrière des enseignants-chercheurs en chiffres
+    - twtexte:[#DataESR] \U0001F4CA \U0001F4C9 L'entrée dans la carrière des enseignants-chercheurs en chiffres
     - twalt:@ffigon @juliengossa LO 2.0 www.cpesr.fr
     - twurl:https://twitter.com/CPESR_/status/1442047467042877442
 
