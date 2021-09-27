@@ -66,7 +66,7 @@ Une version plus complète du rapport est disponible [ici](cpesr-emploiEC-rappor
 `r description.contexte$general`
 
 ```{r contexte_postes}
-plot_emplois_long() + cpesr_cap() + ggtitle("Nombre de postes de Maîtres de conférences ouverts au concours par an") + coord_cartesian(clip = "off")
+plot_emplois_long() + cpesr_cap() + ggtitle("Nombre de postes de Maîtres de conférences ouverts au concours par an") + coord_cartesian(clip = "off")  + theme(plot.margin = margin(0.5, 0.5, 0.5, 0.5, "cm"))
 ```
 
 
