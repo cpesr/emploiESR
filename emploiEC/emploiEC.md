@@ -162,9 +162,13 @@ et dans l’ensemble.
 En revanche, les postes ne sont comptabilisés que pour une seule
 section, et les sommes sont cohérentes.
 
+    - twtexte:[#DataESR] \u1F4CA \u1F4C9 L'entrée dans la carrière des enseignants-chercheurs en chiffres
+    - twalt:@ffigon @juliengossa LO 2.0 www.cpesr.fr
+    - twurl:https://twitter.com/CPESR_/status/1442047467042877442
+
 ## Contexte
 
-### Nombre de postes de MCF ouverts au concours
+### Nombre de postes de MCF ouverts au concours par an
 
 <img src="emploiEC_files/figure-gfm/contexte_postes-1.png" width="768" />
 
@@ -181,7 +185,7 @@ CNU. \`
 
 <img src="emploiEC_files/figure-gfm/contexte_ec-1.png" width="768" />
 
-### Effectifs étudiants
+### Effectifs étudiants dans le périmètre du MESRI
 
 <img src="emploiEC_files/figure-gfm/p_contexte_etu-1.png" width="768" />
 
@@ -200,11 +204,13 @@ d’autres disciplines, ce que ne permet pas de détecter les données.
 
 <img src="emploiEC_files/figure-gfm/p_contexte_te.norm-1.png" width="768" />
 
+### Evolution des effectifs étudiants et enseignants-chercheurs titulairs et taux d’encadrement
+
 <img src="emploiEC_files/figure-gfm/p_contexte_ec.etu.te-1.png" width="768" />
 
 <img src="emploiEC_files/figure-gfm/p_contexte_ec.etu.te.disc-1.png" width="768" />
 
-### Evolution de l’effectif enseignant-chercheur titulaire
+### Evolutions réelles et nécessaires des effectifs enseignant-chercheur titulaire pour maintenant le taux d’encadrement de 2009
 
 L’évolution annuelle des effectifs indique la différence d’une année sur
 l’autre du nombre d’enseignants-chercheurs titulaires sur l’ensemble du
@@ -234,13 +240,13 @@ Les principales séries de données utilisées dans ce document sont :
 -   `Candidats recrutés` : nombre de candidats au concours Maîtres de
     Conférents (MCF) qui obtiennent finalement un poste.
 
-### Toutes disciplines confondues
+### Principales séries de données à propos du recrutement des MCF
 
 <img src="emploiEC_files/figure-gfm/etapes.tout-1.png" width="768" />
 
 <img src="emploiEC_files/figure-gfm/etapes.tout.norm-1.png" width="768" />
 
-### Par secteur disciplinaire
+### Principales séries de données à propos du recrutement des MCF par secteur disciplinaire
 
 <img src="emploiEC_files/figure-gfm/etapes.discipline-1.png" width="768" />
 
@@ -248,7 +254,7 @@ Les principales séries de données utilisées dans ce document sont :
 
 ## Représentation des flux
 
-#### Représentation en colonne
+#### Effectifs aux différentes étapes de la sélection lors du recrutement des MCF : représentation en colonnes
 
 Représentation en colonnes des effectifs aux différentes étapes du
 recrutement des enseignants-chercheurs, pour la dernière année
@@ -260,7 +266,7 @@ Cette représentation propose un profil visuel de la sélection.
 
 <img src="emploiEC_files/figure-gfm/flux.col.discipline-1.png" width="768" />
 
-#### Diagramme de Sankey
+#### Effectifs aux différentes étapes de la sélection lors du recrutement des MCF : diagramme de Sankey
 
 Représentation en flux des effectifs aux différentes étapes du
 recrutement des enseignants-chercheurs, pour la dernière année
@@ -273,7 +279,7 @@ concours.
 
 <img src="emploiEC_files/figure-gfm/flux.alluvial.discipline-1.png" width="768" />
 
-#### Représentation en segments
+#### Effectifs aux différentes étapes de la sélection lors du recrutement des MCF : représentation en segments
 
 Représentation en segments des effectifs aux différentes étapes du
 recrutement des enseignants-chercheurs, pour toutes les années
@@ -313,7 +319,10 @@ Le risque systémique principal est « l’effet accordéon » : des périodes
 avec très peu de postes pour beaucoup de candidats, suivies de périodes
 avec beaucoup de postes pour très peu de candidats.
 
-<img src="emploiEC_files/figure-gfm/metriques-1.png" width="768" /><img src="emploiEC_files/figure-gfm/metriques-2.png" width="768" /><img src="emploiEC_files/figure-gfm/metriques-3.png" width="768" /><img src="emploiEC_files/figure-gfm/metriques-4.png" width="768" />
+<img src="emploiEC_files/figure-gfm/metriques-1.png" width="768" />
+<img src="emploiEC_files/figure-gfm/metriques-2.png" width="768" />
+<img src="emploiEC_files/figure-gfm/metriques-3.png" width="768" />
+<img src="emploiEC_files/figure-gfm/metriques-4.png" width="768" />
 
 ### Taux de réussite à l’entrée dans la carrière d’enseignant-chercheur
 
@@ -330,7 +339,10 @@ Le taux de réussite est proche de l’inverse du taux de tension :
 
 Les mêmes observations s’appliquent qu’au Taux de tension.
 
-<img src="emploiEC_files/figure-gfm/metriques-5.png" width="768" /><img src="emploiEC_files/figure-gfm/metriques-6.png" width="768" /><img src="emploiEC_files/figure-gfm/metriques-7.png" width="768" /><img src="emploiEC_files/figure-gfm/metriques-8.png" width="768" />
+<img src="emploiEC_files/figure-gfm/metriques-5.png" width="768" />
+<img src="emploiEC_files/figure-gfm/metriques-6.png" width="768" />
+<img src="emploiEC_files/figure-gfm/metriques-7.png" width="768" />
+<img src="emploiEC_files/figure-gfm/metriques-8.png" width="768" />
 
 ### Candidats sans poste à l’entrée dans la carrière d’enseignant-chercheur
 
@@ -341,7 +353,10 @@ recrutement potentiel. Il varie en fonction de l’attractivité des
 carrières et du nombre de postes ouverts au concours, mais aussi des
 opportunités d’embauche en dehors du milieu académique.
 
-<img src="emploiEC_files/figure-gfm/metriques-9.png" width="768" /><img src="emploiEC_files/figure-gfm/metriques-10.png" width="768" /><img src="emploiEC_files/figure-gfm/metriques-11.png" width="768" /><img src="emploiEC_files/figure-gfm/metriques-12.png" width="768" />
+<img src="emploiEC_files/figure-gfm/metriques-9.png" width="768" />
+<img src="emploiEC_files/figure-gfm/metriques-10.png" width="768" />
+<img src="emploiEC_files/figure-gfm/metriques-11.png" width="768" />
+<img src="emploiEC_files/figure-gfm/metriques-12.png" width="768" />
 
 ### Taux de sélection à l’entrée dans la carrière d’enseignant-chercheur
 
@@ -356,7 +371,10 @@ l’année, et les candidats ne sont pas forcément qualifiés dans l’année,
 mais cette mesure est moins sensible à l’accumulation de candidats sans
 postes qui recandidatent.
 
-<img src="emploiEC_files/figure-gfm/metriques-13.png" width="768" /><img src="emploiEC_files/figure-gfm/metriques-14.png" width="768" /><img src="emploiEC_files/figure-gfm/metriques-15.png" width="768" /><img src="emploiEC_files/figure-gfm/metriques-16.png" width="768" />
+<img src="emploiEC_files/figure-gfm/metriques-13.png" width="768" />
+<img src="emploiEC_files/figure-gfm/metriques-14.png" width="768" />
+<img src="emploiEC_files/figure-gfm/metriques-15.png" width="768" />
+<img src="emploiEC_files/figure-gfm/metriques-16.png" width="768" />
 
 ### Taux de sélection par la qualification à l’entrée dans la carrière d’enseignant-chercheur
 
@@ -365,7 +383,10 @@ Définition : nombre de qualifiés par candidats à la qualification.
 Le taux de sélection par la qualification mesure la part des lauréats
 lors de cette étape de sélection.
 
-<img src="emploiEC_files/figure-gfm/metriques-17.png" width="768" /><img src="emploiEC_files/figure-gfm/metriques-18.png" width="768" /><img src="emploiEC_files/figure-gfm/metriques-19.png" width="768" /><img src="emploiEC_files/figure-gfm/metriques-20.png" width="768" />
+<img src="emploiEC_files/figure-gfm/metriques-17.png" width="768" />
+<img src="emploiEC_files/figure-gfm/metriques-18.png" width="768" />
+<img src="emploiEC_files/figure-gfm/metriques-19.png" width="768" />
+<img src="emploiEC_files/figure-gfm/metriques-20.png" width="768" />
 
 ### Taux de sélection par le concours à l’entrée dans la carrière d’enseignant-chercheur
 
@@ -374,7 +395,10 @@ Définition : nombre de recrutés par qualifiés.
 Le taux de sélection par le concours mesure la part des lauréats lors de
 cette étape de sélection.
 
-<img src="emploiEC_files/figure-gfm/metriques-21.png" width="768" /><img src="emploiEC_files/figure-gfm/metriques-22.png" width="768" /><img src="emploiEC_files/figure-gfm/metriques-23.png" width="768" /><img src="emploiEC_files/figure-gfm/metriques-24.png" width="768" />
+<img src="emploiEC_files/figure-gfm/metriques-21.png" width="768" />
+<img src="emploiEC_files/figure-gfm/metriques-22.png" width="768" />
+<img src="emploiEC_files/figure-gfm/metriques-23.png" width="768" />
+<img src="emploiEC_files/figure-gfm/metriques-24.png" width="768" />
 
 ### Equilibre de la sélection qualification/concours à l’entrée dans la carrière d’enseignant-chercheur
 
@@ -386,7 +410,10 @@ la sélection à l’entrée de la carrière d’enseignant-chercheur : à 50%,
 qualification et concours ont la même part ; plus le taux est élevé,
 plus le concours occupe une grande part.
 
-<img src="emploiEC_files/figure-gfm/metriques-25.png" width="768" /><img src="emploiEC_files/figure-gfm/metriques-26.png" width="768" /><img src="emploiEC_files/figure-gfm/metriques-27.png" width="768" /><img src="emploiEC_files/figure-gfm/metriques-28.png" width="768" />
+<img src="emploiEC_files/figure-gfm/metriques-25.png" width="768" />
+<img src="emploiEC_files/figure-gfm/metriques-26.png" width="768" />
+<img src="emploiEC_files/figure-gfm/metriques-27.png" width="768" />
+<img src="emploiEC_files/figure-gfm/metriques-28.png" width="768" />
 
 ### Période nécessaire au renouvellement des effectifs enseignant-chercheur titulaire
 
@@ -407,7 +434,10 @@ de nécessaire pour conserver les mêmes effectifs.
 n’est pas complétée notamment par le nombre de départs et la pyramide
 des âges.
 
-<img src="emploiEC_files/figure-gfm/metriques-29.png" width="768" /><img src="emploiEC_files/figure-gfm/metriques-30.png" width="768" /><img src="emploiEC_files/figure-gfm/metriques-31.png" width="768" /><img src="emploiEC_files/figure-gfm/metriques-32.png" width="768" />
+<img src="emploiEC_files/figure-gfm/metriques-29.png" width="768" />
+<img src="emploiEC_files/figure-gfm/metriques-30.png" width="768" />
+<img src="emploiEC_files/figure-gfm/metriques-31.png" width="768" />
+<img src="emploiEC_files/figure-gfm/metriques-32.png" width="768" />
 
 [1] <https://www.conseil-national-des-universites.fr/>
 

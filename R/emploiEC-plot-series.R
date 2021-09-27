@@ -25,8 +25,8 @@ plot_series <- function(métriques, métriqueslab, périm=NULL, périmid=NULL, n
     
     ggplot(aes(x=Année,y=Nombre,color=Série)) +
     #geom_smooth(aes(group=Série), se=FALSE) +
-    geom_line(aes(group=Série)) + 
-    geom_point() +
+    geom_line(aes(group=Série), size=1*sizemult) + 
+    geom_point(size=3*sizemult) +
     { if(labels) geom_label(aes(label=lab), size=5*sizemult, fontface="bold", direction="y", show.legend=FALSE) } +
     coord_cartesian(clip="off") +
     xlab("") + ylab("") + #xlab("Année") +

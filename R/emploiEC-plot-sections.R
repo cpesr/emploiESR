@@ -42,8 +42,8 @@ plot_all_section <- function(sectionID, groupeID, grandedisciplineID, metriques,
       hacklabels(val), NA)) %>%
     
     ggplot(aes(x=Année,y=val,color=Métrique)) +
-    geom_line(aes(group=Périmètre, linetype=Périmètre), se=FALSE) + 
-    geom_point(aes(alpha=Périmètre)) +
+    geom_line(aes(group=Périmètre, linetype=Périmètre), size=sizemult, se=FALSE) + 
+    geom_point(aes(alpha=Périmètre), size=3*sizemult) +
     { if(labels) geom_label(aes(label=lab), size=5*sizemult, fontface="bold", direction="y") } +
     facet_wrap(Métrique~.,nrow=facet_nrow, 
                scales=ifelse(norm,"fixed","free_y"), 

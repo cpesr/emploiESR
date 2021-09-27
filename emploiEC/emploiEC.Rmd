@@ -33,11 +33,12 @@ source("../R/emploiEC-plot-contexte.R")
 
 theme_cpesr_setup(authors = "Julien Gossa, Florent Figon", source = "https://github.com/cpesr/emploiESR")
 
-theme_set(theme_cpesr())
+theme_set(theme_cpesr() + theme(plot.margin = margin(0.3, 0.3, 0.3, 0.3, "cm")))
 
 ```
 
 Une version plus complète du rapport est disponible [ici](cpesr-emploiEC-rapport.pdf).
+
 
 ## Introduction
 
@@ -50,15 +51,22 @@ Une version plus complète du rapport est disponible [ici](cpesr-emploiEC-rappor
 ```
 
 
+
+```
+- twtexte:[#DataESR] \u1F4CA \u1F4C9 L'entrée dans la carrière des enseignants-chercheurs en chiffres
+- twalt:@ffigon @juliengossa LO 2.0 www.cpesr.fr
+- twurl:https://twitter.com/CPESR_/status/1442047467042877442
+```
+
 ## Contexte
 
 
-### Nombre de postes de MCF ouverts au concours
+### Nombre de postes de MCF ouverts au concours par an
 
 `r description.contexte$general`
 
 ```{r contexte_postes}
-plot_emplois_long() + cpesr_cap() 
+plot_emplois_long() + cpesr_cap() + ggtitle("Nombre de postes de Maîtres de conférences ouverts au concours par an") + coord_cartesian(clip = "off")
 ```
 
 
@@ -67,21 +75,21 @@ plot_emplois_long() + cpesr_cap()
 `r description.contexte$ec``
 
 ```{r contexte_ec.norm}
-p_contexte_ec + cpesr_cap() 
+p_contexte_ec + cpesr_cap() + ggtitle("Effectifs enseignants-chercheurs titulaires")
 ```
 
 ```{r contexte_ec}
-p_contexte_ec.norm + cpesr_cap() 
+p_contexte_ec.norm + cpesr_cap() + ggtitle("Evolution des effectifs enseignants-chercheurs titulaires", subtitle="Valeur 100 pour 2009")
 ```
 
-### Effectifs étudiants 
+### Effectifs étudiants dans le périmètre du MESRI
 
 ```{r p_contexte_etu}
-p_contexte_etu + cpesr_cap() 
+p_contexte_etu + cpesr_cap() + ggtitle("Effectifs étudiants dans le périmètre du MESRI", subtitle = "en milliers")
 ```
 
 ```{r p_contexte_etu.norm}
-p_contexte_etu.norm + cpesr_cap() 
+p_contexte_etu.norm + cpesr_cap() + ggtitle("Evolution des effectifs étudiants dans le périmètre du MESRI", subtitle = "en valeur 100 pour 2009")
 ```
 
 ### Taux d'encadrement
@@ -89,27 +97,29 @@ p_contexte_etu.norm + cpesr_cap()
 `r description.contexte$te`
 
 ```{r p_contexte_te}
-p_contexte_te + cpesr_cap() 
+p_contexte_te + cpesr_cap() + ggtitle("Taux d'encadrement au MESRI", subtitle = "nombre d'enseignants-chercheurs titulaires pour 100 étudiants")
 ```
 
 ```{r p_contexte_te.norm}
-p_contexte_te.norm + cpesr_cap() 
+p_contexte_te.norm + cpesr_cap() + ggtitle("Evolution des taux d'encadrement", subtitle = "nombre d'enseignants-chercheurs titulaires pour 100 étudiants, en valeur 100 pour 2009")
 ```
 
+### Evolution des effectifs étudiants et enseignants-chercheurs titulairs et taux d'encadrement
+
 ```{r p_contexte_ec.etu.te}
-p_contexte_ec.etu.te + cpesr_cap() 
+p_contexte_ec.etu.te + cpesr_cap() + ggtitle("Evolution des effectifs étudiants et EC titulaires, et du taux d'encadrement", subtitle = "valeur 100 pour 2009")
 ```
 
 ```{r p_contexte_ec.etu.te.disc}
-p_contexte_ec.etu.te.disc  + cpesr_cap()
+p_contexte_ec.etu.te.disc  + cpesr_cap()  + ggtitle("Evolution des effectifs étudiants et EC titulaires, et des taux d'encadrement", subtitle = "valeur 100 pour 2009")
 ```
 
-### Evolution de l'effectif enseignant-chercheur titulaire
+### Evolutions réelles et nécessaires des effectifs enseignant-chercheur titulaire pour maintenant le taux d'encadrement de 2009
 
 `r description.contexte$evol`
 
 ```{r contexte.evol.etu}
-p_contexte.evol + cpesr_cap()
+p_contexte.evol + cpesr_cap() + ggtitle("Evolutions réelles et nécessaires des effectifs enseignant-chercheur titulaire", subtitle="pour maintenant le taux d'encadrement de 2009")
 ```
 
 
@@ -118,28 +128,28 @@ p_contexte.evol + cpesr_cap()
 ```{r, child="emploiEC-donnees.md"}
 ```
 
-### Toutes disciplines confondues
+### Principales séries de données à propos du recrutement des MCF
 
 ```{r etapes.tout}
-plot_series(séries.MCF, séries.MCF.lab, périm="Ensemble",norm=FALSE) + 
-  ggtitle("Principales séries de données à propos\ndu recrutement des Maîtres⋅ses de Conférences") + cpesr_cap() +
+plot_series(séries.MCF, séries.MCF.lab, périm="Ensemble",norm=FALSE, sizemult=0.7) + 
+  ggtitle("Principales séries de données à propos du recrutement des MCF") + cpesr_cap() +
   guides(color = guide_legend(nrow = 2))
 ```
 
 ```{r etapes.tout.norm}
-plot_series(séries.MCF, séries.MCF.lab, périm="Ensemble",norm=TRUE) + ggtitle("Principales séries de données à propos\ndu recrutement des Maîtres⋅ses de Conférences", subtitle = "(base 100 pour la première année)") + cpesr_cap() +
+plot_series(séries.MCF, séries.MCF.lab, périm="Ensemble",norm=TRUE, sizemult=0.7) + ggtitle("Principales séries de données à propos du recrutement des MCF", subtitle = "base 100 pour 2009") + cpesr_cap() +
   guides(color = guide_legend(nrow = 2))
 ```
 
-### Par secteur disciplinaire
+### Principales séries de données à propos du recrutement des MCF par secteur disciplinaire
 
 ```{r etapes.discipline}
-plot_series(séries.MCF, séries.MCF.lab, périm="Grande discipline",norm=FALSE) + ggtitle("Principales séries de données à propos\ndu recrutement des Maîtres⋅ses de Conférences") + cpesr_cap() +
+plot_series(séries.MCF, séries.MCF.lab, périm="Grande discipline",norm=FALSE, sizemult=0.5) + ggtitle("Principales séries de données à propos du recrutement des MCF") + cpesr_cap() +
   guides(color = guide_legend(nrow = 2))
 ```
 
 ```{r etapes.discipline.norm}
-plot_series(séries.MCF, séries.MCF.lab, périm="Grande discipline",norm=TRUE) + ggtitle("Principales séries de données à propos\ndu recrutement des Maîtres⋅ses de Conférences", subtitle = "(base 100 pour la première année)") + cpesr_cap() +
+plot_series(séries.MCF, séries.MCF.lab, périm="Grande discipline",norm=TRUE, sizemult=0.5) + ggtitle("Principales séries de données à propos du recrutement des MCF", subtitle = "base 100 pour 2009") + cpesr_cap() +
   guides(color = guide_legend(nrow = 2))
 ```
 
@@ -152,38 +162,38 @@ p3 <- plot_flux_alluvial(périm="Ensemble") + cpesr_cap()
 p4 <- plot_flux_alluvial(périm="Grande discipline", sizemult = 0.5) + cpesr_cap()
 ```
 
-#### Représentation en colonne
+#### Effectifs aux différentes étapes de la sélection lors du recrutement des MCF : représentation en colonnes
 
 `r description.flux$col`
 
 ```{r flux.col}
-p1 + ggtitle("Effectifs aux différentes étapes de la sélection lors\ndu recrutement des Maîtres⋅ses de Conférences") + cpesr_cap()
+p1 + ggtitle("Effectifs aux différentes étapes de la sélection lors du recrutement des MCF", subtitle = "en 2019") + cpesr_cap()
 ```
 
 ```{r flux.col.discipline}
-p2 + ggtitle("Effectifs aux différentes étapes de la sélection lors\ndu recrutement des Maîtres⋅ses de Conférences") + cpesr_cap()
+p2 + ggtitle("Effectifs aux différentes étapes de la sélection lors du recrutement des MCF", subtitle="en 2019") + cpesr_cap()
 ```
 
-#### Diagramme de Sankey
+#### Effectifs aux différentes étapes de la sélection lors du recrutement des MCF : diagramme de Sankey
 
 `r description.flux$alluvial`
 
 
 ```{r flux.alluvial}
-p3 + ggtitle("Effectifs aux différentes étapes de la sélection lors\ndu recrutement des Maîtres⋅ses de Conférences") + cpesr_cap()
+p3 + ggtitle("Effectifs aux différentes étapes de la sélection lors du recrutement des MCF", subtitle="en 2019") + cpesr_cap()
 ```
 
 ```{r flux.alluvial.discipline}
-p4 + ggtitle("Effectifs aux différentes étapes de la sélection lors\ndu recrutement des Maîtres⋅ses de Conférences") + cpesr_cap()
+p4 + ggtitle("Effectifs aux différentes étapes de la sélection lors du recrutement des MCF", subtitle="en 2019") + cpesr_cap()
 ```
 
 
-#### Représentation en segments
+#### Effectifs aux différentes étapes de la sélection lors du recrutement des MCF : représentation en segments
 
 ```{r}
-p1 <- plot_flux_lignes(périm="Ensemble")  + theme(legend.position = "none") + cpesr_cap()
-p2 <- plot_flux_lignes(périm="Grande discipline", sizemult = 0.5) + theme(legend.position = "none") + cpesr_cap()
-p3 <- plot_flux_lignes(périm="Ensemble", norm = TRUE) + theme(legend.position = "none") + cpesr_cap()
+p1 <- plot_flux_lignes(périm="Ensemble") + cpesr_cap()
+p2 <- plot_flux_lignes(périm="Grande discipline", sizemult = 0.5) + cpesr_cap()
+p3 <- plot_flux_lignes(périm="Ensemble", norm = TRUE)  + cpesr_cap()
 p4 <- plot_flux_lignes(périm="Grande discipline", norm = TRUE, sizemult = 0.5) + cpesr_cap()
 ```
 
@@ -191,20 +201,20 @@ p4 <- plot_flux_lignes(périm="Grande discipline", norm = TRUE, sizemult = 0.5) 
 
 
 ```{r flux.lignes}
-p1 + ggtitle("Effectifs aux différentes étapes de la sélection lors\ndu recrutement des Maîtres⋅ses de Conférences") + cpesr_cap()
+p1 + ggtitle("Effectifs aux différentes étapes de la sélection lors du recrutement des MCF", subtitle="en 2019") + cpesr_cap()
 ```
 
 ```{r flux.lignes.discipline}
-p2 + ggtitle("Effectifs aux différentes étapes de la sélection lors\ndu recrutement des Maîtres⋅ses de Conférences") + cpesr_cap()
+p2 + ggtitle("Effectifs aux différentes étapes de la sélection lors du recrutement des MCF", subtitle="en 2019") + cpesr_cap()
 ```
 
 
 ```{r flux.lignes.norm}
-p3 + ggtitle("Effectifs aux différentes étapes de la sélection lors\ndu recrutement des Maîtres⋅ses de Conférences", subtitle = "(base 100 pour la première année)") + cpesr_cap()
+p3 + ggtitle("Effectifs aux différentes étapes de la sélection lors du recrutement des MCF", subtitle="en base 100 pour 2009") + cpesr_cap()
 ```
 
 ```{r flux.lignes.discipline.norm}
-p4 + ggtitle("Effectifs aux différentes étapes de la sélection lors\ndu recrutement des Maîtres⋅ses de Conférences", subtitle = "(base 100 pour la première année)") + cpesr_cap()
+p4 + ggtitle("Effectifs aux différentes étapes de la sélection lors\ndu recrutement des Maîtres⋅ses de Conférences", subtitle = "en base 100 pour 2009") + cpesr_cap()
 ```
 
 
@@ -215,9 +225,13 @@ p4 + ggtitle("Effectifs aux différentes étapes de la sélection lors\ndu recru
 ```{r metriques, results='asis'}
 plot_metrique_all_github <- function(metrique, metriquelab = "", titre = "", ...) {
   print(plot_metrique(metrique,metriquelab, ...) + ggtitle(titre)+ cpesr_cap()) 
-  print(plot_metrique(metrique,metriquelab, norm=TRUE, ...) + ggtitle(titre, subtitle = "(base 100 pour la première année")+ cpesr_cap())
+  cat("\n")
+  print(plot_metrique(metrique,metriquelab, norm=TRUE, ...) + ggtitle(titre, subtitle = "base 100 pour 2009")+ cpesr_cap())
+  cat("\n")
   print(plot_metrique(metrique,metriquelab, périm="Grande discipline", ...) + ggtitle(titre)+ cpesr_cap()) 
-  print(plot_metrique(metrique,metriquelab, périm="Grande discipline", norm=TRUE, ...) + ggtitle(titre, subtitle = "(base 100 pour la première année")+ cpesr_cap())
+  cat("\n")
+  print(plot_metrique(metrique,metriquelab, périm="Grande discipline", norm=TRUE, ...) + ggtitle(titre, subtitle = "base 100 pour 2009")+ cpesr_cap())
+  cat("\n")
 }
   
 for(m in kpis) {

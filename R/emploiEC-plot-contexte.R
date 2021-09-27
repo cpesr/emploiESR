@@ -18,7 +18,7 @@ levels_context <- c("Effectif.EC","Effectif.ETU","Contexte.TauxEncadrement")
 labs_context <- c("Effectif EC","Effectif étudiant","Taux d'encadrement")
 palette_context <- setNames(RColorBrewer::brewer.pal(3, "Set2"), labs_context)
 
-p_contexte_ec.etu.te <- plot_series(levels_context, labs_context, périm="Ensemble",norm=TRUE, colors=palette_context, normbreaks = seq(50,150,5), sizemul=context_sizemul, maxannée = "2018")
+p_contexte_ec.etu.te <- plot_series(levels_context, labs_context, périm="Ensemble",norm=TRUE, colors=palette_context, normbreaks = seq(50,150,5), sizemul=1, maxannée = "2018")
 p_contexte_ec.etu.te.disc <- plot_series(levels_context, labs_context, périm="Grande discipline",norm=TRUE, colors=palette_context, sizemul=context_sizemul, maxannée = "2018") + theme_cpesr()
 
 
