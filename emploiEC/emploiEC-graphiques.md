@@ -1,7 +1,7 @@
 Nombre de postes depuis 2002 pour les sections CNU
 ================
 
-    - twtexte:[#DataESR] \u1F4CA \u1F4C9 Diagramme à barres Evolution du nombre de postes de Maître de conférences
+    - twtexte:[#DataESR] Evolution du nombre de postes de Maître de conférences
     - twalt:@ffigon @juliengossa LO 2.0 www.cpesr.fr
     - twurl:https://twitter.com/CPESR_/status/1442047467042877442
 

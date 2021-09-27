@@ -32,7 +32,7 @@ cnu <- read.csv2("../data/cpesr-emplois-cnu-mcf-qualification-recrutement.csv") 
 ```
 
 ```
-- twtexte:[#DataESR] \u1F4CA \u1F4C9 Evolution du nombre de postes de Maître de conférences
+- twtexte:[#DataESR] Evolution du nombre de postes de Maître de conférences
 - twalt:@ffigon @juliengossa LO 2.0 www.cpesr.fr
 - twurl:https://twitter.com/CPESR_/status/1442047467042877442
 ```
