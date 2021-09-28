@@ -46,7 +46,8 @@ la recherche de 2020[4], qui introduit plusieurs dérogations.
     candidats sont classés indépendamment sur chaque concours local. Des
     postes ouverts peuvent ne pas être pourvus, soit parce qu’aucun
     candidat n’a été classé, soit parce que tous les candidats classés
-    ont préféré un autre poste.
+    ont préféré un autre poste ou que le seul candidat s’est finalement
+    désisté.
 
 Les candidats qui acceptent un poste deviennent alors stagiaire pendant
 un an, avant d’être titularisés sous conditions.

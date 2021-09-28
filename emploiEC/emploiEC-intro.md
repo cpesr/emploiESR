@@ -35,7 +35,7 @@ peuvent candidater sur plusieurs postes, pendant toute la période de validité 
 leur qualification. Les candidats sont classés indépendamment sur chaque concours
 local. Des postes ouverts peuvent ne pas être pourvus, soit parce qu'aucun 
 candidat n'a été classé, soit parce que tous les candidats classés ont préféré un
-autre poste. 
+autre poste ou que le seul candidat s'est finalement désisté. 
 
 Les candidats qui acceptent un poste deviennent alors stagiaire pendant un an,
 avant d'être titularisés sous conditions. 
