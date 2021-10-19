@@ -16,7 +16,7 @@ Emploi dans l’ESR
 -   Source :
     <https://www.enseignementsup-recherche.gouv.fr/pid24672-cid85019/fiches-demographiques-des-sections-du-cnu.html>
 -   Mise à jour :19-10-2021
--   Nombre d’observations : 812
+-   Nombre d’observations : 772
 -   Variables :
     -   Périmètre
     -   Périmètre.ID

@@ -5,10 +5,10 @@
 
 urls=(
 ['2020']="
-https://www.enseignementsup-recherche.gouv.fr/cid153532/fiches-demographiques-des-sections-de-droit-2020.html
-https://www.enseignementsup-recherche.gouv.fr/cid153534/fiches-demographiques-des-sections-de-lettres-2020.html
-https://www.enseignementsup-recherche.gouv.fr/cid153536/fiches-demographiques-des-sections-de-sciences-2020.html
-https://www.enseignementsup-recherche.gouv.fr/cid153535/fiches-demographiques-des-sections-de-pharmacie-2020.html
+https://www.enseignementsup-recherche.gouv.fr/cid159553/fiches-demographiques-des-sections-de-droit-2020.htm
+https://www.enseignementsup-recherche.gouv.fr/cid159556/fiches-demographiques-des-sections-de-lettres-2020.html
+https://www.enseignementsup-recherche.gouv.fr/cid159558/fiches-demographiques-des-sections-de-sciences-2020.htm
+https://www.enseignementsup-recherche.gouv.fr/cid159559/fiches-demographiques-des-sections-de-pharmacie-2020.html
 "
 ['2019']="
 https://www.enseignementsup-recherche.gouv.fr/cid153532/fiches-demographiques-des-sections-de-droit-2019.html
