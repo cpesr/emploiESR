@@ -31,8 +31,8 @@ https://www.enseignementsup-recherche.gouv.fr/cid85105/fiches-demographiques-des
 )
 
 secnum=(['2020']=9 ['2019']=9 ['2015']=17 ['2013']=17)
-posqualif=(['2020']="313,37,493,557" ['2019']="313,37,493,557" ['2015']="313,37,493,5557" ['2013']="325,31,531,562")
-posrecrut=(['2020']="568,37,747,557" ['2019']="313,37,493,557" ['2015']="568,37,747,5557" ['2013']="595,31,797,562")
+posqualif=(['2020']="324,30,564,505" ['2019']="313,37,493,557" ['2015']="313,37,493,5557" ['2013']="325,31,531,562")
+posrecrut=(['2020']="585,30,764,567" ['2019']="313,37,493,557" ['2015']="568,37,747,5557" ['2013']="595,31,797,562")
 poscols=(
   ['2020']="75,96,119,159,183,203,227,249,289,343,367,391,429,450,470,493,518"
   ['2019']="75,96,119,159,183,203,227,249,289,343,367,391,429,450,470,493,518"
@@ -45,7 +45,7 @@ for annee in 2020; do
   #rm -rf *
   for url in ${urls[$annee]} ; do
     echo "Download $url"
-    wget -A pdf -r -l 1 -nd --span-hosts --domains=cache.media.enseignementsup-recherche.gouv.fr  -e robots=off -np $url
+    #wget -A pdf -r -l 1 -nd --span-hosts --domains=cache.media.enseignementsup-recherche.gouv.fr  -e robots=off -np $url
   done
   cd ../..
 
