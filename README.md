@@ -12,11 +12,11 @@ Emploi dans l’ESR
 ### Extraction des fiches démographiques du CNU
 
 -   Données :
-    [cpesr-cnu-qualifications](data/cpesr-cnu-qualifications.csv)
+    [cpesr-emplois-cnu-qualification-concours](data/cpesr-emplois-cnu-qualification-concours.csv)
 -   Source :
     <https://www.enseignementsup-recherche.gouv.fr/pid24672-cid85019/fiches-demographiques-des-sections-du-cnu.html>
 -   Mise à jour :19-10-2021
--   Nombre d’observations : 823
+-   Nombre d’observations : 812
 -   Variables :
     -   Périmètre
     -   Périmètre.ID
@@ -29,6 +29,16 @@ Emploi dans l’ESR
     -   Qualification.Candidats.MCF.femmes
     -   Qualification.Qualifiés.MCF
     -   Qualification.Qualifiés.MCF.femmes
+    -   Concours.Postes.PR
+    -   Concours.Candidats.PR
+    -   Concours.Candidats.PR.femmes
+    -   Concours.Recrutés.PR
+    -   Concours.Recrutés.PR.femmes
+    -   Concours.Postes.MCF
+    -   Concours.Candidats.MCF
+    -   Concours.Candidats.MCF.femmes
+    -   Concours.Recrutés.MCF
+    -   Concours.Recrutés.MCF.femmes
 
 ### Qualifications et recrutements MCF par section CNU
 

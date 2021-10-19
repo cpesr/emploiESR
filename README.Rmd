@@ -35,7 +35,7 @@ descdata <- function(file, source = "non indiquée", maj = "non indiquée") {
 
 ### Extraction des fiches démographiques du CNU 
 ```{r results='asis'}
-descdata("cpesr-cnu-qualifications",
+descdata("cpesr-emplois-cnu-qualification-concours",
          "https://www.enseignementsup-recherche.gouv.fr/pid24672-cid85019/fiches-demographiques-des-sections-du-cnu.html",
          "19-10-2021")
 ```
