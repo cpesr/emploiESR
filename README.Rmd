@@ -10,9 +10,9 @@ descdata <- function(file, source = "non indiquée", maj = "non indiquée") {
 
   df <- read.csv2(paste0("data/",file,".csv"))
 
-  cat("- Données : [",file,"](data/",file,".csv)\n") 
-  cat("- Source : ", source,"\n")
-  cat("- Mise à jour :", maj,"\n")  
+  cat("- Données : [",file,"](data/",file,".csv)\n", sep='') 
+  cat("- Source : ", source,"\n", sep='')
+  cat("- Mise à jour :", maj,"\n", sep='')
   
   cat("- Nombre d'observations : ",nrow(df),"\n")
   if("Annee" %in% names(df)) cat("- Période : ",range(df$Annee),"\n")
@@ -32,12 +32,12 @@ descdata <- function(file, source = "non indiquée", maj = "non indiquée") {
 
 ## Jeux de données 
 
-### Extraction des données Galaxie
 
+### Extraction des fiches démographiques du CNU 
 ```{r results='asis'}
-descdata("cpesr-emplois-galaxie",
-         "https://www.galaxie.enseignementsup-recherche.gouv.fr/ensup/ListesPostesPublies/Emplois_publies_TrieParCorps.html",
-         "26-02-2021")
+descdata("cpesr-cnu-qualifications",
+         "https://www.enseignementsup-recherche.gouv.fr/pid24672-cid85019/fiches-demographiques-des-sections-du-cnu.html",
+         "19-10-2021")
 ```
 
 ### Qualifications et recrutements MCF par section CNU
@@ -63,6 +63,16 @@ descdata("cpesr-emplois-mutations-flux",
          "https://www.enseignementsup-recherche.gouv.fr/cid118435/personnels-enseignants-du-superieur-bilans-et-statistiques.html",
          "23-11-2020")
 ```
+
+
+### Extraction des données Galaxie
+
+```{r results='asis'}
+descdata("cpesr-emplois-galaxie",
+         "https://www.galaxie.enseignementsup-recherche.gouv.fr/ensup/ListesPostesPublies/Emplois_publies_TrieParCorps.html",
+         "26-02-2021")
+```
+
 
 ### Sections CNU
 
