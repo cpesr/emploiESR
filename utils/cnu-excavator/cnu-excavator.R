@@ -73,7 +73,8 @@ qualif.ratio.recevabilité <- full_join(
     )
 
 qualif <- bind_rows(
-  clean_qualif("cnu-excavation-qualification-2019.csv"),
+  clean_qualif("cnu-excavation-qualification-2020.csv"),
+  #clean_qualif("cnu-excavation-qualification-2019.csv"),
   clean_qualif("cnu-excavation-qualification-2015.csv") %>% filter(Année < 2015),
   clean_qualif("cnu-excavation-qualification-2013.csv") %>% filter(Année < 2011) %>%
     left_join(qualif.ratio.recevabilité) %>%
@@ -120,7 +121,8 @@ clean_recrut <- function(csvfile) {
 clean_recrut("cnu-excavation-recrutement-2019.csv")
 
 recrut <- bind_rows(
-  clean_recrut("cnu-excavation-recrutement-2019.csv"),
+  clean_recrut("cnu-excavation-recrutement-2020.csv"),
+  #clean_recrut("cnu-excavation-recrutement-2019.csv"),
   clean_recrut("cnu-excavation-recrutement-2015.csv") %>% filter(Année < 2015),
   clean_recrut("cnu-excavation-recrutement-2013.csv") %>% filter(Année < 2011)
 ) %>% 

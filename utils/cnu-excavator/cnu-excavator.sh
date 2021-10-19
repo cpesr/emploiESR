@@ -3,7 +3,14 @@
 # Ce script nécessite tabulapdf
 # https://github.com/tabulapdf/tabula-java
 
-urls=(['2019']="
+urls=(
+['2020']="
+https://www.enseignementsup-recherche.gouv.fr/cid153532/fiches-demographiques-des-sections-de-droit-2020.html
+https://www.enseignementsup-recherche.gouv.fr/cid153534/fiches-demographiques-des-sections-de-lettres-2020.html
+https://www.enseignementsup-recherche.gouv.fr/cid153536/fiches-demographiques-des-sections-de-sciences-2020.html
+https://www.enseignementsup-recherche.gouv.fr/cid153535/fiches-demographiques-des-sections-de-pharmacie-2020.html
+"
+['2019']="
 https://www.enseignementsup-recherche.gouv.fr/cid153532/fiches-demographiques-des-sections-de-droit-2019.html
 https://www.enseignementsup-recherche.gouv.fr/cid153534/fiches-demographiques-des-sections-de-lettres-2019.html
 https://www.enseignementsup-recherche.gouv.fr/cid153536/fiches-demographiques-des-sections-de-sciences-2019.html
@@ -23,21 +30,22 @@ https://www.enseignementsup-recherche.gouv.fr/cid85105/fiches-demographiques-des
 "
 )
 
-secnum=(['2019']=9 ['2015']=17 ['2013']=17)
-posqualif=(['2019']="313,37,493,557" ['2015']="313,37,493,5557" ['2013']="325,31,531,562")
-posrecrut=(['2019']="568,37,747,557" ['2015']="568,37,747,5557" ['2013']="595,31,797,562")
+secnum=(['2020']=9 ['2019']=9 ['2015']=17 ['2013']=17)
+posqualif=(['2020']="313,37,493,557" ['2019']="313,37,493,557" ['2015']="313,37,493,5557" ['2013']="325,31,531,562")
+posrecrut=(['2020']="568,37,747,557" ['2019']="313,37,493,557" ['2015']="568,37,747,5557" ['2013']="595,31,797,562")
 poscols=(
+  ['2020']="75,96,119,159,183,203,227,249,289,343,367,391,429,450,470,493,518"
   ['2019']="75,96,119,159,183,203,227,249,289,343,367,391,429,450,470,493,518"
   ['2015']="75,96,119,159,183,203,227,249,289,343,367,391,429,450,470,493,518"
   ['2013']="68,92,114,156,177,198,223,247,288,341,365,389,428,452,473,496,522")
 
-for annee in 2013; do
+for annee in 2020; do
   mkdir -p pdf/$annee
   cd pdf/$annee
   #rm -rf *
   for url in ${urls[$annee]} ; do
     echo "Download $url"
-    #wget -A pdf -r -l 1 -nd --span-hosts --domains=cache.media.enseignementsup-recherche.gouv.fr  -e robots=off -np $url
+    wget -A pdf -r -l 1 -nd --span-hosts --domains=cache.media.enseignementsup-recherche.gouv.fr  -e robots=off -np $url
   done
   cd ../..
 
