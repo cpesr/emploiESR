@@ -10,23 +10,23 @@ emploisEC <- emploisEC %>%
 p_contexte_etu <- plot_metrique("Effectif.ETU.k", métriquelab = "Etudiants (milliers)", périm = c("Ensemble","Grande discipline"), norm = FALSE, facetting = FALSE, sizemul=context_sizemul)
 p_contexte_etu.norm <- plot_metrique("Effectif.ETU.k", métriquelab = "Etudiants (base 100)", périm = c("Ensemble","Grande discipline"), norm = TRUE, facetting = FALSE, sizemul=context_sizemul)
 
-p_contexte_te <- plot_metrique("Contexte.TauxEncadrement", métriquelab = "Taux d'encadrement", périm = c("Ensemble","Grande discipline"), norm = FALSE, facetting = FALSE, sizemul=context_sizemul, maxannée = "2018")
-p_contexte_te.norm <- plot_metrique("Contexte.TauxEncadrement", métriquelab = "Taux d'encadrement (base 100)", périm = c("Ensemble","Grande discipline"), norm = TRUE, facetting = FALSE, sizemul=context_sizemul, maxannée = "2018")
+p_contexte_te <- plot_metrique("Contexte.TauxEncadrement", métriquelab = "Taux d'encadrement", périm = c("Ensemble","Grande discipline"), norm = FALSE, facetting = FALSE, sizemul=context_sizemul, maxannée = "2020")
+p_contexte_te.norm <- plot_metrique("Contexte.TauxEncadrement", métriquelab = "Taux d'encadrement (base 100)", périm = c("Ensemble","Grande discipline"), norm = TRUE, facetting = FALSE, sizemul=context_sizemul, maxannée = "2020")
 
 
 levels_context <- c("Effectif.EC","Effectif.ETU","Contexte.TauxEncadrement")
 labs_context <- c("Effectif EC","Effectif étudiant","Taux d'encadrement")
 palette_context <- setNames(RColorBrewer::brewer.pal(3, "Set2"), labs_context)
 
-p_contexte_ec.etu.te <- plot_series(levels_context, labs_context, périm="Ensemble",norm=TRUE, colors=palette_context, normbreaks = seq(50,150,5), sizemul=1, maxannée = "2018")
-p_contexte_ec.etu.te.disc <- plot_series(levels_context, labs_context, périm="Grande discipline",norm=TRUE, colors=palette_context, sizemul=context_sizemul*0.8, maxannée = "2018") + theme_cpesr()
+p_contexte_ec.etu.te <- plot_series(levels_context, labs_context, périm="Ensemble",norm=TRUE, colors=palette_context, normbreaks = seq(50,150,5), sizemul=1, minannée = "2010")
+p_contexte_ec.etu.te.disc <- plot_series(levels_context, labs_context, périm="Grande discipline",norm=TRUE, colors=palette_context, sizemul=context_sizemul*0.8, minannée = "2010") + theme_cpesr()
 
 
 
 plot_evolution_EC <- function(périm="Ensemble") {
   emploisEC %>%
     filter(Périmètre == périm) %>%
-    filter(Année !=2019) %>%
+    filter(as.character(Année) > "2009") %>%
     group_by(Périmètre.ID) %>%
     mutate(
       Evolution.réelle = Effectif.EC - lag(Effectif.EC),
@@ -48,11 +48,18 @@ p_contexte.evol.disc <- plot_evolution_EC(périm="Grande discipline")
 
 plot_emplois_long <- function() {
 
-  postes <- read.csv2("../data/cpesr-emplois-cnu-mcf-qualification-recrutement.csv") %>%
+  postes <- read.csv2("../data/cpesr-emplois-cnu-mcf-2002-2008.csv") %>%
+    mutate(Année = factor(Année)) %>%
     left_join(cnu.sections) %>%
-    filter(!is.na(PostesPublies.MCF)) %>%
-    group_by(Année = Annee, GrandeDisciplineCNU.ID) %>%
-    summarise(Concours.Postes.MCF = sum(PostesPublies.MCF,na.rm = TRUE)) 
+    arrange(Année) %>%
+    group_by(Année, GrandeDisciplineCNU.ID) %>%
+    summarise(Concours.Postes.MCF = sum(Concours.Postes.MCF,na.rm = TRUE)) %>%
+    bind_rows(
+      emploisEC %>%
+        filter(Périmètre=="Grande discipline") %>% 
+        select(Année,GrandeDisciplineCNU.ID=Périmètre.ID,Concours.Postes.MCF)
+    ) 
+    
   
   postes.tot <- postes %>%
     group_by(Année) %>%
@@ -67,8 +74,6 @@ plot_emplois_long <- function() {
     xlab("") + ylab("Nombre de postes MCF ouverts") +
     scale_fill_manual(breaks=rev(levels_gdcnu[-1]), values=rev(palette_gdcnu[-1]), name="")
 }
-
-plot_emplois_long()
 
 
 

@@ -1,4 +1,4 @@
-Entrée dans la carrière des enseignants-chercheurs
+L’entrée dans la carrière des enseignants-chercheurs
 ================
 
 Une version plus complète du rapport est disponible
