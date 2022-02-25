@@ -263,9 +263,9 @@ plot_metrique_MCF_all <- function(métrique, métriquelab = "", titre = "", ...)
 ::: {.datapageviz data-latex=""}
 ```{r séries.tout}
 p1 <- plot_series(séries.MCF, séries.MCF.lab, périm="Ensemble",norm=FALSE)  
-p2 <- plot_series(séries.MCF, séries.MCF.lab, périm="Grande discipline",norm=FALSE) + theme_rapport_small()
+p2 <- plot_series(séries.MCF, séries.MCF.lab, périm="Grande discipline",norm=FALSE, sizemult = 0.5) + theme_rapport_small()
 p3 <- plot_series(séries.MCF, séries.MCF.lab, périm="Ensemble",norm=TRUE)
-p4 <- plot_series(séries.MCF, séries.MCF.lab, périm="Grande discipline",norm=TRUE)  + theme_rapport_small()
+p4 <- plot_series(séries.MCF, séries.MCF.lab, périm="Grande discipline",norm=TRUE, sizemult = 0.5)  + theme_rapport_small()
 
 l <- get_legend(p1 +
                   guides(color = guide_legend(nrow = 1)) +
@@ -465,7 +465,7 @@ plot_groupes <- function(groupe,gd) {
 
 ```
 
-```{r groupes, results='asis', cache=TRUE}
+```{r groupes, results='asis', cache=FALSE}
 #knitr::opts_chunk$set(fig.width = 12, fig.height = 7.5, out.width = "100%", fig.align = "center")
 cnu.gd <- cnu.sections %>% select(GrandeDisciplineCNU.ID,GroupeCNU.ID,GroupeCNU) %>% unique() %>% arrange(as.numeric(GroupeCNU.ID))
 
@@ -571,7 +571,7 @@ plot_sections <- function(section,groupe,gd) {
 
 ```
 
-```{r sections, results='asis', cache=TRUE}
+```{r sections, results='asis', cache=FALSE}
 
 #knitr::opts_chunk$set(fig.width = 12, fig.height = 7.5, out.width = "100%", fig.align = "center")
 

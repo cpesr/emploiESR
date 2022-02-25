@@ -31,7 +31,7 @@ plot_all_groupe <- function(groupeID, grandedisciplineID, metriques,
       values_to = "val"
     ) %>% 
     mutate(Métrique = factor(Métrique, levels=metriques, labels=labs)) %>%
-    mutate(seclab = ifelse(Périmètre == "Section" & (Année == last(Année) | (Métrique=="Période de renouvellement (ans)" & Année == "2018")),
+    mutate(seclab = ifelse(Périmètre == "Section" & Année == last(Année),
                            as.character(Périmètre.ID), NA)) %>%
       { if(norm)
       group_by(., Périmètre, Périmètre.ID, Métrique) %>% 
@@ -39,14 +39,13 @@ plot_all_groupe <- function(groupeID, grandedisciplineID, metriques,
         mutate(Périmètre.ID = paste(Périmètre.ID,"(base 100)"))
       else . } %>% 
     mutate(lab = ifelse(
-      Périmètre == "Groupe" & ((Année == first(Année) | Année == last(Année)) |
-                                 (Métrique=="Période de renouvellement (ans)" & Année == "2018")), 
+      Périmètre == "Groupe" & (Année == first(Année) | Année == last(Année)), 
       hacklabels(val), NA)) %>%
     
         
     ggplot(aes(x=Année,y=val,color=Métrique)) +
-    geom_line(aes(group=paste(Périmètre,Périmètre.ID), linetype=Périmètre), se=FALSE) + 
-    geom_point(aes(alpha=Périmètre)) +
+    geom_line(aes(group=paste(Périmètre,Périmètre.ID), linetype=Périmètre, alpha=Périmètre), se=FALSE) + 
+    geom_point(aes(size=Périmètre)) +
     { if(labels) ggrepel::geom_text_repel(aes(label=seclab), size=4*sizemult, direction="y", color = "grey") } +
     { if(labels) geom_label(aes(label=lab), size=5*sizemult, fontface="bold", direction="y") } +
     facet_wrap(Métrique~.,nrow=facet_nrow, 
@@ -56,6 +55,7 @@ plot_all_groupe <- function(groupeID, grandedisciplineID, metriques,
     ylab("") +
     coord_cartesian(clip="off") +
     scale_alpha_manual(values=c(1,0)) +
+    scale_size_manual(values=c(1.5,0.5)) +
     scale_linetype_manual(values=c(1,3)) +
     { if (!is.null(colors)) scale_color_manual(values=colors) } +
     #{ if(périm != "Ensemble") scale_x_discrete(breaks = seq(2001,2020,2)) } +
