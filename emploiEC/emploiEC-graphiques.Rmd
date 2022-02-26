@@ -103,6 +103,8 @@ for(s in 1:nrow(sec)) {
   section <- sec[s,1]
   sectionid <- sec[s,2]
 
+  if (sectionid > 90) break
+  
   cat(paste0("\n\n## MCF Section #CNU", sectionid," ", section,"\n"))
   print(plot_section(section, sectionid, "MCF"))
   

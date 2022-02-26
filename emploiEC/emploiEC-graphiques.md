@@ -476,27 +476,3 @@ Nombre de postes depuis 2002 pour les sections CNU
 ## PR Section \#CNU77 Théologie protestante
 
 ![](emploiEC-graphiques_files/figure-gfm/evolution.postes-116.png)<!-- -->
-
-## MCF Section \#CNU91 Sciences de la rééducation et de réadaptation
-
-![](emploiEC-graphiques_files/figure-gfm/evolution.postes-117.png)<!-- -->
-
-## PR Section \#CNU91 Sciences de la rééducation et de réadaptation
-
-![](emploiEC-graphiques_files/figure-gfm/evolution.postes-118.png)<!-- -->
-
-## MCF Section \#CNU90 NA
-
-![](emploiEC-graphiques_files/figure-gfm/evolution.postes-119.png)<!-- -->
-
-## PR Section \#CNU90 NA
-
-![](emploiEC-graphiques_files/figure-gfm/evolution.postes-120.png)<!-- -->
-
-## MCF Section \#CNU92 Sciences infirmières
-
-![](emploiEC-graphiques_files/figure-gfm/evolution.postes-121.png)<!-- -->
-
-## PR Section \#CNU92 Sciences infirmières
-
-![](emploiEC-graphiques_files/figure-gfm/evolution.postes-122.png)<!-- -->
