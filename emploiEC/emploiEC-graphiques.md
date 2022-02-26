@@ -429,50 +429,42 @@ Nombre de postes depuis 2002 pour les sections CNU
 
 ![](emploiEC-graphiques_files/figure-gfm/evolution.postes-104.png)<!-- -->
 
-## MCF Section \#CNU75 Théologie
+## MCF Section \#CNU85 Sciences physico-chimiques et ingénierie appliquée à la santé
 
 ![](emploiEC-graphiques_files/figure-gfm/evolution.postes-105.png)<!-- -->
 
-## PR Section \#CNU75 Théologie
+## PR Section \#CNU85 Sciences physico-chimiques et ingénierie appliquée à la santé
 
 ![](emploiEC-graphiques_files/figure-gfm/evolution.postes-106.png)<!-- -->
 
-## MCF Section \#CNU85 Sciences physico-chimiques et ingénierie appliquée à la santé
+## MCF Section \#CNU86 Sciences du médicament et des autres produits de santé
 
 ![](emploiEC-graphiques_files/figure-gfm/evolution.postes-107.png)<!-- -->
 
-## PR Section \#CNU85 Sciences physico-chimiques et ingénierie appliquée à la santé
+## PR Section \#CNU86 Sciences du médicament et des autres produits de santé
 
 ![](emploiEC-graphiques_files/figure-gfm/evolution.postes-108.png)<!-- -->
 
-## MCF Section \#CNU86 Sciences du médicament et des autres produits de santé
+## MCF Section \#CNU87 Sciences biologiques, fondamentales et cliniques
 
 ![](emploiEC-graphiques_files/figure-gfm/evolution.postes-109.png)<!-- -->
 
-## PR Section \#CNU86 Sciences du médicament et des autres produits de santé
+## PR Section \#CNU87 Sciences biologiques, fondamentales et cliniques
 
 ![](emploiEC-graphiques_files/figure-gfm/evolution.postes-110.png)<!-- -->
 
-## MCF Section \#CNU87 Sciences biologiques, fondamentales et cliniques
+## MCF Section \#CNU76 Théologie catholique
 
 ![](emploiEC-graphiques_files/figure-gfm/evolution.postes-111.png)<!-- -->
 
-## PR Section \#CNU87 Sciences biologiques, fondamentales et cliniques
+## PR Section \#CNU76 Théologie catholique
 
 ![](emploiEC-graphiques_files/figure-gfm/evolution.postes-112.png)<!-- -->
 
-## MCF Section \#CNU76 Théologie catholique
+## MCF Section \#CNU77 Théologie protestante
 
 ![](emploiEC-graphiques_files/figure-gfm/evolution.postes-113.png)<!-- -->
 
-## PR Section \#CNU76 Théologie catholique
-
-![](emploiEC-graphiques_files/figure-gfm/evolution.postes-114.png)<!-- -->
-
-## MCF Section \#CNU77 Théologie protestante
-
-![](emploiEC-graphiques_files/figure-gfm/evolution.postes-115.png)<!-- -->
-
 ## PR Section \#CNU77 Théologie protestante
 
-![](emploiEC-graphiques_files/figure-gfm/evolution.postes-116.png)<!-- -->
+![](emploiEC-graphiques_files/figure-gfm/evolution.postes-114.png)<!-- -->
