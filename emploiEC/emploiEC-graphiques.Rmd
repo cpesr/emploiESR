@@ -48,16 +48,16 @@ postes <- bind_rows(
 
 ## Concours de Maître de Conférences
 
-```{r ensemble.mcf, fig.width=8}
+```{r ensemble.mcf, fig.width=7, fig.asp=9/16}
 postes %>%
   filter(Corps == "MCF") %>%
   group_by(Année,Donnée,Corps) %>%
   summarise(Postes = sum(Postes, na.rm = TRUE)) %>%
   ggplot(aes(x=Année, y=Postes)) + 
-    geom_smooth(se=F) + 
-    geom_point(aes(color=Donnée),size=1) + 
+    geom_smooth(se=F, size=0.5) + 
+    geom_point(aes(color=Donnée),size=2) + 
     expand_limits(y=0) +
-    scale_color_brewer(palette = "Paired", direction = -1) +
+    scale_color_manual(values=c("blue","orange"), breaks=c("Définitive (CNU)","Temporaire (Galaxie)")) +
     theme_cpesr_cap() + 
     theme(plot.margin = margin(0.5, 0.5, 0.5, 0.5, "cm")) +
     labs(title="Postes au concours de Maître de Conférences", y ="Postes publiés", x = "Année") 
@@ -66,16 +66,16 @@ postes %>%
 ## Concours de Professeur des universités
 
 
-```{r ensemble.pr, fig.width=8}
+```{r ensemble.pr, fig.width=7, fig.asp=9/16}
 postes %>%
   filter(Corps == "PR") %>%
   group_by(Année,Donnée,Corps) %>%
   summarise(Postes = sum(Postes, na.rm = TRUE)) %>%
   ggplot(aes(x=Année, y=Postes)) + 
-    geom_smooth(se=F) + 
-    geom_point(aes(color=Donnée),size=1) + 
+    geom_smooth(se=F, size=0.5) + 
+    geom_point(aes(color=Donnée),size=2) + 
     expand_limits(y=0) +
-    scale_color_brewer(palette = "Paired", direction = -1) +
+    scale_color_manual(values=c("blue","orange"), breaks=c("Définitive (CNU)","Temporaire (Galaxie)")) +
     theme_cpesr_cap() + 
     theme(plot.margin = margin(0.5, 0.5, 0.5, 0.5, "cm")) +
     labs(title="Postes au concours de Professeur des universités", y ="Postes publiés", x = "Année") 
@@ -86,17 +86,20 @@ plot_section <- function(section, sectionid, corps) {
   postes %>% 
     filter(SectionCNU.ID==as.numeric(sectionid), Corps == corps) %>% 
     ggplot(aes(x=Année, y=Postes)) + 
-      geom_smooth(se=F) + 
-      geom_point(aes(color=Donnée),size=1) + 
+      geom_smooth(se=F,size=0.5) + 
+      geom_point(aes(color=Donnée),size=2) + 
       expand_limits(y=0) +
-      scale_color_brewer(palette = "Paired", direction = -1) +
+      scale_color_manual(values=c("blue","orange"), breaks=c("Définitive (CNU)","Temporaire (Galaxie)")) +
       theme_cpesr_cap() + 
       theme(plot.margin = margin(0.5, 0.5, 0.5, 0.5, "cm")) +
-      labs(title=paste0("Concours ",corps," section CNU ", sectionid), subtitle=section, y ="Postes publiés", x = "Année") 
+      #theme(legend.position = "right") +
+      labs(title=paste0("Concours ",corps," section CNU ", sectionid), 
+           subtitle=str_wrap(section,80), 
+           y ="Postes publiés", x = "Année") 
 }
 ```
 
-```{r evolution.postes, fig.width=8, fig.asp=9/16, results='asis'}
+```{r evolution.postes, fig.width=7, fig.asp=9/16, results='asis'}
 
 sec <- postes %>% select(SectionCNU, SectionCNU.ID) %>% unique()
 for(s in 1:nrow(sec)) {
