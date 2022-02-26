@@ -46,46 +46,10 @@ postes <- bind_rows(
 - twurl:https://twitter.com/CPESR_/status/1442047467042877442
 ```
 
-## Concours de Maître de Conférences
-
-```{r ensemble.mcf, fig.width=7, fig.asp=9/16}
-postes %>%
-  filter(Corps == "MCF") %>%
-  group_by(Année,Donnée,Corps) %>%
-  summarise(Postes = sum(Postes, na.rm = TRUE)) %>%
-  ggplot(aes(x=Année, y=Postes)) + 
-    geom_smooth(se=F, size=0.5) + 
-    geom_point(aes(color=Donnée),size=2) + 
-    expand_limits(y=0) +
-    scale_color_manual(values=c("blue","orange"), breaks=c("Définitive (CNU)","Temporaire (Galaxie)")) +
-    theme_cpesr_cap() + 
-    theme(plot.margin = margin(0.5, 0.5, 0.5, 0.5, "cm")) +
-    labs(title="Postes au concours de Maître de Conférences", y ="Postes publiés", x = "Année") 
-```
-
-## Concours de Professeur des universités
-
-
-```{r ensemble.pr, fig.width=7, fig.asp=9/16}
-postes %>%
-  filter(Corps == "PR") %>%
-  group_by(Année,Donnée,Corps) %>%
-  summarise(Postes = sum(Postes, na.rm = TRUE)) %>%
-  ggplot(aes(x=Année, y=Postes)) + 
-    geom_smooth(se=F, size=0.5) + 
-    geom_point(aes(color=Donnée),size=2) + 
-    expand_limits(y=0) +
-    scale_color_manual(values=c("blue","orange"), breaks=c("Définitive (CNU)","Temporaire (Galaxie)")) +
-    theme_cpesr_cap() + 
-    theme(plot.margin = margin(0.5, 0.5, 0.5, 0.5, "cm")) +
-    labs(title="Postes au concours de Professeur des universités", y ="Postes publiés", x = "Année") 
-```
 
 ```{r funs}
-plot_section <- function(section, sectionid, corps) {
-  postes %>% 
-    filter(SectionCNU.ID==as.numeric(sectionid), Corps == corps) %>% 
-    ggplot(aes(x=Année, y=Postes)) + 
+plot_section <- function(data, title, subtitle=NULL) {
+    ggplot(data, aes(x=Année, y=Postes)) + 
       geom_smooth(se=F,size=0.5) + 
       geom_point(aes(color=Donnée),size=2) + 
       expand_limits(y=0) +
@@ -93,14 +57,56 @@ plot_section <- function(section, sectionid, corps) {
       theme_cpesr_cap() + 
       theme(plot.margin = margin(0.5, 0.5, 0.5, 0.5, "cm")) +
       #theme(legend.position = "right") +
-      labs(title=paste0("Concours ",corps," section CNU ", sectionid), 
-           subtitle=str_wrap(section,80), 
-           y ="Postes publiés", x = "Année") 
+      scale_x_continuous(breaks = seq(2000,2025,5)) +
+      labs(title=title, subtitle=subtitle, y ="Postes publiés", x = "Année") 
+}
+```
+
+
+## Concours de Maître de Conférences
+
+```{r ensemble.mcf, fig.width=7, fig.asp=9/16}
+postes %>%
+  filter(Corps == "MCF") %>%
+  group_by(Année,Donnée,Corps) %>%
+  summarise(Postes = sum(Postes, na.rm = TRUE)) %>%
+  plot_section("Postes publiés au concours de Maître de Conférences")
+```
+
+## Concours de Professeur des universités
+
+```{r ensemble.pr, fig.width=7, fig.asp=9/16}
+postes %>%
+  filter(Corps == "PR") %>%
+  group_by(Année,Donnée,Corps) %>%
+  summarise(Postes = sum(Postes, na.rm = TRUE)) %>%
+  plot_section("Postes publiés au concours de Professeur des universités") 
+```
+
+
+```{r gd.postes, fig.width=7, fig.asp=9/16, results='asis'}
+gds <- c("Droit éco gestion", "Lettres et sciences humaines", "Sciences et techniques", 
+"Pharmacie")
+for(gd in gds) {
+
+  cat(paste0("\n\n## MCF en ", gd,"\n"))
+  print(
+    postes %>% filter(GrandeDisciplineCNU == gd, Corps == "MCF") %>% 
+    group_by(Année, Donnée) %>% summarise(Postes = sum(Postes,na.rm = TRUE)) %>%
+    plot_section(paste0("Concours MCF ", gd))
+    )
+  
+  cat(paste0("\n\n## PR en ", gd,"\n"))
+  print(
+    postes %>% filter(GrandeDisciplineCNU == gd, Corps == "PR") %>% 
+    group_by(Année, Donnée) %>% summarise(Postes = sum(Postes,na.rm = TRUE)) %>%
+    plot_section(paste0("Concours PR ", gd))
+    )
+  
 }
 ```
 
 ```{r evolution.postes, fig.width=7, fig.asp=9/16, results='asis'}
-
 sec <- postes %>% select(SectionCNU, SectionCNU.ID) %>% unique()
 for(s in 1:nrow(sec)) {
   section <- sec[s,1]
@@ -109,9 +115,16 @@ for(s in 1:nrow(sec)) {
   if (sectionid == 75 | sectionid >= 90) next
   
   cat(paste0("\n\n## MCF Section #CNU", sectionid," ", section,"\n"))
-  print(plot_section(section, sectionid, "MCF"))
+  print(
+    postes %>% filter(SectionCNU.ID==as.numeric(sectionid), Corps == "MCF") %>% 
+    plot_section(paste0("Concours MCF section CNU ", sectionid), str_wrap(section,80))
+    )
   
   cat(paste0("\n\n## PR Section #CNU", sectionid," ", section,"\n"))
-  print(plot_section(section, sectionid, "PR"))  
+  print(
+    postes %>% filter(SectionCNU.ID==as.numeric(sectionid), Corps == "PR") %>% 
+    plot_section(paste0("Concours PR section CNU ", sectionid), str_wrap(section,80))
+    )
+  
 }
 ```

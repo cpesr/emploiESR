@@ -13,6 +13,38 @@ Nombre de postes depuis 2002 pour les sections CNU
 
 ![](emploiEC-graphiques_files/figure-gfm/ensemble.pr-1.png)<!-- -->
 
+## MCF en Droit éco gestion
+
+![](emploiEC-graphiques_files/figure-gfm/gd.postes-1.png)<!-- -->
+
+## PR en Droit éco gestion
+
+![](emploiEC-graphiques_files/figure-gfm/gd.postes-2.png)<!-- -->
+
+## MCF en Lettres et sciences humaines
+
+![](emploiEC-graphiques_files/figure-gfm/gd.postes-3.png)<!-- -->
+
+## PR en Lettres et sciences humaines
+
+![](emploiEC-graphiques_files/figure-gfm/gd.postes-4.png)<!-- -->
+
+## MCF en Sciences et techniques
+
+![](emploiEC-graphiques_files/figure-gfm/gd.postes-5.png)<!-- -->
+
+## PR en Sciences et techniques
+
+![](emploiEC-graphiques_files/figure-gfm/gd.postes-6.png)<!-- -->
+
+## MCF en Pharmacie
+
+![](emploiEC-graphiques_files/figure-gfm/gd.postes-7.png)<!-- -->
+
+## PR en Pharmacie
+
+![](emploiEC-graphiques_files/figure-gfm/gd.postes-8.png)<!-- -->
+
 ## MCF Section \#CNU1 Droit privé et sciences criminelles
 
 ![](emploiEC-graphiques_files/figure-gfm/evolution.postes-1.png)<!-- -->
