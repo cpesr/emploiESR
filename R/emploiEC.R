@@ -134,6 +134,9 @@ check_emploisEC() %>% filter(nb_lignes != 12)
 
 write.csv2(emploisEC, "../data/cpesr-emploi-ec.csv", row.names = FALSE)
 
+
+## Long serie
+
 read.csv2("../data/cpesr-emplois-cnu-mcf-qualification-recrutement.csv") %>%
   select(Année:Concours.Postes.MCF,Concours.Recrutés.MCF) %>%
   filter(Année < 2009) %>%

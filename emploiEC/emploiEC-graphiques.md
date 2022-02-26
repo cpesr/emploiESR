@@ -1,238 +1,502 @@
 Nombre de postes depuis 2002 pour les sections CNU
 ================
 
-    - twtexte:[#DataESR] Evolution du nombre de postes de Maître de conférences
+    - twtexte:[#DataESR] Evolution du nombre de postes d'enseignant-chercheur
     - twalt:@ffigon @juliengossa LO 2.0 www.cpesr.fr
     - twurl:https://twitter.com/CPESR_/status/1442047467042877442
 
-## Section 01 Droit privé et sciences criminelles
+## Concours de Maître de Conférences
 
-![](emploiEC-graphiques_files/figure-gfm/evolution.postes.MCF-1.png)<!-- -->
+![](emploiEC-graphiques_files/figure-gfm/ensemble.mcf-1.png)<!-- -->
 
-## Section 02 Droit public
+## Concours de Professeur des universités
 
-![](emploiEC-graphiques_files/figure-gfm/evolution.postes.MCF-2.png)<!-- -->
+![](emploiEC-graphiques_files/figure-gfm/ensemble.pr-1.png)<!-- -->
 
-## Section 03 Histoire du droit et des institutions
+## MCF Section \#CNU1 Droit privé et sciences criminelles
 
-![](emploiEC-graphiques_files/figure-gfm/evolution.postes.MCF-3.png)<!-- -->
+![](emploiEC-graphiques_files/figure-gfm/evolution.postes-1.png)<!-- -->
 
-## Section 04 Science politique
+## PR Section \#CNU1 Droit privé et sciences criminelles
 
-![](emploiEC-graphiques_files/figure-gfm/evolution.postes.MCF-4.png)<!-- -->
+![](emploiEC-graphiques_files/figure-gfm/evolution.postes-2.png)<!-- -->
 
-## Section 05 Sciences économiques
+## MCF Section \#CNU2 Droit public
 
-![](emploiEC-graphiques_files/figure-gfm/evolution.postes.MCF-5.png)<!-- -->
+![](emploiEC-graphiques_files/figure-gfm/evolution.postes-3.png)<!-- -->
 
-## Section 06 Sciences de gestion
+## PR Section \#CNU2 Droit public
 
-![](emploiEC-graphiques_files/figure-gfm/evolution.postes.MCF-6.png)<!-- -->
+![](emploiEC-graphiques_files/figure-gfm/evolution.postes-4.png)<!-- -->
 
-## Section 07 Sciences du langage : linguistique et phonétique générales
+## MCF Section \#CNU3 Histoire du droit et des institutions
 
-![](emploiEC-graphiques_files/figure-gfm/evolution.postes.MCF-7.png)<!-- -->
+![](emploiEC-graphiques_files/figure-gfm/evolution.postes-5.png)<!-- -->
 
-## Section 08 Langues et littératures anciennes
+## PR Section \#CNU3 Histoire du droit et des institutions
 
-![](emploiEC-graphiques_files/figure-gfm/evolution.postes.MCF-8.png)<!-- -->
+![](emploiEC-graphiques_files/figure-gfm/evolution.postes-6.png)<!-- -->
 
-## Section 09 Langue et littérature françaises
+## MCF Section \#CNU4 Science politique
 
-![](emploiEC-graphiques_files/figure-gfm/evolution.postes.MCF-9.png)<!-- -->
+![](emploiEC-graphiques_files/figure-gfm/evolution.postes-7.png)<!-- -->
 
-## Section 10 Littératures comparées
+## PR Section \#CNU4 Science politique
 
-![](emploiEC-graphiques_files/figure-gfm/evolution.postes.MCF-10.png)<!-- -->
+![](emploiEC-graphiques_files/figure-gfm/evolution.postes-8.png)<!-- -->
 
-## Section 11 Langues et littératures anglaises et anglo-saxonnes
+## MCF Section \#CNU5 Sciences économiques
 
-![](emploiEC-graphiques_files/figure-gfm/evolution.postes.MCF-11.png)<!-- -->
+![](emploiEC-graphiques_files/figure-gfm/evolution.postes-9.png)<!-- -->
 
-## Section 12 Langues et littératures germaniques et scandinaves
+## PR Section \#CNU5 Sciences économiques
 
-![](emploiEC-graphiques_files/figure-gfm/evolution.postes.MCF-12.png)<!-- -->
+![](emploiEC-graphiques_files/figure-gfm/evolution.postes-10.png)<!-- -->
 
-## Section 13 Langues et littératures slaves
+## MCF Section \#CNU6 Sciences de gestion
 
-![](emploiEC-graphiques_files/figure-gfm/evolution.postes.MCF-13.png)<!-- -->
+![](emploiEC-graphiques_files/figure-gfm/evolution.postes-11.png)<!-- -->
 
-## Section 14 Langues et littératures romanes : espagnol, italien, portugais, autres langues romanes
+## PR Section \#CNU6 Sciences de gestion
 
-![](emploiEC-graphiques_files/figure-gfm/evolution.postes.MCF-14.png)<!-- -->
+![](emploiEC-graphiques_files/figure-gfm/evolution.postes-12.png)<!-- -->
 
-## Section 15 Langues et littératures arabes, chinoises, japonaises, hébraïques, d autres domaines linguistiques
+## MCF Section \#CNU7 Sciences du langage : linguistique et phonétique générales
 
-![](emploiEC-graphiques_files/figure-gfm/evolution.postes.MCF-15.png)<!-- -->
+![](emploiEC-graphiques_files/figure-gfm/evolution.postes-13.png)<!-- -->
 
-## Section 16 Psychologie et Ergonomie
+## PR Section \#CNU7 Sciences du langage : linguistique et phonétique générales
 
-![](emploiEC-graphiques_files/figure-gfm/evolution.postes.MCF-16.png)<!-- -->
+![](emploiEC-graphiques_files/figure-gfm/evolution.postes-14.png)<!-- -->
 
-## Section 17 Philosophie
+## MCF Section \#CNU8 Langues et littératures anciennes
 
-![](emploiEC-graphiques_files/figure-gfm/evolution.postes.MCF-17.png)<!-- -->
+![](emploiEC-graphiques_files/figure-gfm/evolution.postes-15.png)<!-- -->
 
-## Section 18 Architecture et Arts : plastiques, du spectacle, musique, musicologie, esthétique, sciences de l’art
+## PR Section \#CNU8 Langues et littératures anciennes
 
-![](emploiEC-graphiques_files/figure-gfm/evolution.postes.MCF-18.png)<!-- -->
+![](emploiEC-graphiques_files/figure-gfm/evolution.postes-16.png)<!-- -->
 
-## Section 19 Sociologie, démographie
+## MCF Section \#CNU9 Langue et littérature françaises
 
-![](emploiEC-graphiques_files/figure-gfm/evolution.postes.MCF-19.png)<!-- -->
+![](emploiEC-graphiques_files/figure-gfm/evolution.postes-17.png)<!-- -->
 
-## Section 20 Anthropologie biologique, ethnologie, préhistoire
+## PR Section \#CNU9 Langue et littérature françaises
 
-![](emploiEC-graphiques_files/figure-gfm/evolution.postes.MCF-20.png)<!-- -->
+![](emploiEC-graphiques_files/figure-gfm/evolution.postes-18.png)<!-- -->
 
-## Section 21 Histoire et civilisations : histoire et archéologie des mondes anciens et des mondes médiévaux, de l’art
+## MCF Section \#CNU10 Littératures comparées
 
-![](emploiEC-graphiques_files/figure-gfm/evolution.postes.MCF-21.png)<!-- -->
+![](emploiEC-graphiques_files/figure-gfm/evolution.postes-19.png)<!-- -->
 
-## Section 22 Histoire et civilisations : histoire des mondes modernes, histoire du monde contemporain, de l’art, de la musique
+## PR Section \#CNU10 Littératures comparées
 
-![](emploiEC-graphiques_files/figure-gfm/evolution.postes.MCF-22.png)<!-- -->
+![](emploiEC-graphiques_files/figure-gfm/evolution.postes-20.png)<!-- -->
 
-## Section 23 Géographie physique, humaine, économique et régionale
+## MCF Section \#CNU11 Langues et littératures anglaises et anglo-saxonnes
 
-![](emploiEC-graphiques_files/figure-gfm/evolution.postes.MCF-23.png)<!-- -->
+![](emploiEC-graphiques_files/figure-gfm/evolution.postes-21.png)<!-- -->
 
-## Section 24 Aménagement de l’espace, urbanisme
+## PR Section \#CNU11 Langues et littératures anglaises et anglo-saxonnes
 
-![](emploiEC-graphiques_files/figure-gfm/evolution.postes.MCF-24.png)<!-- -->
+![](emploiEC-graphiques_files/figure-gfm/evolution.postes-22.png)<!-- -->
 
-## Section 25 Mathématiques
+## MCF Section \#CNU12 Langues et littératures germaniques et scandinaves
 
-![](emploiEC-graphiques_files/figure-gfm/evolution.postes.MCF-25.png)<!-- -->
+![](emploiEC-graphiques_files/figure-gfm/evolution.postes-23.png)<!-- -->
 
-## Section 26 Mathématiques appliquées et applications des mathématiques
+## PR Section \#CNU12 Langues et littératures germaniques et scandinaves
 
-![](emploiEC-graphiques_files/figure-gfm/evolution.postes.MCF-26.png)<!-- -->
+![](emploiEC-graphiques_files/figure-gfm/evolution.postes-24.png)<!-- -->
 
-## Section 27 Informatique
+## MCF Section \#CNU13 Langues et littératures slaves
 
-![](emploiEC-graphiques_files/figure-gfm/evolution.postes.MCF-27.png)<!-- -->
+![](emploiEC-graphiques_files/figure-gfm/evolution.postes-25.png)<!-- -->
 
-## Section 28 Milieux denses et matériaux
+## PR Section \#CNU13 Langues et littératures slaves
 
-![](emploiEC-graphiques_files/figure-gfm/evolution.postes.MCF-28.png)<!-- -->
+![](emploiEC-graphiques_files/figure-gfm/evolution.postes-26.png)<!-- -->
 
-## Section 29 Constituants élémentaires
+## MCF Section \#CNU14 Langues et littératures romanes : espagnol, italien, portugais, autres langues romanes
 
-![](emploiEC-graphiques_files/figure-gfm/evolution.postes.MCF-29.png)<!-- -->
+![](emploiEC-graphiques_files/figure-gfm/evolution.postes-27.png)<!-- -->
 
-## Section 30 Milieux dilués et optique
+## PR Section \#CNU14 Langues et littératures romanes : espagnol, italien, portugais, autres langues romanes
 
-![](emploiEC-graphiques_files/figure-gfm/evolution.postes.MCF-30.png)<!-- -->
+![](emploiEC-graphiques_files/figure-gfm/evolution.postes-28.png)<!-- -->
 
-## Section 31 Chimie théorique, physique, analytique
+## MCF Section \#CNU15 Langues et littératures arabes, chinoises, japonaises, hébraïques, d autres domaines linguistiques
 
-![](emploiEC-graphiques_files/figure-gfm/evolution.postes.MCF-31.png)<!-- -->
+![](emploiEC-graphiques_files/figure-gfm/evolution.postes-29.png)<!-- -->
 
-## Section 32 Chimie organique, inorganique, industrielle
+## PR Section \#CNU15 Langues et littératures arabes, chinoises, japonaises, hébraïques, d autres domaines linguistiques
 
-![](emploiEC-graphiques_files/figure-gfm/evolution.postes.MCF-32.png)<!-- -->
+![](emploiEC-graphiques_files/figure-gfm/evolution.postes-30.png)<!-- -->
 
-## Section 33 Chimie des matériaux
+## MCF Section \#CNU16 Psychologie et Ergonomie
 
-![](emploiEC-graphiques_files/figure-gfm/evolution.postes.MCF-33.png)<!-- -->
+![](emploiEC-graphiques_files/figure-gfm/evolution.postes-31.png)<!-- -->
 
-## Section 34 Astronomie, astrophysique
+## PR Section \#CNU16 Psychologie et Ergonomie
 
-![](emploiEC-graphiques_files/figure-gfm/evolution.postes.MCF-34.png)<!-- -->
+![](emploiEC-graphiques_files/figure-gfm/evolution.postes-32.png)<!-- -->
 
-## Section 35 Structure et évolution de la Terre et des autres planètes
+## MCF Section \#CNU17 Philosophie
 
-![](emploiEC-graphiques_files/figure-gfm/evolution.postes.MCF-35.png)<!-- -->
+![](emploiEC-graphiques_files/figure-gfm/evolution.postes-33.png)<!-- -->
 
-## Section 36 Terre solide : géodynamique des enveloppes supérieures, paléobiosphère
+## PR Section \#CNU17 Philosophie
 
-![](emploiEC-graphiques_files/figure-gfm/evolution.postes.MCF-36.png)<!-- -->
+![](emploiEC-graphiques_files/figure-gfm/evolution.postes-34.png)<!-- -->
 
-## Section 37 Météorologie, océanographie physique et physique de l’environnement
+## MCF Section \#CNU18 Architecture et Arts : plastiques, du spectacle, musique, musicologie, esthétique, sciences de l’art
 
-![](emploiEC-graphiques_files/figure-gfm/evolution.postes.MCF-37.png)<!-- -->
+![](emploiEC-graphiques_files/figure-gfm/evolution.postes-35.png)<!-- -->
 
-## Section 60 Mécanique, génie mécanique, génie civil
+## PR Section \#CNU18 Architecture et Arts : plastiques, du spectacle, musique, musicologie, esthétique, sciences de l’art
 
-![](emploiEC-graphiques_files/figure-gfm/evolution.postes.MCF-38.png)<!-- -->
+![](emploiEC-graphiques_files/figure-gfm/evolution.postes-36.png)<!-- -->
 
-## Section 61 Génie informatique, automatique et traitement du signal
+## MCF Section \#CNU19 Sociologie, démographie
 
-![](emploiEC-graphiques_files/figure-gfm/evolution.postes.MCF-39.png)<!-- -->
+![](emploiEC-graphiques_files/figure-gfm/evolution.postes-37.png)<!-- -->
 
-## Section 62 Énergétique, génie des procédés
+## PR Section \#CNU19 Sociologie, démographie
 
-![](emploiEC-graphiques_files/figure-gfm/evolution.postes.MCF-40.png)<!-- -->
+![](emploiEC-graphiques_files/figure-gfm/evolution.postes-38.png)<!-- -->
 
-## Section 63 Génie Électrique, Électronique, optronique et systèmes
+## MCF Section \#CNU20 Anthropologie biologique, ethnologie, préhistoire
 
-![](emploiEC-graphiques_files/figure-gfm/evolution.postes.MCF-41.png)<!-- -->
+![](emploiEC-graphiques_files/figure-gfm/evolution.postes-39.png)<!-- -->
 
-## Section 64 Biochimie et biologie moléculaire
+## PR Section \#CNU20 Anthropologie biologique, ethnologie, préhistoire
 
-![](emploiEC-graphiques_files/figure-gfm/evolution.postes.MCF-42.png)<!-- -->
+![](emploiEC-graphiques_files/figure-gfm/evolution.postes-40.png)<!-- -->
 
-## Section 65 Biologie cellulaire
+## MCF Section \#CNU21 Histoire et civilisations : histoire et archéologie des mondes anciens et des mondes médiévaux, de l’art
 
-![](emploiEC-graphiques_files/figure-gfm/evolution.postes.MCF-43.png)<!-- -->
+![](emploiEC-graphiques_files/figure-gfm/evolution.postes-41.png)<!-- -->
 
-## Section 66 Physiologie
+## PR Section \#CNU21 Histoire et civilisations : histoire et archéologie des mondes anciens et des mondes médiévaux, de l’art
 
-![](emploiEC-graphiques_files/figure-gfm/evolution.postes.MCF-44.png)<!-- -->
+![](emploiEC-graphiques_files/figure-gfm/evolution.postes-42.png)<!-- -->
 
-## Section 67 Biologie des populations et écologie
+## MCF Section \#CNU22 Histoire et civilisations : histoire des mondes modernes, histoire du monde contemporain, de l’art, de la musique
 
-![](emploiEC-graphiques_files/figure-gfm/evolution.postes.MCF-45.png)<!-- -->
+![](emploiEC-graphiques_files/figure-gfm/evolution.postes-43.png)<!-- -->
 
-## Section 68 Biologie des organismes
+## PR Section \#CNU22 Histoire et civilisations : histoire des mondes modernes, histoire du monde contemporain, de l’art, de la musique
 
-![](emploiEC-graphiques_files/figure-gfm/evolution.postes.MCF-46.png)<!-- -->
+![](emploiEC-graphiques_files/figure-gfm/evolution.postes-44.png)<!-- -->
 
-## Section 69 Neurosciences
+## MCF Section \#CNU23 Géographie physique, humaine, économique et régionale
 
-![](emploiEC-graphiques_files/figure-gfm/evolution.postes.MCF-47.png)<!-- -->
+![](emploiEC-graphiques_files/figure-gfm/evolution.postes-45.png)<!-- -->
 
-## Section 70 Sciences de l’éducation
+## PR Section \#CNU23 Géographie physique, humaine, économique et régionale
 
-![](emploiEC-graphiques_files/figure-gfm/evolution.postes.MCF-48.png)<!-- -->
+![](emploiEC-graphiques_files/figure-gfm/evolution.postes-46.png)<!-- -->
 
-## Section 71 Sciences de l’information et de la communication
+## MCF Section \#CNU24 Aménagement de l’espace, urbanisme
 
-![](emploiEC-graphiques_files/figure-gfm/evolution.postes.MCF-49.png)<!-- -->
+![](emploiEC-graphiques_files/figure-gfm/evolution.postes-47.png)<!-- -->
 
-## Section 72 Épistémologie, histoire des sciences et des techniques
+## PR Section \#CNU24 Aménagement de l’espace, urbanisme
 
-![](emploiEC-graphiques_files/figure-gfm/evolution.postes.MCF-50.png)<!-- -->
+![](emploiEC-graphiques_files/figure-gfm/evolution.postes-48.png)<!-- -->
 
-## Section 73 Cultures et langues régionales
+## MCF Section \#CNU25 Mathématiques
 
-![](emploiEC-graphiques_files/figure-gfm/evolution.postes.MCF-51.png)<!-- -->
+![](emploiEC-graphiques_files/figure-gfm/evolution.postes-49.png)<!-- -->
 
-## Section 74 Sciences et techniques des activités physiques et sportives
+## PR Section \#CNU25 Mathématiques
 
-![](emploiEC-graphiques_files/figure-gfm/evolution.postes.MCF-52.png)<!-- -->
+![](emploiEC-graphiques_files/figure-gfm/evolution.postes-50.png)<!-- -->
 
-## Section 75 Théologie
+## MCF Section \#CNU26 Mathématiques appliquées et applications des mathématiques
 
-![](emploiEC-graphiques_files/figure-gfm/evolution.postes.MCF-53.png)<!-- -->
+![](emploiEC-graphiques_files/figure-gfm/evolution.postes-51.png)<!-- -->
 
-## Section 85 Sciences physico-chimiques et ingénierie appliquée à la santé
+## PR Section \#CNU26 Mathématiques appliquées et applications des mathématiques
 
-![](emploiEC-graphiques_files/figure-gfm/evolution.postes.MCF-54.png)<!-- -->
+![](emploiEC-graphiques_files/figure-gfm/evolution.postes-52.png)<!-- -->
 
-## Section 86 Sciences du médicament et des autres produits de santé
+## MCF Section \#CNU27 Informatique
 
-![](emploiEC-graphiques_files/figure-gfm/evolution.postes.MCF-55.png)<!-- -->
+![](emploiEC-graphiques_files/figure-gfm/evolution.postes-53.png)<!-- -->
 
-## Section 87 Sciences biologiques, fondamentales et cliniques
+## PR Section \#CNU27 Informatique
 
-![](emploiEC-graphiques_files/figure-gfm/evolution.postes.MCF-56.png)<!-- -->
+![](emploiEC-graphiques_files/figure-gfm/evolution.postes-54.png)<!-- -->
 
-## Section 76 Théologie catholique
+## MCF Section \#CNU28 Milieux denses et matériaux
 
-![](emploiEC-graphiques_files/figure-gfm/evolution.postes.MCF-57.png)<!-- -->
+![](emploiEC-graphiques_files/figure-gfm/evolution.postes-55.png)<!-- -->
 
-## Section 77 Théologie protestante
+## PR Section \#CNU28 Milieux denses et matériaux
 
-![](emploiEC-graphiques_files/figure-gfm/evolution.postes.MCF-58.png)<!-- -->
+![](emploiEC-graphiques_files/figure-gfm/evolution.postes-56.png)<!-- -->
+
+## MCF Section \#CNU29 Constituants élémentaires
+
+![](emploiEC-graphiques_files/figure-gfm/evolution.postes-57.png)<!-- -->
+
+## PR Section \#CNU29 Constituants élémentaires
+
+![](emploiEC-graphiques_files/figure-gfm/evolution.postes-58.png)<!-- -->
+
+## MCF Section \#CNU30 Milieux dilués et optique
+
+![](emploiEC-graphiques_files/figure-gfm/evolution.postes-59.png)<!-- -->
+
+## PR Section \#CNU30 Milieux dilués et optique
+
+![](emploiEC-graphiques_files/figure-gfm/evolution.postes-60.png)<!-- -->
+
+## MCF Section \#CNU31 Chimie théorique, physique, analytique
+
+![](emploiEC-graphiques_files/figure-gfm/evolution.postes-61.png)<!-- -->
+
+## PR Section \#CNU31 Chimie théorique, physique, analytique
+
+![](emploiEC-graphiques_files/figure-gfm/evolution.postes-62.png)<!-- -->
+
+## MCF Section \#CNU32 Chimie organique, inorganique, industrielle
+
+![](emploiEC-graphiques_files/figure-gfm/evolution.postes-63.png)<!-- -->
+
+## PR Section \#CNU32 Chimie organique, inorganique, industrielle
+
+![](emploiEC-graphiques_files/figure-gfm/evolution.postes-64.png)<!-- -->
+
+## MCF Section \#CNU33 Chimie des matériaux
+
+![](emploiEC-graphiques_files/figure-gfm/evolution.postes-65.png)<!-- -->
+
+## PR Section \#CNU33 Chimie des matériaux
+
+![](emploiEC-graphiques_files/figure-gfm/evolution.postes-66.png)<!-- -->
+
+## MCF Section \#CNU34 Astronomie, astrophysique
+
+![](emploiEC-graphiques_files/figure-gfm/evolution.postes-67.png)<!-- -->
+
+## PR Section \#CNU34 Astronomie, astrophysique
+
+![](emploiEC-graphiques_files/figure-gfm/evolution.postes-68.png)<!-- -->
+
+## MCF Section \#CNU35 Structure et évolution de la Terre et des autres planètes
+
+![](emploiEC-graphiques_files/figure-gfm/evolution.postes-69.png)<!-- -->
+
+## PR Section \#CNU35 Structure et évolution de la Terre et des autres planètes
+
+![](emploiEC-graphiques_files/figure-gfm/evolution.postes-70.png)<!-- -->
+
+## MCF Section \#CNU36 Terre solide : géodynamique des enveloppes supérieures, paléobiosphère
+
+![](emploiEC-graphiques_files/figure-gfm/evolution.postes-71.png)<!-- -->
+
+## PR Section \#CNU36 Terre solide : géodynamique des enveloppes supérieures, paléobiosphère
+
+![](emploiEC-graphiques_files/figure-gfm/evolution.postes-72.png)<!-- -->
+
+## MCF Section \#CNU37 Météorologie, océanographie physique et physique de l’environnement
+
+![](emploiEC-graphiques_files/figure-gfm/evolution.postes-73.png)<!-- -->
+
+## PR Section \#CNU37 Météorologie, océanographie physique et physique de l’environnement
+
+![](emploiEC-graphiques_files/figure-gfm/evolution.postes-74.png)<!-- -->
+
+## MCF Section \#CNU60 Mécanique, génie mécanique, génie civil
+
+![](emploiEC-graphiques_files/figure-gfm/evolution.postes-75.png)<!-- -->
+
+## PR Section \#CNU60 Mécanique, génie mécanique, génie civil
+
+![](emploiEC-graphiques_files/figure-gfm/evolution.postes-76.png)<!-- -->
+
+## MCF Section \#CNU61 Génie informatique, automatique et traitement du signal
+
+![](emploiEC-graphiques_files/figure-gfm/evolution.postes-77.png)<!-- -->
+
+## PR Section \#CNU61 Génie informatique, automatique et traitement du signal
+
+![](emploiEC-graphiques_files/figure-gfm/evolution.postes-78.png)<!-- -->
+
+## MCF Section \#CNU62 Énergétique, génie des procédés
+
+![](emploiEC-graphiques_files/figure-gfm/evolution.postes-79.png)<!-- -->
+
+## PR Section \#CNU62 Énergétique, génie des procédés
+
+![](emploiEC-graphiques_files/figure-gfm/evolution.postes-80.png)<!-- -->
+
+## MCF Section \#CNU63 Génie Électrique, Électronique, optronique et systèmes
+
+![](emploiEC-graphiques_files/figure-gfm/evolution.postes-81.png)<!-- -->
+
+## PR Section \#CNU63 Génie Électrique, Électronique, optronique et systèmes
+
+![](emploiEC-graphiques_files/figure-gfm/evolution.postes-82.png)<!-- -->
+
+## MCF Section \#CNU64 Biochimie et biologie moléculaire
+
+![](emploiEC-graphiques_files/figure-gfm/evolution.postes-83.png)<!-- -->
+
+## PR Section \#CNU64 Biochimie et biologie moléculaire
+
+![](emploiEC-graphiques_files/figure-gfm/evolution.postes-84.png)<!-- -->
+
+## MCF Section \#CNU65 Biologie cellulaire
+
+![](emploiEC-graphiques_files/figure-gfm/evolution.postes-85.png)<!-- -->
+
+## PR Section \#CNU65 Biologie cellulaire
+
+![](emploiEC-graphiques_files/figure-gfm/evolution.postes-86.png)<!-- -->
+
+## MCF Section \#CNU66 Physiologie
+
+![](emploiEC-graphiques_files/figure-gfm/evolution.postes-87.png)<!-- -->
+
+## PR Section \#CNU66 Physiologie
+
+![](emploiEC-graphiques_files/figure-gfm/evolution.postes-88.png)<!-- -->
+
+## MCF Section \#CNU67 Biologie des populations et écologie
+
+![](emploiEC-graphiques_files/figure-gfm/evolution.postes-89.png)<!-- -->
+
+## PR Section \#CNU67 Biologie des populations et écologie
+
+![](emploiEC-graphiques_files/figure-gfm/evolution.postes-90.png)<!-- -->
+
+## MCF Section \#CNU68 Biologie des organismes
+
+![](emploiEC-graphiques_files/figure-gfm/evolution.postes-91.png)<!-- -->
+
+## PR Section \#CNU68 Biologie des organismes
+
+![](emploiEC-graphiques_files/figure-gfm/evolution.postes-92.png)<!-- -->
+
+## MCF Section \#CNU69 Neurosciences
+
+![](emploiEC-graphiques_files/figure-gfm/evolution.postes-93.png)<!-- -->
+
+## PR Section \#CNU69 Neurosciences
+
+![](emploiEC-graphiques_files/figure-gfm/evolution.postes-94.png)<!-- -->
+
+## MCF Section \#CNU70 Sciences de l’éducation
+
+![](emploiEC-graphiques_files/figure-gfm/evolution.postes-95.png)<!-- -->
+
+## PR Section \#CNU70 Sciences de l’éducation
+
+![](emploiEC-graphiques_files/figure-gfm/evolution.postes-96.png)<!-- -->
+
+## MCF Section \#CNU71 Sciences de l’information et de la communication
+
+![](emploiEC-graphiques_files/figure-gfm/evolution.postes-97.png)<!-- -->
+
+## PR Section \#CNU71 Sciences de l’information et de la communication
+
+![](emploiEC-graphiques_files/figure-gfm/evolution.postes-98.png)<!-- -->
+
+## MCF Section \#CNU72 Épistémologie, histoire des sciences et des techniques
+
+![](emploiEC-graphiques_files/figure-gfm/evolution.postes-99.png)<!-- -->
+
+## PR Section \#CNU72 Épistémologie, histoire des sciences et des techniques
+
+![](emploiEC-graphiques_files/figure-gfm/evolution.postes-100.png)<!-- -->
+
+## MCF Section \#CNU73 Cultures et langues régionales
+
+![](emploiEC-graphiques_files/figure-gfm/evolution.postes-101.png)<!-- -->
+
+## PR Section \#CNU73 Cultures et langues régionales
+
+![](emploiEC-graphiques_files/figure-gfm/evolution.postes-102.png)<!-- -->
+
+## MCF Section \#CNU74 Sciences et techniques des activités physiques et sportives
+
+![](emploiEC-graphiques_files/figure-gfm/evolution.postes-103.png)<!-- -->
+
+## PR Section \#CNU74 Sciences et techniques des activités physiques et sportives
+
+![](emploiEC-graphiques_files/figure-gfm/evolution.postes-104.png)<!-- -->
+
+## MCF Section \#CNU75 Théologie
+
+![](emploiEC-graphiques_files/figure-gfm/evolution.postes-105.png)<!-- -->
+
+## PR Section \#CNU75 Théologie
+
+![](emploiEC-graphiques_files/figure-gfm/evolution.postes-106.png)<!-- -->
+
+## MCF Section \#CNU85 Sciences physico-chimiques et ingénierie appliquée à la santé
+
+![](emploiEC-graphiques_files/figure-gfm/evolution.postes-107.png)<!-- -->
+
+## PR Section \#CNU85 Sciences physico-chimiques et ingénierie appliquée à la santé
+
+![](emploiEC-graphiques_files/figure-gfm/evolution.postes-108.png)<!-- -->
+
+## MCF Section \#CNU86 Sciences du médicament et des autres produits de santé
+
+![](emploiEC-graphiques_files/figure-gfm/evolution.postes-109.png)<!-- -->
+
+## PR Section \#CNU86 Sciences du médicament et des autres produits de santé
+
+![](emploiEC-graphiques_files/figure-gfm/evolution.postes-110.png)<!-- -->
+
+## MCF Section \#CNU87 Sciences biologiques, fondamentales et cliniques
+
+![](emploiEC-graphiques_files/figure-gfm/evolution.postes-111.png)<!-- -->
+
+## PR Section \#CNU87 Sciences biologiques, fondamentales et cliniques
+
+![](emploiEC-graphiques_files/figure-gfm/evolution.postes-112.png)<!-- -->
+
+## MCF Section \#CNU76 Théologie catholique
+
+![](emploiEC-graphiques_files/figure-gfm/evolution.postes-113.png)<!-- -->
+
+## PR Section \#CNU76 Théologie catholique
+
+![](emploiEC-graphiques_files/figure-gfm/evolution.postes-114.png)<!-- -->
+
+## MCF Section \#CNU77 Théologie protestante
+
+![](emploiEC-graphiques_files/figure-gfm/evolution.postes-115.png)<!-- -->
+
+## PR Section \#CNU77 Théologie protestante
+
+![](emploiEC-graphiques_files/figure-gfm/evolution.postes-116.png)<!-- -->
+
+## MCF Section \#CNU91 Sciences de la rééducation et de réadaptation
+
+![](emploiEC-graphiques_files/figure-gfm/evolution.postes-117.png)<!-- -->
+
+## PR Section \#CNU91 Sciences de la rééducation et de réadaptation
+
+![](emploiEC-graphiques_files/figure-gfm/evolution.postes-118.png)<!-- -->
+
+## MCF Section \#CNU90 NA
+
+![](emploiEC-graphiques_files/figure-gfm/evolution.postes-119.png)<!-- -->
+
+## PR Section \#CNU90 NA
+
+![](emploiEC-graphiques_files/figure-gfm/evolution.postes-120.png)<!-- -->
+
+## MCF Section \#CNU92 Sciences infirmières
+
+![](emploiEC-graphiques_files/figure-gfm/evolution.postes-121.png)<!-- -->
+
+## PR Section \#CNU92 Sciences infirmières
+
+![](emploiEC-graphiques_files/figure-gfm/evolution.postes-122.png)<!-- -->

@@ -10,55 +10,103 @@ library(ggcpesrthemes)
 
 theme_cpesr_setup(authors=c("Florent Figon, Julien Gossa"), licence="LO 2.0", source = "DGRH A1-1")
 
-cnu <- read.csv2("../data/cpesr-emplois-cnu-mcf-qualification-recrutement.csv") %>%
+
+## Galaxie
+
+galaxie <- bind_rows(
+  # read.csv("../utils/galaxie-excavator/galaxie.2018.csv") %>% mutate(Année = 2018),
+  # read.csv("../utils/galaxie-excavator/galaxie.2019.csv") %>% mutate(Année = 2019),
+  # read.csv("../utils/galaxie-excavator/galaxie.2020.csv") %>% mutate(Année = 2020),
+  read.csv("../utils/galaxie-excavator/galaxie.2021.csv") %>% mutate(Année = 2021),
+  read.csv("../utils/galaxie-excavator/galaxie.2022.csv") %>% mutate(Année = 2022)
+) %>%
+  group_by(Année,Corps,SectionCNU.ID = Section) %>%
+  summarise(Concours.postes = n()) %>%
+  pivot_wider(values_from = Concours.postes, names_from = Corps, names_prefix = "Concours.Postes.") 
+
+
+
+postes <- bind_rows(
+  read.csv2("../data/cpesr-emplois-cnu-mcf-2002-2008.csv") %>% mutate(Donnée = "Définitive (CNU)"),
+  read.csv2("../data/cpesr-emplois-cnu-qualification-concours.csv") %>% 
+    filter(Périmètre == "Section") %>%
+    mutate(SectionCNU.ID = as.numeric(as.character(Périmètre.ID))) %>%
+    mutate(Donnée = "Définitive (CNU)"),
+  galaxie %>% mutate(Donnée = "Temporaire (Galaxie)")
+  ) %>% 
+  select(Année,SectionCNU.ID,Donnée,Concours.Postes.MCF,Concours.Postes.PR) %>%
   left_join(read.csv2("../data/cpesr-cnu-sections.csv")) %>%
-    mutate(SectionCNU.ID = as.factor(SectionCNU.ID),
-           candidatures.par.candidat.MCF = Candidatures.MCF / Candidats.MCF,
-           candidatures.par.poste.MCF = Candidatures.MCF / PostesPublies.MCF,
-           candidats.par.poste.MCF = Candidats.MCF / PostesPublies.MCF,
-           candidatures.par.candidat.par.poste.MCF = candidatures.par.candidat.MCF / PostesPublies.MCF,
-           GrandeDisciplineCNU = as.factor(GrandeDisciplineCNU),
-           Code.GrandeDisciplineCNU = recode(GrandeDisciplineCNU, 
-                                             "Droit éco ges" ="DEG",
-                                             "Lettres et sciences humaines" = "LSHS",
-                                             "Pharmacie" = "Pharma",
-                                             "Sciences et techniques" = "ST"),
-           SectionCNU = recode(SectionCNU, 
-                               "87/41 Sciences biologiques, fondamentales et cliniques"="87 Sciences biologiques, fondamentales et cliniques",
-                               "86/40 Sciences du médicament et des autres produits de santé"="86 Sciences du médicament et des autres produits de santé",
-                               "85/39 Sciences physico-chimiques et ingénierie appliquée à la santé"="85 Sciences physico-chimiques et ingénierie appliquée à la santé"),
-           SectionCNU.ID = stringr::str_pad(SectionCNU.ID,2,pad='0')
-    )
+  pivot_longer(starts_with("Concours.Postes."), names_to = "Corps", values_to = "Postes", names_prefix = "Concours.Postes.") %>%
+  filter(!is.na(Postes))
 ```
 
 ```
-- twtexte:[#DataESR] Evolution du nombre de postes de Maître de conférences
+- twtexte:[#DataESR] Evolution du nombre de postes d'enseignant-chercheur
 - twalt:@ffigon @juliengossa LO 2.0 www.cpesr.fr
 - twurl:https://twitter.com/CPESR_/status/1442047467042877442
 ```
 
+## Concours de Maître de Conférences
+
+```{r ensemble.mcf, fig.width=8}
+postes %>%
+  filter(Corps == "MCF") %>%
+  group_by(Année,Donnée,Corps) %>%
+  summarise(Postes = sum(Postes, na.rm = TRUE)) %>%
+  ggplot(aes(x=Année, y=Postes)) + 
+    geom_smooth(se=F) + 
+    geom_point(aes(color=Donnée),size=1) + 
+    expand_limits(y=0) +
+    scale_color_brewer(palette = "Paired", direction = -1) +
+    theme_cpesr_cap() + 
+    theme(plot.margin = margin(0.5, 0.5, 0.5, 0.5, "cm")) +
+    labs(title="Postes au concours de Maître de Conférences", y ="Postes publiés", x = "Année") 
+```
+
+## Concours de Professeur des universités
+
+
+```{r ensemble.pr, fig.width=8}
+postes %>%
+  filter(Corps == "PR") %>%
+  group_by(Année,Donnée,Corps) %>%
+  summarise(Postes = sum(Postes, na.rm = TRUE)) %>%
+  ggplot(aes(x=Année, y=Postes)) + 
+    geom_smooth(se=F) + 
+    geom_point(aes(color=Donnée),size=1) + 
+    expand_limits(y=0) +
+    scale_color_brewer(palette = "Paired", direction = -1) +
+    theme_cpesr_cap() + 
+    theme(plot.margin = margin(0.5, 0.5, 0.5, 0.5, "cm")) +
+    labs(title="Postes au concours de Professeur des universités", y ="Postes publiés", x = "Année") 
+```
+
 ```{r funs}
-plot_section <- function(section, sectionid) {
-  df <- cnu %>% 
-    drop_na(PostesPublies.MCF) %>% 
-    filter(SectionCNU==section) %>% 
-    ggplot(aes(x=Annee, y=PostesPublies.MCF)) + 
-      geom_point() + geom_smooth(se=F) + 
+plot_section <- function(section, sectionid, corps) {
+  postes %>% 
+    filter(SectionCNU.ID==as.numeric(sectionid), Corps == corps) %>% 
+    ggplot(aes(x=Année, y=Postes)) + 
+      geom_smooth(se=F) + 
+      geom_point(aes(color=Donnée),size=1) + 
       expand_limits(y=0) +
+      scale_color_brewer(palette = "Paired", direction = -1) +
       theme_cpesr_cap() + 
       theme(plot.margin = margin(0.5, 0.5, 0.5, 0.5, "cm")) +
-      labs(title=paste0("Concours MCF section ", sectionid," de 2002 à 2019"), subtitle=section, y ="Postes de MCF publiés", x = "Année") 
+      labs(title=paste0("Concours ",corps," section CNU ", sectionid), subtitle=section, y ="Postes publiés", x = "Année") 
 }
 ```
 
-```{r evolution.postes.MCF, fig.width=8, fig.asp=9/16, results='asis'}
+```{r evolution.postes, fig.width=8, fig.asp=9/16, results='asis'}
 
-sec <- cnu %>% select(SectionCNU, SectionCNU.ID) %>% unique()
+sec <- postes %>% select(SectionCNU, SectionCNU.ID) %>% unique()
 for(s in 1:nrow(sec)) {
   section <- sec[s,1]
   sectionid <- sec[s,2]
 
-  cat(paste0("\n\n## Section ", sectionid," ", section,"\n"))
-  print(plot_section(section, sectionid))
+  cat(paste0("\n\n## MCF Section #CNU", sectionid," ", section,"\n"))
+  print(plot_section(section, sectionid, "MCF"))
+  
+  cat(paste0("\n\n## PR Section #CNU", sectionid," ", section,"\n"))
+  print(plot_section(section, sectionid, "PR"))  
 }
 ```
