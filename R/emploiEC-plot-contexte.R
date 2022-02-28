@@ -48,31 +48,46 @@ p_contexte.evol.disc <- plot_evolution_EC(périm="Grande discipline")
 
 plot_emplois_long <- function() {
 
-  postes <- read.csv2("../data/cpesr-emplois-cnu-mcf-2002-2008.csv") %>%
-    mutate(Année = factor(Année)) %>%
+  postes.long <- read.csv2("../data/cpesr-emplois-cnu-mcf-2002-2008.csv") %>%
     left_join(cnu.sections) %>%
-    arrange(Année) %>%
     group_by(Année, GrandeDisciplineCNU.ID) %>%
     summarise(Concours.Postes.MCF = sum(Concours.Postes.MCF,na.rm = TRUE)) %>%
-    bind_rows(
-      emploisEC %>%
-        filter(Périmètre=="Grande discipline") %>% 
-        select(Année,GrandeDisciplineCNU.ID=Périmètre.ID,Concours.Postes.MCF)
-    ) 
-    
+    mutate(Données = "Définitives")
   
+  postes.cnu <- emploisEC %>%
+        filter(Périmètre=="Grande discipline") %>% 
+        transmute(Année = as.numeric(as.character(Année)), 
+               GrandeDisciplineCNU.ID=Périmètre.ID,
+               Concours.Postes.MCF) %>%
+    mutate(Données = "Définitives")
+
+  postes.galaxie <- bind_rows(
+    read.csv("../utils/galaxie-excavator/galaxie.2021.csv") %>% mutate(Année = 2021),
+    read.csv("../utils/galaxie-excavator/galaxie.2022.csv") %>% mutate(Année = 2022)
+  ) %>%
+    filter(Corps=="MCF") %>%
+    rename(SectionCNU.ID = Section) %>%
+    left_join(cnu.sections) %>%
+    group_by(Année,GrandeDisciplineCNU.ID) %>%
+    summarise(Concours.Postes.MCF = n()) %>%
+    filter(GrandeDisciplineCNU.ID != "Santé", !is.na(GrandeDisciplineCNU.ID)) %>%
+    mutate(Données = "Temporaires")
+    
+  postes <- bind_rows(postes.long,postes.cnu,postes.galaxie)
+
   postes.tot <- postes %>%
-    group_by(Année) %>%
+    group_by(Année,Données) %>%
     summarise(Concours.Postes.MCF = sum(Concours.Postes.MCF,na.rm = TRUE)) %>%
     ungroup() %>%
     mutate(evol = round(Concours.Postes.MCF / first(Concours.Postes.MCF) * 100))
     
   ggplot(postes, aes(x=Année, y=Concours.Postes.MCF)) +
-    geom_col(aes(fill=factor(GrandeDisciplineCNU.ID,levels=rev(levels_gdcnu)))) +
+    geom_col(aes(fill=factor(GrandeDisciplineCNU.ID,levels=rev(levels_gdcnu)),alpha=Données)) +
     geom_text(data=postes.tot, aes(label=Concours.Postes.MCF), color="black", vjust=-0.3) +
     geom_text(data=postes.tot, aes(label=evol), color="white", vjust=1.3) +
     xlab("") + ylab("Nombre de postes MCF ouverts") +
-    scale_fill_manual(breaks=rev(levels_gdcnu[-1]), values=rev(palette_gdcnu[-1]), name="")
+    scale_fill_manual(breaks=rev(levels_gdcnu[-1]), values=rev(palette_gdcnu[-1]), name="") +
+    scale_alpha_manual(values = c(1,0.5)) 
 }
 
 

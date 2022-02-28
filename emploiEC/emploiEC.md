@@ -171,7 +171,7 @@ section, et les sommes sont cohérentes.
 
 ### Nombre de postes de MCF ouverts au concours par an
 
-<img src="emploiEC_files/figure-gfm/contexte_postes-1.png" width="768" />
+<img src="emploiEC_files/figure-gfm/contexte_postes-1.png" width="960" />
 
 ### Effectifs enseignants-chercheurs titulaires
 
