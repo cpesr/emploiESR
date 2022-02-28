@@ -214,7 +214,7 @@ d’autres disciplines, ce que ne permet pas de détecter les données.
 
 <img src="emploiEC_files/figure-gfm/p_contexte_ec.etu.te.disc-1.png" width="768" />
 
-### Evolutions réelles et nécessaires des effectifs enseignant-chercheur titulaire pour maintenant le taux d’encadrement de 2010
+### Evolutions réelles et nécessaires des effectifs enseignant-chercheur titulaire pour maintenir le taux d’encadrement de 2010
 
 L’évolution annuelle des effectifs indique la différence d’une année sur
 l’autre du nombre d’enseignants-chercheurs titulaires sur l’ensemble du

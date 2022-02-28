@@ -114,12 +114,12 @@ p_contexte_ec.etu.te + cpesr_cap() + ggtitle("Evolution des effectifs étudiants
 p_contexte_ec.etu.te.disc  + cpesr_cap()  + ggtitle("Evolution des effectifs étudiants et EC titulaires, et des taux d'encadrement", subtitle = "valeur 100 pour 2010")
 ```
 
-### Evolutions réelles et nécessaires des effectifs enseignant-chercheur titulaire pour maintenant le taux d'encadrement de 2010
+### Evolutions réelles et nécessaires des effectifs enseignant-chercheur titulaire pour maintenir le taux d'encadrement de 2010
 
 `r description.contexte$evol`
 
 ```{r contexte.evol.etu}
-p_contexte.evol + cpesr_cap() + ggtitle("Evolutions réelles et nécessaires des effectifs enseignant-chercheur titulaire", subtitle="pour maintenant le taux d'encadrement de 2010")
+p_contexte.evol + cpesr_cap() + ggtitle("Evolutions réelles et nécessaires des effectifs enseignant-chercheur titulaire", subtitle="pour maintenir le taux d'encadrement de 2010")
 ```
 
 
