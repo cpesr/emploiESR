@@ -107,11 +107,13 @@ plot_flux_alluvial <- function(périm=NULL, périmid=NULL, année=2020, sizemult
  
 plot_flux_lignes <- function(périm=NULL, périmid=NULL, année=NULL, norm = FALSE, sizemult=1) {
   
-  emploisEC %>%
+  df <- emploisEC %>%
     { if(!is.null(périm)) filter(.,Périmètre == périm) else . } %>%
     { if(!is.null(périmid)) filter(.,Périmètre.ID == périmid) else . } %>%
-    { if(!is.null(année)) filter(.,Année == année) else . } %>%
-    
+    { if(!is.null(année)) filter(.,Année == année) else . } 
+  dfl <- length(unique(df$Année))
+  
+  df %>%  
     pivot_longer(
       cols = all_of(séries.MCF),
       names_to = "Métrique",
@@ -119,11 +121,12 @@ plot_flux_lignes <- function(périm=NULL, périmid=NULL, année=NULL, norm = FAL
     ) %>%
     mutate(Métrique = factor(Métrique, levels=séries.MCF,labels=séries.MCF.lab)) %>%
     mutate(lab = as.character(Nombre)) %>% 
+    arrange(Année) %>%
     { if(norm) 
       group_by(., Périmètre.ID, Métrique) %>% 
         mutate(Nombre = Nombre / first(Nombre) * 100) %>%
         mutate(Périmètre.ID = paste(Périmètre.ID,"(base 100)"))
-      else . } %>%    
+      else . } %>% 
     
     ggplot(aes(x=Métrique,y=Nombre,color=Année)) +
     geom_line(aes(group=Année)) +
@@ -132,12 +135,12 @@ plot_flux_lignes <- function(périm=NULL, périmid=NULL, année=NULL, norm = FAL
     expand_limits(y=0) +
     scale_x_discrete(labels=~str_replace(.x," ","\n")) +
     { if(norm) scale_y_continuous(breaks=seq(0,120,20)) } + 
-    scale_color_brewer(palette="RdBu", direction=-1) +
+    scale_color_manual(values=colorRampPalette(rev(RColorBrewer::brewer.pal(11,"RdBu")))(dfl)) +
     xlab("") + ylab("") +
     theme(legend.position = "right") 
 }
 
-plot_flux_lignes(périm="Grande discipline", périmid="ST", norm=FALSE)
+#plot_flux_lignes(périm="Grande discipline", périmid="ST", norm=TRUE)
 
 
 

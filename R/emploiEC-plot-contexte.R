@@ -133,7 +133,7 @@ ne permet pas de détecter les données.
 du nombre d'enseignants-chercheurs titulaires sur l'ensemble du périmètre MESRI.
 
 Une deuxième série indique l'évolution qui aurait été nécessaire pour conserver 
-le taux d'encadrement global de 2009, et donc le nombre de recrutements qu'il aurait fallu faire,
+le taux d'encadrement global de 2010, et donc le nombre de recrutements qu'il aurait fallu faire,
 en plus des renouvellement de départ, pour conserver les conditions de travail et 
 d'étude sur la dernière décennie.
 "

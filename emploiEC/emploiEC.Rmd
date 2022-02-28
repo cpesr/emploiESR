@@ -79,7 +79,7 @@ p_contexte_ec + cpesr_cap() + ggtitle("Effectifs enseignants-chercheurs titulair
 ```
 
 ```{r contexte_ec}
-p_contexte_ec.norm + cpesr_cap() + ggtitle("Evolution des effectifs enseignants-chercheurs titulaires", subtitle="Valeur 100 pour 2009")
+p_contexte_ec.norm + cpesr_cap() + ggtitle("Evolution des effectifs enseignants-chercheurs titulaires", subtitle="Valeur 100 pour 2010")
 ```
 
 ### Effectifs étudiants dans le périmètre du MESRI
@@ -89,7 +89,7 @@ p_contexte_etu + cpesr_cap() + ggtitle("Effectifs étudiants dans le périmètre
 ```
 
 ```{r p_contexte_etu.norm}
-p_contexte_etu.norm + cpesr_cap() + ggtitle("Evolution des effectifs étudiants dans le périmètre du MESRI", subtitle = "en valeur 100 pour 2009")
+p_contexte_etu.norm + cpesr_cap() + ggtitle("Evolution des effectifs étudiants dans le périmètre du MESRI", subtitle = "en valeur 100 pour 2010")
 ```
 
 ### Taux d'encadrement
@@ -101,25 +101,25 @@ p_contexte_te + cpesr_cap() + ggtitle("Taux d'encadrement au MESRI", subtitle = 
 ```
 
 ```{r p_contexte_te.norm}
-p_contexte_te.norm + cpesr_cap() + ggtitle("Evolution des taux d'encadrement", subtitle = "nombre d'enseignants-chercheurs titulaires pour 100 étudiants, en valeur 100 pour 2009")
+p_contexte_te.norm + cpesr_cap() + ggtitle("Evolution des taux d'encadrement", subtitle = "nombre d'enseignants-chercheurs titulaires pour 100 étudiants, en valeur 100 pour 2010")
 ```
 
 ### Evolution des effectifs étudiants et enseignants-chercheurs titulairs et taux d'encadrement
 
 ```{r p_contexte_ec.etu.te}
-p_contexte_ec.etu.te + cpesr_cap() + ggtitle("Evolution des effectifs étudiants et EC titulaires, et du taux d'encadrement", subtitle = "valeur 100 pour 2009")
+p_contexte_ec.etu.te + cpesr_cap() + ggtitle("Evolution des effectifs étudiants et EC titulaires, et du taux d'encadrement", subtitle = "valeur 100 pour 2010")
 ```
 
 ```{r p_contexte_ec.etu.te.disc}
-p_contexte_ec.etu.te.disc  + cpesr_cap()  + ggtitle("Evolution des effectifs étudiants et EC titulaires, et des taux d'encadrement", subtitle = "valeur 100 pour 2009")
+p_contexte_ec.etu.te.disc  + cpesr_cap()  + ggtitle("Evolution des effectifs étudiants et EC titulaires, et des taux d'encadrement", subtitle = "valeur 100 pour 2010")
 ```
 
-### Evolutions réelles et nécessaires des effectifs enseignant-chercheur titulaire pour maintenant le taux d'encadrement de 2009
+### Evolutions réelles et nécessaires des effectifs enseignant-chercheur titulaire pour maintenant le taux d'encadrement de 2010
 
 `r description.contexte$evol`
 
 ```{r contexte.evol.etu}
-p_contexte.evol + cpesr_cap() + ggtitle("Evolutions réelles et nécessaires des effectifs enseignant-chercheur titulaire", subtitle="pour maintenant le taux d'encadrement de 2009")
+p_contexte.evol + cpesr_cap() + ggtitle("Evolutions réelles et nécessaires des effectifs enseignant-chercheur titulaire", subtitle="pour maintenant le taux d'encadrement de 2010")
 ```
 
 
@@ -167,11 +167,11 @@ p4 <- plot_flux_alluvial(périm="Grande discipline", sizemult = 0.5) + cpesr_cap
 `r description.flux$col`
 
 ```{r flux.col}
-p1 + ggtitle("Effectifs aux différentes étapes de la sélection lors du recrutement des MCF", subtitle = "en 2019") + cpesr_cap()
+p1 + ggtitle("Effectifs aux différentes étapes de la sélection lors du recrutement des MCF", subtitle = "en 2020") + cpesr_cap()
 ```
 
 ```{r flux.col.discipline}
-p2 + ggtitle("Effectifs aux différentes étapes de la sélection lors du recrutement des MCF", subtitle="en 2019") + cpesr_cap()
+p2 + ggtitle("Effectifs aux différentes étapes de la sélection lors du recrutement des MCF", subtitle="en 2020") + cpesr_cap()
 ```
 
 #### Effectifs aux différentes étapes de la sélection lors du recrutement des MCF : diagramme de Sankey
@@ -180,11 +180,11 @@ p2 + ggtitle("Effectifs aux différentes étapes de la sélection lors du recrut
 
 
 ```{r flux.alluvial}
-p3 + ggtitle("Effectifs aux différentes étapes de la sélection lors du recrutement des MCF", subtitle="en 2019") + cpesr_cap()
+p3 + ggtitle("Effectifs aux différentes étapes de la sélection lors du recrutement des MCF", subtitle="en 2020") + cpesr_cap()
 ```
 
 ```{r flux.alluvial.discipline}
-p4 + ggtitle("Effectifs aux différentes étapes de la sélection lors du recrutement des MCF", subtitle="en 2019") + cpesr_cap()
+p4 + ggtitle("Effectifs aux différentes étapes de la sélection lors du recrutement des MCF", subtitle="en 2020") + cpesr_cap()
 ```
 
 
@@ -201,11 +201,11 @@ p4 <- plot_flux_lignes(périm="Grande discipline", norm = TRUE, sizemult = 0.5) 
 
 
 ```{r flux.lignes}
-p1 + ggtitle("Effectifs aux différentes étapes de la sélection lors du recrutement des MCF", subtitle="en 2019") + cpesr_cap()
+p1 + ggtitle("Effectifs aux différentes étapes de la sélection lors du recrutement des MCF", subtitle="en 2020") + cpesr_cap()
 ```
 
 ```{r flux.lignes.discipline}
-p2 + ggtitle("Effectifs aux différentes étapes de la sélection lors du recrutement des MCF", subtitle="en 2019") + cpesr_cap()
+p2 + ggtitle("Effectifs aux différentes étapes de la sélection lors du recrutement des MCF", subtitle="en 2020") + cpesr_cap()
 ```
 
 
