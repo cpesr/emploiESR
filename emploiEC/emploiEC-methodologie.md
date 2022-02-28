@@ -34,8 +34,9 @@ n'est pas traité dans ce document.
 ## Source des données
 
 - Données originales :
-  - [Fiches démographiques du CNU](https://www.enseignementsup-recherche.gouv.fr/pid24672-cid85019/fiches-demographiques-des-sections-du-cnu.html)
+  - [Fiches démographiques du CNU](https://www.enseignementsup-recherche.gouv.fr/fr/fiches-demographiques-des-sections-du-conseil-national-des-universites-cnu-83047)
   - [Bilans de campagne de recrutement](https://www.enseignementsup-recherche.gouv.fr/cid118435/personnels-enseignants-du-superieur-bilans-et-statistiques.html#recrutement)
+  - [Galaxie](https://www.galaxie.enseignementsup-recherche.gouv.fr/ensup/ListesPostesPublies/Emplois_publies_TrieParCorps.html)
 
 - Données agrégées : 
   - [cpesr-emplois-cnu-qualification-concours.csv](https://github.com/cpesr/emploiESR/tree/main/data/data/cpesr-emplois-cnu-qualification-concours.csv)
@@ -43,7 +44,7 @@ n'est pas traité dans ce document.
 
 - Autres données :
   - [Les enseignants titulaires dans les établissements publics de l'ESR](https://data.enseignementsup-recherche.gouv.fr/explore/dataset/fr-esr-enseignants-titulaires-esr-public/export/?flg=fr&disjunctive.annee)
-  - [Statistiques sur les effectifs d'étudiants inscrits par établissement public sous tutelle du ministère en charge de l'Enseignement supérieur (hors doubles inscriptions université-CPGE)](https://data.enseignementsup-recherche.gouv.fr/explore/dataset/fr-esr-statistiques-sur-les-effectifs-d-etudiants-inscrits-par-etablissement-hcp/)
+  - [Statistiques sur les effectifs d'étudiants inscrits](https://data.enseignementsup-recherche.gouv.fr/explore/dataset/fr-esr-statistiques-sur-les-effectifs-d-etudiants-inscrits-par-etablissement-hcp/)
 
 ## Acquisition et traitement des données
 
@@ -51,9 +52,11 @@ n'est pas traité dans ce document.
 1. Visualisations exploratoires :
     + à propos de la qualification : [visualisations](https://github.com/cpesr/RFC/blob/main/ConcoursMCF/QualificationMCF.md) ;
     + à propos du concours : [visualisations](https://github.com/cpesr/RFC/blob/main/ConcoursMCF/ConcoursMCF.md) ;
-1. Acquisition automatisée par le script [cnu-excavator](https://github.com/cpesr/emploiESR/tree/main/utils/cnu-excavator), pour les années 2013, 2015 et 2019, des tableaux :
-    + `3.1 - Qualification aux fonctions d'enseignant-chercheur - Nombre de candidats et de qualifiés (y compris la qualification "de groupe")` ;
-    + `3.2 - Recrutement des enseignants-chercheurs - Postes publiés et pourvus, taux de pression et part des postes non pourvus - Session synchronisée et "au fil de l'eau"` ;
+1. Acquisition automatisée des données provenant des `fiches démographiques du CNU` par le script [cnu-excavator](https://github.com/cpesr/emploiESR/tree/main/utils/cnu-excavator), pour les années 2013, 2015 et 2020, des tableaux :
+    + `3.1 - Qualification aux fonctions d'enseignant-chercheur` ;
+    + `3.2 - Recrutement des enseignants-chercheurs` ;
+1. Acquisition automatisée données provenant des postes en ligne sur `Galaxie` par le script [galaxie-excavator](https://github.com/cpesr/emploiESR/tree/main/utils/galaxie-excavator), pour les années 2020 et 2021 :
+    + Ces données sont marquées comme `temporaires`.
 1. Correction des erreurs détectées :
     + Inversion du nombre de candidats en 2019 entre les groupes Pharma. et ST ;
     + Erreur manifeste dans le nombre de candidats en 2018 pour le groupe 10 ;

@@ -37,8 +37,8 @@ plot_all_section <- function(sectionID, groupeID, grandedisciplineID, metriques,
         mutate(Périmètre.ID = paste(Périmètre.ID,"(base 100)"))
       else . } %>% 
     mutate(lab = ifelse(
-      Périmètre == "Section" & ((Année == first(Année) | Année == last(Année)) |
-        (Métrique=="Période de renouvellement (ans)" & Année == "2018")), 
+      Périmètre == "Section" & ((Année == first(Année) | Année == last(Année))), #|
+        #(Métrique=="Période de renouvellement (ans)" & Année == "2018")), 
       hacklabels(val), NA)) %>%
     
     ggplot(aes(x=Année,y=val,color=Métrique)) +

@@ -55,7 +55,7 @@ Une version plus complète du rapport est disponible [ici](cpesr-emploiEC-rappor
 ```
 - twtexte:[#DataESR] L'entrée dans la carrière des enseignants-chercheurs en chiffres
 - twalt:@ffigon @juliengossa LO 2.0 www.cpesr.fr
-- twurl:https://twitter.com/CPESR_/status/1442047467042877442
+- twurl:https://twitter.com/CPESR_/status/1498228236710559744
 ```
 
 ## Contexte

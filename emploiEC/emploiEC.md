@@ -95,19 +95,18 @@ différent qui n’est pas traité dans ce document.
 
 -   Données originales :
     -   [Fiches démographiques du
-        CNU](https://www.enseignementsup-recherche.gouv.fr/pid24672-cid85019/fiches-demographiques-des-sections-du-cnu.html)
+        CNU](https://www.enseignementsup-recherche.gouv.fr/fr/fiches-demographiques-des-sections-du-conseil-national-des-universites-cnu-83047)
     -   [Bilans de campagne de
         recrutement](https://www.enseignementsup-recherche.gouv.fr/cid118435/personnels-enseignants-du-superieur-bilans-et-statistiques.html#recrutement)
+    -   [Galaxie](https://www.galaxie.enseignementsup-recherche.gouv.fr/ensup/ListesPostesPublies/Emplois_publies_TrieParCorps.html)
 -   Données agrégées :
     -   [cpesr-emplois-cnu-qualification-concours.csv](https://github.com/cpesr/emploiESR/tree/main/data/data/cpesr-emplois-cnu-qualification-concours.csv)
     -   [cpesr-emplois-ec.csv](https://github.com/cpesr/emploiESR/tree/main/data/cpesr-emplois-ec.csv)
 -   Autres données :
     -   [Les enseignants titulaires dans les établissements publics de
         l’ESR](https://data.enseignementsup-recherche.gouv.fr/explore/dataset/fr-esr-enseignants-titulaires-esr-public/export/?flg=fr&disjunctive.annee)
-    -   [Statistiques sur les effectifs d’étudiants inscrits par
-        établissement public sous tutelle du ministère en charge de
-        l’Enseignement supérieur (hors doubles inscriptions
-        université-CPGE)](https://data.enseignementsup-recherche.gouv.fr/explore/dataset/fr-esr-statistiques-sur-les-effectifs-d-etudiants-inscrits-par-etablissement-hcp/)
+    -   [Statistiques sur les effectifs d’étudiants
+        inscrits](https://data.enseignementsup-recherche.gouv.fr/explore/dataset/fr-esr-statistiques-sur-les-effectifs-d-etudiants-inscrits-par-etablissement-hcp/)
 
 ## Acquisition et traitement des données
 
@@ -120,14 +119,18 @@ différent qui n’est pas traité dans ce document.
     -   à propos du concours :
         [visualisations](https://github.com/cpesr/RFC/blob/main/ConcoursMCF/ConcoursMCF.md)
         ;
-3.  Acquisition automatisée par le script
+3.  Acquisition automatisée des données provenant des
+    `fiches démographiques du CNU` par le script
     [cnu-excavator](https://github.com/cpesr/emploiESR/tree/main/utils/cnu-excavator),
-    pour les années 2013, 2015 et 2019, des tableaux :
-    -   `3.1 - Qualification aux fonctions d'enseignant-chercheur - Nombre de candidats et de qualifiés (y compris la qualification "de groupe")`
-        ;
-    -   `3.2 - Recrutement des enseignants-chercheurs - Postes publiés et pourvus, taux de pression et part des postes non pourvus - Session synchronisée et "au fil de l'eau"`
-        ;
-4.  Correction des erreurs détectées :
+    pour les années 2013, 2015 et 2020, des tableaux :
+    -   `3.1 - Qualification aux fonctions d'enseignant-chercheur` ;
+    -   `3.2 - Recrutement des enseignants-chercheurs` ;
+4.  Acquisition automatisée données provenant des postes en ligne sur
+    `Galaxie` par le script
+    [galaxie-excavator](https://github.com/cpesr/emploiESR/tree/main/utils/galaxie-excavator),
+    pour les années 2020 et 2021 :
+    -   Ces données sont marquées comme `temporaires`.
+5.  Correction des erreurs détectées :
     -   Inversion du nombre de candidats en 2019 entre les groupes
         Pharma. et ST ;
     -   Erreur manifeste dans le nombre de candidats en 2018 pour le
@@ -141,15 +144,15 @@ différent qui n’est pas traité dans ce document.
         -   Application de ce ratio aux données de la fiche 2013 (donc
             pour les années 2009 et 2010, les suivantes étant dans la
             fiche 2015) ;
-5.  Traitement des données par des [scripts
+6.  Traitement des données par des [scripts
     R](https://github.com/cpesr/emploiESR/tree/main/R) :
     -   Normalisation des données ;
     -   Intégration des données extérieures ;
     -   Calcul des métriques supplémentaires ;
-6.  Production et mise en ligne des visualisations pour commentaires :
+7.  Production et mise en ligne des visualisations pour commentaires :
     [visualisations](https://github.com/cpesr/emploiESR/blob/main/emploiEC/emploiEC.md)
     ;
-7.  Production de ce rapport.
+8.  Production de ce rapport.
 
 ## Note sur les qualifications multiples
 
@@ -165,7 +168,7 @@ section, et les sommes sont cohérentes.
 
     - twtexte:[#DataESR] L'entrée dans la carrière des enseignants-chercheurs en chiffres
     - twalt:@ffigon @juliengossa LO 2.0 www.cpesr.fr
-    - twurl:https://twitter.com/CPESR_/status/1442047467042877442
+    - twurl:https://twitter.com/CPESR_/status/1498228236710559744
 
 ## Contexte
 

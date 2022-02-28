@@ -11,7 +11,7 @@ library(ggcpesrthemes)
 
 
 
-plot_flux_col <- function(périm=NULL, périmid=NULL, année=2019, sizemult=1) {
+plot_flux_col <- function(périm=NULL, périmid=NULL, année=2020, sizemult=1) {
   
   emploisEC %>%
     { if(!is.null(périm)) filter(.,Périmètre == périm) else . } %>%
@@ -54,7 +54,7 @@ plot_flux_col(périm="Ensemble")
 palette_alluvial <- c("red2","#33A02C","#1F78B4","#B2DF8A","#33A02C")
 names(palette_alluvial) <- c("Echec","Réussite","Qualifiés","Candidats","Recrutés")
 
-plot_flux_alluvial <- function(périm=NULL, périmid=NULL, année=2019, sizemult = 1) {
+plot_flux_alluvial <- function(périm=NULL, périmid=NULL, année=2020, sizemult = 1) {
   
   emploisEC %>%
     { if(!is.null(périm)) filter(.,Périmètre == périm) else . } %>%
@@ -98,7 +98,7 @@ plot_flux_alluvial <- function(périm=NULL, périmid=NULL, année=2019, sizemult
 }
 
 
-plot_flux_alluvial(périm="Ensemble",année=2019)
+# plot_flux_alluvial(périm="Ensemble",année=2020)
 # plot_flux_alluvial(périm="Grande discipline",année=2019) 
 # plot_flux_alluvial(périm="Grande discipline", périmid="ST",année=NULL) 
 

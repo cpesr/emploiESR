@@ -5,3 +5,4 @@
   - Cette année présente un nombre de postes incorrectement plus faible d'environ 10%.
 - Liste d’aptitude : entre 2002 et 2005, les postes ouverts réservés aux assistants titulaires (article 62 pour fusion des corps depuis le décret de 1984) ne sont pas comptabilisés. Il y en avait 250 par an. 
 - Les postes prennent en compte les mutations et détachements. 
+- Les données temporaires sont une extraction de Galaxie à l'ouverture de la campagne synchronisée.
