@@ -114,13 +114,13 @@ for(s in 1:nrow(sec)) {
 
   if (sectionid == 75 | sectionid >= 90) next
   
-  cat(paste0("\n\n## MCF Section #CNU", sectionid," ", section,"\n"))
+  cat(paste0("\n\n## MCF Section CNU ", sectionid," ", section,"\n"))
   print(
     postes %>% filter(SectionCNU.ID==as.numeric(sectionid), Corps == "MCF") %>% 
     plot_section(paste0("Concours MCF section CNU ", sectionid), str_wrap(section,80))
     )
   
-  cat(paste0("\n\n## PR Section #CNU", sectionid," ", section,"\n"))
+  cat(paste0("\n\n## PR Section CNU ", sectionid," ", section,"\n"))
   print(
     postes %>% filter(SectionCNU.ID==as.numeric(sectionid), Corps == "PR") %>% 
     plot_section(paste0("Concours PR section CNU ", sectionid), str_wrap(section,80))
