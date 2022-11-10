@@ -4,6 +4,7 @@ Nombre de postes depuis 2002 pour les sections CNU
     - twtexte:[#DataESR] Evolution du nombre de postes d'enseignant-chercheur
     - twalt:@ffigon @juliengossa LO 2.0 www.cpesr.fr
     - twurl:https://twitter.com/CPESR_/status/1498228236710559744
+    - ulr:https://cpesr.fr/lentree-dans-la-carriere-des-enseignants-chercheurs/
 
 ## Concours de Maître de Conférences
 
