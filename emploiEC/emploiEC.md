@@ -7,47 +7,46 @@ Une version plus complète du rapport est disponible
 ## Introduction
 
 Les principales données utilisées dans ce document proviennent des
-fiches démographiques du CNU[1] (Conseil National des Universités) et
+fiches démographiques du CNU[^1] (Conseil National des Universités) et
 décrivent en partie les conditions d’entrée dans la carrière
 d’enseignants-chercheurs.
 
 Ce document s’intéresse essentiellement au recrutement des titulaires,
-qui comporte trois phases[2] :
+qui comporte trois phases[^2] :
 
--   **Doctorat** : l’obtention d’un doctorat (Bac+8) est en principe
-    indispensable pour participer aux épreuves de recrutement. Les
-    docteurs ne se destinent pas tous à une carrière académique, et la
-    proportion qui poursuit sa carrière dans le secteur privé est un
-    enjeu politique subissant des transformations.
+- **Doctorat** : l’obtention d’un doctorat (Bac+8) est en principe
+  indispensable pour participer aux épreuves de recrutement. Les
+  docteurs ne se destinent pas tous à une carrière académique, et la
+  proportion qui poursuit sa carrière dans le secteur privé est un enjeu
+  politique subissant des transformations.
 
 L’âge moyen d’obtention du doctorat est de 32 ans.
 
 Le nombre de docteurs n’est pas disponible dans le jeu de données
 exploité dans ce document.
 
--   **Qualification** : la qualification est une épreuve nationale, sur
-    dossier expertisé par le CNU. En principe, seuls les qualifiés sont
-    autorisés à participer aux concours. L’expertise est disciplinaire,
-    et peut fortement varier d’une section CNU[3] (sous-groupe
-    disciplinaire) à l’autre, tant sur les critères d’éligibilité que
-    sur la poids de la qualification dans le recrutement. Les docteurs
-    peuvent être qualifiés dans plusieurs sections, et les
-    qualifications sont valables 4 ans.
+- **Qualification** : la qualification est une épreuve nationale, sur
+  dossier expertisé par le CNU. En principe, seuls les qualifiés sont
+  autorisés à participer aux concours. L’expertise est disciplinaire, et
+  peut fortement varier d’une section CNU[^3] (sous-groupe
+  disciplinaire) à l’autre, tant sur les critères d’éligibilité que sur
+  la poids de la qualification dans le recrutement. Les docteurs peuvent
+  être qualifiés dans plusieurs sections, et les qualifications sont
+  valables 4 ans.
 
 L’âge moyen d’obtention de la qualification est de 33 ans.
 
 La qualification est largement affaiblie par la Loi de programmation de
-la recherche de 2020[4], qui introduit plusieurs dérogations.
+la recherche de 2020[^4], qui introduit plusieurs dérogations.
 
--   **Concours** : le concours est une épreuve locale, sur dossier puis
-    audition, organisée par chaque établissement pour chaque poste
-    ouvert. Les qualifiés peuvent candidater sur plusieurs postes,
-    pendant toute la période de validité de leur qualification. Les
-    candidats sont classés indépendamment sur chaque concours local. Des
-    postes ouverts peuvent ne pas être pourvus, soit parce qu’aucun
-    candidat n’a été classé, soit parce que tous les candidats classés
-    ont préféré un autre poste ou que le seul candidat s’est finalement
-    désisté.
+- **Concours** : le concours est une épreuve locale, sur dossier puis
+  audition, organisée par chaque établissement pour chaque poste ouvert.
+  Les qualifiés peuvent candidater sur plusieurs postes, pendant toute
+  la période de validité de leur qualification. Les candidats sont
+  classés indépendamment sur chaque concours local. Des postes ouverts
+  peuvent ne pas être pourvus, soit parce qu’aucun candidat n’a été
+  classé, soit parce que tous les candidats classés ont préféré un autre
+  poste ou que le seul candidat s’est finalement désisté.
 
 Les candidats qui acceptent un poste deviennent alors stagiaire pendant
 un an, avant d’être titularisés sous conditions.
@@ -55,7 +54,7 @@ un an, avant d’être titularisés sous conditions.
 L’âge moyen d’obtention d’un poste est de 34 ans, et celui de la
 titularisation de 35 ans.
 
-L’âge moyen de départ à la retraite est de 63 ans[5].
+L’âge moyen de départ à la retraite est de 63 ans[^5].
 
 ### Méthodologie
 
@@ -73,82 +72,81 @@ Traitements et données : <https://github.com/cpesr/emploiESR/>
 Les données temporelles sont systématiquement présentées sous quatre
 formes :
 
--   `Ensemble` : toutes disciplines confondues ;
--   `Ensemble en base 100` : ensemble, en base 100 pour la première
-    année ;
--   `Disciplinaire` : par grandes disciplines du CNU ;
--   `Disciplinaire en base 100` : disciplinaire, en base 100 pour la
-    première année.
+- `Ensemble` : toutes disciplines confondues ;
+- `Ensemble en base 100` : ensemble, en base 100 pour la première année
+  ;
+- `Disciplinaire` : par grandes disciplines du CNU ;
+- `Disciplinaire en base 100` : disciplinaire, en base 100 pour la
+  première année.
 
 Les grandes disciplines du CNU sont :
 
--   `DEG` : Droit, Economie, Gestion ;
--   `LLASHS` : Lettres, Langues, Arts, Sciences Humaines et Sociales ;
--   `Pharma` : Pharmacie ;
--   `ST` : Sciences et Technologies (aussi appelée `SI`, Sciences et
-    sciences de l’Ingénieur).
+- `DEG` : Droit, Economie, Gestion ;
+- `LLASHS` : Lettres, Langues, Arts, Sciences Humaines et Sociales ;
+- `Pharma` : Pharmacie ;
+- `ST` : Sciences et Technologies (aussi appelée `SI`, Sciences et
+  sciences de l’Ingénieur).
 
 Les disciplines de santé et médecine ont un système de recrutement
 différent qui n’est pas traité dans ce document.
 
 ## Source des données
 
--   Données originales :
-    -   [Fiches démographiques du
-        CNU](https://www.enseignementsup-recherche.gouv.fr/fr/fiches-demographiques-des-sections-du-conseil-national-des-universites-cnu-83047)
-    -   [Bilans de campagne de
-        recrutement](https://www.enseignementsup-recherche.gouv.fr/cid118435/personnels-enseignants-du-superieur-bilans-et-statistiques.html#recrutement)
-    -   [Galaxie](https://www.galaxie.enseignementsup-recherche.gouv.fr/ensup/ListesPostesPublies/Emplois_publies_TrieParCorps.html)
--   Données agrégées :
-    -   [cpesr-emplois-cnu-qualification-concours.csv](https://github.com/cpesr/emploiESR/tree/main/data/data/cpesr-emplois-cnu-qualification-concours.csv)
-    -   [cpesr-emplois-ec.csv](https://github.com/cpesr/emploiESR/tree/main/data/cpesr-emplois-ec.csv)
--   Autres données :
-    -   [Les enseignants titulaires dans les établissements publics de
-        l’ESR](https://data.enseignementsup-recherche.gouv.fr/explore/dataset/fr-esr-enseignants-titulaires-esr-public/export/?flg=fr&disjunctive.annee)
-    -   [Statistiques sur les effectifs d’étudiants
-        inscrits](https://data.enseignementsup-recherche.gouv.fr/explore/dataset/fr-esr-statistiques-sur-les-effectifs-d-etudiants-inscrits-par-etablissement-hcp/)
+- Données originales :
+  - [Fiches démographiques du
+    CNU](https://www.enseignementsup-recherche.gouv.fr/fr/fiches-demographiques-des-sections-du-conseil-national-des-universites-cnu-83047)
+  - [Bilans de campagne de
+    recrutement](https://www.enseignementsup-recherche.gouv.fr/cid118435/personnels-enseignants-du-superieur-bilans-et-statistiques.html#recrutement)
+  - [Galaxie](https://www.galaxie.enseignementsup-recherche.gouv.fr/ensup/ListesPostesPublies/Emplois_publies_TrieParCorps.html)
+- Données agrégées :
+  - [cpesr-emplois-cnu-qualification-concours.csv](https://github.com/cpesr/emploiESR/tree/main/data/data/cpesr-emplois-cnu-qualification-concours.csv)
+  - [cpesr-emplois-ec.csv](https://github.com/cpesr/emploiESR/tree/main/data/cpesr-emplois-ec.csv)
+- Autres données :
+  - [Les enseignants titulaires dans les établissements publics de
+    l’ESR](https://data.enseignementsup-recherche.gouv.fr/explore/dataset/fr-esr-enseignants-titulaires-esr-public/export/?flg=fr&disjunctive.annee)
+  - [Statistiques sur les effectifs d’étudiants
+    inscrits](https://data.enseignementsup-recherche.gouv.fr/explore/dataset/fr-esr-statistiques-sur-les-effectifs-d-etudiants-inscrits-par-etablissement-hcp/)
 
 ## Acquisition et traitement des données
 
 1.  Acquisition manuelle d’un sous-ensemble des données provenant des
     `fiches démographiques du CNU` ;
 2.  Visualisations exploratoires :
-    -   à propos de la qualification :
-        [visualisations](https://github.com/cpesr/RFC/blob/main/ConcoursMCF/QualificationMCF.md)
-        ;
-    -   à propos du concours :
-        [visualisations](https://github.com/cpesr/RFC/blob/main/ConcoursMCF/ConcoursMCF.md)
-        ;
+    - à propos de la qualification :
+      [visualisations](https://github.com/cpesr/RFC/blob/main/ConcoursMCF/QualificationMCF.md)
+      ;
+    - à propos du concours :
+      [visualisations](https://github.com/cpesr/RFC/blob/main/ConcoursMCF/ConcoursMCF.md)
+      ;
 3.  Acquisition automatisée des données provenant des
     `fiches démographiques du CNU` par le script
     [cnu-excavator](https://github.com/cpesr/emploiESR/tree/main/utils/cnu-excavator),
     pour les années 2013, 2015 et 2020, des tableaux :
-    -   `3.1 - Qualification aux fonctions d'enseignant-chercheur` ;
-    -   `3.2 - Recrutement des enseignants-chercheurs` ;
+    - `3.1 - Qualification aux fonctions d'enseignant-chercheur` ;
+    - `3.2 - Recrutement des enseignants-chercheurs` ;
 4.  Acquisition automatisée données provenant des postes en ligne sur
     `Galaxie` par le script
     [galaxie-excavator](https://github.com/cpesr/emploiESR/tree/main/utils/galaxie-excavator),
     pour les années 2020 et 2021 :
-    -   Ces données sont marquées comme `temporaires`.
+    - Ces données sont marquées comme `temporaires`.
 5.  Correction des erreurs détectées :
-    -   Inversion du nombre de candidats en 2019 entre les groupes
-        Pharma. et ST ;
-    -   Erreur manifeste dans le nombre de candidats en 2018 pour le
-        groupe 10 ;
-    -   Changement de méthodologie pour les candidats à la qualification
-        entre les fiches 2013 (candidatures totales) et 2015
-        (candidatures recevables seulement) :
-        -   Calcul d’un ratio moyen candidatures recevables /
-            candidatures sur les années 2011 à 2013, pour chaque section
-            indépendamment ;
-        -   Application de ce ratio aux données de la fiche 2013 (donc
-            pour les années 2009 et 2010, les suivantes étant dans la
-            fiche 2015) ;
+    - Inversion du nombre de candidats en 2019 entre les groupes Pharma.
+      et ST ;
+    - Erreur manifeste dans le nombre de candidats en 2018 pour le
+      groupe 10 ;
+    - Changement de méthodologie pour les candidats à la qualification
+      entre les fiches 2013 (candidatures totales) et 2015 (candidatures
+      recevables seulement) :
+      - Calcul d’un ratio moyen candidatures recevables / candidatures
+        sur les années 2011 à 2013, pour chaque section indépendamment ;
+      - Application de ce ratio aux données de la fiche 2013 (donc pour
+        les années 2009 et 2010, les suivantes étant dans la fiche 2015)
+        ;
 6.  Traitement des données par des [scripts
     R](https://github.com/cpesr/emploiESR/tree/main/R) :
-    -   Normalisation des données ;
-    -   Intégration des données extérieures ;
-    -   Calcul des métriques supplémentaires ;
+    - Normalisation des données ;
+    - Intégration des données extérieures ;
+    - Calcul des métriques supplémentaires ;
 7.  Production et mise en ligne des visualisations pour commentaires :
     [visualisations](https://github.com/cpesr/emploiESR/blob/main/emploiEC/emploiEC.md)
     ;
@@ -222,7 +220,7 @@ périmètre MESRI.
 
 Une deuxième série indique l’évolution qui aurait été nécessaire pour
 conserver le taux d’encadrement global de 2010, et donc le nombre de
-recrutements qu’il aurait fallu faire, en plus des renouvellement de
+recrutements qu’il aurait fallu faire, en plus des renouvellements de
 départ, pour conserver les conditions de travail et d’étude sur la
 dernière décennie.
 
@@ -232,17 +230,17 @@ dernière décennie.
 
 Les principales séries de données utilisées dans ce document sont :
 
--   `Candidats à la qualification` : nombre de docteurs ayant déposé une
-    candidature recevable à la qualification dans l’année ;
--   `Candidats qualififés` : nombre de docteurs ayant été qualifiés dans
-    l’année ;
--   `Candidats au concours` : nombre de qualifiés (pas nécessairement
-    dans l’année) ayant participé au concours Maîtres de Conférences
-    (MCF) dans l’année ;
--   `Postes publiés` : nombre de postes de Maîtres de Conférences (MCF)
-    ouverts au concours dans l’année ;
--   `Candidats recrutés` : nombre de candidats au concours Maîtres de
-    Conférents (MCF) qui obtiennent finalement un poste.
+- `Candidats à la qualification` : nombre de docteurs ayant déposé une
+  candidature recevable à la qualification dans l’année ;
+- `Candidats qualififés` : nombre de docteurs ayant été qualifiés dans
+  l’année ;
+- `Candidats au concours` : nombre de qualifiés (pas nécessairement dans
+  l’année) ayant participé au concours Maîtres de Conférences (MCF) dans
+  l’année ;
+- `Postes publiés` : nombre de postes de Maîtres de Conférences (MCF)
+  ouverts au concours dans l’année ;
+- `Candidats recrutés` : nombre de candidats au concours Maîtres de
+  Conférents (MCF) qui obtiennent finalement un poste.
 
 ### Principales séries de données à propos du recrutement des MCF
 
@@ -308,10 +306,10 @@ Définition : nombre de candidats par poste ouvert au concours
 
 La tension présente une triple interprétation :
 
--   pour l’Etat, elle mesure l’attractivité des carrières ;
--   pour les établissement, elle mesure l’attractivité des postes mis au
-    concours ;
--   pour les candidats, elle mesure la compétition.
+- pour l’Etat, elle mesure l’attractivité des carrières ;
+- pour les établissement, elle mesure l’attractivité des postes mis au
+  concours ;
+- pour les candidats, elle mesure la compétition.
 
 Des carrières attractives augmentent la tension, mais une tension haute
 diminue l’attractivité des carrières. Cette dynamique est soumise à un
@@ -334,12 +332,12 @@ Définition : nombre de recrutés par candidat⋅e.
 
 Le taux de réussite est proche de l’inverse du taux de tension :
 
--   pour l’Etat et les établissements, il mesure la qualité du
-    recrutement : plus le taux est bas, plus on estime que les candidats
-    recrutés sont de grande qualité ;
--   pour les candidats, il mesure le risque de précarité à la sortie du
-    doctorat : plus le taux est bas, plus le risque de se retrouver «
-    sans poste » est grand.
+- pour l’Etat et les établissements, il mesure la qualité du recrutement
+  : plus le taux est bas, plus on estime que les candidats recrutés sont
+  de grande qualité ;
+- pour les candidats, il mesure le risque de précarité à la sortie du
+  doctorat : plus le taux est bas, plus le risque de se retrouver « sans
+  poste » est grand.
 
 Les mêmes observations s’appliquent qu’au Taux de tension.
 
@@ -443,12 +441,12 @@ des âges.
 <img src="emploiEC_files/figure-gfm/metriques-31.png" width="768" />
 <img src="emploiEC_files/figure-gfm/metriques-32.png" width="768" />
 
-[1] <https://www.conseil-national-des-universites.fr/>
+[^1]: <https://www.conseil-national-des-universites.fr/>
 
-[2] <https://cache.media.enseignementsup-recherche.gouv.fr/file/statistiques/20/0/Note_DGRH_n7_septembre_2020_-_Trajectoire_professionnelle_des_enseignants-chercheurs_recrutes_en_2019_1328200.pdf>
+[^2]: <https://cache.media.enseignementsup-recherche.gouv.fr/file/statistiques/20/0/Note_DGRH_n7_septembre_2020_-_Trajectoire_professionnelle_des_enseignants-chercheurs_recrutes_en_2019_1328200.pdf>
 
-[3] <https://www.conseil-national-des-universites.fr/cnu/#/entite/entiteName/CNU/idChild/0>
+[^3]: <https://www.conseil-national-des-universites.fr/cnu/#/entite/entiteName/CNU/idChild/0>
 
-[4] <https://cpesr.fr/dossier-lppr/>
+[^4]: <https://cpesr.fr/dossier-lppr/>
 
-[5] <https://cache.media.enseignementsup-recherche.gouv.fr/file/2020/89/3/NI_2020_06_Retraites_1278893.pdf>
+[^5]: <https://cache.media.enseignementsup-recherche.gouv.fr/file/2020/89/3/NI_2020_06_Retraites_1278893.pdf>

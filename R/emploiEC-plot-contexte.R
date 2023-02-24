@@ -34,12 +34,17 @@ plot_evolution_EC <- function(périm="Ensemble") {
     ) %>%
     select(Année,Périmètre.ID,Evolution.réelle,Evolution.nécessaire) %>%
     pivot_longer(-c(Année,Périmètre.ID),names_to = "Série", values_to = "val") %>%
+    mutate(val = round(val)) %>%
     mutate(Série = factor(Série,labels = c("Evolution nécessaire", "Evolution réelle"))) %>%
+    mutate(nudge = ifelse(val >= 0,-0.2,1.2)) %>%
     ggplot(aes(x=Année,y=val,fill=Série)) + 
     geom_col(position="dodge") + 
+    geom_text(aes(label=val, vjust = nudge), position = position_dodge(width = .9)) +
     facet_wrap(Périmètre.ID~.) +
-    xlab("") + ylab("Evolution annuelle des effectifs EC")
+    xlab("") + ylab("Evolution annuelle des effectifs EC") +
+    scale_y_continuous(breaks = seq(0,12500,2500))
 }
+# plot_evolution_EC() 
 
 p_contexte.evol <- plot_evolution_EC() 
 p_contexte.evol.disc <- plot_evolution_EC(périm="Grande discipline") 
@@ -62,8 +67,8 @@ plot_emplois_long <- function() {
     mutate(Données = "Définitives")
 
   postes.galaxie <- bind_rows(
-    read.csv("../utils/galaxie-excavator/galaxie.2021.csv") %>% mutate(Année = 2021),
-    read.csv("../utils/galaxie-excavator/galaxie.2022.csv") %>% mutate(Année = 2022)
+    read.csv("../utils/galaxie-excavator/galaxie.2022.csv") %>% mutate(Année = 2022),
+    read.csv("../utils/galaxie-excavator/galaxie.2023.csv") %>% mutate(Année = 2023)
   ) %>%
     filter(Corps=="MCF") %>%
     rename(SectionCNU.ID = Section) %>%
@@ -134,7 +139,7 @@ du nombre d'enseignants-chercheurs titulaires sur l'ensemble du périmètre MESR
 
 Une deuxième série indique l'évolution qui aurait été nécessaire pour conserver 
 le taux d'encadrement global de 2010, et donc le nombre de recrutements qu'il aurait fallu faire,
-en plus des renouvellement de départ, pour conserver les conditions de travail et 
+en plus des renouvellements de départ, pour conserver les conditions de travail et 
 d'étude sur la dernière décennie.
 "
 )

@@ -17,8 +17,9 @@ galaxie <- bind_rows(
   # read.csv("../utils/galaxie-excavator/galaxie.2018.csv") %>% mutate(Année = 2018),
   # read.csv("../utils/galaxie-excavator/galaxie.2019.csv") %>% mutate(Année = 2019),
   # read.csv("../utils/galaxie-excavator/galaxie.2020.csv") %>% mutate(Année = 2020),
-  read.csv("../utils/galaxie-excavator/galaxie.2021.csv") %>% mutate(Année = 2021),
-  read.csv("../utils/galaxie-excavator/galaxie.2022.csv") %>% mutate(Année = 2022)
+  #read.csv("../utils/galaxie-excavator/galaxie.2021.csv") %>% mutate(Année = 2021),
+  read.csv("../utils/galaxie-excavator/galaxie.2022.csv") %>% mutate(Année = 2022),
+  read.csv("../utils/galaxie-excavator/galaxie.2023.csv") %>% mutate(Année = 2023)
 ) %>%
   group_by(Année,Corps,SectionCNU.ID = Section) %>%
   summarise(Concours.postes = n()) %>%

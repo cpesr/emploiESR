@@ -44,7 +44,7 @@ source("../R/emploiEC-plot-groupes.R")
 source("../R/emploiEC-plot-contexte.R")
 
 theme_cpesr_setup(authors = "Florent Figon, Julien Gossa", source = "https://github.com/cpesr/emploiESR")
-theme_rapport <- function() { theme_cpesr() + theme(
+theme_rapport <- function() { theme_cpesr(x_grid = FALSE) + theme(
   legend.position = "none",
   plot.margin = unit(c(0.5,0.5,0.5,0.5), "lines"), 
   axis.ticks.y = element_blank(),

@@ -5,7 +5,7 @@
 
 library(tidyverse)
 
-rentrée <- 2022
+rentrée <- 2023
 
 # Approximation des sections CNU correspondant aux flilières en tension
 #section.cnu.en.tension = c("74","70","18","16","01","02","03","71")
@@ -22,8 +22,10 @@ galaxie.2021 <- read.table("galaxie.2021.csv",header=TRUE, sep=",", quote='"')
 galaxie.2021$Annee <- 2021
 galaxie.2022 <- read.table("galaxie.2022.csv",header=TRUE, sep=",", quote='"')
 galaxie.2022$Annee <- 2022
+galaxie.2023 <- read.table("galaxie.2023.csv",header=TRUE, sep=",", quote='"')
+galaxie.2023$Annee <- 2023
 
-galaxie <-  bind_rows(galaxie.2018, galaxie.2019, galaxie.2020, galaxie.2021, galaxie.2022) 
+
+galaxie <-  bind_rows(galaxie.2018, galaxie.2019, galaxie.2020, galaxie.2021, galaxie.2022, galaxie.2023)
 
 write.csv2(galaxie,file="galaxie.csv",row.names=FALSE)
-

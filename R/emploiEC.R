@@ -21,29 +21,6 @@ ens <- read.csv2("../data/fr-esr-enseignants-titulaires-esr-public.csv") %>%
     ) %>%
   left_join(cnu.sections)
 
-etu <- read.csv2("../data/fr-esr-statistiques-sur-les-effectifs-d-etudiants-inscrits-par-etablissement-hcp.csv") %>%
-    filter(Attention == "") %>%
-    #filter(Type.d.établissement == "Université" ) %>%
-    transmute(
-      Année = rentree,
-      Ensemble = replace_na(Nombre.d.étudiants.inscrits..inscriptions.principales..hors.doubles.inscriptions.CPGE,0) - replace_na(Diplôme.préparé...Diplôme.d.État.d.infirmier,0),
-      DEG=Grande.discipline...Droit..sciences.économiques..AES,
-      Sans=Grande.discipline...Interdisciplinaire,
-      LLASHS=replace_na(Grande.discipline...Lettres..langues.et.sciences.humaines,0) + replace_na(Grande.discipline...STAPS,0),
-      Santé = Grande.discipline...Santé,
-      ST = Grande.discipline...Sciences.et.sciences.de.l.ingénieur,
-      Pharma = Discipline...Pharmacie      
-      ) %>% 
-    pivot_longer(-c(Année), names_to = "Périmètre.ID", values_to = "Effectif.ETU") %>%
-    group_by(Année, Périmètre.ID) %>%
-    summarise(Effectif.ETU = sum(Effectif.ETU, na.rm = TRUE)) %>%
-    mutate(
-      Périmètre.ID = na_if(Périmètre.ID,"NA"),
-      Périmètre=ifelse(Périmètre.ID == "Ensemble", "Ensemble","Grande discipline")) %>%
-    filter(Année > 2009)
-  
-
-
 
 ens <- bind_rows(
 ens %>%
@@ -83,6 +60,31 @@ ens %>%
   )
 ) 
 
+
+etu <- read.csv2("../data/fr-esr-statistiques-sur-les-effectifs-d-etudiants-inscrits-par-etablissement-hcp.csv") %>%
+  filter(Attention == "Sans double compte des établissements-composantes pour les EPE") %>%
+  #filter(Type.d.établissement == "Université" ) %>%
+  transmute(
+    Année = rentree,
+    Ensemble = replace_na(Nombre.d.étudiants.inscrits..inscriptions.principales..hors.doubles.inscriptions.CPGE,0) - replace_na(Diplôme.préparé...Diplôme.d.État.d.infirmier,0),
+    DEG=Grande.discipline...Droit..sciences.économiques..AES,
+    Sans=Grande.discipline...Interdisciplinaire,
+    LLASHS=replace_na(Grande.discipline...Lettres..langues.et.sciences.humaines,0) + replace_na(Grande.discipline...STAPS,0),
+    Santé = Grande.discipline...Santé,
+    ST = Grande.discipline...Sciences.et.sciences.de.l.ingénieur,
+    Pharma = Discipline...Pharmacie      
+  ) %>% 
+  pivot_longer(-c(Année), names_to = "Périmètre.ID", values_to = "Effectif.ETU") %>%
+  group_by(Année, Périmètre.ID) %>%
+  summarise(Effectif.ETU = sum(Effectif.ETU, na.rm = TRUE)) %>%
+  mutate(
+    Périmètre.ID = na_if(Périmètre.ID,"NA"),
+    Périmètre=ifelse(Périmètre.ID == "Ensemble", "Ensemble","Grande discipline")) %>%
+  filter(Année > 2009) %>%
+  filter(Année <= max(ens$Année))
+
+
+
 cnu.périmètres <- bind_rows(
   cnu.sections %>% transmute(Périmètre = "Section", Périmètre.ID = as.character(SectionCNU.ID), Périmètre.label = SectionCNU),
   cnu.sections %>% transmute(Périmètre = "Groupe", Périmètre.ID = GroupeCNU.ID, Périmètre.label = GroupeCNU) %>% unique(),
@@ -90,9 +92,9 @@ cnu.périmètres <- bind_rows(
   data.frame("Périmètre" = "Ensemble", Périmètre.ID = "Ensemble", Périmètre.label = "Ensemble")) %>%
   na.omit()
   
-
+qual_con <- read.csv2("../data/cpesr-emplois-cnu-qualification-concours.csv")
 emploisEC <- cnu.périmètres %>%
-  right_join(read.csv2("../data/cpesr-emplois-cnu-qualification-concours.csv")) %>%
+  right_join(qual_con) %>%
   left_join(ens) %>%
   left_join(etu) %>%
   mutate(
@@ -130,7 +132,7 @@ check_emploisEC <- function() {
     filter(nb_lignes != 10)
 }
 
-check_emploisEC() %>% filter(nb_lignes != 12)
+check_emploisEC() %>% filter(nb_lignes != 13)
 
 write.csv2(emploisEC, "../data/cpesr-emploi-ec.csv", row.names = FALSE)
 
@@ -141,3 +143,4 @@ read.csv2("../data/cpesr-emplois-cnu-mcf-qualification-recrutement.csv") %>%
   select(Année:Concours.Postes.MCF,Concours.Recrutés.MCF) %>%
   filter(Année < 2009) %>%
   write.csv2("../data/cpesr-emplois-cnu-mcf-2002-2008.csv",row.names = FALSE)
+
