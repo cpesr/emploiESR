@@ -466,7 +466,6 @@ plot_groupes <- function(groupe,gd) {
 ```
 
 ```{r groupes, results='asis', cache=TRUE}
-
 #knitr::opts_chunk$set(fig.width = 12, fig.height = 7.5, out.width = "100%", fig.align = "center")
 cnu.gd <- cnu.sections %>% select(GrandeDisciplineCNU.ID,GroupeCNU.ID,GroupeCNU) %>% unique() %>% arrange(as.numeric(GroupeCNU.ID))
 
@@ -574,7 +573,6 @@ plot_sections <- function(section,groupe,gd) {
 
 ```{r sections, results='asis', cache=TRUE}
 #knitr::opts_chunk$set(fig.width = 12, fig.height = 7.5, out.width = "100%", fig.align = "center")
-
 metriques <- bind_rows(kpis)
 
 for (s in 2:min(nrow(cnu.sections),1000)) { 
