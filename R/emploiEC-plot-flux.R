@@ -11,7 +11,9 @@ library(ggcpesrthemes)
 
 
 
-plot_flux_col <- function(périm=NULL, périmid=NULL, année=2020, sizemult=1) {
+plot_flux_col <- function(périm=NULL, périmid=NULL, année=NA, sizemult=1) {
+  
+  if(is.na(année)) année <- max(levels(emploisEC$Année))
   
   emploisEC %>%
     { if(!is.null(périm)) filter(.,Périmètre == périm) else . } %>%
