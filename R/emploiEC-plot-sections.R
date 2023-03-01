@@ -11,7 +11,7 @@ emploisEC_section <- function(sectionID, groupeID, grandedisciplineID) {
 hacklabels <- function(x) {
   ifelse(x<1.9 & x!=0,
          scales::percent(x, accuracy = 1),
-         round(x))
+         as.character(round(x)))
 }
 
 labeller_100 <- function(x)  paste(x, "(base 100)")
@@ -23,8 +23,10 @@ plot_all_section <- function(sectionID, groupeID, grandedisciplineID, metriques,
   
   labellerfun <- ifelse(norm,labeller_100,identity)
   
-  { if (egd) emploisEC_section(sectionID,groupeID, grandedisciplineID) 
+  df <- { if (egd) emploisEC_section(sectionID,groupeID, grandedisciplineID) 
     else emploisEC %>% filter(Périmètre == "Section", Périmètre.ID == sectionID) } %>%
+    filter(Source == "CNU") %>%
+    mutate(Année = as.character(Année)) %>%
     pivot_longer(
       cols = all_of(metriques),
       names_to = "Métrique",
@@ -35,16 +37,18 @@ plot_all_section <- function(sectionID, groupeID, grandedisciplineID, metriques,
       group_by(., Périmètre.ID,Métrique) %>% 
         mutate(val = val / first(val) * 100) %>%
         mutate(Périmètre.ID = paste(Périmètre.ID,"(base 100)"))
-      else . } %>% 
-    mutate(lab = ifelse(
-      Périmètre == "Section" & ((Année == first(Année) | Année == last(Année))), #|
-        #(Métrique=="Période de renouvellement (ans)" & Année == "2018")), 
-      hacklabels(val), NA)) %>%
+      else . } 
+  
+  df.lab <- df %>% 
+    filter(Périmètre == "Section", !is.na(val)) %>%
+    group_by(Métrique) %>%
+    slice(c(1,n())) %>%
+    mutate(lab = hacklabels(val))
     
-    ggplot(aes(x=Année,y=val,color=Métrique)) +
+    ggplot(df, aes(x=Année,y=val,color=Métrique)) +
     geom_line(aes(group=Périmètre, linetype=Périmètre), size=sizemult, se=FALSE) + 
     geom_point(aes(alpha=Périmètre), size=3*sizemult) +
-    { if(labels) geom_label(aes(label=lab), size=5*sizemult, fontface="bold", direction="y") } +
+    { if(labels) geom_label(data = df.lab, aes(label=lab), size=5*sizemult, fontface="bold", direction="y") } +
     facet_wrap(Métrique~.,nrow=facet_nrow, 
                scales=ifelse(norm,"fixed","free_y"), 
                labeller = labeller(Métrique=labellerfun)) +
@@ -62,14 +66,14 @@ plot_all_section <- function(sectionID, groupeID, grandedisciplineID, metriques,
     guides(color="none")
 }
 
-# plot_all_section("27","5","ST",
-#                  metriques = c("Qualification.Candidats.MCF","Qualification.Qualifiés.MCF",
-#                    "Concours.Candidats.MCF","Concours.Recrutés.MCF"),
-#                  labs = c("Candidats qualification","Candidats qualifiés",
-#                           "Candidats concours","Candidats recrutés"),
-#                  facet_nrow = 2,
-#                  norm=TRUE,
-#                  colors = séries.MCF.palette)
+plot_all_section("27","5","ST",
+                 metriques = c("kpi.PériodeRenouvellement","Qualification.Qualifiés.MCF",
+                   "Concours.Candidats.MCF","Concours.Recrutés.MCF"),
+                 labs = c("Candidats qualification","Candidats qualifiés",
+                          "Candidats concours","Candidats recrutés"),
+                 facet_nrow = 2,
+                 #norm=TRUE,
+                 colors = séries.MCF.palette)
 
 # metriques <- bind_rows(kpis)
 # 

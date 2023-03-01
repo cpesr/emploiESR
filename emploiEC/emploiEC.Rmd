@@ -17,10 +17,8 @@ options(dplyr.summarise.inform = FALSE)
 options(tidyverse.quiet = TRUE)
 
 
-emploisEC <- read.csv2("../data/cpesr-emploi-ec.csv", stringsAsFactors = TRUE) %>%
-  mutate(Année = as.factor(Année))
 cnu.sections <- read.csv2("../data/cpesr-cnu-sections.csv")
-
+emploisEC <- read.csv2("../data/cpesr-emplois-ec.csv", stringsAsFactors = TRUE) 
 
 source("../R/emploiEC-metriques.R")
 source("../R/emploiEC-plot-series.R")

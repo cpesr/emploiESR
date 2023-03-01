@@ -7,6 +7,8 @@ plot_series <- function(métriques, métriqueslab, périm=NULL, périmid=NULL, n
   labellerfun <- ifelse(norm,labeller_100,identity)
   
   emploisEC %>%
+    filter(Source == "CNU") %>%
+    mutate(Année = as.character(Année)) %>%
     filter(as.character(Année) >= minannée, as.character(Année) <= maxannée) %>%
     { if(!is.null(périm)) filter(.,Périmètre == périm) else . } %>%
     { if(!is.null(périmid)) filter(.,Périmètre.ID == périmid) else . } %>%

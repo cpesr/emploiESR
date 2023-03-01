@@ -144,3 +144,34 @@ read.csv2("../data/cpesr-emplois-cnu-mcf-qualification-recrutement.csv") %>%
   filter(Année < 2009) %>%
   write.csv2("../data/cpesr-emplois-cnu-mcf-2002-2008.csv",row.names = FALSE)
 
+
+## Données temporaires
+
+dir <- "../utils/galaxie-excavator/"
+galaxie <- data.frame() 
+for(file in list.files(dir, pattern = "^galaxie......csv$")) {
+  an <- str_sub(file,9,12)
+  gal <- read.table(paste0(dir,file), header=TRUE, sep=",", quote='"') %>%
+    mutate(Année = an) 
+  galaxie <- bind_rows(galaxie,gal)
+}
+galaxie %>% 
+  rename(SectionCNU.ID = Section) %>%
+  left_join(cnu.sections) 
+
+emploisEC.tmp <- bind_rows(
+  galaxie %>%
+    group_by(Année, Corps, Périmètre = "Grande discipline", Périmètre.ID = GrandeDisciplineCNU.ID) %>%
+    summarise(Concours.Postes = n()), 
+  galaxie %>%
+    group_by(Année, Corps, Périmètre = "Groupe", Périmètre.ID = GroupeCNU.ID) %>%
+    summarise(Concours.Postes = n()), 
+  galaxie %>%
+    group_by(Année, Corps, Périmètre = "Section", Périmètre.ID = as.character(SectionCNU.ID)) %>%
+    summarise(Concours.Postes = n())
+) %>%
+  pivot_wider(names_from = Corps, values_from = Concours.Postes, names_prefix = "Concours.Postes.")
+
+  
+write.csv2(emploisEC.tmp, "../data/cpesr-emplois-galaxie.csv",row.names = FALSE)
+

@@ -12,7 +12,7 @@ emploisEC_groupe <- function(groupeID, grandedisciplineID) {
 hacklabels <- function(x) {
   ifelse(x<1.9 & x!=0,
          scales::percent(x, accuracy = 1),
-         round(x))
+         as.character(round(x)))
 }
 
 labeller_100 <- function(x)  paste(x, "(base 100)")
@@ -24,7 +24,9 @@ plot_all_groupe <- function(groupeID, grandedisciplineID, metriques,
   
   labellerfun <- ifelse(norm,labeller_100,identity)
   
-  emploisEC_groupe(groupeID, grandedisciplineID) %>%
+  df <- emploisEC_groupe(groupeID, grandedisciplineID) %>%
+    filter(Source == "CNU") %>%
+    mutate(Année = as.character(Année)) %>%
     pivot_longer(
       cols = all_of(metriques),
       names_to = "Métrique",
@@ -37,17 +39,21 @@ plot_all_groupe <- function(groupeID, grandedisciplineID, metriques,
       group_by(., Périmètre, Périmètre.ID, Métrique) %>% 
         mutate(val = val / first(val) * 100) %>%
         mutate(Périmètre.ID = paste(Périmètre.ID,"(base 100)"))
-      else . } %>% 
-    mutate(lab = ifelse(
-      Périmètre == "Groupe" & (Année == first(Année) | Année == last(Année)), 
-      hacklabels(val), NA)) %>%
+      else . }
+  
+  df.lab <- df %>% 
+    filter(!is.na(val)) %>%
+    group_by(Métrique) %>%
+    slice(c(1,n())) %>%
+    mutate(lab = hacklabels(val))
+  
     
         
-    ggplot(aes(x=Année,y=val,color=Métrique)) +
+    ggplot(df, aes(x=Année,y=val,color=Métrique)) +
     geom_line(aes(group=paste(Périmètre,Périmètre.ID), linetype=Périmètre, alpha=Périmètre), se=FALSE) + 
     geom_point(aes(size=Périmètre)) +
-    { if(labels) ggrepel::geom_text_repel(aes(label=seclab), size=4*sizemult, direction="y", color = "grey") } +
-    { if(labels) geom_label(aes(label=lab), size=5*sizemult, fontface="bold", direction="y") } +
+    #{ if(labels) ggrepel::geom_text_repel(aes(label=seclab), size=4*sizemult, direction="y", color = "grey") } +
+    { if(labels) geom_label(data = df.lab, aes(label=lab), size=5*sizemult, fontface="bold", direction="y") } +
     facet_wrap(Métrique~.,nrow=facet_nrow, 
                scales=ifelse(norm,"fixed","free_y"), 
                labeller = labeller(Métrique=labellerfun)) +

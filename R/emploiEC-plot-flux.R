@@ -13,7 +13,11 @@ library(ggcpesrthemes)
 
 plot_flux_col <- function(périm=NULL, périmid=NULL, année=NA, sizemult=1) {
   
-  if(is.na(année)) année <- max(levels(emploisEC$Année))
+  
+  if(is.na(année)) {
+    df <- emploisEC %>% filter(Source != "Galaxie")
+    année <- max(as.character(df$Année))
+  }
   
   emploisEC %>%
     { if(!is.null(périm)) filter(.,Périmètre == périm) else . } %>%
@@ -39,7 +43,7 @@ plot_flux_col <- function(périm=NULL, périmid=NULL, année=NA, sizemult=1) {
     xlab("") + ylab("")
 }
 
-plot_flux_col(périm="Ensemble")
+# plot_flux_col(périm="Ensemble")
 # plot_flux_col(périm="Grande discipline", sizemult = 0.5)
 
 # 
@@ -110,6 +114,8 @@ plot_flux_alluvial <- function(périm=NULL, périmid=NULL, année=2020, sizemult
 plot_flux_lignes <- function(périm=NULL, périmid=NULL, année=NULL, norm = FALSE, sizemult=1) {
   
   df <- emploisEC %>%
+    mutate(Année = as.character(Année)) %>%
+    filter(Source == "CNU") %>%
     { if(!is.null(périm)) filter(.,Périmètre == périm) else . } %>%
     { if(!is.null(périmid)) filter(.,Périmètre.ID == périmid) else . } %>%
     { if(!is.null(année)) filter(.,Année == année) else . } 
@@ -142,7 +148,7 @@ plot_flux_lignes <- function(périm=NULL, périmid=NULL, année=NULL, norm = FAL
     theme(legend.position = "right") 
 }
 
-#plot_flux_lignes(périm="Grande discipline", périmid="ST", norm=TRUE)
+# plot_flux_lignes(périm="Grande discipline", périmid="ST", norm=TRUE)
 
 
 

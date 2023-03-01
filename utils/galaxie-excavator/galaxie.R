@@ -12,6 +12,18 @@ rentrée <- 2023
 section.cnu.en.tension = c()
 
 # Chargement des données Galaxie
+dir <- "../utils/galaxie-excavator/"
+galaxie <- data.frame() 
+for(file in list.files(dir, pattern = "^galaxie......csv$")) {
+  an <- str_sub(file,9,12)
+  gal <- read.table(paste0(dir,file), header=TRUE, sep=",", quote='"') %>%
+    mutate(Année = an) 
+  galaxie <- bind_rows(galaxie,gal)
+}
+galaxie <- galaxie %>% select(Année, everything())
+
+
+
 galaxie.2018 <- read.table("galaxie.2018.csv",header=TRUE, sep=",", quote='"')
 galaxie.2018$Annee <- 2018
 galaxie.2019 <- read.table("galaxie.2019.csv",header=TRUE, sep=",", quote='"')

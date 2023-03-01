@@ -1,5 +1,13 @@
-library(tidyverse)
+---
+title: "CNU Excavator"
+output: github_document
+---
 
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+
+library(tidyverse)
+library(ggcpesrthemes)
 
 as.numeric_cnu <- function(x) {
   if(is.numeric(x)) return(x)
@@ -9,9 +17,6 @@ as.numeric_cnu <- function(x) {
     readr::parse_number(x,trim_ws = T, locale = readr::locale(decimal_mark = ",", grouping_mark = " "))
   )
 }
-
-cnu.sections <- read.csv2("../../data/cpesr-cnu-sections.csv")
-
 
 clean_perimetre <- function(df,perimetre.nom,perimetre.col,data.col.start,data.col.end) {
   df %>%
@@ -25,6 +30,12 @@ clean_perimetre <- function(df,perimetre.nom,perimetre.col,data.col.start,data.c
     )
 }
 
+cnu.sections <- read.csv2("../../data/cpesr-cnu-sections.csv")
+```
+
+## Qualifications 
+
+```{r qualif.funs}
 clean_qualif <- function(csvfile) {
   
   qualif <- read.csv(csvfile, header = FALSE) %>%
@@ -55,7 +66,11 @@ clean_qualif <- function(csvfile) {
   )
 
 }
+```
 
+### Recevabilité
+
+```{r qualif.recev, results='asis'}
 qualif.ratio.recevabilité <- full_join(
   clean_qualif("cnu-excavation-qualification-2013.csv") %>%
     transmute(Périmètre, Périmètre.ID,Année,QC.MCF.13=Qualification.Candidats.MCF,QC.PR.13=Qualification.Candidats.PR),
@@ -72,8 +87,15 @@ qualif.ratio.recevabilité <- full_join(
     ratio.PR = mean(ratio.PR),
     )
 
+spoiler_table(qualif.ratio.recevabilité)
+```
+
+### Bind
+
+```{r qualif.bind, results='asis'}
 qualif <- bind_rows(
-  clean_qualif("cnu-excavation-qualification-2020.csv"),
+  clean_qualif("cnu-excavation-qualification-2021.csv"),
+  clean_qualif("cnu-excavation-qualification-2020.csv") %>% filter(Année <= 2016),
   #clean_qualif("cnu-excavation-qualification-2019.csv"),
   clean_qualif("cnu-excavation-qualification-2015.csv") %>% filter(Année <= 2015),
   clean_qualif("cnu-excavation-qualification-2013.csv") %>% filter(Année < 2011) %>%
@@ -85,8 +107,13 @@ qualif <- bind_rows(
 ) %>% 
   arrange(Périmètre, Périmètre.ID, Année)
 
+spoiler_table(qualif)
+```
 
 
+## Recrutements
+
+```{r rec.funs}
 clean_recrut <- function(csvfile) {
   
   recrut <<- read.csv(csvfile, header = FALSE) %>%
@@ -117,17 +144,25 @@ clean_recrut <- function(csvfile) {
   )
   
 }
+```
 
-rec.2020 <- clean_recrut("cnu-excavation-recrutement-2020.csv")
-
+```{r rec.bind, results='asis'}
 recrut <- bind_rows(
-  clean_recrut("cnu-excavation-recrutement-2020.csv"),
+  clean_recrut("cnu-excavation-recrutement-2021.csv"),
+  clean_recrut("cnu-excavation-recrutement-2020.csv") %>% filter(Année <= 2016),
   #clean_recrut("cnu-excavation-recrutement-2019.csv"),
   clean_recrut("cnu-excavation-recrutement-2015.csv") %>% filter(Année <= 2015),
   clean_recrut("cnu-excavation-recrutement-2013.csv") %>% filter(Année < 2011)
 ) %>% 
   arrange(Périmètre, Périmètre.ID, Année)
 
+spoiler_table(recrut)
+```
+
+
+## CNU
+
+```{r cnu, results='asis'}
 cnu <- full_join(qualif,recrut) %>%
   # Suppression des sans groupe
   filter(!is.na(Périmètre.ID)) %>% 
@@ -145,8 +180,8 @@ cnu <- full_join(qualif,recrut) %>%
       Année == 2018 & Périmètre == "Groupe" & Périmètre.ID == "10" ~ 645,
       TRUE ~ Concours.Candidats.MCF)
   )
-  
-cnu[!complete.cases(cnu),]
+
+#cnu[!complete.cases(cnu),]
 
 cnu %>% ungroup() %>% 
   pivot_longer(
@@ -157,6 +192,9 @@ cnu %>% ungroup() %>%
   select(-val) %>%
   write.csv2("valeurs-manquantes.csv", row.names = F)
 
-write.csv2(cnu,"../../data/cpesr-emplois-cnu-qualification-concours.csv", row.names = F)
+write.csv2(cnu,"../../data/cpesr-emplois-ec-cnu.csv", row.names = F)
+
+spoiler_table(cnu)
+```
 
 

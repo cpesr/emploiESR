@@ -99,7 +99,6 @@ différent qui n’est pas traité dans ce document.
     recrutement](https://www.enseignementsup-recherche.gouv.fr/cid118435/personnels-enseignants-du-superieur-bilans-et-statistiques.html#recrutement)
   - [Galaxie](https://www.galaxie.enseignementsup-recherche.gouv.fr/ensup/ListesPostesPublies/Emplois_publies_TrieParCorps.html)
 - Données agrégées :
-  - [cpesr-emplois-cnu-qualification-concours.csv](https://github.com/cpesr/emploiESR/tree/main/data/data/cpesr-emplois-cnu-qualification-concours.csv)
   - [cpesr-emplois-ec.csv](https://github.com/cpesr/emploiESR/tree/main/data/cpesr-emplois-ec.csv)
 - Autres données :
   - [Les enseignants titulaires dans les établissements publics de
@@ -121,13 +120,13 @@ différent qui n’est pas traité dans ce document.
 3.  Acquisition automatisée des données provenant des
     `fiches démographiques du CNU` par le script
     [cnu-excavator](https://github.com/cpesr/emploiESR/tree/main/utils/cnu-excavator),
-    pour les années 2013, 2015 et 2020, des tableaux :
+    pour les années 2013, 2015 et 2021, des tableaux :
     - `3.1 - Qualification aux fonctions d'enseignant-chercheur` ;
     - `3.2 - Recrutement des enseignants-chercheurs` ;
 4.  Acquisition automatisée données provenant des postes en ligne sur
     `Galaxie` par le script
     [galaxie-excavator](https://github.com/cpesr/emploiESR/tree/main/utils/galaxie-excavator),
-    pour les années 2020 et 2021 :
+    pour les années suivantes :
     - Ces données sont marquées comme `temporaires`.
 5.  Correction des erreurs détectées :
     - Inversion du nombre de candidats en 2019 entre les groupes Pharma.

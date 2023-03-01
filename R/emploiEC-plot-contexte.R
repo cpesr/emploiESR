@@ -21,12 +21,15 @@ palette_context <- setNames(RColorBrewer::brewer.pal(3, "Set2"), labs_context)
 p_contexte_ec.etu.te <- plot_series(levels_context, labs_context, périm="Ensemble",norm=TRUE, colors=palette_context, normbreaks = seq(50,150,5), sizemul=1, minannée = "2010")
 p_contexte_ec.etu.te.disc <- plot_series(levels_context, labs_context, périm="Grande discipline",norm=TRUE, colors=palette_context, sizemul=context_sizemul*0.8, minannée = "2010")
 
+levels_gdcnu <- c("Ensemble","DEG","LLASHS","Pharma","ST")
+palette_gdcnu <- setNames(RColorBrewer::brewer.pal(5, "Set1"), levels_gdcnu)
 
 
 plot_evolution_EC <- function(périm="Ensemble") {
   emploisEC %>%
+    mutate(Année = as.character(Année)) %>%
     filter(Périmètre == périm) %>%
-    filter(as.character(Année) > "2009") %>%
+    filter(!is.na(Effectif.EC)) %>%
     group_by(Périmètre.ID) %>%
     mutate(
       Evolution.réelle = Effectif.EC - lag(Effectif.EC),
@@ -45,7 +48,7 @@ plot_evolution_EC <- function(périm="Ensemble") {
     xlab("") + ylab("Evolution annuelle des effectifs EC") +
     scale_y_continuous(breaks = seq(0,12500,2500))
 }
-#plot_evolution_EC() 
+# plot_evolution_EC() 
 
 p_contexte.evol <- plot_evolution_EC() 
 p_contexte.evol.disc <- plot_evolution_EC(périm="Grande discipline") 
@@ -54,41 +57,20 @@ p_contexte.evol.disc <- plot_evolution_EC(périm="Grande discipline")
 
 plot_emplois_long <- function() {
 
-  postes.long <- read.csv2("../data/cpesr-emplois-cnu-mcf-2002-2008.csv") %>%
-    left_join(cnu.sections) %>%
-    group_by(Année, GrandeDisciplineCNU.ID) %>%
-    summarise(Concours.Postes.MCF = sum(Concours.Postes.MCF,na.rm = TRUE)) %>%
-    mutate(Données = "Définitives")
-  
-  postes.cnu <- emploisEC %>%
-        filter(Périmètre=="Grande discipline") %>% 
-        transmute(Année = as.numeric(as.character(Année)), 
-               GrandeDisciplineCNU.ID=Périmètre.ID,
-               Concours.Postes.MCF) %>%
-    mutate(Données = "Définitives")
-
-  postes.galaxie <- bind_rows(
-    read.csv("../utils/galaxie-excavator/galaxie.2022.csv") %>% mutate(Année = 2022),
-    read.csv("../utils/galaxie-excavator/galaxie.2023.csv") %>% mutate(Année = 2023)
-  ) %>%
-    filter(Corps=="MCF") %>%
-    rename(SectionCNU.ID = Section) %>%
-    left_join(cnu.sections) %>%
-    group_by(Année,GrandeDisciplineCNU.ID) %>%
-    summarise(Concours.Postes.MCF = n()) %>%
-    filter(GrandeDisciplineCNU.ID != "Santé", !is.na(GrandeDisciplineCNU.ID)) %>%
-    mutate(Données = "Temporaires")
+  postes <- emploisEC %>%
+    filter(Périmètre %in% c("Grande discipline")) %>%
+    mutate(Données = ifelse(Source == "Galaxie", "Temporaires","Définitives")) %>%
+    mutate(Année = as.character(Année)) 
     
-  postes <- bind_rows(postes.long,postes.cnu,postes.galaxie)
-
+    
   postes.tot <- postes %>%
     group_by(Année,Données) %>%
     summarise(Concours.Postes.MCF = sum(Concours.Postes.MCF,na.rm = TRUE)) %>%
     ungroup() %>%
     mutate(evol = round(Concours.Postes.MCF / first(Concours.Postes.MCF) * 100))
-    
+  
   ggplot(postes, aes(x=Année, y=Concours.Postes.MCF)) +
-    geom_col(aes(fill=factor(GrandeDisciplineCNU.ID,levels=rev(levels_gdcnu)),alpha=Données)) +
+    geom_col(aes(fill=factor(Périmètre.ID,levels=rev(levels_gdcnu)),alpha=Données)) +
     geom_text(data=postes.tot, aes(label=Concours.Postes.MCF), color="black", vjust=-0.3) +
     geom_text(data=postes.tot, aes(label=evol), color="white", vjust=1.3) +
     xlab("") + ylab("Nombre de postes MCF ouverts") +
@@ -96,7 +78,7 @@ plot_emplois_long <- function() {
     scale_alpha_manual(values = c(1,0.5)) 
 }
 
-
+# plot_emplois_long()
 
 ### Descriptions
 

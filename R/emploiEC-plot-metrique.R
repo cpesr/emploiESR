@@ -6,13 +6,16 @@ labeller_100 <- function(x) paste(x, "(base 100)")
 
 plot_metrique <- function(métrique, métriquelab = "Valeur", périm="Ensemble", 
                           norm=FALSE, labels=TRUE, sizemult=1, percentlab=FALSE,
-                          facetting=TRUE, maxannée = "2030") {
+                          facetting=TRUE, maxannée = 2030, fullannées = TRUE) {
   
   labellerfun <- ifelse(norm,labeller_100,identity)
   
   emploisEC %>%
-    filter(as.character(Année) <= maxannée) %>%
+    filter(Année <= maxannée) %>%
+    { if(fullannées) mutate(., Année = as.character(Année)) else . } %>%
     filter(Périmètre %in% périm) %>%
+    filter(!is.na(Périmètre.ID)) %>%
+    filter(Périmètre.ID != "Santé") %>%
     mutate(val = !!as.name(métrique)) %>%
     filter(!is.na(val) & val != 0) %>%
     { if(norm) 
@@ -41,6 +44,8 @@ plot_metrique <- function(métrique, métriquelab = "Valeur", périm="Ensemble",
     { if(percentlab & !norm) scale_y_continuous(labels=scales::percent) } +
     theme(axis.text.x = element_text(angle = 45, vjust = 1, hjust=1))
 }
+
+# plot_metrique("Concours.Postes.MCF","métriquelab", périm="Grande discipline", norm=TRUE, sizemult=0.5, fullannées = FALSE) 
 
 # plot_metrique("kpi.MCF.TauxTension", percentlab = FALSE, norm = FALSE, sizemult = 1)
 # plot_metrique("kpi.MCF.TauxTension", métriquelab = "Tension", périm = "Grande discipline", norm = TRUE, facetting = TRUE)

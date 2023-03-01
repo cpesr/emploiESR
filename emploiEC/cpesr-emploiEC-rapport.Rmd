@@ -28,12 +28,8 @@ library(cowplot)
 library(pander)
 library(ggcpesrthemes)
 
-#source("../R/emploiEC.R",chdir=TRUE)
-
-emploisEC <- read.csv2("../data/cpesr-emploi-ec.csv", stringsAsFactors = TRUE) %>%
-  mutate(Année = as.factor(Année))
 cnu.sections <- read.csv2("../data/cpesr-cnu-sections.csv")
-
+emploisEC <- read.csv2("../data/cpesr-emplois-ec.csv", stringsAsFactors = TRUE) 
 
 source("../R/emploiEC-metriques.R")
 source("../R/emploiEC-plot-series.R")
@@ -124,7 +120,7 @@ knitr::include_graphics("files/589px-Knowledge-Reid-Highsmith.png")
 
 
 Notes :
-```{r child="../data/cpesr-emplois-cnu-mcf-qualification-recrutement.md"}
+```{r child="../data/cpesr-emplois-ec-dgrh.md"}
 ```
 
 :::
@@ -229,9 +225,9 @@ p_contexte.evol + theme(legend.position = "top")
 ```{r}
 plot_metrique_MCF_all <- function(métrique, métriquelab = "", titre = "", ...) {
   p1 <- plot_metrique(métrique,métriquelab, ...)
-  p2 <- plot_metrique(métrique,métriquelab, périm="Grande discipline", sizemult=0.5, ...)  + theme_rapport_small()
+  p2 <- plot_metrique(métrique,métriquelab, périm="Grande discipline", sizemult=0.5, fullannées = FALSE, ...)  + theme_rapport_small()
   p3 <- plot_metrique(métrique,métriquelab, norm=TRUE, ...)
-  p4 <- plot_metrique(métrique,métriquelab, périm="Grande discipline", norm=TRUE, sizemult=0.5, ...)  + theme_rapport_small() 
+  p4 <- plot_metrique(métrique,métriquelab, périm="Grande discipline", norm=TRUE, sizemult=0.5, fullannées = FALSE, ...)  + theme_rapport_small() 
 
   cowplot::plot_grid(ncol = 2, 
     p1, p2, p3, p4
