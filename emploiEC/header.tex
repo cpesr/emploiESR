@@ -3,6 +3,7 @@
 %\usepackage{draftwatermark}
 \usepackage[french]{babel}
 \usepackage[default]{raleway}
+\usepackage{ifthen}
 \usepackage[strict]{changepage}
 \usepackage{multicol}
 \usepackage{calc}
@@ -15,11 +16,27 @@
   positioning
 }
 
+\definecolor{royalblue(traditional)}{rgb}{0.0, 0.14, 0.4}
+\definecolor{royalblue(web)}{rgb}{0.25, 0.41, 0.88}
+
+
 \DeclareUnicodeCharacter{22C5}{\textperiodcentered}
 
 \def\arraystretch{1.5}
 
 \usepackage{fancyhdr}
+\renewcommand{\headrule}{\hbox to\headwidth{%
+  \color{royalblue(traditional)}\leaders\hrule height \headrulewidth\hfill}}
+
+\pagestyle{fancy}
+\renewcommand{\chaptermark}[1]{\markboth{#1}{}}
+
+\fancyhf{}
+\fancyhead[R]{\leftmark}
+\fancyfoot[C]{\thepage}
+
+
+
 \makeatletter
 \renewcommand{\@chapapp}{Partie}
 \renewcommand\tableofcontents{%
@@ -42,24 +59,10 @@
 %%%%%%%%%%%%%%%%%%%%%%%%
 
 
-\definecolor{royalblue(traditional)}{rgb}{0.0, 0.14, 0.4}
-\definecolor{royalblue(web)}{rgb}{0.25, 0.41, 0.88}
-
 
 \newcommand\vshift{0.15\paperheight}
 
 \usepackage[explicit]{titlesec}
-
-\makeatletter
-\renewcommand\section{\@startsection {section}{1}{\z@}%
-                                   {-3.5ex \@plus -1ex \@minus -.2ex}%
-                                   {2.3ex \@plus.2ex}%
-                                   {\normalfont\Large\bfseries\raggedright}}
-\renewcommand\subsection{\@startsection{subsection}{2}{\z@}%
-                                     {-3.25ex\@plus -1ex \@minus -.2ex}%
-                                     {1.5ex \@plus .2ex}%
-                                     {\normalfont\large\bfseries\raggedright}}
-\makeatother
 
 \titleformat{\chapter}
   {\gdef\chapterlabel{}
@@ -77,7 +80,7 @@
    \end{tikzpicture}
    \newpage
   }
-\titlespacing*{\chapter}{0pt}{50pt}{-60pt}
+\titlespacing*{\chapter}{0pt}{-50pt}{-40pt}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%% 
@@ -94,7 +97,7 @@
 \makeatother
 
 
-\newenvironment{datapage}[1][]{}{\newpage}
+\newenvironment{datapage}[1][]{\ifthenelse{\equal{#1}{}}{}{\chaptermark{#1}}}{\newpage}
 
 \newenvironment{datapagecom}[1][]
 {%

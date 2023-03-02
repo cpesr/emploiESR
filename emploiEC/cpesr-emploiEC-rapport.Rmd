@@ -50,6 +50,8 @@ theme_rapport_small <- function() { theme(
   axis.title = element_text(size=rel(0.5))) }
 
 theme_set(theme_rapport())
+
+année.ref <- emploisEC %>% filter(Source != "Galaxie") %>% tail(n = 1) %>% pull(Année)
 ```
 
 
@@ -76,7 +78,7 @@ knitr::include_graphics("files/589px-Knowledge-Reid-Highsmith.png")
 ```{=latex}
 \newpage
 \begin{multicols}{2}
-\setcounter{tocdepth}{3}
+\setcounter{tocdepth}{1}
 \tableofcontents
 \newpage
 ```
@@ -406,6 +408,7 @@ cat("
 # Groupes CNU
 
 
+
 ```{r groupes.fun}
 
 metriques <- bind_rows(kpis)
@@ -463,25 +466,43 @@ plot_groupes <- function(groupe,gd) {
 
 ```{r groupes, results='asis', cache=TRUE}
 
+# Ancien format:
+## Groupe ",groupe," - ", groupe.lab," (",gd,")
+
 #knitr::opts_chunk$set(fig.width = 12, fig.height = 7.5, out.width = "100%", fig.align = "center")
-cnu.gd <- cnu.sections %>% select(GrandeDisciplineCNU.ID,GroupeCNU.ID,GroupeCNU) %>% unique() %>% arrange(as.numeric(GroupeCNU.ID))
+cnu.gd <- cnu.sections %>% select(GrandeDisciplineCNU.ID,GrandeDisciplineCNU, GroupeCNU.ID,GroupeCNU) %>% unique() %>% arrange(as.numeric(GroupeCNU.ID))
 
 for (s in 1:11) { 
   gd <- cnu.gd[s,"GrandeDisciplineCNU.ID"]
+  gd.lab <- cnu.gd[s,"GrandeDisciplineCNU"]
   groupe <- cnu.gd[s,"GroupeCNU.ID"]
   groupe.lab <- cnu.gd[s,"GroupeCNU"]
 
 cat(sep = '',"
-:::::: {.datapage data-latex=''} 
+:::::: {.datapage data-latex='[Groupes de ", gd.lab, " (",gd,")]'} 
 
 ::: {.datapagecom data-latex=''}
-## Groupe ",groupe," - ", groupe.lab," (",gd,")
-
-\\ \\ 
-
+## Groupe ",groupe," — ", groupe.lab,"
 
 \\footnotesize
-Définition des métriques :
+\\subsection*{Année de référence : ", année.ref,"}
+\\subsection*{Valeurs temporaires :}
+
+\\begin{center}
+
+")
+
+cat(emploisEC %>% 
+  filter(Périmètre == "Groupe", Périmètre.ID == groupe, Source == "Galaxie") %>%
+  select(Année, `Postes MCF`=Concours.Postes.MCF) %>%
+  kableExtra::kable("latex", booktabs = T)
+) 
+
+
+cat(sep = '', "
+\\end{center}
+\\vspace{0cm}
+\\subsection*{Définition des métriques :}
 
 ")
 
@@ -504,7 +525,10 @@ cat("
     
 ")
 
+#knitr::knit_exit()
+
 }
+
 ```
 
 
@@ -570,11 +594,16 @@ plot_sections <- function(section,groupe,gd) {
 
 ```{r sections, results='asis', cache=TRUE}
 
+# Ancien format :
+## Section ",section," - ",section.lab," (Groupe ",groupe," - ", groupe.lab," - ",gd,")
+
+
 #knitr::opts_chunk$set(fig.width = 12, fig.height = 7.5, out.width = "100%", fig.align = "center")
 metriques <- bind_rows(kpis)
 
 for (s in 2:min(nrow(cnu.sections),1000)) { 
   gd <- cnu.sections[s,"GrandeDisciplineCNU.ID"]
+  gd.lab <- cnu.sections[s,"GrandeDisciplineCNU"]
   groupe <- cnu.sections[s,"GroupeCNU.ID"]
   groupe.lab <- cnu.sections[s,"GroupeCNU"]
   section <- cnu.sections[s,"SectionCNU.ID"]
@@ -582,16 +611,31 @@ for (s in 2:min(nrow(cnu.sections),1000)) {
 
 if (section %in% c(42:58,75:77,80:82,91:92)) next()  
 cat(sep = '',"
-:::::: {.datapage data-latex=''} 
+:::::: {.datapage data-latex='[Sections du Groupe ",groupe, " - ", groupe.lab," — ", gd.lab, " (",gd,")]'} 
 
 ::: {.datapagecom data-latex=''}
-## Section ",section," - ",section.lab," (Groupe ",groupe," - ", groupe.lab," - ",gd,")
-
-\\ \\ 
-
+## Section ",section," — ",section.lab,"
 
 \\footnotesize
-Définition des métriques :
+\\subsection*{Année de référence : ",année.ref,"}
+\\subsection*{Valeurs temporaires :}
+
+\\begin{center}
+
+")
+
+cat(emploisEC %>% 
+  filter(Périmètre == "Section", Périmètre.ID == section, Source == "Galaxie") %>%
+  select(Année, `Postes MCF`=Concours.Postes.MCF) %>%
+  kableExtra::kable("latex", booktabs = T)
+) 
+
+
+cat(sep = '', "
+
+\\end{center}
+\\vspace{0cm}
+\\subsection*{Définition des métriques :}
 
 ")
 

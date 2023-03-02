@@ -10,35 +10,16 @@ library(ggcpesrthemes)
 
 theme_cpesr_setup(authors=c("Florent Figon, Julien Gossa"), licence="LO 2.0", source = "DGRH A1-1")
 
+cnu.sections <- read.csv2("../data/cpesr-cnu-sections.csv")
+emploisEC <- read.csv2("../data/cpesr-emplois-ec.csv", stringsAsFactors = TRUE) 
 
-## Galaxie
-
-galaxie <- bind_rows(
-  # read.csv("../utils/galaxie-excavator/galaxie.2018.csv") %>% mutate(Année = 2018),
-  # read.csv("../utils/galaxie-excavator/galaxie.2019.csv") %>% mutate(Année = 2019),
-  # read.csv("../utils/galaxie-excavator/galaxie.2020.csv") %>% mutate(Année = 2020),
-  #read.csv("../utils/galaxie-excavator/galaxie.2021.csv") %>% mutate(Année = 2021),
-  read.csv("../utils/galaxie-excavator/galaxie.2022.csv") %>% mutate(Année = 2022),
-  read.csv("../utils/galaxie-excavator/galaxie.2023.csv") %>% mutate(Année = 2023)
-) %>%
-  group_by(Année,Corps,SectionCNU.ID = Section) %>%
-  summarise(Concours.postes = n()) %>%
-  pivot_wider(values_from = Concours.postes, names_from = Corps, names_prefix = "Concours.Postes.") 
-
-
-
-postes <- bind_rows(
-  read.csv2("../data/cpesr-emplois-cnu-mcf-2002-2008.csv") %>% mutate(Donnée = "Définitive (CNU)"),
-  read.csv2("../data/cpesr-emplois-cnu-qualification-concours.csv") %>% 
-    filter(Périmètre == "Section") %>%
-    mutate(SectionCNU.ID = as.numeric(as.character(Périmètre.ID))) %>%
-    mutate(Donnée = "Définitive (CNU)"),
-  galaxie %>% mutate(Donnée = "Temporaire (Galaxie)")
-  ) %>% 
-  select(Année,SectionCNU.ID,Donnée,Concours.Postes.MCF,Concours.Postes.PR) %>%
-  left_join(read.csv2("../data/cpesr-cnu-sections.csv")) %>%
-  pivot_longer(starts_with("Concours.Postes."), names_to = "Corps", values_to = "Postes", names_prefix = "Concours.Postes.") %>%
-  filter(!is.na(Postes))
+# source("../R/emploiEC-metriques.R")
+# source("../R/emploiEC-plot-series.R")
+# source("../R/emploiEC-plot-metrique.R")
+# source("../R/emploiEC-plot-flux.R")
+# source("../R/emploiEC-plot-sections.R")
+# source("../R/emploiEC-plot-groupes.R")
+# source("../R/emploiEC-plot-contexte.R")
 ```
 
 ```
@@ -50,45 +31,60 @@ postes <- bind_rows(
 
 
 ```{r funs}
-plot_section <- function(data, title, subtitle=NULL) {
-    ggplot(data, aes(x=Année, y=Postes)) + 
+plot_postes <- function(métrique, métriquelab = "Postes publiés", périm="Ensemble", périm.id="Ensemble") {
+  df <- emploisEC %>%
+    filter(Périmètre == périm, Périmètre.ID == périm.id) %>%
+    mutate(Données = ifelse(Source == "Galaxie","Temporaires (Galaxie)", "Définitives (CNU)")) %>%
+    filter(!is.na(!!as.symbol(métrique)))
+  
+  df %>%
+    ggplot(aes_string(x="Année", y=métrique)) + 
       geom_smooth(se=F,size=0.5) + 
-      geom_point(aes(color=Donnée),size=2) + 
+      geom_point(aes(color=Données),size=2) + 
       expand_limits(y=0) +
-      scale_color_manual(values=c("blue","orange"), breaks=c("Définitive (CNU)","Temporaire (Galaxie)")) +
+      scale_color_manual(values=c("blue","orange"), breaks=c("Définitives (CNU)","Temporaires (Galaxie)")) +
       theme_cpesr_cap() + 
       theme(plot.margin = margin(0.5, 0.5, 0.5, 0.5, "cm")) +
       #theme(legend.position = "right") +
-      scale_x_continuous(breaks = seq(2000,2025,5)) +
-      labs(title=title, subtitle=subtitle, y ="Postes publiés", x = "Année") 
+      scale_x_continuous(breaks = c(seq(min(df$Année),2025,5))) +
+      labs(y = métriquelab, x = "Année") 
 }
+
+#plot_postes("Concours.Postes.MCF", périm="Section", périm.id="27")
 ```
 
 
 ## Concours de Maître de Conférences
 
 ```{r ensemble.mcf, fig.width=7, fig.asp=9/16}
-postes %>%
-  filter(Corps == "MCF") %>%
-  group_by(Année,Donnée,Corps) %>%
-  summarise(Postes = sum(Postes, na.rm = TRUE)) %>%
-  plot_section("Postes publiés au concours de Maître de Conférences")
+plot_postes("Concours.Postes.MCF") +
+  ggtitle("Postes publiés au concours de Maître de Conférences")
 ```
 
 ## Concours de Professeur des universités
 
 ```{r ensemble.pr, fig.width=7, fig.asp=9/16}
-postes %>%
-  filter(Corps == "PR") %>%
-  group_by(Année,Donnée,Corps) %>%
-  summarise(Postes = sum(Postes, na.rm = TRUE)) %>%
-  plot_section("Postes publiés au concours de Professeur des universités") 
+plot_postes("Concours.Postes.PR") +
+  ggtitle("Postes publiés au concours de Professeur des universités") 
 ```
 
 
 ```{r gd.postes, fig.width=7, fig.asp=9/16, results='asis'}
-gds <- c("Droit éco gestion", "Lettres et sciences humaines", "Sciences et techniques", 
-"Pharmacie")
+
+périmètres <- emploisEC %>% 
+  select(Périmètre,Périmètre.ID,Périmètre.label) %>% 
+  unique() %>%
+  filter(Périmètre.ID != "Santé") %>%
+  na.omit()
+
+# for (s in 2:min(nrow(cnu.sections),1000)) { 
+#   gd <- cnu.sections[s,"GrandeDisciplineCNU.ID"]
+#   gd.lab <- cnu.sections[s,"GrandeDisciplineCNU"]
+#   groupe <- cnu.sections[s,"GroupeCNU.ID"]
+#   groupe.lab <- cnu.sections[s,"GroupeCNU"]
+#   section <- cnu.sections[s,"SectionCNU.ID"]
+#   section.lab <- cnu.sections[s,"SectionCNU"]
+
 for(gd in gds) {
 
   cat(paste0("\n\n## MCF en ", gd,"\n"))
