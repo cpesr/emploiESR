@@ -11,8 +11,7 @@ library(ggcpesrthemes)
 
 
 
-plot_flux_col <- function(périm=NULL, périmid=NULL, année=NA, sizemult=1) {
-  
+plot_flux_col <- function(périm=NULL, périmid=NULL, année=NA, sizemult=1, facetting = TRUE) {
   
   if(is.na(année)) {
     df <- emploisEC %>% filter(Source != "Galaxie")
@@ -37,7 +36,7 @@ plot_flux_col <- function(périm=NULL, périmid=NULL, année=NA, sizemult=1) {
     geom_text(aes(label=lab), size=6*sizemult, vjust=-0.2) +
     expand_limits(y=max(df$Nombre)*1.05) +
     coord_cartesian(clip = 'off') +
-    { if (is.null(année)) facet_wrap(Périmètre.ID ~ Année) else facet_wrap(Périmètre.ID~.) } +
+    { if (facetting) if (is.null(année)) facet_wrap(Périmètre.ID ~ Année) else facet_wrap(Périmètre.ID~.) } +
     scale_x_discrete(labels = ~ str_replace(.x," ","\n")) +
     scale_fill_manual(values=séries.MCF.palette, guide = "none") +
     xlab("") + ylab("")
@@ -60,7 +59,12 @@ plot_flux_col <- function(périm=NULL, périmid=NULL, année=NA, sizemult=1) {
 palette_alluvial <- c("red2","#33A02C","#1F78B4","#B2DF8A","#33A02C")
 names(palette_alluvial) <- c("Echec","Réussite","Qualifiés","Candidats","Recrutés")
 
-plot_flux_alluvial <- function(périm=NULL, périmid=NULL, année=2020, sizemult = 1) {
+plot_flux_alluvial <- function(périm=NULL, périmid=NULL, année=NA, sizemult = 1, facetting = TRUE) {
+  
+  if(is.na(année)) {
+    df <- emploisEC %>% filter(Source != "Galaxie")
+    année <- max(as.character(df$Année))
+  }
   
   emploisEC %>%
     { if(!is.null(périm)) filter(.,Périmètre == périm) else . } %>%
@@ -96,7 +100,7 @@ plot_flux_alluvial <- function(périm=NULL, périmid=NULL, année=2020, sizemult
     ) %>%
     
     ggplot(aes(x=Phase,y=Nombre,stratum=Pop,alluvium=ID)) +
-    { if (is.null(année)) facet_wrap(Périmètre.ID ~ Année) else facet_wrap(Périmètre.ID~.) } +
+    { if (facetting) if (is.null(année)) facet_wrap(Périmètre.ID ~ Année) else facet_wrap(Périmètre.ID~.) } +
     geom_stratum(aes(fill=Pop)) +
     geom_flow(aes(fill=ID)) +
     scale_fill_manual(values=palette_alluvial,name="") +
@@ -104,7 +108,7 @@ plot_flux_alluvial <- function(périm=NULL, périmid=NULL, année=2020, sizemult
 }
 
 
-# plot_flux_alluvial(périm="Ensemble",année=2020)
+# plot_flux_alluvial(périm="Ensemble", facetting = FALSE)
 # plot_flux_alluvial(périm="Grande discipline",année=2019) 
 # plot_flux_alluvial(périm="Grande discipline", périmid="ST",année=NULL) 
 

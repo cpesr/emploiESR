@@ -472,7 +472,7 @@ plot_groupes <- function(groupe,gd) {
 #knitr::opts_chunk$set(fig.width = 12, fig.height = 7.5, out.width = "100%", fig.align = "center")
 cnu.gd <- cnu.sections %>% select(GrandeDisciplineCNU.ID,GrandeDisciplineCNU, GroupeCNU.ID,GroupeCNU) %>% unique() %>% arrange(as.numeric(GroupeCNU.ID))
 
-for (s in 1:11) { 
+for (s in 1:12) { 
   gd <- cnu.gd[s,"GrandeDisciplineCNU.ID"]
   gd.lab <- cnu.gd[s,"GrandeDisciplineCNU"]
   groupe <- cnu.gd[s,"GroupeCNU.ID"]

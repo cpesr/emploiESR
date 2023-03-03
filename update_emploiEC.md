@@ -1,7 +1,7 @@
 EmploiEC: update data
 ================
 CPESR
-2023-03-02
+2023-03-03
 
 ## Chargement des données sources
 
@@ -132,7 +132,7 @@ galaxie
 |  2020 | Ensemble  | Ensemble     |                1119 |                620 |
 |  2021 | Ensemble  | Ensemble     |                1047 |                606 |
 |  2022 | Ensemble  | Ensemble     |                1281 |                679 |
-|  2023 | Ensemble  | Ensemble     |                1482 |                635 |
+|  2023 | Ensemble  | Ensemble     |                1493 |                642 |
 
 </details>
 
@@ -198,20 +198,6 @@ NA
 </td>
 <td style="text-align:left;">
 NA
-</td>
-<td style="text-align:right;">
-2
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-Groupe
-</td>
-<td style="text-align:left;">
-15
-</td>
-<td style="text-align:left;">
-Autres santé(mono-appartenants)
 </td>
 <td style="text-align:right;">
 2

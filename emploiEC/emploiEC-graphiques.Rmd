@@ -6,24 +6,30 @@ output: github_document
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
 library(tidyverse)
+library(cowplot)
 library(ggcpesrthemes)
 
-theme_cpesr_setup(authors=c("Florent Figon, Julien Gossa"), licence="LO 2.0", source = "DGRH A1-1")
+knitr::opts_chunk$set(fig.asp=9/16, fig.retina = 2)
+
+theme_cpesr_setup(authors=c("Florent Figon, Julien Gossa"), licence="LO 2.0", source = "DGRH A1-1 — https://github.com/cpesr/emploiESR/")
 
 cnu.sections <- read.csv2("../data/cpesr-cnu-sections.csv")
 emploisEC <- read.csv2("../data/cpesr-emplois-ec.csv", stringsAsFactors = TRUE) 
 
-# source("../R/emploiEC-metriques.R")
+source("../R/emploiEC-metriques.R")
 # source("../R/emploiEC-plot-series.R")
 # source("../R/emploiEC-plot-metrique.R")
-# source("../R/emploiEC-plot-flux.R")
+source("../R/emploiEC-plot-flux.R")
 # source("../R/emploiEC-plot-sections.R")
 # source("../R/emploiEC-plot-groupes.R")
 # source("../R/emploiEC-plot-contexte.R")
+
+année.ref <- emploisEC %>% filter(Source != "Galaxie") %>% tail(n = 1) %>% pull(Année)
+
 ```
 
 ```
-- twtexte:[#DataESR] Evolution du nombre de postes d'enseignant-chercheur
+- twtexte:[#DataESR] Visualisation des concours d'enseignant-chercheur
 - twalt:@ffigon @juliengossa LO 2.0 www.cpesr.fr
 - twurl:https://twitter.com/CPESR_/status/1498228236710559744
 - url:https://cpesr.fr/lentree-dans-la-carriere-des-enseignants-chercheurs/
@@ -46,83 +52,70 @@ plot_postes <- function(métrique, métriquelab = "Postes publiés", périm="Ens
       theme_cpesr_cap() + 
       theme(plot.margin = margin(0.5, 0.5, 0.5, 0.5, "cm")) +
       #theme(legend.position = "right") +
-      scale_x_continuous(breaks = c(seq(min(df$Année),2025,5))) +
+      scale_x_continuous(breaks = c(seq(min(df$Année),2025,5)), minor_breaks = seq(min(df$Année),2025,1)) +
       labs(y = métriquelab, x = "Année") 
 }
 
-#plot_postes("Concours.Postes.MCF", périm="Section", périm.id="27")
+# plot_postes("Concours.Postes.MCF", périm="Section", périm.id="27")
+# plot_postes("Concours.Postes.MCF", périm="Ensemble", périm.id="Ensemble")
 ```
 
+```{r batch, results='asis'}
 
-## Concours de Maître de Conférences
-
-```{r ensemble.mcf, fig.width=7, fig.asp=9/16}
-plot_postes("Concours.Postes.MCF") +
-  ggtitle("Postes publiés au concours de Maître de Conférences")
-```
-
-## Concours de Professeur des universités
-
-```{r ensemble.pr, fig.width=7, fig.asp=9/16}
-plot_postes("Concours.Postes.PR") +
-  ggtitle("Postes publiés au concours de Professeur des universités") 
-```
-
-
-```{r gd.postes, fig.width=7, fig.asp=9/16, results='asis'}
-
-périmètres <- emploisEC %>% 
-  select(Périmètre,Périmètre.ID,Périmètre.label) %>% 
+cnus <- cnu.sections %>% filter(GrandeDisciplineCNU != "Santé", GroupeCNU.ID !="11s")
+périmètres <- bind_rows(
+  cnus %>% transmute(Périmètre = "Grande discipline", Périmètre.ID = GrandeDisciplineCNU.ID, Périmètre.label = GrandeDisciplineCNU),
+  cnus %>% transmute(Périmètre = "Groupe", Périmètre.ID = as.character(GroupeCNU.ID), Périmètre.label = GroupeCNU),
+  cnus %>% transmute(Périmètre = "Section", Périmètre.ID = as.character(SectionCNU.ID), Périmètre.label = SectionCNU)
+) %>%
   unique() %>%
-  filter(Périmètre.ID != "Santé") %>%
-  na.omit()
+  mutate(
+    lab = paste(Périmètre,"CNU",Périmètre.ID,"-",Périmètre.label),
+    tit = paste(Périmètre,"CNU",Périmètre.ID),
+    subtit = str_wrap(Périmètre.label,80)
+  ) %>%
+  na.omit() %>%
+  add_row(Périmètre = "Ensemble", Périmètre.ID = "Ensemble", Périmètre.label = "Ensemble",
+          lab = "Ensemble des sections CNU", tit = "Ensemble des sections CNU", subtit = "",
+          .before = 1)
 
-# for (s in 2:min(nrow(cnu.sections),1000)) { 
-#   gd <- cnu.sections[s,"GrandeDisciplineCNU.ID"]
-#   gd.lab <- cnu.sections[s,"GrandeDisciplineCNU"]
-#   groupe <- cnu.sections[s,"GroupeCNU.ID"]
-#   groupe.lab <- cnu.sections[s,"GroupeCNU"]
-#   section <- cnu.sections[s,"SectionCNU.ID"]
-#   section.lab <- cnu.sections[s,"SectionCNU"]
+for (ip in 1:nrow(périmètres)) {
+  p <- périmètres[ip,"Périmètre"]
+  pid <- périmètres[ip,"Périmètre.ID"]
+  plab <- périmètres[ip,"Périmètre.label"]
+  lab <- périmètres[ip,"lab"]
+  tit <- périmètres[ip,"tit"]
+  subtit <- périmètres[ip,"subtit"]
 
-for(gd in gds) {
+  message(tit)
 
-  cat(paste0("\n\n## MCF en ", gd,"\n"))
-  print(
-    postes %>% filter(GrandeDisciplineCNU == gd, Corps == "MCF") %>% 
-    group_by(Année, Donnée) %>% summarise(Postes = sum(Postes,na.rm = TRUE)) %>%
-    plot_section(paste0("Concours MCF ", gd))
+  for (corps in c("MCF","PR")) {
+    cat("\n\n## Evolution du nombre de postes",corps,"—",lab,"\n")
+    try(print(
+      plot_postes(paste0("Concours.Postes.",corps), périm = p, périm.id = pid) +
+        ggtitle(paste("Nombre de postes au concours",corps," — ",tit), subtitle = subtit)
+    ))
+  }
+  
+  cat("\n\n## Sélection des MCF","—",lab,"\n")
+  
+  try(print(
+    plot_grid(nrow = 1, rel_widths = c(10,7), align = "hv", axis = "tb", 
+      plot_flux_col(périm = p, périmid = pid, facetting = FALSE) +
+        ggtitle(paste("Concours MCF ",année.ref," — ",tit), subtitle = subtit) +
+        theme_cpesr() +
+        theme(plot.margin = unit(c(0,0,0,0),"cm"),),
+      plot_flux_alluvial(périm = p, périmid = pid, facetting = FALSE) +
+        #ggtitle(paste("Concours MCF ",année.ref," — ",tit), subtitle = subtit) +
+        theme_cpesr_cap() +
+        theme(legend.position = "None", 
+              axis.title.x = element_blank(), 
+              plot.margin = unit(c(0,0,0,0),"cm"),
+              plot.caption = element_text(margin = unit(c(0.5,0,0,0),"cm"))
+        )
     )
-  
-  cat(paste0("\n\n## PR en ", gd,"\n"))
-  print(
-    postes %>% filter(GrandeDisciplineCNU == gd, Corps == "PR") %>% 
-    group_by(Année, Donnée) %>% summarise(Postes = sum(Postes,na.rm = TRUE)) %>%
-    plot_section(paste0("Concours PR ", gd))
-    )
-  
-}
-```
+  ))
 
-```{r evolution.postes, fig.width=7, fig.asp=9/16, results='asis'}
-sec <- postes %>% select(SectionCNU, SectionCNU.ID) %>% unique()
-for(s in 1:nrow(sec)) {
-  section <- sec[s,1]
-  sectionid <- sec[s,2]
-
-  if (sectionid == 75 | sectionid >= 90) next
-  
-  cat(paste0("\n\n## MCF Section CNU ", sectionid," ", section,"\n"))
-  print(
-    postes %>% filter(SectionCNU.ID==as.numeric(sectionid), Corps == "MCF") %>% 
-    plot_section(paste0("Concours MCF section CNU ", sectionid), str_wrap(section,80))
-    )
-  
-  cat(paste0("\n\n## PR Section CNU ", sectionid," ", section,"\n"))
-  print(
-    postes %>% filter(SectionCNU.ID==as.numeric(sectionid), Corps == "PR") %>% 
-    plot_section(paste0("Concours PR section CNU ", sectionid), str_wrap(section,80))
-    )
-  
+    
 }
 ```

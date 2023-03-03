@@ -17,4 +17,4 @@ cp Emplois_publies_TrieParCorps.$RENTREE.html $WD/Emplois_publies_TrieParCorps.$
 cp Emplois_publies_TrieParCorps.$RENTREE.html1.csv $WD/galaxie.$RENTREE.csv
 
 cd $WD
-Rscript galaxie.R
+#Rscript galaxie.R
