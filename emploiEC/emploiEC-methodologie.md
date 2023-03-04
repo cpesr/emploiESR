@@ -49,8 +49,8 @@ n'est pas traité dans ce document.
 
 1. Acquisition manuelle d'un sous-ensemble des données provenant des `fiches démographiques du CNU` ;
 1. Visualisations exploratoires :
-    + à propos de la qualification : [visualisations](https://github.com/cpesr/RFC/blob/main/ConcoursMCF/QualificationMCF.md) ;
-    + à propos du concours : [visualisations](https://github.com/cpesr/RFC/blob/main/ConcoursMCF/ConcoursMCF.md) ;
+    + à propos de la [qualification](https://github.com/cpesr/RFC/blob/main/ConcoursMCF/QualificationMCF.md) et du [concours](https://github.com/cpesr/RFC/blob/main/ConcoursMCF/ConcoursMCF.md) ;
+1. Acquisition automatisée des données provenant des `bilans de la Direction des personnels` par le script [dpe-excavator](https://github.com/cpesr/emploiESR/tree/main/utils/dpe-excavator), pour les années 2001 à 2008 ;
 1. Acquisition automatisée des données provenant des `fiches démographiques du CNU` par le script [cnu-excavator](https://github.com/cpesr/emploiESR/tree/main/utils/cnu-excavator), pour les années 2013, 2015 et 2021, des tableaux :
     + `3.1 - Qualification aux fonctions d'enseignant-chercheur` ;
     + `3.2 - Recrutement des enseignants-chercheurs` ;

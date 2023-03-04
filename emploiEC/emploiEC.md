@@ -111,24 +111,27 @@ différent qui n’est pas traité dans ce document.
 1.  Acquisition manuelle d’un sous-ensemble des données provenant des
     `fiches démographiques du CNU` ;
 2.  Visualisations exploratoires :
-    - à propos de la qualification :
-      [visualisations](https://github.com/cpesr/RFC/blob/main/ConcoursMCF/QualificationMCF.md)
-      ;
-    - à propos du concours :
-      [visualisations](https://github.com/cpesr/RFC/blob/main/ConcoursMCF/ConcoursMCF.md)
+    - à propos de la
+      [qualification](https://github.com/cpesr/RFC/blob/main/ConcoursMCF/QualificationMCF.md)
+      et du
+      [concours](https://github.com/cpesr/RFC/blob/main/ConcoursMCF/ConcoursMCF.md)
       ;
 3.  Acquisition automatisée des données provenant des
+    `bilans de la Direction des personnels` par le script
+    [dpe-excavator](https://github.com/cpesr/emploiESR/tree/main/utils/dpe-excavator),
+    pour les années 2001 à 2008 ;
+4.  Acquisition automatisée des données provenant des
     `fiches démographiques du CNU` par le script
     [cnu-excavator](https://github.com/cpesr/emploiESR/tree/main/utils/cnu-excavator),
     pour les années 2013, 2015 et 2021, des tableaux :
     - `3.1 - Qualification aux fonctions d'enseignant-chercheur` ;
     - `3.2 - Recrutement des enseignants-chercheurs` ;
-4.  Acquisition automatisée données provenant des postes en ligne sur
+5.  Acquisition automatisée données provenant des postes en ligne sur
     `Galaxie` par le script
     [galaxie-excavator](https://github.com/cpesr/emploiESR/tree/main/utils/galaxie-excavator),
     pour les années suivantes :
     - Ces données sont marquées comme `temporaires`.
-5.  Correction des erreurs détectées :
+6.  Correction des erreurs détectées :
     - Inversion du nombre de candidats en 2019 entre les groupes Pharma.
       et ST ;
     - Erreur manifeste dans le nombre de candidats en 2018 pour le
@@ -141,15 +144,15 @@ différent qui n’est pas traité dans ce document.
       - Application de ce ratio aux données de la fiche 2013 (donc pour
         les années 2009 et 2010, les suivantes étant dans la fiche 2015)
         ;
-6.  Traitement des données par des [scripts
+7.  Traitement des données par des [scripts
     R](https://github.com/cpesr/emploiESR/tree/main/R) :
     - Normalisation des données ;
     - Intégration des données extérieures ;
     - Calcul des métriques supplémentaires ;
-7.  Production et mise en ligne des visualisations pour commentaires :
+8.  Production et mise en ligne des visualisations pour commentaires :
     [visualisations](https://github.com/cpesr/emploiESR/blob/main/emploiEC/emploiEC.md)
     ;
-8.  Production de ce rapport.
+9.  Production de ce rapport.
 
 ## Note sur les qualifications multiples
 

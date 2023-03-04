@@ -136,31 +136,48 @@ cnu.fd %>% spoiler_table("cnu.fd")
 
 ### DGRH
 
-```{r }
-dgrh.raw <- read.csv2("data/cpesr-emplois-ec-dgrh.csv") %>% 
-      left_join(cnu.sections) 
+```{r fun.aggreg}
+sections_agregations <- function(df) {
+  df <- df %>% left_join(cnu.sections) 
     
-dgrh <- bind_rows(
-  dgrh.raw %>%
-    group_by(Année, Périmètre = "Ensemble", Périmètre.ID = "Ensemble") %>%
-    summarise(across(c(Concours.Postes.MCF, Concours.Recrutés.MCF),
-                       ~ sum(.x,na.rm=TRUE))),
-  dgrh.raw %>%
-    group_by(Année, Périmètre = "Grande discipline", Périmètre.ID = GrandeDisciplineCNU.ID) %>%
-    summarise(across(c(Concours.Postes.MCF, Concours.Recrutés.MCF),
-                       ~ sum(.x,na.rm=TRUE))),
-  dgrh.raw %>%
-    group_by(Année, Périmètre = "Groupe", Périmètre.ID = GroupeCNU.ID) %>%
-    summarise(across(c(Concours.Postes.MCF, Concours.Recrutés.MCF),
-                       ~ sum(.x,na.rm=TRUE))),
-  dgrh.raw %>%
-    group_by(Année, Périmètre = "Section", Périmètre.ID = as.character(SectionCNU.ID)) %>%
-    summarise(across(c(Concours.Postes.MCF, Concours.Recrutés.MCF),
-                       ~ sum(.x,na.rm=TRUE)))
+  bind_rows(
+    df %>%
+      group_by(Année, Périmètre = "Ensemble", Périmètre.ID = "Ensemble") %>%
+      summarise(across(starts_with(c("Concours","Qualifications")),
+                         ~ sum(.x,na.rm=FALSE))),
+    df %>%
+      group_by(Année, Périmètre = "Grande discipline", Périmètre.ID = GrandeDisciplineCNU.ID) %>%
+      summarise(across(starts_with(c("Concours","Qualifications")),
+                         ~ sum(.x,na.rm=FALSE))),
+    df %>%
+      group_by(Année, Périmètre = "Groupe", Périmètre.ID = GroupeCNU.ID) %>%
+      summarise(across(starts_with(c("Concours","Qualifications")),
+                         ~ sum(.x,na.rm=FALSE))),
+    df %>%
+      group_by(Année, Périmètre = "Section", Périmètre.ID = as.character(SectionCNU.ID)) %>%
+      summarise(across(starts_with(c("Concours","Qualifications")),
+                         ~ sum(.x,na.rm=FALSE)))
   )
-
-dgrh %>% spoiler_table("dgrh")
+}
 ```
+
+```{r dgrh, results='asis'}
+dgrh.raw <- read.csv2("data/cpesr-emplois-ec-dgrh.csv")
+dgrh <- sections_agregations(dgrh.raw)
+dgrh %>% spoiler_table("dgrh", trim = 20)
+```
+
+### DPE
+
+```{r dpe, results='asis'}
+dpe.raw <- read.csv2("utils/dpe-excavator/cpesr-emplois-ec-dpe.csv") %>%
+  select(-SectionCNU, -Concours.TauxCouverture.MCF, -Concours.TauxCouverture.PR) %>%
+  mutate(Concours.Postes.PR = ifelse(SectionCNU.ID > 6, Concours.Postes.PR, NA)) # Section à aggrégation
+dpe <- sections_agregations(dpe.raw)
+dpe %>% spoiler_table("dpe", trim = 20)
+```
+
+
 
 ## Données temporaires galaxie
 
@@ -206,7 +223,7 @@ galaxie %>% spoiler_table("galaxie")
 ```{r emploisEC, results='asis'}
 
 concours <- bind_rows(
-  dgrh %>% 
+  dpe %>% 
     mutate(Source = "DGRH") %>%
     filter(Année < min(cnu.fd$Année)),
   cnu.fd %>%

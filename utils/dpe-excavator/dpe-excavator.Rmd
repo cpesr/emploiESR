@@ -1,0 +1,91 @@
+---
+title: "DPE Excavator"
+author: "CPESR"
+date: "`r Sys.Date()`"
+output: github_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+options(dplyr.summarise.inform = FALSE)
+knitr::opts_chunk$set(fig.asp = 9/16, fig.retina = 2)
+
+library(tidyverse)
+library(ggcpesrthemes)
+theme_set(theme_cpesr())
+theme_cpesr_setup(authors = "Julien Gossa", source = "https://github.com/cpesr/RFC/")
+```
+
+## Chargement des données
+
+### Qualifs
+
+```{r load.qualif}
+qualif <- data.frame()
+
+for(année in seq(2001,2008)) {
+  message(année)
+  qualif.année <- read.csv(paste0("csv/dpe-excavation-",année,"-qualif.csv"), header = FALSE) %>%
+    setNames(c("SectionCNU.ID", "SectionCNU", 
+               "Qualification.Qualifiés.MCF", "Concours.Postes.MCF", "Concours.Recrutés.MCF", "Concours.TauxCouverture.MCF",
+               "Qualification.Qualifiés.PR", "Concours.Postes.PR", "Concours.Recrutés.PR", "Concours.TauxCouverture.PR")) %>%
+    mutate(Année = année) 
+  
+  qualif <- bind_rows(qualif,qualif.année) 
+}
+```
+
+```{r load.postes}
+postes <- data.frame()
+
+for(année in seq(2001,2008)) {
+  message(année)
+  postes.année <- read.csv(paste0("csv/dpe-excavation-",année,"-postes.csv"), header = FALSE) %>%
+    setNames(c("SectionCNU.ID", "SectionCNU", 
+               "Concours.Postes.MCF", "Concours.NonPourvus.MCF", "Concours.Recrutés.MCF", "Concours.TauxCouverture.MCF",
+               "Concours.Postes.PR", "Concours.NonPourvus.PR", "Concours.Recrutés.PR", "Concours.TauxCouverture.PR")) %>%
+    mutate(Année = année)
+  
+  postes <- bind_rows(postes, postes.année)
+}
+```
+
+
+## Fusions
+
+```{r fusion}
+dpe <- bind_rows(qualif,postes) %>% 
+  select(-Concours.NonPourvus.MCF, -Concours.NonPourvus.PR) %>%
+  mutate(across(Qualification.Qualifiés.MCF:Concours.Recrutés.MCF, ~ replace_na(.x,0))) %>%
+  mutate(across(Qualification.Qualifiés.PR:Concours.Recrutés.PR, ~ replace_na(.x,0))) %>%
+  group_by(Année,SectionCNU.ID) %>%
+  summarise(across(everything(), ~ max(.x, na.rm=TRUE))) %>%
+  select(Année, everything()) %>%
+  arrange(SectionCNU.ID,Année) 
+```
+
+## Vérifications
+
+### Nombre sections
+```{r check.nsec}
+dpe %>% 
+  group_by(Année) %>%
+  summarise(n_sections = n_distinct(SectionCNU.ID)) %>%
+  kableExtra::kable()
+```
+
+### Nombre de sections sans postes
+
+```{r check.nseczero}
+dpe %>% 
+  group_by(Année) %>%
+  summarise(across(starts_with(c("Qualification","Concours")), ~ sum(.x == 0))) %>%
+  kableExtra::kable()
+```
+
+
+## Ecriture 
+
+```{r save}
+write.csv2(dpe, "cpesr-emplois-ec-dpe.csv", row.names = FALSE)
+```
