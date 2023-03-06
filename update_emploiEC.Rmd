@@ -162,7 +162,7 @@ sections_agregations <- function(df) {
 ```
 
 ```{r dgrh, results='asis'}
-dgrh.raw <- read.csv2("data/cpesr-emplois-ec-dgrh.csv")
+dgrh.raw <- read.csv2("data/cpesr-emplois-ec-dgrh.csv") 
 dgrh <- sections_agregations(dgrh.raw)
 dgrh %>% spoiler_table("dgrh", trim = 20)
 ```
@@ -172,7 +172,8 @@ dgrh %>% spoiler_table("dgrh", trim = 20)
 ```{r dpe, results='asis'}
 dpe.raw <- read.csv2("utils/dpe-excavator/cpesr-emplois-ec-dpe.csv") %>%
   select(-SectionCNU, -Concours.TauxCouverture.MCF, -Concours.TauxCouverture.PR) %>%
-  mutate(Concours.Postes.PR = ifelse(SectionCNU.ID > 6, Concours.Postes.PR, NA)) # Section à aggrégation
+  mutate(Concours.Postes.PR = ifelse(SectionCNU.ID > 6, Concours.Postes.PR, NA)) %>% # Section à aggrégation
+  mutate(SectionCNU.ID = recode(SectionCNU.ID, `39` = 85L, `40` = 86L, `41` = 87L)) # Pharma
 dpe <- sections_agregations(dpe.raw)
 dpe %>% spoiler_table("dpe", trim = 20)
 ```

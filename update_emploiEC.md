@@ -1,7 +1,7 @@
 EmploiEC: update data
 ================
 CPESR
-2023-03-04
+2023-03-06
 
 ## Chargement des données sources
 
@@ -149,16 +149,16 @@ dpe
 |  2008 | Ensemble          | Ensemble     |                1877 |                  1726 |                 NA |                  781 |
 |  2001 | Grande discipline | DEG          |                 276 |                   243 |                 NA |                   88 |
 |  2001 | Grande discipline | LLASHS       |                 665 |                   575 |                388 |                  253 |
+|  2001 | Grande discipline | Pharma       |                  60 |                    56 |                 25 |                   24 |
 |  2001 | Grande discipline | ST           |                 823 |                   768 |                432 |                  316 |
-|  2001 | Grande discipline | NA           |                  60 |                    56 |                 25 |                   24 |
 |  2002 | Grande discipline | DEG          |                 351 |                   307 |                 NA |                  121 |
 |  2002 | Grande discipline | LLASHS       |                 781 |                   724 |                369 |                  261 |
+|  2002 | Grande discipline | Pharma       |                  66 |                    64 |                 34 |                   31 |
 |  2002 | Grande discipline | ST           |                 918 |                   885 |                501 |                  414 |
-|  2002 | Grande discipline | NA           |                  66 |                    64 |                 34 |                   31 |
 |  2003 | Grande discipline | DEG          |                 275 |                   253 |                 NA |                  100 |
 |  2003 | Grande discipline | LLASHS       |                 661 |                   609 |                377 |                  274 |
+|  2003 | Grande discipline | Pharma       |                  55 |                    53 |                 36 |                   30 |
 |  2003 | Grande discipline | ST           |                 937 |                   909 |                501 |                  449 |
-|  2003 | Grande discipline | NA           |                  55 |                    53 |                 36 |                   30 |
 
 </details>
 
@@ -274,7 +274,7 @@ Pharma
 Pharmacie
 </td>
 <td style="text-align:right;">
-15
+23
 </td>
 </tr>
 <tr>
@@ -316,7 +316,7 @@ NA
 NA
 </td>
 <td style="text-align:right;">
-10
+2
 </td>
 </tr>
 <tr>
@@ -358,7 +358,7 @@ Groupe
 Pharmacie
 </td>
 <td style="text-align:right;">
-15
+23
 </td>
 </tr>
 <tr>
@@ -498,7 +498,7 @@ NA
 NA
 </td>
 <td style="text-align:right;">
-10
+9
 </td>
 </tr>
 <tr>
@@ -945,20 +945,6 @@ Météorologie, océanographie physique et physique de l’environnement
 Section
 </td>
 <td style="text-align:left;">
-39
-</td>
-<td style="text-align:left;">
-NA
-</td>
-<td style="text-align:right;">
-8
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-Section
-</td>
-<td style="text-align:left;">
 4
 </td>
 <td style="text-align:left;">
@@ -966,34 +952,6 @@ Science politique
 </td>
 <td style="text-align:right;">
 23
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-Section
-</td>
-<td style="text-align:left;">
-40
-</td>
-<td style="text-align:left;">
-NA
-</td>
-<td style="text-align:right;">
-8
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-Section
-</td>
-<td style="text-align:left;">
-41
-</td>
-<td style="text-align:left;">
-NA
-</td>
-<td style="text-align:right;">
-8
 </td>
 </tr>
 <tr>
@@ -1301,7 +1259,7 @@ Section
 Sciences physico-chimiques et ingénierie appliquée à la santé
 </td>
 <td style="text-align:right;">
-15
+23
 </td>
 </tr>
 <tr>
@@ -1315,7 +1273,7 @@ Section
 Sciences du médicament et des autres produits de santé
 </td>
 <td style="text-align:right;">
-15
+23
 </td>
 </tr>
 <tr>
@@ -1329,7 +1287,7 @@ Section
 Sciences biologiques, fondamentales et cliniques
 </td>
 <td style="text-align:right;">
-15
+23
 </td>
 </tr>
 <tr>
