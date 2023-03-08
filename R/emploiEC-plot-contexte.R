@@ -21,10 +21,6 @@ palette_context <- setNames(RColorBrewer::brewer.pal(3, "Set2"), labs_context)
 p_contexte_ec.etu.te <- plot_series(levels_context, labs_context, périm="Ensemble",norm=TRUE, colors=palette_context, normbreaks = seq(50,150,5), sizemul=1, minannée = "2010")
 p_contexte_ec.etu.te.disc <- plot_series(levels_context, labs_context, périm="Grande discipline",norm=TRUE, colors=palette_context, sizemul=context_sizemul*0.8, minannée = "2010")
 
-levels_gdcnu <- c("Ensemble","DEG","LLASHS","Pharma","ST")
-palette_gdcnu <- setNames(RColorBrewer::brewer.pal(5, "Set1"), levels_gdcnu)
-
-
 plot_evolution_EC <- function(périm="Ensemble") {
   emploisEC %>%
     mutate(Année = as.character(Année)) %>%
@@ -62,7 +58,6 @@ plot_emplois_long <- function() {
     mutate(Données = ifelse(Source == "Galaxie", "Temporaires","Définitives")) %>%
     mutate(Année = as.character(Année)) 
     
-    
   postes.tot <- postes %>%
     group_by(Année,Données) %>%
     summarise(Concours.Postes.MCF = sum(Concours.Postes.MCF,na.rm = TRUE)) %>%
@@ -70,15 +65,15 @@ plot_emplois_long <- function() {
     mutate(evol = round(Concours.Postes.MCF / first(Concours.Postes.MCF) * 100))
   
   ggplot(postes, aes(x=Année, y=Concours.Postes.MCF)) +
-    geom_col(aes(fill=factor(Périmètre.ID,levels=rev(levels_gdcnu)),alpha=Données)) +
+    geom_col(aes(fill=factor(Périmètre.ID,levels=levels_gdcnu),alpha=Données)) +
     geom_text(data=postes.tot, aes(label=Concours.Postes.MCF), color="black", vjust=-0.3) +
     geom_text(data=postes.tot, aes(label=evol), color="white", vjust=1.3) +
     xlab("") + ylab("Nombre de postes MCF ouverts") +
-    scale_fill_manual(breaks=rev(levels_gdcnu[-1]), values=rev(palette_gdcnu[-1]), name="") +
+    scale_fill_manual(breaks=levels_gdcnu[-1], values=palette_gdcnu[-1], name="") +
     scale_alpha_manual(values = c(1,0.5)) 
 }
 
-# plot_emplois_long()
+#plot_emplois_long()
 
 ### Descriptions
 

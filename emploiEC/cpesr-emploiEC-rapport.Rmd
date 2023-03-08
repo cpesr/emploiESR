@@ -74,6 +74,11 @@ année.ref <- emploisEC %>% filter(Source != "Galaxie") %>% tail(n = 1) %>% pull
 knitr::include_graphics("files/589px-Knowledge-Reid-Highsmith.png")
 ```
 
+## Points clés {-}
+
+```{r, child="emploiEC-pointscles.md"}
+```
+
 
 ```{=latex}
 \newpage

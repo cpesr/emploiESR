@@ -8,5 +8,5 @@ Apparaissant dès le XIIIe siècle, les universités sont des organisations à l
  
 Alliées aux réformes de retraites qui retardent les départs et donc la libération des postes, dans un contexte de forte croissance démographique étudiante, ces transformations conduisent à une baisse des recrutements et une montée de la précarité chez les jeunes universitaires. 
 
-Ce document présente les évolutions de différents indicateurs relatifs à l'entrée dans la carrière des enseignants-chercheurs, au niveau national et par grands secteurs disciplinaires.
+Ce document présente les évolutions de différents indicateurs relatifs à l'entrée dans la carrière des enseignants-chercheurs, au niveau national, par grands secteurs disciplinaires, groupes et sections CNU.
 

@@ -56,6 +56,97 @@ titularisation de 35 ans.
 
 L’âge moyen de départ à la retraite est de 63 ans[^5].
 
+### Points clés
+
+Ce document présente les évolutions de différents indicateurs relatifs à
+l’entrée dans la carrière des enseignants-chercheurs (EC), notamment au
+niveau national et par grands secteurs disciplinaires : Droit, Economie,
+Gestion (DEG), Lettres, Langues, Arts et Sciences Humaines et Sociales
+(LLA-SHS), Sciences et Technologies (ST) et Pharmacie.
+
+Les principales observations sont :
+
+- Le nombre de postes mis au concours semble avoir été atteint **un
+  creux dans la période 2019-2021 autour de 1 100 postes**, puis être
+  reparti à la hausse vers les 1 500 postes en 2023.
+
+- **Entre 2010 et 2021, le nombre de néo-recrutés a été divisé par
+  deux**, passant d’environ 2 000 à 1 000.
+
+  - Le secteur **ST est le plus fortement touché, avec près de 60% de
+    recrutements en moins**, particulièrement en Chimie qui accuse une
+    baisse de près de 70%.
+  - Le groupe le moins touché est interdisciplinaire et STAPS, avec une
+    baisse de 14%.
+  - Les deux sections CNU qui accusent la plus forte baisse du nombre de
+    recrutements sont **la section 13 - Langues et littératures slaves
+    (-80%, seulement 1 recrutement), et la 67 - Biologie des populations
+    et écologie (-78%, seulement 8 recrutements)**.
+    - Ces chiffres soulèvent la question de l’adéquation des
+      recrutements avec les grandes crises actuelles.
+
+- Sur la même période, le nombre de candidats est passé d’environ 10 000
+  à 8 500.
+
+  - Cette baisse est concentrée sur Pharmacie (-20%), mais aussi et
+    surtout **ST, qui accuse 30% de baisse des candidats à la
+    qualification et 40% de baisse des candidats aux concours**.
+
+- Du point des vue des candidats, le nombre global de concurrents par
+  poste est passé de 4,6 à 7,7, soit **une augmentation de la tension à
+  l’entrée dans la carrière de près de 70%**.
+
+  - Cette augmentation concerne tous les groupes et pratiquement toutes
+    les sections. Elle est particulièrement marquée en DEG et LLA-SHS,
+    où elle a pratiquement doublé.
+  - En LLA-SHS, la tension dépasse désormais 10 candidats par poste, et
+    même **37 candidats par poste en Section 19 - Sociologie et
+    Démographie**, qui détient le record de 2021.
+    - NB : il s’agit bien du nombre de candidats, et non de candidatures
+      ; chaque candidats ayant pu faire plusieurs candidatures.
+
+- La taux de sélection par la qualification est resté stable, avec un
+  taux de réussite autour de 70% (allant de 45% en DEG et 80% en ST).
+
+  - C’est donc le faible nombre de postes qui porte essentiellement la
+    tension, avec **un taux de réussite au concours passant de 32% à
+    18%** (allant de 36% en DEG à 13% en ST).
+
+- Du point de vue démographique, il en résulte un vieillissement du
+  corps des EC, caractérisé par **la période de temps nécessaire pour
+  renouveler entièrement les effectifs au rythme de recrutement annuel :
+  alors qu’il fallait 29 ans en 2010, il en faut 52 au rythme de 2021**.
+
+  - La période de renouvellement dépasse désormais la durée des
+    carrières, ce qui porte le risque d’une attrition de la corporation.
+  - ST est particulièrement touché, avec une période passant de 28 à 62
+    ans, soit plus qu’un doublement.
+  - Cette période de renouvellement montre de très grande disparités,
+    avec des sections qui se renouvellent en une vingtaine d’années,
+    alors qu’**il faudrait plus de 150 ans pour renouveler la section
+    30 - Milieux dilués et optique**.
+
+- De point de vue des missions, entre 2010 et 2021, **le nombre d’EC
+  titulaires a baissé d’environ 2%, passant de 56 200 en 2010 à 55
+  300**. Dans le même temps, **les effectifs étudiants augmentaient de
+  près de 20%**.
+
+  - **La baisse des effectifs EC concerne en particulier ST, près de 4%,
+    soit plus de 600 postes**. Les Sections 87 - Sciences biologiques,
+    fondamentales et cliniques et 12 - Langues et littératures
+    germaniques et scandinaves ont perdu 30% de leur effectif.
+  - Une minorité de sections voient leur effectif EC augmenter,
+    notamment la section 4 - Science politique, qui gagne une
+    cinquantaine de postes (+22%).
+  - Il en résulte globalement **une baisse du taux d’encadrement
+    pédagogique de 17%, passant sur la période de 3,7 titulaires pour
+    100 étudiants à 3,1**.
+  - La baisse du taux d’encadrement est particulièrement marquée **en
+    LLA-SHS et ST, où le nombre d’EC par étudiant a baissé de près d’un
+    quart en 10 ans**.
+  - Au global, **il faudrait désormais ouvrir plus de 11 000 postes pour
+    retrouver les taux d’encadrement de 2010**.
+
 ### Méthodologie
 
 Ce document constitue un travail de traitement et de représentation de

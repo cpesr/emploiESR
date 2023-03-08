@@ -1,6 +1,4 @@
 
-levels_gdcnu <- c("Ensemble","DEG","LLASHS","Pharma","ST")
-palette_gdcnu <- setNames(RColorBrewer::brewer.pal(5, "Set1"), levels_gdcnu)
 labeller_100 <- function(x) paste(x, "(base 100)")
 
 
@@ -29,6 +27,8 @@ plot_metrique <- function(métrique, métriquelab = "Valeur", périm="Ensemble",
       else
         mutate(., lab = format(val, digits=2, decimal.mark=",", big.mark=" " , small.interval=3)) } %>%
     
+    mutate(Périmètre.ID = factor(Périmètre.ID,levels=levels_gdcnu)) %>%
+    
     mutate(lab = ifelse(Année == first(Année) |  Année == last(Année), lab, NA)) %>%
     ggplot(aes(x=Année,y=val,color=Périmètre.ID)) +  
     geom_line(aes(group=Périmètre.ID), size=1*sizemult) + geom_point(size=3*sizemult) +
@@ -44,6 +44,8 @@ plot_metrique <- function(métrique, métriquelab = "Valeur", périm="Ensemble",
     { if(percentlab & !norm) scale_y_continuous(labels=scales::percent) } +
     theme(axis.text.x = element_text(angle = 45, vjust = 1, hjust=1))
 }
+
+# plot_metrique("Effectif.EC", métriquelab = "Enseignants-chercheurs titulaire", périm = c("Ensemble","Grande discipline"), norm = FALSE, facetting = FALSE, sizemul=context_sizemul)
 
 # plot_metrique("Concours.Postes.MCF","métriquelab", périm="Grande discipline", norm=TRUE, sizemult=0.5, fullannées = FALSE) 
 

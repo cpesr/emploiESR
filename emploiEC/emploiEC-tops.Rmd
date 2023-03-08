@@ -1,0 +1,51 @@
+---
+title: "Chiffres clés"
+author: "CPESR"
+date: "`r Sys.Date()`"
+output: github_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+options(dplyr.summarise.inform = FALSE)
+knitr::opts_chunk$set(fig.asp = 9/16, fig.retina = 2)
+
+library(tidyverse)
+library(ggcpesrthemes)
+theme_set(theme_cpesr())
+theme_cpesr_setup(authors = "Julien Gossa", source = "https://github.com/cpesr/RFC/")
+
+cnu.sections <- read.csv2("../data/cpesr-cnu-sections.csv")
+emploisEC <- read.csv2("../data/cpesr-emplois-ec.csv", stringsAsFactors = TRUE) 
+```
+
+
+```{r kpi, results='asis'}
+kpitop <- function(périm, métrique, trievol = FALSE, année = 2021, année.ref = 2010) {
+  if(trievol) trikey <- "evol" else trikey <- métrique
+  emploisEC %>%
+    filter(Périmètre == périm, Année >= année.ref) %>%
+    select(Année, Périmètre.ID, Périmètre.label, one_of(métrique)) %>%
+    group_by(Périmètre.ID) %>%
+    filter(!is.na(!!sym(métrique))) %>%
+    mutate(
+      evol = !!sym(métrique) / first(!!sym(métrique)) * 100,
+      Val.ref = first(!!sym(métrique)),
+      Année.ref = first(Année)) %>%
+    filter(Année == année) %>% 
+    arrange(!!sym(trikey))
+}
+
+for(métrique in emploisEC %>% select(starts_with("kpi"),starts_with("Contexte"),starts_with("Concours"),starts_with("Qualification"),starts_with("Effectif")) %>% names()) {
+  cat("## ", métrique, "\n\n") 
+  for(périm in c(unique(emploisEC$Périmètre))) {
+    cat("### ", périm, "\n\n") 
+    
+    kpitop(périm,métrique, trievol = FALSE) %>% spoiler_table("tri par valeur", trim = Inf)
+    kpitop(périm,métrique, trievol = TRUE) %>% spoiler_table("tri par évol", trim = Inf)
+    
+  }
+}
+
+
+```

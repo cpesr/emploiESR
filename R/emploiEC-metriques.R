@@ -1,11 +1,14 @@
 
+levels_gdcnu <- c("Ensemble","ST","LLASHS","DEG","Pharma")
+palette_gdcnu <- setNames(RColorBrewer::brewer.pal(5, "Set1"), levels_gdcnu)
+
+
 séries.MCF = c("Qualification.Candidats.MCF","Qualification.Qualifiés.MCF",
                "Concours.Candidats.MCF","Concours.Postes.MCF","Concours.Recrutés.MCF")
 séries.MCF.lab = c("Candidats qualification","Candidats qualifiés",
                    "Candidats concours","Postes publiés","Candidats recrutés")
 séries.MCF.palette <- c("#A6CEE3","#1F78B4","#B2DF8A","#79c360","#33A02C")
 names(séries.MCF.palette) <- séries.MCF.lab
-
 
 kpis <- list(
   "kpi.MCF.TauxTension"=list(

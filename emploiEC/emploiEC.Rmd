@@ -43,6 +43,11 @@ Une version plus complète du rapport est disponible [ici](cpesr-emploiEC-rappor
 ```{r, child="emploiEC-intro.md"}
 ```
 
+### Points clés
+
+```{r, child="emploiEC-pointscles.md"}
+```
+
 ### Méthodologie
 
 ```{r, child="emploiEC-methodologie.md"}
