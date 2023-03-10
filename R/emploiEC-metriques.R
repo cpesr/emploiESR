@@ -13,12 +13,11 @@ names(séries.MCF.palette) <- séries.MCF.lab
 kpis <- list(
   "kpi.MCF.TauxTension"=list(
     "nom"="kpi.MCF.TauxTension",
-    "titre"="Tension à l'entrée dans la carrière d'enseignant-chercheur",
+    "titre"="Tension à l'entrée dans la carrière d'enseignant-chercheur.",
     "lab"="Tension",
     "percentlab" = FALSE,
     "def"="nombre de candidats par poste ouvert au concours",
-    "desc"="
-La tension présente une triple interprétation\\ :
+    "desc"="La tension présente une triple interprétation\\ :
 
 - pour l'Etat, elle mesure l'attractivité des carrières\\ ;
 - pour les établissement, elle mesure l'attractivité des postes mis au concours ;
@@ -41,8 +40,7 @@ beaucoup de postes pour très peu de candidats.
     "lab"="Taux de réussite concours",
     "percentlab" = TRUE,
     "def"="nombre de recrutés par candidat⋅e.",
-    "desc"="
-Le taux de réussite est proche de l'inverse du taux de tension :
+    "desc"="Le taux de réussite est proche de l'inverse du taux de tension :
 
 - pour l'Etat et les établissements, il mesure la qualité du recrutement : 
 plus le taux est bas, plus on estime que les candidats recrutés sont de grande qualité ;
@@ -58,8 +56,7 @@ Les mêmes observations s'appliquent qu'au Taux de tension.
     "lab"="Nombre de candidats sans poste",
     "percentlab" = FALSE,
     "def"="différence entre candidats et recrutés au concours.",
-    "desc"="
-Le nombre de « sans poste » mesure le vivier, ou réservoir, de recrutement potentiel.
+    "desc"="Le nombre de « sans poste » mesure le vivier, ou réservoir, de recrutement potentiel.
 Il varie en fonction de l'attractivité des carrières et du nombre de postes ouverts
 au concours, mais aussi des opportunités d'embauche en dehors du milieu académique.
 "),
@@ -71,8 +68,7 @@ au concours, mais aussi des opportunités d'embauche en dehors du milieu académ
     "lab"="Taux de sélection",
     "percentlab" = TRUE,
     "def"="nombre de recrutés par candidats à la qualification.",
-    "desc"="
-Le taux de sélection est une mesure de la difficulté d'entrer dans la carrière
+    "desc"="Le taux de sélection est une mesure de la difficulté d'entrer dans la carrière
 d'enseignant-chercheur, au travers des deux étapes de la sélection : qualification et
 concours.
 
@@ -89,8 +85,7 @@ recandidatent.
     "lab"="Taux de sélection qualification",
     "percentlab" = TRUE,
     "def"="nombre de qualifiés par candidats à la qualification.",  
-    "desc"="
-Le taux de sélection par la qualification mesure la part des lauréats lors de cette étape de sélection.
+    "desc"="Le taux de sélection par la qualification mesure la part des lauréats lors de cette étape de sélection.
     "),
   
   "kpi.MCF.TauxSélection.Concours"=list(
@@ -99,8 +94,7 @@ Le taux de sélection par la qualification mesure la part des lauréats lors de 
     "lab"="Taux de sélection concours",
     "percentlab" = TRUE,
     "def"="nombre de recrutés par qualifiés.",
-    "desc"="
-Le taux de sélection par le concours mesure la part des lauréats lors de cette étape de sélection.
+    "desc"="Le taux de sélection par le concours mesure la part des lauréats lors de cette étape de sélection.
 "),
   
   "kpi.MCF.TauxSélection.QualifVsConcours"=list(
@@ -108,9 +102,8 @@ Le taux de sélection par le concours mesure la part des lauréats lors de cette
     "titre"="Equilibre de la sélection qualification/concours à l'entrée dans la carrière d'enseignant-chercheur",
     "lab"="Taux d'équilibre",
     "percentlab" = TRUE,
-    "def"="nombre de qualifiés évincés par le concours par le nombre de candidats évincés par la qualification et le concours. ",
-    "desc"="
-Ce taux mesure la part relative de la qualification et du concours dans la sélection
+    "def"="nombre de qualifiés évincés par le concours par le nombre de candidats évincés par la qualification et le concours.",
+    "desc"="Ce taux mesure la part relative de la qualification et du concours dans la sélection
 à l'entrée de la carrière d'enseignant-chercheur : à 50%, qualification et concours 
 ont la même part ; plus le taux est élevé, plus le concours occupe une grande part.
 "),
@@ -122,8 +115,7 @@ ont la même part ; plus le taux est élevé, plus le concours occupe une grande
     "lab"="Période de renouvellement (ans)",
     "percentlab" = FALSE,
     "def"="effectifs enseignants-chercheurs titulaires par poste publié.",
-    "desc"="
-Cette période mesure le nombre d'années nécessaires au renouvellement de la 
+    "desc"="Cette période mesure le nombre d'années nécessaires au renouvellement de la 
 totalité des effectifs actuels, au rythme de recrutement actuel.
 
 Un seuil peut être grossièrement défini autour de 29 ans, correspondant à la 

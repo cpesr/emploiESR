@@ -55,7 +55,7 @@ plot_emplois_long <- function() {
 
   postes <- emploisEC %>%
     filter(Périmètre %in% c("Grande discipline")) %>%
-    mutate(Données = ifelse(Source == "Galaxie", "Temporaires","Définitives")) %>%
+    mutate(Données = ifelse(Source == "CNU", "Consolidées","Non consolidées")) %>%
     mutate(Année = as.character(Année)) 
     
   postes.tot <- postes %>%
@@ -70,10 +70,10 @@ plot_emplois_long <- function() {
     geom_text(data=postes.tot, aes(label=evol), color="white", vjust=1.3) +
     xlab("") + ylab("Nombre de postes MCF ouverts") +
     scale_fill_manual(breaks=levels_gdcnu[-1], values=palette_gdcnu[-1], name="") +
-    scale_alpha_manual(values = c(1,0.5)) 
+    scale_alpha_manual(values = c(1,0.6)) 
 }
 
-#plot_emplois_long()
+# plot_emplois_long()
 
 ### Descriptions
 

@@ -1,7 +1,7 @@
 EmploiEC: update data
 ================
 CPESR
-2023-03-06
+2023-03-10
 
 ## Chargement des données sources
 
@@ -492,13 +492,41 @@ Mécanique, génie mécanique, génie informatique, énergétique
 Groupe
 </td>
 <td style="text-align:left;">
+Santé
+</td>
+<td style="text-align:left;">
+Autres santé(mono-appartenants)
+</td>
+<td style="text-align:right;">
+2
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Groupe
+</td>
+<td style="text-align:left;">
+Théologie
+</td>
+<td style="text-align:left;">
+Théologie
+</td>
+<td style="text-align:right;">
+8
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Groupe
+</td>
+<td style="text-align:left;">
 NA
 </td>
 <td style="text-align:left;">
 NA
 </td>
 <td style="text-align:right;">
-9
+2
 </td>
 </tr>
 <tr>
@@ -594,8 +622,8 @@ Section
 15
 </td>
 <td style="text-align:left;">
-Langues et littératures arabes, chinoises, japonaises, hébraïques, d
-autres domaines linguistiques
+Langues et littératures arabes, chinoises, japonaises, hébraïques,
+d’autres domaines linguistiques
 </td>
 <td style="text-align:right;">
 23

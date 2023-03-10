@@ -69,33 +69,28 @@ Les principales observations sont :
 - Le nombre de postes mis au concours semble avoir été atteint **un
   creux dans la période 2019-2021 autour de 1 100 postes**, puis être
   reparti à la hausse vers les 1 500 postes en 2023.
-
+  - La suite des observations se concentrent sur la période 2010-2021,
+    pour laquelle les données sont complètes et consolidées.
 - **Entre 2010 et 2021, le nombre de néo-recrutés a été divisé par
   deux**, passant d’environ 2 000 à 1 000.
-
   - Le secteur **ST est le plus fortement touché, avec près de 60% de
     recrutements en moins**, particulièrement en Chimie qui accuse une
     baisse de près de 70%.
   - Le groupe le moins touché est interdisciplinaire et STAPS, avec une
     baisse de 14%.
-  - Les deux sections CNU qui accusent la plus forte baisse du nombre de
-    recrutements sont **la section 13 - Langues et littératures slaves
-    (-80%, seulement 1 recrutement), et la 67 - Biologie des populations
-    et écologie (-78%, seulement 8 recrutements)**.
-    - Ces chiffres soulèvent la question de l’adéquation des
-      recrutements avec les grandes crises actuelles.
-
+  - La section 67 - Biologie des populations et écologie est parmi
+    celles où les recrutements baissent le plus, seulement 8 en 2021,
+    alors qu’il y en avait plus de 30 dans les années 2000. La section
+    37 - Météorologie, océanographie physique et physique de
+    l’environnement n’a ouvert que 2 postes.
 - Sur la même période, le nombre de candidats est passé d’environ 10 000
   à 8 500.
-
   - Cette baisse est concentrée sur Pharmacie (-20%), mais aussi et
     surtout **ST, qui accuse 30% de baisse des candidats à la
     qualification et 40% de baisse des candidats aux concours**.
-
 - Du point des vue des candidats, le nombre global de concurrents par
   poste est passé de 4,6 à 7,7, soit **une augmentation de la tension à
   l’entrée dans la carrière de près de 70%**.
-
   - Cette augmentation concerne tous les groupes et pratiquement toutes
     les sections. Elle est particulièrement marquée en DEG et LLA-SHS,
     où elle a pratiquement doublé.
@@ -104,19 +99,15 @@ Les principales observations sont :
     Démographie**, qui détient le record de 2021.
     - NB : il s’agit bien du nombre de candidats, et non de candidatures
       ; chaque candidats ayant pu faire plusieurs candidatures.
-
 - La taux de sélection par la qualification est resté stable, avec un
   taux de réussite autour de 70% (allant de 45% en DEG et 80% en ST).
-
   - C’est donc le faible nombre de postes qui porte essentiellement la
     tension, avec **un taux de réussite au concours passant de 32% à
     18%** (allant de 36% en DEG à 13% en ST).
-
 - Du point de vue démographique, il en résulte un vieillissement du
   corps des EC, caractérisé par **la période de temps nécessaire pour
   renouveler entièrement les effectifs au rythme de recrutement annuel :
   alors qu’il fallait 29 ans en 2010, il en faut 52 au rythme de 2021**.
-
   - La période de renouvellement dépasse désormais la durée des
     carrières, ce qui porte le risque d’une attrition de la corporation.
   - ST est particulièrement touché, avec une période passant de 28 à 62
@@ -125,12 +116,10 @@ Les principales observations sont :
     avec des sections qui se renouvellent en une vingtaine d’années,
     alors qu’**il faudrait plus de 150 ans pour renouveler la section
     30 - Milieux dilués et optique**.
-
 - De point de vue des missions, entre 2010 et 2021, **le nombre d’EC
   titulaires a baissé d’environ 2%, passant de 56 200 en 2010 à 55
   300**. Dans le même temps, **les effectifs étudiants augmentaient de
   près de 20%**.
-
   - **La baisse des effectifs EC concerne en particulier ST, près de 4%,
     soit plus de 600 postes**. Les Sections 87 - Sciences biologiques,
     fondamentales et cliniques et 12 - Langues et littératures
@@ -393,11 +382,10 @@ l’évolution dans le temps des effectifs.
 
 ## Métriques
 
-### Tension à l’entrée dans la carrière d’enseignant-chercheur
+### Tension à l’entrée dans la carrière d’enseignant-chercheur.
 
-Définition : nombre de candidats par poste ouvert au concours
-
-La tension présente une triple interprétation :
+Définition : nombre de candidats par poste ouvert au concours La tension
+présente une triple interprétation :
 
 - pour l’Etat, elle mesure l’attractivité des carrières ;
 - pour les établissement, elle mesure l’attractivité des postes mis au
@@ -421,9 +409,8 @@ avec beaucoup de postes pour très peu de candidats.
 
 ### Taux de réussite à l’entrée dans la carrière d’enseignant-chercheur
 
-Définition : nombre de recrutés par candidat⋅e.
-
-Le taux de réussite est proche de l’inverse du taux de tension :
+Définition : nombre de recrutés par candidat⋅e. Le taux de réussite est
+proche de l’inverse du taux de tension :
 
 - pour l’Etat et les établissements, il mesure la qualité du recrutement
   : plus le taux est bas, plus on estime que les candidats recrutés sont
@@ -441,12 +428,11 @@ Les mêmes observations s’appliquent qu’au Taux de tension.
 
 ### Candidats sans poste à l’entrée dans la carrière d’enseignant-chercheur
 
-Définition : différence entre candidats et recrutés au concours.
-
-Le nombre de « sans poste » mesure le vivier, ou réservoir, de
-recrutement potentiel. Il varie en fonction de l’attractivité des
-carrières et du nombre de postes ouverts au concours, mais aussi des
-opportunités d’embauche en dehors du milieu académique.
+Définition : différence entre candidats et recrutés au concours. Le
+nombre de « sans poste » mesure le vivier, ou réservoir, de recrutement
+potentiel. Il varie en fonction de l’attractivité des carrières et du
+nombre de postes ouverts au concours, mais aussi des opportunités
+d’embauche en dehors du milieu académique.
 
 <img src="emploiEC_files/figure-gfm/metriques-9.png" width="768" />
 <img src="emploiEC_files/figure-gfm/metriques-10.png" width="768" />
@@ -455,9 +441,8 @@ opportunités d’embauche en dehors du milieu académique.
 
 ### Taux de sélection à l’entrée dans la carrière d’enseignant-chercheur
 
-Définition : nombre de recrutés par candidats à la qualification.
-
-Le taux de sélection est une mesure de la difficulté d’entrer dans la
+Définition : nombre de recrutés par candidats à la qualification. Le
+taux de sélection est une mesure de la difficulté d’entrer dans la
 carrière d’enseignant-chercheur, au travers des deux étapes de la
 sélection : qualification et concours.
 
@@ -473,10 +458,9 @@ postes qui recandidatent.
 
 ### Taux de sélection par la qualification à l’entrée dans la carrière d’enseignant-chercheur
 
-Définition : nombre de qualifiés par candidats à la qualification.
-
-Le taux de sélection par la qualification mesure la part des lauréats
-lors de cette étape de sélection.
+Définition : nombre de qualifiés par candidats à la qualification. Le
+taux de sélection par la qualification mesure la part des lauréats lors
+de cette étape de sélection.
 
 <img src="emploiEC_files/figure-gfm/metriques-17.png" width="768" />
 <img src="emploiEC_files/figure-gfm/metriques-18.png" width="768" />
@@ -485,10 +469,9 @@ lors de cette étape de sélection.
 
 ### Taux de sélection par le concours à l’entrée dans la carrière d’enseignant-chercheur
 
-Définition : nombre de recrutés par qualifiés.
-
-Le taux de sélection par le concours mesure la part des lauréats lors de
-cette étape de sélection.
+Définition : nombre de recrutés par qualifiés. Le taux de sélection par
+le concours mesure la part des lauréats lors de cette étape de
+sélection.
 
 <img src="emploiEC_files/figure-gfm/metriques-21.png" width="768" />
 <img src="emploiEC_files/figure-gfm/metriques-22.png" width="768" />
@@ -498,12 +481,11 @@ cette étape de sélection.
 ### Equilibre de la sélection qualification/concours à l’entrée dans la carrière d’enseignant-chercheur
 
 Définition : nombre de qualifiés évincés par le concours par le nombre
-de candidats évincés par la qualification et le concours.
-
-Ce taux mesure la part relative de la qualification et du concours dans
-la sélection à l’entrée de la carrière d’enseignant-chercheur : à 50%,
-qualification et concours ont la même part ; plus le taux est élevé,
-plus le concours occupe une grande part.
+de candidats évincés par la qualification et le concours. Ce taux mesure
+la part relative de la qualification et du concours dans la sélection à
+l’entrée de la carrière d’enseignant-chercheur : à 50%, qualification et
+concours ont la même part ; plus le taux est élevé, plus le concours
+occupe une grande part.
 
 <img src="emploiEC_files/figure-gfm/metriques-25.png" width="768" />
 <img src="emploiEC_files/figure-gfm/metriques-26.png" width="768" />
@@ -513,10 +495,9 @@ plus le concours occupe une grande part.
 ### Période nécessaire au renouvellement des effectifs enseignant-chercheur titulaire
 
 Définition : effectifs enseignants-chercheurs titulaires par poste
-publié.
-
-Cette période mesure le nombre d’années nécessaires au renouvellement de
-la totalité des effectifs actuels, au rythme de recrutement actuel.
+publié. Cette période mesure le nombre d’années nécessaires au
+renouvellement de la totalité des effectifs actuels, au rythme de
+recrutement actuel.
 
 Un seuil peut être grossièrement défini autour de 29 ans, correspondant
 à la différence entre l’âge moyen de recrutement des MCF (34 ans) et

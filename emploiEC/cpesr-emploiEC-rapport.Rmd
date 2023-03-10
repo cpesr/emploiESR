@@ -487,14 +487,31 @@ cat(sep = '',"
 :::::: {.datapage data-latex='[Groupes de ", gd.lab, " (",gd,")]'} 
 
 ::: {.datapagecom data-latex=''}
-## Groupe ",groupe," — ", groupe.lab,"
-
+\\section[Groupe ",groupe," — ",groupe.lab,"]{Groupe ",groupe,"}
+\\subsection*{",groupe.lab,"}
+\\vspace{1cm}
 \\footnotesize
-\\subsection*{Année de référence : ", année.ref,"}
-\\subsection*{Valeurs temporaires :}
+\\subsubsection*{Année de référence : ",année.ref,"}
 
+\\subsubsection*{Effectifs EC titulaires :}
 \\begin{center}
+")
 
+cat(emploisEC %>% 
+  filter(Périmètre == "Groupe", Périmètre.ID == groupe, Source != "Galaxie") %>%
+  filter(!is.na(Effectif.EC)) %>%
+  slice(1,n()) %>%
+  select(Année, Effectif=Effectif.EC) %>%
+  mutate(`Valeur 100` = round(Effectif / first(Effectif) * 100)) %>%
+  kableExtra::kable("latex", booktabs = T)
+) 
+
+cat(sep = '', "
+\\end{center}
+
+
+\\subsubsection*{Postes (valeurs temporaires) :}
+\\begin{center}
 ")
 
 cat(emploisEC %>% 
@@ -503,11 +520,12 @@ cat(emploisEC %>%
   kableExtra::kable("latex", booktabs = T)
 ) 
 
-
 cat(sep = '', "
 \\end{center}
-\\vspace{0cm}
-\\subsection*{Définition des métriques :}
+
+\\vfill
+\\subsubsection*{Définition des métriques :}
+\\scriptsize
 
 ")
 
@@ -619,12 +637,30 @@ cat(sep = '',"
 :::::: {.datapage data-latex='[Sections du Groupe ",groupe, " - ", groupe.lab," — ", gd.lab, " (",gd,")]'} 
 
 ::: {.datapagecom data-latex=''}
-## Section ",section," — ",section.lab,"
-
+\\section[Section ",section," — ",section.lab,"]{Section ",section,"}
+\\subsection*{",section.lab,"}
+\\vspace{1cm}
 \\footnotesize
-\\subsection*{Année de référence : ",année.ref,"}
-\\subsection*{Valeurs temporaires :}
+\\subsubsection*{Année de référence : ",année.ref,"}
 
+\\subsubsection*{Effectifs EC titulaires :}
+\\begin{center}
+")
+
+cat(emploisEC %>% 
+  filter(Périmètre == "Section", Périmètre.ID == section, Source != "Galaxie") %>%
+  filter(!is.na(Effectif.EC)) %>%
+  slice(1,n()) %>%
+  select(Année, Effectif=Effectif.EC) %>%
+  mutate(`Valeur 100` = round(Effectif / first(Effectif) * 100)) %>%
+  kableExtra::kable("latex", booktabs = T)
+) 
+
+cat(sep = '', "
+\\end{center}
+
+
+\\subsubsection*{Postes (valeurs temporaires) :}
 \\begin{center}
 
 ")
@@ -635,17 +671,17 @@ cat(emploisEC %>%
   kableExtra::kable("latex", booktabs = T)
 ) 
 
-
 cat(sep = '', "
 
 \\end{center}
-\\vspace{0cm}
-\\subsection*{Définition des métriques :}
+\\vfill
+\\subsubsection*{Définition des métriques :}
+\\scriptsize
 
 ")
 
 for(m in kpis) {
-  cat("- ",m$lab," : ",m$def,"\n\n")
+  cat("- ",m$lab," : ",m$def,"\n")
 } 
 
 cat(sep = '',"
