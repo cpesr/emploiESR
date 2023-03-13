@@ -31,7 +31,7 @@ année.ref <- emploisEC %>% filter(Source != "Galaxie") %>% tail(n = 1) %>% pull
 ```
 - twtexte:[#DataESR] Visualisation des concours d'enseignant-chercheur
 - twalt:@ffigon @juliengossa LO 2.0 www.cpesr.fr
-- twurl:https://twitter.com/CPESR_/status/1498228236710559744
+- twurl:https://twitter.com/CPESR_/status/1635378748844388353
 - url:https://cpesr.fr/lentree-dans-la-carriere-des-enseignants-chercheurs/
 ```
 
@@ -110,7 +110,7 @@ for (ip in 1:nrow(périmètres)) {
         theme_cpesr_cap() +
         theme(legend.position = "None", 
               axis.title.x = element_blank(), 
-              plot.margin = unit(c(0,0,0,0),"cm"),
+              #plot.margin = unit(c(0,0,0,0),"cm"),
               plot.caption = element_text(margin = unit(c(0.5,0,0,0),"cm"))
         )
     )
