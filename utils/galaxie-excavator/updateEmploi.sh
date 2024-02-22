@@ -3,7 +3,7 @@
 #Corrige à l'arrache le html
 #Converti en csv et nettoie les noms de fichers
 
-RENTREE="2023"
+RENTREE="2024"
 WD=$PWD
 
 cd /tmp
@@ -16,5 +16,7 @@ cp Emplois_publies_TrieParCorps.$RENTREE.html $WD
 cp Emplois_publies_TrieParCorps.$RENTREE.html $WD/Emplois_publies_TrieParCorps.${RENTREE}_`date +%Y-%M-%d`.html
 cp Emplois_publies_TrieParCorps.$RENTREE.html1.csv $WD/galaxie.$RENTREE.csv
 
+wc -l
+
 cd $WD
-#Rscript galaxie.R
+# Rscript galaxie.R

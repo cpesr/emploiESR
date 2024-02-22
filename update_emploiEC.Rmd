@@ -25,7 +25,7 @@ theme_cpesr_setup(authors = "Julien Gossa", source = "https://github.com/cpesr/R
 ```{r load.cnu.section, results='asis'}
 cnu.sections <- read.csv2("data/cpesr-cnu-sections.csv")
 
-cnu.sections %>% spoiler_table("cnu.section")
+cnu.sections %>% spoiler_table("cnu.section", trim=Inf)
 ```
 
 ```{r load.cnu.perimetre, results='asis'}
@@ -36,7 +36,7 @@ cnu.périmètres <- bind_rows(
   data.frame("Périmètre" = "Ensemble", Périmètre.ID = "Ensemble", Périmètre.label = "Ensemble")) %>%
   na.omit()
 
-cnu.périmètres %>% spoiler_table("cnu.périmètres")
+cnu.périmètres %>% spoiler_table("cnu.périmètres", trim=Inf)
 ```
 
 ### Enseignants
@@ -93,9 +93,9 @@ ens %>%
     Effectif.MCF = sum(Effectif.MCF, na.rm = T),
     Effectif.PR = sum(Effectif.PR, na.rm = T)
   )
-) 
+)
 
-ens %>% spoiler_table("ens")
+ens %>% spoiler_table("ens", trim=Inf)
 ```
 
 ### Etudiants
@@ -106,7 +106,7 @@ etu <- read.csv2("data/fr-esr-statistiques-sur-les-effectifs-d-etudiants-inscrit
   #filter(Type.d.établissement == "Université" ) %>%
   transmute(
     Année = rentree,
-    Ensemble = replace_na(Nombre.d.étudiants.inscrits..inscriptions.principales..hors.doubles.inscriptions.CPGE,0) - replace_na(Diplôme.préparé...Diplôme.d.État.d.infirmier,0),
+    Ensemble = replace_na(Nombre.d.étudiants.inscrits..inscriptions.principales..hors.doubles.inscriptions.CPGE,0) - replace_na(Nombre.d.étudiants.préparant.un.diplôme.d.État.d.infirmier.en.IFSI,0),
     DEG=Grande.discipline...Droit..sciences.économiques..AES,
     Sans=Grande.discipline...Interdisciplinaire,
     LLASHS=replace_na(Grande.discipline...Lettres..langues.et.sciences.humaines,0) + replace_na(Grande.discipline...STAPS,0),
@@ -123,7 +123,7 @@ etu <- read.csv2("data/fr-esr-statistiques-sur-les-effectifs-d-etudiants-inscrit
   filter(Année > 2009) %>%
   filter(Année <= max(ens$Année))
 
-etu %>% spoiler_table("etu")
+etu %>% spoiler_table("etu", trim=Inf)
 ```
 
 ### Fiches démographiques CNU
@@ -131,7 +131,7 @@ etu %>% spoiler_table("etu")
 ```{r load.cnu.fd, results='asis'}
 cnu.fd <- read.csv2("data/cpesr-emplois-ec-cnu.csv")
 
-cnu.fd %>% spoiler_table("cnu.fd")
+cnu.fd %>% spoiler_table("cnu.fd", trim=Inf)
 ```
 
 ### DGRH
@@ -214,7 +214,7 @@ galaxie <- bind_rows(
 ) %>%
   pivot_wider(names_from = Corps, values_from = Concours.Postes, names_prefix = "Concours.Postes.")
 
-galaxie %>% spoiler_table("galaxie")
+galaxie %>% spoiler_table("galaxie", trim=Inf)
 ```
 
 
@@ -263,7 +263,7 @@ emploisEC <- cnu.périmètres %>%
   ungroup() %>%
   arrange(Périmètre, Année, Périmètre.ID)
 
-emploisEC %>% spoiler_table("emploisEC")
+emploisEC %>% spoiler_table("emploisEC", trim = Inf)
 ```
 
 ```{r check}

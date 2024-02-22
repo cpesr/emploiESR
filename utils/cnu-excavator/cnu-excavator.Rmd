@@ -94,8 +94,9 @@ spoiler_table(qualif.ratio.recevabilité)
 
 ```{r qualif.bind, results='asis'}
 qualif <- bind_rows(
-  clean_qualif("cnu-excavation-qualification-2021.csv"),
-  clean_qualif("cnu-excavation-qualification-2020.csv") %>% filter(Année <= 2016),
+  clean_qualif("cnu-excavation-qualification-2022.csv"),
+  #clean_qualif("cnu-excavation-qualification-2021.csv"),
+  clean_qualif("cnu-excavation-qualification-2020.csv") %>% filter(Année <= 2017),
   #clean_qualif("cnu-excavation-qualification-2019.csv"),
   clean_qualif("cnu-excavation-qualification-2015.csv") %>% filter(Année <= 2015),
   clean_qualif("cnu-excavation-qualification-2013.csv") %>% filter(Année < 2011) %>%
@@ -148,15 +149,16 @@ clean_recrut <- function(csvfile) {
 
 ```{r rec.bind, results='asis'}
 recrut <- bind_rows(
-  clean_recrut("cnu-excavation-recrutement-2021.csv"),
-  clean_recrut("cnu-excavation-recrutement-2020.csv") %>% filter(Année <= 2016),
+  clean_recrut("cnu-excavation-recrutement-2022.csv"),
+  #clean_recrut("cnu-excavation-recrutement-2021.csv"),
+  clean_recrut("cnu-excavation-recrutement-2020.csv") %>% filter(Année <= 2017),
   #clean_recrut("cnu-excavation-recrutement-2019.csv"),
   clean_recrut("cnu-excavation-recrutement-2015.csv") %>% filter(Année <= 2015),
   clean_recrut("cnu-excavation-recrutement-2013.csv") %>% filter(Année < 2011)
 ) %>% 
   arrange(Périmètre, Périmètre.ID, Année)
 
-spoiler_table(recrut)
+spoiler_table(recrut, trim = Inf)
 ```
 
 
@@ -194,7 +196,7 @@ cnu %>% ungroup() %>%
 
 write.csv2(cnu,"../../data/cpesr-emplois-ec-cnu.csv", row.names = F)
 
-spoiler_table(cnu)
+spoiler_table(cnu, trim = Inf)
 ```
 
 

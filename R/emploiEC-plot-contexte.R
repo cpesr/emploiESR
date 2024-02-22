@@ -44,7 +44,7 @@ plot_evolution_EC <- function(périm="Ensemble") {
     xlab("") + ylab("Evolution annuelle des effectifs EC") +
     scale_y_continuous(breaks = seq(0,12500,2500))
 }
-# plot_evolution_EC() 
+plot_evolution_EC() 
 
 p_contexte.evol <- plot_evolution_EC() 
 p_contexte.evol.disc <- plot_evolution_EC(périm="Grande discipline") 
