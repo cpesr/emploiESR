@@ -156,7 +156,7 @@ recrut <- bind_rows(
   clean_recrut("cnu-excavation-recrutement-2015.csv") %>% filter(Année <= 2015),
   clean_recrut("cnu-excavation-recrutement-2013.csv") %>% filter(Année < 2011)
 ) %>% 
-  arrange(Périmètre, Périmètre.ID, Année)
+  arrange(Périmètre, Périmètre.ID, Année) 
 
 spoiler_table(recrut, trim = Inf)
 ```
@@ -168,19 +168,40 @@ spoiler_table(recrut, trim = Inf)
 cnu <- full_join(qualif,recrut) %>%
   # Suppression des sans groupe
   filter(!is.na(Périmètre.ID)) %>% 
-  # Erreurs : 
-  #  - inversion du nombre de candidats Pharma/ST en 2019 
+  # Fix Erreurs : 
+  #  - inversion du nombre de candidats Pharma/ST en 2019 et 2022
+  #  - inversion des nombres de candidats et qualifiés Pharma/ST en 2022 
   #  - erreur nombre de candidats groupe 10 pour 2018
   mutate(
     Concours.Candidats.PR = case_when(
       Année == 2019 & Périmètre == "Grande discipline" & Périmètre.ID == "ST" ~ 942,
       Année == 2019 & Périmètre == "Grande discipline" & Périmètre.ID == "Pharma" ~ 29,
+      Année == 2022 & Périmètre == "Grande discipline" & Périmètre.ID == "ST" ~ 937,
+      Année == 2022 & Périmètre == "Grande discipline" & Périmètre.ID == "Pharma" ~ 29,
       TRUE ~ Concours.Candidats.PR),
     Concours.Candidats.MCF = case_when(
       Année == 2019 & Périmètre == "Grande discipline" & Périmètre.ID == "ST" ~ 2719,
       Année == 2019 & Périmètre == "Grande discipline" & Périmètre.ID == "Pharma" ~ 209,
+      Année == 2022 & Périmètre == "Grande discipline" & Périmètre.ID == "ST" ~ 2905,
+      Année == 2022 & Périmètre == "Grande discipline" & Périmètre.ID == "Pharma" ~ 224,
       Année == 2018 & Périmètre == "Groupe" & Périmètre.ID == "10" ~ 645,
-      TRUE ~ Concours.Candidats.MCF)
+      TRUE ~ Concours.Candidats.MCF),
+    Qualification.Candidats.PR = case_when(
+      Année == 2022 & Périmètre == "Grande discipline" & Périmètre.ID == "ST" ~ 231,
+      Année == 2022 & Périmètre == "Grande discipline" & Périmètre.ID == "Pharma" ~ 15,
+      TRUE ~ Qualification.Candidats.PR),
+    Qualification.Candidats.MCF = case_when(
+      Année == 2022 & Périmètre == "Grande discipline" & Périmètre.ID == "ST" ~ 3374,
+      Année == 2022 & Périmètre == "Grande discipline" & Périmètre.ID == "Pharma" ~ 231,
+      TRUE ~ Qualification.Candidats.MCF),
+    Qualification.Qualifiés.PR = case_when(
+      Année == 2022 & Périmètre == "Grande discipline" & Périmètre.ID == "ST" ~ 180,
+      Année == 2022 & Périmètre == "Grande discipline" & Périmètre.ID == "Pharma" ~ 4,
+      TRUE ~ Qualification.Qualifiés.PR),
+    Qualification.Qualifiés.MCF = case_when(
+      Année == 2022 & Périmètre == "Grande discipline" & Périmètre.ID == "ST" ~ 2655,
+      Année == 2022 & Périmètre == "Grande discipline" & Périmètre.ID == "Pharma" ~ 167,
+      TRUE ~ Qualification.Qualifiés.MCF)
   )
 
 #cnu[!complete.cases(cnu),]
