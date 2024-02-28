@@ -22,7 +22,7 @@
 "Ensemble";"Ensemble";"Ensemble";"2021";1106;1065;598;555;501;0,267;359;0,284;8195;45,5;5953;0,459;2225;0,358;0,42;8504;0,457;0,467;"CNU";35168;20132;1713936;55300;3,226491537607;NA;NA;7,68896925858951;0,125235183443086;7439;0,129957291031117;0,726418547895058;0,178901394254997;0,685553997194951;51,924882629108
 "Ensemble";"Ensemble";"Ensemble";"2022";1351;1270;607;569;394;0,317;269;0,286;7338;45,2;5342;0,452;2011;0,356;0,402;8230;0,45;0,447;"CNU";NA;NA;NA;NA;NA;NA;NA;6,09178386380459;0,154313487241798;6960;0,173071681657127;0,72799127827746;0,237738674653688;0,671061305207647;NA
 "Ensemble";"Ensemble";"Ensemble";"2023";1493;NA;642;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;"Galaxie";NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA
-"Ensemble";"Ensemble";"Ensemble";"2024";1553;NA;701;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;"Galaxie";NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA
+"Ensemble";"Ensemble";"Ensemble";"2024";1557;NA;693;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;"Galaxie";NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA
 "Grande discipline";"DEG";"Droit éco gestion";"2001";276;243;NA;88;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;"DGRH";NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA
 "Grande discipline";"LLASHS";"Lettres et sciences humaines";"2001";665;575;388;253;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;"DGRH";NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA
 "Grande discipline";"Pharma";"Pharmacie";"2001";60;56;25;24;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;"DGRH";NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA
@@ -117,10 +117,10 @@
 "Grande discipline";"ST";"Sciences et techniques";"2023";569;NA;294;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;"Galaxie";NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA
 "Grande discipline";"Santé";"Santé";"2023";9;NA;2;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;"Galaxie";NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA
 "Grande discipline";NA;NA;"2023";2;NA;1;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;"Galaxie";NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA
-"Grande discipline";"DEG";"Droit éco gestion";"2024";276;NA;84;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;"Galaxie";NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA
+"Grande discipline";"DEG";"Droit éco gestion";"2024";276;NA;74;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;"Galaxie";NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA
 "Grande discipline";"LLASHS";"Lettres et sciences humaines";"2024";572;NA;257;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;"Galaxie";NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA
 "Grande discipline";"Pharma";"Pharmacie";"2024";45;NA;18;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;"Galaxie";NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA
-"Grande discipline";"ST";"Sciences et techniques";"2024";638;NA;339;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;"Galaxie";NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA
+"Grande discipline";"ST";"Sciences et techniques";"2024";642;NA;341;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;"Galaxie";NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA
 "Grande discipline";"Santé";"Santé";"2024";17;NA;2;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;"Galaxie";NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA
 "Grande discipline";NA;NA;"2024";5;NA;1;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;"Galaxie";NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA
 "Groupe";"1";"Droit et science politique";"2001";114;107;NA;55;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;"DGRH";NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA
@@ -423,18 +423,18 @@
 "Groupe";"Santé";"Autres santé(mono-appartenants)";"2023";9;NA;2;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;"Galaxie";NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA
 "Groupe";"Théologie";"Théologie";"2023";2;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;"Galaxie";NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA
 "Groupe";NA;NA;"2023";2;NA;1;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;"Galaxie";NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA
-"Groupe";"1";"Droit et science politique";"2024";129;NA;36;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;"Galaxie";NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA
-"Groupe";"10";"Biologie et biochimie";"2024";98;NA;39;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;"Galaxie";NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA
+"Groupe";"1";"Droit et science politique";"2024";129;NA;30;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;"Galaxie";NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA
+"Groupe";"10";"Biologie et biochimie";"2024";98;NA;40;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;"Galaxie";NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA
 "Groupe";"11";"Pharmacie";"2024";45;NA;18;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;"Galaxie";NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA
 "Groupe";"12";"Groupe interdisciplinaire et STAPS";"2024";139;NA;42;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;"Galaxie";NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA
-"Groupe";"2";"Sciences économiques et de gestion ";"2024";147;NA;48;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;"Galaxie";NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA
+"Groupe";"2";"Sciences économiques et de gestion ";"2024";147;NA;44;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;"Galaxie";NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA
 "Groupe";"3";"Littératures et Langues";"2024";174;NA;82;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;"Galaxie";NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA
 "Groupe";"4";"Sciences humaines et Histoire-Géographie";"2024";256;NA;133;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;"Galaxie";NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA
-"Groupe";"5";"Mathématiques et Informatique";"2024";215;NA;94;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;"Galaxie";NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA
+"Groupe";"5";"Mathématiques et Informatique";"2024";216;NA;94;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;"Galaxie";NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA
 "Groupe";"6";"Physique";"2024";42;NA;40;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;"Galaxie";NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA
 "Groupe";"7";"Chimie";"2024";42;NA;41;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;"Galaxie";NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA
 "Groupe";"8";"Sciences de la Terre";"2024";26;NA;19;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;"Galaxie";NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA
-"Groupe";"9";"Mécanique, génie mécanique, génie informatique, énergétique ";"2024";215;NA;106;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;"Galaxie";NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA
+"Groupe";"9";"Mécanique, génie mécanique, génie informatique, énergétique ";"2024";218;NA;107;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;"Galaxie";NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA
 "Groupe";"Santé";"Autres santé(mono-appartenants)";"2024";17;NA;2;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;"Galaxie";NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA
 "Groupe";"Théologie";"Théologie";"2024";3;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;"Galaxie";NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA
 "Groupe";NA;NA;"2024";5;NA;1;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;"Galaxie";NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA
@@ -1745,7 +1745,7 @@
 "Section";"90";NA;"2023";2;NA;1;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;"Galaxie";NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA
 "Section";"91";"Sciences de la rééducation et de réadaptation";"2023";6;NA;2;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;"Galaxie";NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA
 "Section";"92";"Sciences infirmières";"2023";3;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;"Galaxie";NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA
-"Section";"1";"Droit privé et sciences criminelles";"2024";64;NA;18;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;"Galaxie";NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA
+"Section";"1";"Droit privé et sciences criminelles";"2024";64;NA;14;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;"Galaxie";NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA
 "Section";"10";"Littératures comparées";"2024";10;NA;3;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;"Galaxie";NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA
 "Section";"11";"Langues et littératures anglaises et anglo-saxonnes";"2024";49;NA;24;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;"Galaxie";NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA
 "Section";"12";"Langues et littératures germaniques et scandinaves";"2024";5;NA;6;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;"Galaxie";NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA
@@ -1756,14 +1756,14 @@
 "Section";"17";"Philosophie";"2024";11;NA;8;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;"Galaxie";NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA
 "Section";"18";"Architecture et Arts : plastiques, du spectacle, musique, musicologie, esthétique, sciences de l'art";"2024";35;NA;19;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;"Galaxie";NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA
 "Section";"19";"Sociologie, démographie";"2024";33;NA;25;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;"Galaxie";NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA
-"Section";"2";"Droit public";"2024";45;NA;15;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;"Galaxie";NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA
+"Section";"2";"Droit public";"2024";45;NA;14;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;"Galaxie";NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA
 "Section";"20";"Anthropologie biologique, ethnologie, préhistoire";"2024";10;NA;5;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;"Galaxie";NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA
 "Section";"21";"Histoire et civilisations : histoire et archéologie des mondes anciens et des mondes médiévaux, de l'art";"2024";24;NA;14;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;"Galaxie";NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA
 "Section";"22";"Histoire et civilisations : histoire des mondes modernes, histoire du monde contemporain, de l'art, de la musique";"2024";38;NA;22;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;"Galaxie";NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA
 "Section";"23";"Géographie physique, humaine, économique et régionale";"2024";23;NA;18;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;"Galaxie";NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA
 "Section";"24";"Aménagement de l'espace, urbanisme";"2024";10;NA;5;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;"Galaxie";NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA
 "Section";"25";"Mathématiques";"2024";26;NA;18;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;"Galaxie";NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA
-"Section";"26";"Mathématiques appliquées et applications des mathématiques";"2024";47;NA;29;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;"Galaxie";NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA
+"Section";"26";"Mathématiques appliquées et applications des mathématiques";"2024";48;NA;29;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;"Galaxie";NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA
 "Section";"27";"Informatique";"2024";142;NA;47;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;"Galaxie";NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA
 "Section";"28";"Milieux denses et matériaux";"2024";23;NA;22;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;"Galaxie";NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA
 "Section";"29";"Constituants élémentaires";"2024";7;NA;11;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;"Galaxie";NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA
@@ -1776,17 +1776,17 @@
 "Section";"35";"Structure et évolution de la Terre et des autres planètes";"2024";16;NA;12;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;"Galaxie";NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA
 "Section";"36";"Terre solide : géodynamique des enveloppes supérieures, paléobiosphère";"2024";3;NA;2;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;"Galaxie";NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA
 "Section";"37";"Météorologie, océanographie physique et physique de l'environnement";"2024";5;NA;2;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;"Galaxie";NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA
-"Section";"4";"Science politique";"2024";17;NA;2;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;"Galaxie";NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA
+"Section";"4";"Science politique";"2024";17;NA;1;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;"Galaxie";NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA
 "Section";"5";"Sciences économiques";"2024";48;NA;35;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;"Galaxie";NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA
-"Section";"6";"Sciences de gestion";"2024";99;NA;13;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;"Galaxie";NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA
-"Section";"60";"Mécanique, génie mécanique, génie civil";"2024";78;NA;46;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;"Galaxie";NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA
-"Section";"61";"Génie informatique, automatique et traitement du signal";"2024";70;NA;21;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;"Galaxie";NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA
-"Section";"62";"Énergétique, génie des procédés";"2024";26;NA;17;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;"Galaxie";NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA
+"Section";"6";"Sciences de gestion";"2024";99;NA;9;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;"Galaxie";NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA
+"Section";"60";"Mécanique, génie mécanique, génie civil";"2024";80;NA;46;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;"Galaxie";NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA
+"Section";"61";"Génie informatique, automatique et traitement du signal";"2024";71;NA;21;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;"Galaxie";NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA
+"Section";"62";"Énergétique, génie des procédés";"2024";26;NA;18;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;"Galaxie";NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA
 "Section";"63";"Génie Électrique, Électronique, optronique et systèmes";"2024";41;NA;22;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;"Galaxie";NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA
 "Section";"64";"Biochimie et biologie moléculaire";"2024";31;NA;13;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;"Galaxie";NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA
 "Section";"65";"Biologie cellulaire";"2024";19;NA;5;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;"Galaxie";NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA
 "Section";"66";"Physiologie";"2024";7;NA;7;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;"Galaxie";NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA
-"Section";"67";"Biologie des populations et écologie";"2024";18;NA;6;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;"Galaxie";NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA
+"Section";"67";"Biologie des populations et écologie";"2024";18;NA;7;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;"Galaxie";NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA
 "Section";"68";"Biologie des organismes";"2024";11;NA;4;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;"Galaxie";NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA
 "Section";"69";"Neurosciences";"2024";12;NA;4;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;"Galaxie";NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA
 "Section";"7";"Sciences du langage : linguistique et phonétique générales";"2024";34;NA;11;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;"Galaxie";NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA;NA

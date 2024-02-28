@@ -62,7 +62,8 @@ année.ref <- emploisEC %>% filter(Source != "Galaxie") %>% tail(n = 1) %>% pull
 \begin{large}
 ```
 
-```{r child = 'avantpropos.md', echo = FALSE, warning = FALSE}
+
+```{r child = 'emploiEC-avantpropos.md', echo = FALSE, warning = FALSE}
 ```
 
 ```{=latex}
@@ -70,11 +71,12 @@ année.ref <- emploisEC %>% filter(Source != "Galaxie") %>% tail(n = 1) %>% pull
 \vspace*{\fill}
 ```
 
-```{r, out.width = "200px"}
-knitr::include_graphics("files/589px-Knowledge-Reid-Highsmith.png")
-```
+<!-- ```{r, out.width = "200px"} -->
+<!-- knitr::include_graphics("files/589px-Knowledge-Reid-Highsmith.png") -->
+<!-- ``` -->
 
-## Points clés {-}
+
+## Chiffres clés {-}
 
 ```{r, child="emploiEC-pointscles.md"}
 ```
