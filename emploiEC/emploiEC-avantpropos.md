@@ -16,4 +16,3 @@ __Enfin, et pour la première fois, la subvention pour charge de service public 
 
 __Les trois principaux facteurs déterminants le nombre de postes ouverts au concours (effectifs étudiants, départs à la retraite et dotations financières) connaissent donc des transformations, voire des renversements, qui pourraient profondément modifier le concours d'entrée dans la profession d'enseignant-chercheur. En cas d'attrition, les chaires professeur junior (CPJ), nouvelle voie d'accès créée par la Loi de programmation de la recherche (LPR) en 2019, pourraient prendre une nouvelle importance.__
 
-_Attention :_ En raison d'un délais de publication des données sur les effectifs, les données de contextualisation s'arrêtent en 2021. Le document sera mis à jour dès publication de ces données.
