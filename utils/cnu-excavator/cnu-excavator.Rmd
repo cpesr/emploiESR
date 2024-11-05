@@ -22,8 +22,7 @@ clean_perimetre <- function(df,perimetre.nom,perimetre.col,data.col.start,data.c
   df %>%
   filter(Périmètre == perimetre.nom) %>%
     mutate(Périmètre.ID = as.character(!!as.name(perimetre.col))) %>%
-    group_by(Année, Périmètre.ID) %>%
-    slice_head() %>% 
+    slice_head(by=c(Année, Périmètre.ID)) %>% 
     select(
       Périmètre,Périmètre.ID,Année,
       !!as.name(data.col.start):!!as.name(data.col.end)
@@ -54,8 +53,10 @@ clean_qualif <- function(csvfile) {
       #Qualification.Ratio.MCF = as.numeric_cnu(V19) /100,
       ) %>%
     filter(!is.na(Année)) %>%
-    group_by(SectionCNU.ID,Année) %>%
-    mutate(Périmètre = factor(row_number(), levels=c(1,2,3,4), labels = c("Ensemble","Grande discipline","Groupe","Section"))) %>%
+    mutate(Périmètre = factor(row_number(), 
+                              levels=c(1,2,3,4), 
+                              labels = c("Ensemble","Grande discipline","Groupe","Section")),
+           .by = c(SectionCNU.ID,Année)) %>%
     left_join(cnu.sections) 
   
   bind_rows(  
@@ -73,18 +74,20 @@ clean_qualif <- function(csvfile) {
 ```{r qualif.recev, results='asis'}
 qualif.ratio.recevabilité <- full_join(
   clean_qualif("cnu-excavation-qualification-2013.csv") %>%
-    transmute(Périmètre, Périmètre.ID,Année,QC.MCF.13=Qualification.Candidats.MCF,QC.PR.13=Qualification.Candidats.PR),
+    transmute(Périmètre, Périmètre.ID, Année,
+              QC.MCF.13=Qualification.Candidats.MCF, QC.PR.13=Qualification.Candidats.PR),
   clean_qualif("cnu-excavation-qualification-2015.csv") %>%
-    transmute(Périmètre, Périmètre.ID,Année,QC.MCF.15=Qualification.Candidats.MCF,QC.PR.15=Qualification.Candidats.PR) 
+    transmute(Périmètre, Périmètre.ID, Année,
+              QC.MCF.15=Qualification.Candidats.MCF, QC.PR.15=Qualification.Candidats.PR) 
   ) %>%
   mutate(
     ratio.MCF = QC.MCF.15/QC.MCF.13,
     ratio.PR = QC.PR.15/QC.PR.13) %>%
   na.omit() %>%
-  group_by(Périmètre,Périmètre.ID) %>%
   summarise(
     ratio.MCF = mean(ratio.MCF),
     ratio.PR = mean(ratio.PR),
+    .by = c(Périmètre,Périmètre.ID)
     )
 
 spoiler_table(qualif.ratio.recevabilité)
@@ -94,18 +97,20 @@ spoiler_table(qualif.ratio.recevabilité)
 
 ```{r qualif.bind, results='asis'}
 qualif <- bind_rows(
-  clean_qualif("cnu-excavation-qualification-2022.csv"),
+  clean_qualif("cnu-excavation-qualification-2023.csv"),
+  #clean_qualif("cnu-excavation-qualification-2022.csv"),
   #clean_qualif("cnu-excavation-qualification-2021.csv"),
-  clean_qualif("cnu-excavation-qualification-2020.csv") %>% filter(Année <= 2017),
+  clean_qualif("cnu-excavation-qualification-2020.csv"),
   #clean_qualif("cnu-excavation-qualification-2019.csv"),
-  clean_qualif("cnu-excavation-qualification-2015.csv") %>% filter(Année <= 2015),
-  clean_qualif("cnu-excavation-qualification-2013.csv") %>% filter(Année < 2011) %>%
+  clean_qualif("cnu-excavation-qualification-2015.csv"),
+  clean_qualif("cnu-excavation-qualification-2013.csv") %>%
     left_join(qualif.ratio.recevabilité) %>%
     mutate(
       Qualification.Candidats.MCF = Qualification.Candidats.MCF * ratio.MCF,
       Qualification.Candidats.PR = Qualification.Candidats.PR * ratio.PR) %>%
     select(-c(ratio.MCF,ratio.PR))
 ) %>% 
+  slice_head(n=1, by=c(Périmètre, Périmètre.ID, Année)) %>%
   arrange(Périmètre, Périmètre.ID, Année)
 
 spoiler_table(qualif)
@@ -133,8 +138,11 @@ clean_recrut <- function(csvfile) {
       Concours.Recrutés.MCF.femmes = as.numeric_cnu(V18) /100,
     ) %>%
     filter(!is.na(Année)) %>%
-    group_by(SectionCNU.ID,Année) %>%
-    mutate(Périmètre = factor(row_number(), levels=c(1,2,3,4), labels = c("Ensemble","Grande discipline","Groupe","Section"))) %>%
+    mutate(Périmètre = factor(row_number(), 
+                              levels=c(1,2,3,4), 
+                              labels = c("Ensemble","Grande discipline","Groupe","Section")),
+           .by = c(SectionCNU.ID,Année)
+           ) %>%
     left_join(cnu.sections)
   
   bind_rows(  
@@ -149,13 +157,14 @@ clean_recrut <- function(csvfile) {
 
 ```{r rec.bind, results='asis'}
 recrut <- bind_rows(
-  clean_recrut("cnu-excavation-recrutement-2022.csv"),
+  clean_recrut("cnu-excavation-recrutement-2023.csv"),
   #clean_recrut("cnu-excavation-recrutement-2021.csv"),
-  clean_recrut("cnu-excavation-recrutement-2020.csv") %>% filter(Année <= 2017),
+  clean_recrut("cnu-excavation-recrutement-2020.csv"),
   #clean_recrut("cnu-excavation-recrutement-2019.csv"),
-  clean_recrut("cnu-excavation-recrutement-2015.csv") %>% filter(Année <= 2015),
-  clean_recrut("cnu-excavation-recrutement-2013.csv") %>% filter(Année < 2011)
+  clean_recrut("cnu-excavation-recrutement-2015.csv"),
+  clean_recrut("cnu-excavation-recrutement-2013.csv")
 ) %>% 
+  slice_head(n=1, by=c(Périmètre, Périmètre.ID, Année)) %>%
   arrange(Périmètre, Périmètre.ID, Année) 
 
 spoiler_table(recrut, trim = Inf)
