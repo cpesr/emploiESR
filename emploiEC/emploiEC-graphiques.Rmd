@@ -36,6 +36,26 @@ année.ref <- emploisEC %>% filter(Source != "Galaxie") %>% tail(n = 1) %>% pull
 ```
 
 
+```{r pnp}
+emploisEC %>% 
+  filter(Périmètre == "Grande discipline") %>% 
+  mutate(
+    `Postes MCF` = Concours.Postes.MCF,
+    `Postes non pourvus` = Concours.Postes.MCF - Concours.Recrutés.MCF,
+    `Part des postes non pourvus` = 1-(Concours.Recrutés.MCF/Concours.Postes.MCF)) %>% 
+  arrange(Année) %>%
+  #select(Périmètre.ID,Année,Concours.Postes.MCF, Concours.Recrutés.MCF, pnp, tpnp) %>% 
+  filter(!is.na(Périmètre.ID), Périmètre.ID != "Pharma", Périmètre.ID != "Santé") %>%
+  pivot_longer(c(`Postes MCF`,`Postes non pourvus`,`Part des postes non pourvus`)) %>%
+  mutate(name = factor(name, levels=c("Postes MCF","Postes non pourvus","Part des postes non pourvus"))) %>%
+  ggplot(aes(x=Année,y=value,color=Périmètre.ID)) + 
+  geom_line() + geom_point() + 
+  ylab("") + 
+  facet_wrap(name~Périmètre.ID, scales="free_y") +
+  ggtitle("Postes MCF : total, non pourvus, et part des non pourvus")
+```
+
+
 ```{r funs}
 plot_postes <- function(métrique, métriquelab = "Postes publiés", périm="Ensemble", périm.id="Ensemble") {
   df <- emploisEC %>%
