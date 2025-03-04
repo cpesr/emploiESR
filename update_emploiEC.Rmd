@@ -200,12 +200,6 @@ for(file in list.files(dir, pattern = "^galaxie......csv$")) {
   galaxie <- bind_rows(galaxie,gal)
 }
 
-for(file in list.files(dir, pattern = "^odyssee......csv$")) {
-  an <- str_sub(file,9,12)
-  odd <- read.table(paste0(dir,file), header=TRUE, sep=",", quote='"') 
-  galaxie <- bind_rows(galaxie,odd)
-}
-
 galaxie <- galaxie %>% 
   rename(SectionCNU.ID = Section) %>%
   left_join(cnu.sections) %>%
@@ -230,7 +224,34 @@ galaxie <- bind_rows(
 galaxie %>% spoiler_table("galaxie", trim=Inf)
 ```
 
+## Données temporaires Odyssee
 
+```{r odyssee, results='asis'}
+dir <- "utils/odyssee-excavator/"
+
+odyssee <- read.csv(paste0(dir,"odyssee.csv")) %>% 
+  rename(SectionCNU.ID = section, Corps = corps) %>%
+  left_join(cnu.sections) %>%
+  mutate(Année = as.integer(str_sub(dateOuvertureCandidatures,1,4)))
+
+odyssee <- bind_rows(
+  odyssee %>%
+    group_by(Année, Corps, Périmètre = "Ensemble", Périmètre.ID = "Ensemble") %>%
+    summarise(Concours.Postes = n()), 
+  odyssee %>%
+    group_by(Année, Corps, Périmètre = "Grande discipline", Périmètre.ID = GrandeDisciplineCNU.ID) %>%
+    summarise(Concours.Postes = n()), 
+  odyssee %>%
+    group_by(Année, Corps, Périmètre = "Groupe", Périmètre.ID = GroupeCNU.ID) %>%
+    summarise(Concours.Postes = n()), 
+  odyssee %>%
+    group_by(Année, Corps, Périmètre = "Section", Périmètre.ID = as.character(SectionCNU.ID)) %>%
+    summarise(Concours.Postes = n())
+) %>%
+  pivot_wider(names_from = Corps, values_from = Concours.Postes, names_prefix = "Concours.Postes.")
+
+odyssee %>% spoiler_table("odyssee", trim=Inf)
+```
 
 ## Fusions
 
@@ -244,7 +265,10 @@ concours <- bind_rows(
     mutate(Source = "CNU"),
   galaxie %>%
     mutate(Source = "Galaxie") %>%
-    filter(Année > max(cnu.fd$Année))
+    filter(Année > max(cnu.fd$Année)),
+  odyssee %>%
+    mutate(Source = "Odyssee") %>%
+    filter(Année > max(galaxie$Année))
 ) %>%
   select(-Source, everything(), Source)
 

@@ -1,7 +1,7 @@
 EmploiEC: update data
 ================
 CPESR
-2025-03-03
+2025-03-04
 
 ## Chargement des données sources
 
@@ -2589,639 +2589,653 @@ dgrh
 galaxie
 </summary>
 
-| Année | Périmètre | Périmètre.ID | Concours.Postes.MCF | Concours.Postes.PR | Concours.Postes.ATER | Concours.Postes.MCMU | Concours.Postes.PRMU |
+| Année | Périmètre         | Périmètre.ID | Concours.Postes.MCF | Concours.Postes.PR |
+|------:|:------------------|:-------------|--------------------:|-------------------:|
+|  2018 | Ensemble          | Ensemble     |                1082 |                576 |
+|  2019 | Ensemble          | Ensemble     |                1029 |                580 |
+|  2020 | Ensemble          | Ensemble     |                1119 |                620 |
+|  2021 | Ensemble          | Ensemble     |                1047 |                606 |
+|  2022 | Ensemble          | Ensemble     |                1281 |                679 |
+|  2023 | Ensemble          | Ensemble     |                1493 |                642 |
+|  2024 | Ensemble          | Ensemble     |                1557 |                693 |
+|  2018 | Grande discipline | DEG          |                 225 |                111 |
+|  2018 | Grande discipline | LLASHS       |                 467 |                241 |
+|  2018 | Grande discipline | Pharma       |                  23 |                 11 |
+|  2018 | Grande discipline | ST           |                 367 |                213 |
+|  2019 | Grande discipline | DEG          |                 232 |                105 |
+|  2019 | Grande discipline | LLASHS       |                 419 |                227 |
+|  2019 | Grande discipline | Pharma       |                  23 |                 14 |
+|  2019 | Grande discipline | ST           |                 355 |                234 |
+|  2020 | Grande discipline | DEG          |                 235 |                 96 |
+|  2020 | Grande discipline | LLASHS       |                 455 |                250 |
+|  2020 | Grande discipline | Pharma       |                  31 |                 14 |
+|  2020 | Grande discipline | ST           |                 396 |                259 |
+|  2020 | Grande discipline | Santé        |                   1 |                  1 |
+|  2020 | Grande discipline | NA           |                   1 |                 NA |
+|  2021 | Grande discipline | DEG          |                 210 |                 99 |
+|  2021 | Grande discipline | LLASHS       |                 413 |                243 |
+|  2021 | Grande discipline | Pharma       |                  31 |                 14 |
+|  2021 | Grande discipline | ST           |                 388 |                249 |
+|  2021 | Grande discipline | Santé        |                   5 |                 NA |
+|  2021 | Grande discipline | NA           |                  NA |                  1 |
+|  2022 | Grande discipline | DEG          |                 252 |                 93 |
+|  2022 | Grande discipline | LLASHS       |                 488 |                284 |
+|  2022 | Grande discipline | Pharma       |                  27 |                 15 |
+|  2022 | Grande discipline | ST           |                 499 |                285 |
+|  2022 | Grande discipline | Santé        |                  11 |                  1 |
+|  2022 | Grande discipline | NA           |                   4 |                  1 |
+|  2023 | Grande discipline | DEG          |                 291 |                 93 |
+|  2023 | Grande discipline | LLASHS       |                 591 |                241 |
+|  2023 | Grande discipline | Pharma       |                  31 |                 11 |
+|  2023 | Grande discipline | ST           |                 569 |                294 |
+|  2023 | Grande discipline | Santé        |                   9 |                  2 |
+|  2023 | Grande discipline | NA           |                   2 |                  1 |
+|  2024 | Grande discipline | DEG          |                 276 |                 74 |
+|  2024 | Grande discipline | LLASHS       |                 572 |                257 |
+|  2024 | Grande discipline | Pharma       |                  45 |                 18 |
+|  2024 | Grande discipline | ST           |                 642 |                341 |
+|  2024 | Grande discipline | Santé        |                  17 |                  2 |
+|  2024 | Grande discipline | NA           |                   5 |                  1 |
+|  2018 | Groupe            | 1            |                 103 |                 51 |
+|  2018 | Groupe            | 10           |                  69 |                 36 |
+|  2018 | Groupe            | 11           |                  23 |                 11 |
+|  2018 | Groupe            | 12           |                 108 |                 40 |
+|  2018 | Groupe            | 2            |                 122 |                 60 |
+|  2018 | Groupe            | 3            |                 177 |                 89 |
+|  2018 | Groupe            | 4            |                 179 |                112 |
+|  2018 | Groupe            | 5            |                 112 |                 72 |
+|  2018 | Groupe            | 6            |                  21 |                 14 |
+|  2018 | Groupe            | 7            |                  34 |                 24 |
+|  2018 | Groupe            | 8            |                  14 |                 17 |
+|  2018 | Groupe            | 9            |                 117 |                 50 |
+|  2018 | Groupe            | Théologie    |                   3 |                 NA |
+|  2019 | Groupe            | 1            |                 111 |                 52 |
+|  2019 | Groupe            | 10           |                  58 |                 33 |
+|  2019 | Groupe            | 11           |                  23 |                 14 |
+|  2019 | Groupe            | 12           |                 108 |                 33 |
+|  2019 | Groupe            | 2            |                 121 |                 53 |
+|  2019 | Groupe            | 3            |                 139 |                 95 |
+|  2019 | Groupe            | 4            |                 172 |                 98 |
+|  2019 | Groupe            | 5            |                 127 |                 72 |
+|  2019 | Groupe            | 6            |                  15 |                 28 |
+|  2019 | Groupe            | 7            |                  27 |                 20 |
+|  2019 | Groupe            | 8            |                  14 |                 15 |
+|  2019 | Groupe            | 9            |                 114 |                 66 |
+|  2019 | Groupe            | Théologie    |                  NA |                  1 |
+|  2020 | Groupe            | 1            |                 113 |                 51 |
+|  2020 | Groupe            | 10           |                  68 |                 36 |
+|  2020 | Groupe            | 11           |                  31 |                 14 |
+|  2020 | Groupe            | 12           |                 101 |                 42 |
+|  2020 | Groupe            | 2            |                 122 |                 45 |
+|  2020 | Groupe            | 3            |                 158 |                 99 |
+|  2020 | Groupe            | 4            |                 196 |                109 |
+|  2020 | Groupe            | 5            |                 137 |                 70 |
+|  2020 | Groupe            | 6            |                  22 |                 28 |
+|  2020 | Groupe            | 7            |                  31 |                 24 |
+|  2020 | Groupe            | 8            |                  23 |                 18 |
+|  2020 | Groupe            | 9            |                 115 |                 83 |
+|  2020 | Groupe            | Santé        |                   1 |                  1 |
+|  2020 | Groupe            | NA           |                   1 |                 NA |
+|  2021 | Groupe            | 1            |                  92 |                 57 |
+|  2021 | Groupe            | 10           |                  60 |                 46 |
+|  2021 | Groupe            | 11           |                  31 |                 14 |
+|  2021 | Groupe            | 12           |                 101 |                 41 |
+|  2021 | Groupe            | 2            |                 118 |                 42 |
+|  2021 | Groupe            | 3            |                 147 |                 79 |
+|  2021 | Groupe            | 4            |                 164 |                123 |
+|  2021 | Groupe            | 5            |                 134 |                 73 |
+|  2021 | Groupe            | 6            |                  26 |                 23 |
+|  2021 | Groupe            | 7            |                  29 |                 29 |
+|  2021 | Groupe            | 8            |                  21 |                 10 |
+|  2021 | Groupe            | 9            |                 118 |                 68 |
+|  2021 | Groupe            | Santé        |                   5 |                 NA |
+|  2021 | Groupe            | Théologie    |                   1 |                 NA |
+|  2021 | Groupe            | NA           |                  NA |                  1 |
+|  2022 | Groupe            | 1            |                 120 |                 48 |
+|  2022 | Groupe            | 10           |                  86 |                 48 |
+|  2022 | Groupe            | 11           |                  27 |                 15 |
+|  2022 | Groupe            | 12           |                 106 |                 46 |
+|  2022 | Groupe            | 2            |                 132 |                 45 |
+|  2022 | Groupe            | 3            |                 181 |                 98 |
+|  2022 | Groupe            | 4            |                 201 |                140 |
+|  2022 | Groupe            | 5            |                 176 |                 85 |
+|  2022 | Groupe            | 6            |                  27 |                 23 |
+|  2022 | Groupe            | 7            |                  35 |                 32 |
+|  2022 | Groupe            | 8            |                  21 |                 22 |
+|  2022 | Groupe            | 9            |                 154 |                 75 |
+|  2022 | Groupe            | Santé        |                  11 |                  1 |
+|  2022 | Groupe            | NA           |                   4 |                  1 |
+|  2023 | Groupe            | 1            |                 143 |                 40 |
+|  2023 | Groupe            | 10           |                  93 |                 43 |
+|  2023 | Groupe            | 11           |                  31 |                 11 |
+|  2023 | Groupe            | 12           |                 142 |                 30 |
+|  2023 | Groupe            | 2            |                 148 |                 53 |
+|  2023 | Groupe            | 3            |                 196 |                 83 |
+|  2023 | Groupe            | 4            |                 251 |                128 |
+|  2023 | Groupe            | 5            |                 189 |                 83 |
+|  2023 | Groupe            | 6            |                  34 |                 29 |
+|  2023 | Groupe            | 7            |                  47 |                 25 |
+|  2023 | Groupe            | 8            |                  26 |                 19 |
+|  2023 | Groupe            | 9            |                 180 |                 95 |
+|  2023 | Groupe            | Santé        |                   9 |                  2 |
+|  2023 | Groupe            | Théologie    |                   2 |                 NA |
+|  2023 | Groupe            | NA           |                   2 |                  1 |
+|  2024 | Groupe            | 1            |                 129 |                 30 |
+|  2024 | Groupe            | 10           |                  98 |                 40 |
+|  2024 | Groupe            | 11           |                  45 |                 18 |
+|  2024 | Groupe            | 12           |                 139 |                 42 |
+|  2024 | Groupe            | 2            |                 147 |                 44 |
+|  2024 | Groupe            | 3            |                 174 |                 82 |
+|  2024 | Groupe            | 4            |                 256 |                133 |
+|  2024 | Groupe            | 5            |                 216 |                 94 |
+|  2024 | Groupe            | 6            |                  42 |                 40 |
+|  2024 | Groupe            | 7            |                  42 |                 41 |
+|  2024 | Groupe            | 8            |                  26 |                 19 |
+|  2024 | Groupe            | 9            |                 218 |                107 |
+|  2024 | Groupe            | Santé        |                  17 |                  2 |
+|  2024 | Groupe            | Théologie    |                   3 |                 NA |
+|  2024 | Groupe            | NA           |                   5 |                  1 |
+|  2018 | Section           | 1            |                  56 |                 26 |
+|  2018 | Section           | 10           |                   6 |                  1 |
+|  2018 | Section           | 11           |                  49 |                 23 |
+|  2018 | Section           | 12           |                  11 |                  4 |
+|  2018 | Section           | 13           |                   6 |                  3 |
+|  2018 | Section           | 14           |                  27 |                 12 |
+|  2018 | Section           | 15           |                  21 |                  3 |
+|  2018 | Section           | 16           |                  44 |                 18 |
+|  2018 | Section           | 17           |                  15 |                 10 |
+|  2018 | Section           | 18           |                  27 |                 10 |
+|  2018 | Section           | 19           |                  22 |                 17 |
+|  2018 | Section           | 2            |                  23 |                 19 |
+|  2018 | Section           | 20           |                   5 |                  2 |
+|  2018 | Section           | 21           |                  12 |                 23 |
+|  2018 | Section           | 22           |                  25 |                 23 |
+|  2018 | Section           | 23           |                  23 |                  7 |
+|  2018 | Section           | 24           |                   6 |                  2 |
+|  2018 | Section           | 25           |                  21 |                 14 |
+|  2018 | Section           | 26           |                  27 |                 25 |
+|  2018 | Section           | 27           |                  64 |                 33 |
+|  2018 | Section           | 28           |                   7 |                  9 |
+|  2018 | Section           | 29           |                   4 |                  2 |
+|  2018 | Section           | 3            |                   4 |                  2 |
+|  2018 | Section           | 30           |                  10 |                  3 |
+|  2018 | Section           | 31           |                  11 |                 12 |
+|  2018 | Section           | 32           |                  14 |                  6 |
+|  2018 | Section           | 33           |                   9 |                  6 |
+|  2018 | Section           | 34           |                   2 |                  4 |
+|  2018 | Section           | 35           |                   7 |                  7 |
+|  2018 | Section           | 36           |                   3 |                  4 |
+|  2018 | Section           | 37           |                   2 |                  2 |
+|  2018 | Section           | 4            |                  20 |                  4 |
+|  2018 | Section           | 5            |                  37 |                 24 |
+|  2018 | Section           | 6            |                  85 |                 36 |
+|  2018 | Section           | 60           |                  54 |                 18 |
+|  2018 | Section           | 61           |                  26 |                 14 |
+|  2018 | Section           | 62           |                  16 |                  7 |
+|  2018 | Section           | 63           |                  21 |                 11 |
+|  2018 | Section           | 64           |                  21 |                 13 |
+|  2018 | Section           | 65           |                  17 |                  7 |
+|  2018 | Section           | 66           |                   5 |                  5 |
+|  2018 | Section           | 67           |                  14 |                  7 |
+|  2018 | Section           | 68           |                   6 |                  2 |
+|  2018 | Section           | 69           |                   6 |                  2 |
+|  2018 | Section           | 7            |                  26 |                 13 |
+|  2018 | Section           | 70           |                  35 |                 18 |
+|  2018 | Section           | 71           |                  35 |                  5 |
+|  2018 | Section           | 72           |                   1 |                 NA |
+|  2018 | Section           | 73           |                   1 |                  2 |
+|  2018 | Section           | 74           |                  36 |                 15 |
+|  2018 | Section           | 76           |                   3 |                 NA |
+|  2018 | Section           | 8            |                   5 |                  7 |
+|  2018 | Section           | 85           |                   7 |                  3 |
+|  2018 | Section           | 86           |                  13 |                  5 |
+|  2018 | Section           | 87           |                   3 |                  3 |
+|  2018 | Section           | 9            |                  26 |                 23 |
+|  2019 | Section           | 1            |                  50 |                 25 |
+|  2019 | Section           | 10           |                   2 |                  4 |
+|  2019 | Section           | 11           |                  51 |                 22 |
+|  2019 | Section           | 12           |                   4 |                 NA |
+|  2019 | Section           | 13           |                   2 |                 NA |
+|  2019 | Section           | 14           |                  20 |                 16 |
+|  2019 | Section           | 15           |                  17 |                  7 |
+|  2019 | Section           | 16           |                  53 |                 14 |
+|  2019 | Section           | 17           |                  10 |                  9 |
+|  2019 | Section           | 18           |                  20 |                 19 |
+|  2019 | Section           | 19           |                  30 |                 13 |
+|  2019 | Section           | 2            |                  42 |                 23 |
+|  2019 | Section           | 20           |                   3 |                  4 |
+|  2019 | Section           | 21           |                  17 |                  9 |
+|  2019 | Section           | 22           |                  20 |                 19 |
+|  2019 | Section           | 23           |                  13 |                  8 |
+|  2019 | Section           | 24           |                   6 |                  3 |
+|  2019 | Section           | 25           |                  22 |                 15 |
+|  2019 | Section           | 26           |                  40 |                 18 |
+|  2019 | Section           | 27           |                  65 |                 39 |
+|  2019 | Section           | 28           |                   8 |                 22 |
+|  2019 | Section           | 29           |                   4 |                  2 |
+|  2019 | Section           | 3            |                   6 |                  3 |
+|  2019 | Section           | 30           |                   3 |                  4 |
+|  2019 | Section           | 31           |                  15 |                 11 |
+|  2019 | Section           | 32           |                   9 |                  3 |
+|  2019 | Section           | 33           |                   3 |                  6 |
+|  2019 | Section           | 34           |                   4 |                  4 |
+|  2019 | Section           | 35           |                   9 |                  8 |
+|  2019 | Section           | 37           |                   1 |                  1 |
+|  2019 | Section           | 4            |                  13 |                  1 |
+|  2019 | Section           | 5            |                  44 |                 18 |
+|  2019 | Section           | 6            |                  77 |                 35 |
+|  2019 | Section           | 60           |                  51 |                 25 |
+|  2019 | Section           | 61           |                  33 |                 20 |
+|  2019 | Section           | 62           |                  10 |                  8 |
+|  2019 | Section           | 63           |                  20 |                 13 |
+|  2019 | Section           | 64           |                  21 |                 12 |
+|  2019 | Section           | 65           |                  13 |                  5 |
+|  2019 | Section           | 66           |                   4 |                  6 |
+|  2019 | Section           | 67           |                   8 |                  3 |
+|  2019 | Section           | 68           |                   4 |                  3 |
+|  2019 | Section           | 69           |                   8 |                  4 |
+|  2019 | Section           | 7            |                  15 |                 18 |
+|  2019 | Section           | 70           |                  34 |                 15 |
+|  2019 | Section           | 71           |                  25 |                  9 |
+|  2019 | Section           | 72           |                   1 |                  1 |
+|  2019 | Section           | 73           |                   2 |                  1 |
+|  2019 | Section           | 74           |                  46 |                  7 |
+|  2019 | Section           | 8            |                   7 |                  3 |
+|  2019 | Section           | 85           |                  13 |                  4 |
+|  2019 | Section           | 86           |                   9 |                  7 |
+|  2019 | Section           | 87           |                   1 |                  3 |
+|  2019 | Section           | 9            |                  21 |                 25 |
+|  2019 | Section           | 36           |                  NA |                  2 |
+|  2019 | Section           | 76           |                  NA |                  1 |
+|  2020 | Section           | 1            |                  53 |                 30 |
+|  2020 | Section           | 10           |                   5 |                 NA |
+|  2020 | Section           | 11           |                  53 |                 21 |
+|  2020 | Section           | 12           |                   6 |                  2 |
+|  2020 | Section           | 13           |                   4 |                  2 |
+|  2020 | Section           | 14           |                  18 |                 13 |
+|  2020 | Section           | 15           |                  15 |                 12 |
+|  2020 | Section           | 16           |                  46 |                 18 |
+|  2020 | Section           | 17           |                  18 |                 12 |
+|  2020 | Section           | 18           |                  29 |                 12 |
+|  2020 | Section           | 19           |                  26 |                 14 |
+|  2020 | Section           | 2            |                  40 |                 15 |
+|  2020 | Section           | 20           |                   5 |                  5 |
+|  2020 | Section           | 21           |                  14 |                 13 |
+|  2020 | Section           | 22           |                  32 |                 21 |
+|  2020 | Section           | 23           |                  24 |                 12 |
+|  2020 | Section           | 24           |                   2 |                  2 |
+|  2020 | Section           | 25           |                  25 |                  9 |
+|  2020 | Section           | 26           |                  41 |                 20 |
+|  2020 | Section           | 27           |                  71 |                 41 |
+|  2020 | Section           | 28           |                  15 |                 19 |
+|  2020 | Section           | 29           |                   4 |                  6 |
+|  2020 | Section           | 3            |                   5 |                  1 |
+|  2020 | Section           | 30           |                   3 |                  3 |
+|  2020 | Section           | 31           |                  12 |                 13 |
+|  2020 | Section           | 32           |                   9 |                  5 |
+|  2020 | Section           | 33           |                  10 |                  6 |
+|  2020 | Section           | 35           |                  18 |                  7 |
+|  2020 | Section           | 36           |                   4 |                  4 |
+|  2020 | Section           | 37           |                   1 |                  6 |
+|  2020 | Section           | 4            |                  15 |                  5 |
+|  2020 | Section           | 5            |                  43 |                 25 |
+|  2020 | Section           | 6            |                  79 |                 20 |
+|  2020 | Section           | 60           |                  39 |                 33 |
+|  2020 | Section           | 61           |                  33 |                 16 |
+|  2020 | Section           | 62           |                  15 |                 12 |
+|  2020 | Section           | 63           |                  28 |                 22 |
+|  2020 | Section           | 64           |                  24 |                 13 |
+|  2020 | Section           | 65           |                  21 |                 10 |
+|  2020 | Section           | 66           |                   6 |                  2 |
+|  2020 | Section           | 67           |                  12 |                  4 |
+|  2020 | Section           | 68           |                   1 |                  4 |
+|  2020 | Section           | 69           |                   4 |                  3 |
+|  2020 | Section           | 7            |                  26 |                 18 |
+|  2020 | Section           | 70           |                  30 |                 17 |
+|  2020 | Section           | 71           |                  28 |                  9 |
+|  2020 | Section           | 72           |                   2 |                  1 |
+|  2020 | Section           | 73           |                   1 |                  2 |
+|  2020 | Section           | 74           |                  40 |                 13 |
+|  2020 | Section           | 8            |                   7 |                  4 |
+|  2020 | Section           | 85           |                   3 |                  4 |
+|  2020 | Section           | 86           |                  17 |                  4 |
+|  2020 | Section           | 87           |                  11 |                  6 |
+|  2020 | Section           | 9            |                  24 |                 27 |
+|  2020 | Section           | 90           |                   1 |                 NA |
+|  2020 | Section           | 91           |                   1 |                  1 |
+|  2020 | Section           | 34           |                  NA |                  1 |
+|  2021 | Section           | 1            |                  39 |                 29 |
+|  2021 | Section           | 10           |                   6 |                  7 |
+|  2021 | Section           | 11           |                  44 |                 18 |
+|  2021 | Section           | 12           |                   3 |                  5 |
+|  2021 | Section           | 13           |                   1 |                  1 |
+|  2021 | Section           | 14           |                  20 |                 16 |
+|  2021 | Section           | 15           |                  20 |                  5 |
+|  2021 | Section           | 16           |                  45 |                 24 |
+|  2021 | Section           | 17           |                   5 |                 13 |
+|  2021 | Section           | 18           |                  30 |                 11 |
+|  2021 | Section           | 19           |                  15 |                 17 |
+|  2021 | Section           | 2            |                  33 |                 21 |
+|  2021 | Section           | 20           |                   4 |                  7 |
+|  2021 | Section           | 21           |                  17 |                 16 |
+|  2021 | Section           | 22           |                  18 |                 18 |
+|  2021 | Section           | 23           |                  25 |                 14 |
+|  2021 | Section           | 24           |                   5 |                  3 |
+|  2021 | Section           | 25           |                  24 |                 18 |
+|  2021 | Section           | 26           |                  40 |                 18 |
+|  2021 | Section           | 27           |                  70 |                 37 |
+|  2021 | Section           | 28           |                  18 |                 14 |
+|  2021 | Section           | 29           |                   4 |                  5 |
+|  2021 | Section           | 3            |                  10 |                  2 |
+|  2021 | Section           | 30           |                   4 |                  4 |
+|  2021 | Section           | 31           |                  10 |                 14 |
+|  2021 | Section           | 32           |                  11 |                  7 |
+|  2021 | Section           | 33           |                   8 |                  8 |
+|  2021 | Section           | 34           |                   3 |                 NA |
+|  2021 | Section           | 35           |                  13 |                  6 |
+|  2021 | Section           | 36           |                   3 |                  2 |
+|  2021 | Section           | 37           |                   2 |                  2 |
+|  2021 | Section           | 4            |                  10 |                  5 |
+|  2021 | Section           | 5            |                  50 |                 26 |
+|  2021 | Section           | 6            |                  68 |                 16 |
+|  2021 | Section           | 60           |                  42 |                 21 |
+|  2021 | Section           | 61           |                  30 |                 24 |
+|  2021 | Section           | 62           |                  17 |                 10 |
+|  2021 | Section           | 63           |                  29 |                 13 |
+|  2021 | Section           | 64           |                  13 |                 15 |
+|  2021 | Section           | 65           |                  11 |                  9 |
+|  2021 | Section           | 66           |                  11 |                  6 |
+|  2021 | Section           | 67           |                   8 |                 10 |
+|  2021 | Section           | 68           |                   8 |                  3 |
+|  2021 | Section           | 69           |                   9 |                  3 |
+|  2021 | Section           | 7            |                  27 |                 12 |
+|  2021 | Section           | 70           |                  30 |                 19 |
+|  2021 | Section           | 71           |                  33 |                 10 |
+|  2021 | Section           | 72           |                   1 |                  1 |
+|  2021 | Section           | 73           |                   2 |                 NA |
+|  2021 | Section           | 74           |                  35 |                 11 |
+|  2021 | Section           | 77           |                   1 |                 NA |
+|  2021 | Section           | 8            |                   5 |                  2 |
+|  2021 | Section           | 85           |                   9 |                  7 |
+|  2021 | Section           | 86           |                  14 |                  6 |
+|  2021 | Section           | 87           |                   8 |                  1 |
+|  2021 | Section           | 9            |                  21 |                 13 |
+|  2021 | Section           | 91           |                   5 |                 NA |
+|  2021 | Section           | 90           |                  NA |                  1 |
+|  2022 | Section           | 1            |                  68 |                 23 |
+|  2022 | Section           | 10           |                   7 |                  4 |
+|  2022 | Section           | 11           |                  54 |                 25 |
+|  2022 | Section           | 12           |                  15 |                  9 |
+|  2022 | Section           | 13           |                   1 |                  1 |
+|  2022 | Section           | 14           |                  30 |                 13 |
+|  2022 | Section           | 15           |                  18 |                  4 |
+|  2022 | Section           | 16           |                  52 |                 41 |
+|  2022 | Section           | 17           |                  12 |                  6 |
+|  2022 | Section           | 18           |                  31 |                 17 |
+|  2022 | Section           | 19           |                  29 |                 23 |
+|  2022 | Section           | 2            |                  36 |                 18 |
+|  2022 | Section           | 20           |                   7 |                  7 |
+|  2022 | Section           | 21           |                  20 |                 12 |
+|  2022 | Section           | 22           |                  28 |                 19 |
+|  2022 | Section           | 23           |                  15 |                  7 |
+|  2022 | Section           | 24           |                   7 |                  8 |
+|  2022 | Section           | 25           |                  29 |                 14 |
+|  2022 | Section           | 26           |                  50 |                 20 |
+|  2022 | Section           | 27           |                  97 |                 51 |
+|  2022 | Section           | 28           |                  15 |                 17 |
+|  2022 | Section           | 29           |                   5 |                  3 |
+|  2022 | Section           | 3            |                   4 |                  1 |
+|  2022 | Section           | 30           |                   7 |                  3 |
+|  2022 | Section           | 31           |                  16 |                 12 |
+|  2022 | Section           | 32           |                   7 |                  6 |
+|  2022 | Section           | 33           |                  12 |                 14 |
+|  2022 | Section           | 34           |                   3 |                  5 |
+|  2022 | Section           | 35           |                  14 |                 10 |
+|  2022 | Section           | 36           |                   2 |                  3 |
+|  2022 | Section           | 37           |                   2 |                  4 |
+|  2022 | Section           | 4            |                  12 |                  6 |
+|  2022 | Section           | 5            |                  49 |                 32 |
+|  2022 | Section           | 6            |                  83 |                 13 |
+|  2022 | Section           | 60           |                  63 |                 26 |
+|  2022 | Section           | 61           |                  41 |                 22 |
+|  2022 | Section           | 62           |                  15 |                 14 |
+|  2022 | Section           | 63           |                  35 |                 13 |
+|  2022 | Section           | 64           |                  21 |                 17 |
+|  2022 | Section           | 65           |                  24 |                 11 |
+|  2022 | Section           | 66           |                  12 |                  5 |
+|  2022 | Section           | 67           |                  17 |                  8 |
+|  2022 | Section           | 68           |                   7 |                  3 |
+|  2022 | Section           | 69           |                   5 |                  4 |
+|  2022 | Section           | 7            |                  35 |                 18 |
+|  2022 | Section           | 70           |                  38 |                 16 |
+|  2022 | Section           | 71           |                  23 |                 18 |
+|  2022 | Section           | 72           |                   3 |                  1 |
+|  2022 | Section           | 73           |                   2 |                  1 |
+|  2022 | Section           | 74           |                  40 |                 10 |
+|  2022 | Section           | 8            |                   2 |                  8 |
+|  2022 | Section           | 85           |                   8 |                  6 |
+|  2022 | Section           | 86           |                   9 |                  4 |
+|  2022 | Section           | 87           |                  10 |                  5 |
+|  2022 | Section           | 9            |                  19 |                 16 |
+|  2022 | Section           | 90           |                   4 |                  1 |
+|  2022 | Section           | 91           |                   8 |                  1 |
+|  2022 | Section           | 92           |                   3 |                 NA |
+|  2023 | Section           | 1            |                  73 |                 19 |
+|  2023 | Section           | 10           |                   6 |                  2 |
+|  2023 | Section           | 11           |                  58 |                 31 |
+|  2023 | Section           | 12           |                  14 |                  2 |
+|  2023 | Section           | 13           |                   3 |                  1 |
+|  2023 | Section           | 14           |                  27 |                 11 |
+|  2023 | Section           | 15           |                  21 |                  5 |
+|  2023 | Section           | 16           |                  80 |                 23 |
+|  2023 | Section           | 17           |                   8 |                 10 |
+|  2023 | Section           | 18           |                  35 |                 12 |
+|  2023 | Section           | 19           |                  28 |                 21 |
+|  2023 | Section           | 2            |                  43 |                 18 |
+|  2023 | Section           | 20           |                  12 |                  2 |
+|  2023 | Section           | 21           |                  23 |                 22 |
+|  2023 | Section           | 22           |                  29 |                 23 |
+|  2023 | Section           | 23           |                  30 |                  9 |
+|  2023 | Section           | 24           |                   6 |                  6 |
+|  2023 | Section           | 25           |                  30 |                 18 |
+|  2023 | Section           | 26           |                  46 |                 25 |
+|  2023 | Section           | 27           |                 113 |                 40 |
+|  2023 | Section           | 28           |                  19 |                 18 |
+|  2023 | Section           | 29           |                   5 |                  5 |
+|  2023 | Section           | 3            |                   6 |                  1 |
+|  2023 | Section           | 30           |                  10 |                  6 |
+|  2023 | Section           | 31           |                  19 |                  9 |
+|  2023 | Section           | 32           |                  15 |                  5 |
+|  2023 | Section           | 33           |                  13 |                 11 |
+|  2023 | Section           | 34           |                   1 |                  2 |
+|  2023 | Section           | 35           |                  13 |                 14 |
+|  2023 | Section           | 36           |                   6 |                  1 |
+|  2023 | Section           | 37           |                   6 |                  2 |
+|  2023 | Section           | 4            |                  21 |                  2 |
+|  2023 | Section           | 5            |                  45 |                 31 |
+|  2023 | Section           | 6            |                 103 |                 22 |
+|  2023 | Section           | 60           |                  74 |                 41 |
+|  2023 | Section           | 61           |                  48 |                 22 |
+|  2023 | Section           | 62           |                  22 |                 13 |
+|  2023 | Section           | 63           |                  36 |                 19 |
+|  2023 | Section           | 64           |                  32 |                 16 |
+|  2023 | Section           | 65           |                  21 |                  6 |
+|  2023 | Section           | 66           |                  15 |                 11 |
+|  2023 | Section           | 67           |                  15 |                  5 |
+|  2023 | Section           | 68           |                   4 |                  2 |
+|  2023 | Section           | 69           |                   6 |                  3 |
+|  2023 | Section           | 7            |                  39 |                  9 |
+|  2023 | Section           | 70           |                  55 |                 15 |
+|  2023 | Section           | 71           |                  40 |                  4 |
+|  2023 | Section           | 72           |                   1 |                  1 |
+|  2023 | Section           | 73           |                   1 |                  2 |
+|  2023 | Section           | 74           |                  45 |                  8 |
+|  2023 | Section           | 76           |                   1 |                 NA |
+|  2023 | Section           | 77           |                   1 |                 NA |
+|  2023 | Section           | 8            |                   7 |                  1 |
+|  2023 | Section           | 85           |                   9 |                  2 |
+|  2023 | Section           | 86           |                  11 |                  4 |
+|  2023 | Section           | 87           |                  11 |                  5 |
+|  2023 | Section           | 9            |                  21 |                 21 |
+|  2023 | Section           | 90           |                   2 |                  1 |
+|  2023 | Section           | 91           |                   6 |                  2 |
+|  2023 | Section           | 92           |                   3 |                 NA |
+|  2024 | Section           | 1            |                  64 |                 14 |
+|  2024 | Section           | 10           |                  10 |                  3 |
+|  2024 | Section           | 11           |                  49 |                 24 |
+|  2024 | Section           | 12           |                   5 |                  6 |
+|  2024 | Section           | 13           |                   4 |                  1 |
+|  2024 | Section           | 14           |                  29 |                  9 |
+|  2024 | Section           | 15           |                  21 |                  7 |
+|  2024 | Section           | 16           |                  72 |                 17 |
+|  2024 | Section           | 17           |                  11 |                  8 |
+|  2024 | Section           | 18           |                  35 |                 19 |
+|  2024 | Section           | 19           |                  33 |                 25 |
+|  2024 | Section           | 2            |                  45 |                 14 |
+|  2024 | Section           | 20           |                  10 |                  5 |
+|  2024 | Section           | 21           |                  24 |                 14 |
+|  2024 | Section           | 22           |                  38 |                 22 |
+|  2024 | Section           | 23           |                  23 |                 18 |
+|  2024 | Section           | 24           |                  10 |                  5 |
+|  2024 | Section           | 25           |                  26 |                 18 |
+|  2024 | Section           | 26           |                  48 |                 29 |
+|  2024 | Section           | 27           |                 142 |                 47 |
+|  2024 | Section           | 28           |                  23 |                 22 |
+|  2024 | Section           | 29           |                   7 |                 11 |
+|  2024 | Section           | 3            |                   3 |                  1 |
+|  2024 | Section           | 30           |                  12 |                  7 |
+|  2024 | Section           | 31           |                  20 |                 15 |
+|  2024 | Section           | 32           |                  10 |                 15 |
+|  2024 | Section           | 33           |                  12 |                 11 |
+|  2024 | Section           | 34           |                   2 |                  3 |
+|  2024 | Section           | 35           |                  16 |                 12 |
+|  2024 | Section           | 36           |                   3 |                  2 |
+|  2024 | Section           | 37           |                   5 |                  2 |
+|  2024 | Section           | 4            |                  17 |                  1 |
+|  2024 | Section           | 5            |                  48 |                 35 |
+|  2024 | Section           | 6            |                  99 |                  9 |
+|  2024 | Section           | 60           |                  80 |                 46 |
+|  2024 | Section           | 61           |                  71 |                 21 |
+|  2024 | Section           | 62           |                  26 |                 18 |
+|  2024 | Section           | 63           |                  41 |                 22 |
+|  2024 | Section           | 64           |                  31 |                 13 |
+|  2024 | Section           | 65           |                  19 |                  5 |
+|  2024 | Section           | 66           |                   7 |                  7 |
+|  2024 | Section           | 67           |                  18 |                  7 |
+|  2024 | Section           | 68           |                  11 |                  4 |
+|  2024 | Section           | 69           |                  12 |                  4 |
+|  2024 | Section           | 7            |                  34 |                 11 |
+|  2024 | Section           | 70           |                  44 |                 18 |
+|  2024 | Section           | 71           |                  39 |                 10 |
+|  2024 | Section           | 72           |                   1 |                 NA |
+|  2024 | Section           | 73           |                   1 |                  1 |
+|  2024 | Section           | 74           |                  54 |                 13 |
+|  2024 | Section           | 76           |                   2 |                 NA |
+|  2024 | Section           | 77           |                   1 |                 NA |
+|  2024 | Section           | 8            |                   3 |                  2 |
+|  2024 | Section           | 85           |                  12 |                  6 |
+|  2024 | Section           | 86           |                  19 |                 10 |
+|  2024 | Section           | 87           |                  14 |                  2 |
+|  2024 | Section           | 9            |                  19 |                 19 |
+|  2024 | Section           | 90           |                   5 |                  1 |
+|  2024 | Section           | 91           |                   8 |                  1 |
+|  2024 | Section           | 92           |                   9 |                  1 |
+
+</details>
+
+## Données temporaires Odyssee
+
+    ## Joining with `by = join_by(SectionCNU.ID)`
+
+<details>
+<summary>
+odyssee
+</summary>
+
+| Année | Périmètre | Périmètre.ID | Concours.Postes.ATER | Concours.Postes.MCF | Concours.Postes.MCMU | Concours.Postes.PR | Concours.Postes.PRMU |
 |---:|:---|:---|---:|---:|---:|---:|---:|
-| 2018 | Ensemble | Ensemble | 1082 | 576 | NA | NA | NA |
-| 2019 | Ensemble | Ensemble | 1029 | 580 | NA | NA | NA |
-| 2020 | Ensemble | Ensemble | 1119 | 620 | NA | NA | NA |
-| 2021 | Ensemble | Ensemble | 1047 | 606 | NA | NA | NA |
-| 2022 | Ensemble | Ensemble | 1281 | 679 | NA | NA | NA |
-| 2023 | Ensemble | Ensemble | 1493 | 642 | NA | NA | NA |
-| 2024 | Ensemble | Ensemble | 1557 | 693 | NA | NA | NA |
-| 2025 | Ensemble | Ensemble | 892 | 364 | 767 | 5 | 3 |
-| 2018 | Grande discipline | DEG | 225 | 111 | NA | NA | NA |
-| 2018 | Grande discipline | LLASHS | 467 | 241 | NA | NA | NA |
-| 2018 | Grande discipline | Pharma | 23 | 11 | NA | NA | NA |
-| 2018 | Grande discipline | ST | 367 | 213 | NA | NA | NA |
-| 2019 | Grande discipline | DEG | 232 | 105 | NA | NA | NA |
-| 2019 | Grande discipline | LLASHS | 419 | 227 | NA | NA | NA |
-| 2019 | Grande discipline | Pharma | 23 | 14 | NA | NA | NA |
-| 2019 | Grande discipline | ST | 355 | 234 | NA | NA | NA |
-| 2020 | Grande discipline | DEG | 235 | 96 | NA | NA | NA |
-| 2020 | Grande discipline | LLASHS | 455 | 250 | NA | NA | NA |
-| 2020 | Grande discipline | Pharma | 31 | 14 | NA | NA | NA |
-| 2020 | Grande discipline | ST | 396 | 259 | NA | NA | NA |
-| 2020 | Grande discipline | Santé | 1 | 1 | NA | NA | NA |
-| 2020 | Grande discipline | NA | 1 | NA | NA | NA | NA |
-| 2021 | Grande discipline | DEG | 210 | 99 | NA | NA | NA |
-| 2021 | Grande discipline | LLASHS | 413 | 243 | NA | NA | NA |
-| 2021 | Grande discipline | Pharma | 31 | 14 | NA | NA | NA |
-| 2021 | Grande discipline | ST | 388 | 249 | NA | NA | NA |
-| 2021 | Grande discipline | Santé | 5 | NA | NA | NA | NA |
-| 2021 | Grande discipline | NA | NA | 1 | NA | NA | NA |
-| 2022 | Grande discipline | DEG | 252 | 93 | NA | NA | NA |
-| 2022 | Grande discipline | LLASHS | 488 | 284 | NA | NA | NA |
-| 2022 | Grande discipline | Pharma | 27 | 15 | NA | NA | NA |
-| 2022 | Grande discipline | ST | 499 | 285 | NA | NA | NA |
-| 2022 | Grande discipline | Santé | 11 | 1 | NA | NA | NA |
-| 2022 | Grande discipline | NA | 4 | 1 | NA | NA | NA |
-| 2023 | Grande discipline | DEG | 291 | 93 | NA | NA | NA |
-| 2023 | Grande discipline | LLASHS | 591 | 241 | NA | NA | NA |
-| 2023 | Grande discipline | Pharma | 31 | 11 | NA | NA | NA |
-| 2023 | Grande discipline | ST | 569 | 294 | NA | NA | NA |
-| 2023 | Grande discipline | Santé | 9 | 2 | NA | NA | NA |
-| 2023 | Grande discipline | NA | 2 | 1 | NA | NA | NA |
-| 2024 | Grande discipline | DEG | 276 | 74 | NA | NA | NA |
-| 2024 | Grande discipline | LLASHS | 572 | 257 | NA | NA | NA |
-| 2024 | Grande discipline | Pharma | 45 | 18 | NA | NA | NA |
-| 2024 | Grande discipline | ST | 642 | 341 | NA | NA | NA |
-| 2024 | Grande discipline | Santé | 17 | 2 | NA | NA | NA |
-| 2024 | Grande discipline | NA | 5 | 1 | NA | NA | NA |
-| 2025 | Grande discipline | DEG | 174 | 33 | 151 | 1 | NA |
-| 2025 | Grande discipline | LLASHS | 322 | 140 | 334 | 1 | 1 |
-| 2025 | Grande discipline | Pharma | 18 | 7 | 11 | NA | NA |
-| 2025 | Grande discipline | ST | 372 | 183 | 271 | 3 | 2 |
-| 2025 | Grande discipline | Santé | 5 | NA | NA | NA | NA |
-| 2025 | Grande discipline | NA | 1 | 1 | NA | NA | NA |
-| 2018 | Groupe | 1 | 103 | 51 | NA | NA | NA |
-| 2018 | Groupe | 10 | 69 | 36 | NA | NA | NA |
-| 2018 | Groupe | 11 | 23 | 11 | NA | NA | NA |
-| 2018 | Groupe | 12 | 108 | 40 | NA | NA | NA |
-| 2018 | Groupe | 2 | 122 | 60 | NA | NA | NA |
-| 2018 | Groupe | 3 | 177 | 89 | NA | NA | NA |
-| 2018 | Groupe | 4 | 179 | 112 | NA | NA | NA |
-| 2018 | Groupe | 5 | 112 | 72 | NA | NA | NA |
-| 2018 | Groupe | 6 | 21 | 14 | NA | NA | NA |
-| 2018 | Groupe | 7 | 34 | 24 | NA | NA | NA |
-| 2018 | Groupe | 8 | 14 | 17 | NA | NA | NA |
-| 2018 | Groupe | 9 | 117 | 50 | NA | NA | NA |
-| 2018 | Groupe | Théologie | 3 | NA | NA | NA | NA |
-| 2019 | Groupe | 1 | 111 | 52 | NA | NA | NA |
-| 2019 | Groupe | 10 | 58 | 33 | NA | NA | NA |
-| 2019 | Groupe | 11 | 23 | 14 | NA | NA | NA |
-| 2019 | Groupe | 12 | 108 | 33 | NA | NA | NA |
-| 2019 | Groupe | 2 | 121 | 53 | NA | NA | NA |
-| 2019 | Groupe | 3 | 139 | 95 | NA | NA | NA |
-| 2019 | Groupe | 4 | 172 | 98 | NA | NA | NA |
-| 2019 | Groupe | 5 | 127 | 72 | NA | NA | NA |
-| 2019 | Groupe | 6 | 15 | 28 | NA | NA | NA |
-| 2019 | Groupe | 7 | 27 | 20 | NA | NA | NA |
-| 2019 | Groupe | 8 | 14 | 15 | NA | NA | NA |
-| 2019 | Groupe | 9 | 114 | 66 | NA | NA | NA |
-| 2019 | Groupe | Théologie | NA | 1 | NA | NA | NA |
-| 2020 | Groupe | 1 | 113 | 51 | NA | NA | NA |
-| 2020 | Groupe | 10 | 68 | 36 | NA | NA | NA |
-| 2020 | Groupe | 11 | 31 | 14 | NA | NA | NA |
-| 2020 | Groupe | 12 | 101 | 42 | NA | NA | NA |
-| 2020 | Groupe | 2 | 122 | 45 | NA | NA | NA |
-| 2020 | Groupe | 3 | 158 | 99 | NA | NA | NA |
-| 2020 | Groupe | 4 | 196 | 109 | NA | NA | NA |
-| 2020 | Groupe | 5 | 137 | 70 | NA | NA | NA |
-| 2020 | Groupe | 6 | 22 | 28 | NA | NA | NA |
-| 2020 | Groupe | 7 | 31 | 24 | NA | NA | NA |
-| 2020 | Groupe | 8 | 23 | 18 | NA | NA | NA |
-| 2020 | Groupe | 9 | 115 | 83 | NA | NA | NA |
-| 2020 | Groupe | Santé | 1 | 1 | NA | NA | NA |
-| 2020 | Groupe | NA | 1 | NA | NA | NA | NA |
-| 2021 | Groupe | 1 | 92 | 57 | NA | NA | NA |
-| 2021 | Groupe | 10 | 60 | 46 | NA | NA | NA |
-| 2021 | Groupe | 11 | 31 | 14 | NA | NA | NA |
-| 2021 | Groupe | 12 | 101 | 41 | NA | NA | NA |
-| 2021 | Groupe | 2 | 118 | 42 | NA | NA | NA |
-| 2021 | Groupe | 3 | 147 | 79 | NA | NA | NA |
-| 2021 | Groupe | 4 | 164 | 123 | NA | NA | NA |
-| 2021 | Groupe | 5 | 134 | 73 | NA | NA | NA |
-| 2021 | Groupe | 6 | 26 | 23 | NA | NA | NA |
-| 2021 | Groupe | 7 | 29 | 29 | NA | NA | NA |
-| 2021 | Groupe | 8 | 21 | 10 | NA | NA | NA |
-| 2021 | Groupe | 9 | 118 | 68 | NA | NA | NA |
-| 2021 | Groupe | Santé | 5 | NA | NA | NA | NA |
-| 2021 | Groupe | Théologie | 1 | NA | NA | NA | NA |
-| 2021 | Groupe | NA | NA | 1 | NA | NA | NA |
-| 2022 | Groupe | 1 | 120 | 48 | NA | NA | NA |
-| 2022 | Groupe | 10 | 86 | 48 | NA | NA | NA |
-| 2022 | Groupe | 11 | 27 | 15 | NA | NA | NA |
-| 2022 | Groupe | 12 | 106 | 46 | NA | NA | NA |
-| 2022 | Groupe | 2 | 132 | 45 | NA | NA | NA |
-| 2022 | Groupe | 3 | 181 | 98 | NA | NA | NA |
-| 2022 | Groupe | 4 | 201 | 140 | NA | NA | NA |
-| 2022 | Groupe | 5 | 176 | 85 | NA | NA | NA |
-| 2022 | Groupe | 6 | 27 | 23 | NA | NA | NA |
-| 2022 | Groupe | 7 | 35 | 32 | NA | NA | NA |
-| 2022 | Groupe | 8 | 21 | 22 | NA | NA | NA |
-| 2022 | Groupe | 9 | 154 | 75 | NA | NA | NA |
-| 2022 | Groupe | Santé | 11 | 1 | NA | NA | NA |
-| 2022 | Groupe | NA | 4 | 1 | NA | NA | NA |
-| 2023 | Groupe | 1 | 143 | 40 | NA | NA | NA |
-| 2023 | Groupe | 10 | 93 | 43 | NA | NA | NA |
-| 2023 | Groupe | 11 | 31 | 11 | NA | NA | NA |
-| 2023 | Groupe | 12 | 142 | 30 | NA | NA | NA |
-| 2023 | Groupe | 2 | 148 | 53 | NA | NA | NA |
-| 2023 | Groupe | 3 | 196 | 83 | NA | NA | NA |
-| 2023 | Groupe | 4 | 251 | 128 | NA | NA | NA |
-| 2023 | Groupe | 5 | 189 | 83 | NA | NA | NA |
-| 2023 | Groupe | 6 | 34 | 29 | NA | NA | NA |
-| 2023 | Groupe | 7 | 47 | 25 | NA | NA | NA |
-| 2023 | Groupe | 8 | 26 | 19 | NA | NA | NA |
-| 2023 | Groupe | 9 | 180 | 95 | NA | NA | NA |
-| 2023 | Groupe | Santé | 9 | 2 | NA | NA | NA |
-| 2023 | Groupe | Théologie | 2 | NA | NA | NA | NA |
-| 2023 | Groupe | NA | 2 | 1 | NA | NA | NA |
-| 2024 | Groupe | 1 | 129 | 30 | NA | NA | NA |
-| 2024 | Groupe | 10 | 98 | 40 | NA | NA | NA |
-| 2024 | Groupe | 11 | 45 | 18 | NA | NA | NA |
-| 2024 | Groupe | 12 | 139 | 42 | NA | NA | NA |
-| 2024 | Groupe | 2 | 147 | 44 | NA | NA | NA |
-| 2024 | Groupe | 3 | 174 | 82 | NA | NA | NA |
-| 2024 | Groupe | 4 | 256 | 133 | NA | NA | NA |
-| 2024 | Groupe | 5 | 216 | 94 | NA | NA | NA |
-| 2024 | Groupe | 6 | 42 | 40 | NA | NA | NA |
-| 2024 | Groupe | 7 | 42 | 41 | NA | NA | NA |
-| 2024 | Groupe | 8 | 26 | 19 | NA | NA | NA |
-| 2024 | Groupe | 9 | 218 | 107 | NA | NA | NA |
-| 2024 | Groupe | Santé | 17 | 2 | NA | NA | NA |
-| 2024 | Groupe | Théologie | 3 | NA | NA | NA | NA |
-| 2024 | Groupe | NA | 5 | 1 | NA | NA | NA |
-| 2025 | Groupe | 1 | 66 | 11 | 88 | 1 | NA |
-| 2025 | Groupe | 10 | 60 | 22 | 67 | 1 | 2 |
-| 2025 | Groupe | 11 | 18 | 7 | 11 | NA | NA |
-| 2025 | Groupe | 12 | 76 | 16 | 46 | NA | NA |
-| 2025 | Groupe | 2 | 108 | 22 | 63 | NA | NA |
-| 2025 | Groupe | 3 | 120 | 48 | 113 | NA | NA |
-| 2025 | Groupe | 4 | 125 | 76 | 174 | 1 | 1 |
-| 2025 | Groupe | 5 | 126 | 58 | 83 | NA | NA |
-| 2025 | Groupe | 6 | 36 | 16 | 11 | NA | NA |
-| 2025 | Groupe | 7 | 29 | 22 | 23 | 1 | NA |
-| 2025 | Groupe | 8 | 10 | 10 | 18 | 1 | NA |
-| 2025 | Groupe | 9 | 111 | 55 | 69 | NA | NA |
-| 2025 | Groupe | Théologie | 1 | NA | 1 | NA | NA |
-| 2025 | Groupe | Santé | 5 | NA | NA | NA | NA |
-| 2025 | Groupe | NA | 1 | 1 | NA | NA | NA |
-| 2018 | Section | 1 | 56 | 26 | NA | NA | NA |
-| 2018 | Section | 10 | 6 | 1 | NA | NA | NA |
-| 2018 | Section | 11 | 49 | 23 | NA | NA | NA |
-| 2018 | Section | 12 | 11 | 4 | NA | NA | NA |
-| 2018 | Section | 13 | 6 | 3 | NA | NA | NA |
-| 2018 | Section | 14 | 27 | 12 | NA | NA | NA |
-| 2018 | Section | 15 | 21 | 3 | NA | NA | NA |
-| 2018 | Section | 16 | 44 | 18 | NA | NA | NA |
-| 2018 | Section | 17 | 15 | 10 | NA | NA | NA |
-| 2018 | Section | 18 | 27 | 10 | NA | NA | NA |
-| 2018 | Section | 19 | 22 | 17 | NA | NA | NA |
-| 2018 | Section | 2 | 23 | 19 | NA | NA | NA |
-| 2018 | Section | 20 | 5 | 2 | NA | NA | NA |
-| 2018 | Section | 21 | 12 | 23 | NA | NA | NA |
-| 2018 | Section | 22 | 25 | 23 | NA | NA | NA |
-| 2018 | Section | 23 | 23 | 7 | NA | NA | NA |
-| 2018 | Section | 24 | 6 | 2 | NA | NA | NA |
-| 2018 | Section | 25 | 21 | 14 | NA | NA | NA |
-| 2018 | Section | 26 | 27 | 25 | NA | NA | NA |
-| 2018 | Section | 27 | 64 | 33 | NA | NA | NA |
-| 2018 | Section | 28 | 7 | 9 | NA | NA | NA |
-| 2018 | Section | 29 | 4 | 2 | NA | NA | NA |
-| 2018 | Section | 3 | 4 | 2 | NA | NA | NA |
-| 2018 | Section | 30 | 10 | 3 | NA | NA | NA |
-| 2018 | Section | 31 | 11 | 12 | NA | NA | NA |
-| 2018 | Section | 32 | 14 | 6 | NA | NA | NA |
-| 2018 | Section | 33 | 9 | 6 | NA | NA | NA |
-| 2018 | Section | 34 | 2 | 4 | NA | NA | NA |
-| 2018 | Section | 35 | 7 | 7 | NA | NA | NA |
-| 2018 | Section | 36 | 3 | 4 | NA | NA | NA |
-| 2018 | Section | 37 | 2 | 2 | NA | NA | NA |
-| 2018 | Section | 4 | 20 | 4 | NA | NA | NA |
-| 2018 | Section | 5 | 37 | 24 | NA | NA | NA |
-| 2018 | Section | 6 | 85 | 36 | NA | NA | NA |
-| 2018 | Section | 60 | 54 | 18 | NA | NA | NA |
-| 2018 | Section | 61 | 26 | 14 | NA | NA | NA |
-| 2018 | Section | 62 | 16 | 7 | NA | NA | NA |
-| 2018 | Section | 63 | 21 | 11 | NA | NA | NA |
-| 2018 | Section | 64 | 21 | 13 | NA | NA | NA |
-| 2018 | Section | 65 | 17 | 7 | NA | NA | NA |
-| 2018 | Section | 66 | 5 | 5 | NA | NA | NA |
-| 2018 | Section | 67 | 14 | 7 | NA | NA | NA |
-| 2018 | Section | 68 | 6 | 2 | NA | NA | NA |
-| 2018 | Section | 69 | 6 | 2 | NA | NA | NA |
-| 2018 | Section | 7 | 26 | 13 | NA | NA | NA |
-| 2018 | Section | 70 | 35 | 18 | NA | NA | NA |
-| 2018 | Section | 71 | 35 | 5 | NA | NA | NA |
-| 2018 | Section | 72 | 1 | NA | NA | NA | NA |
-| 2018 | Section | 73 | 1 | 2 | NA | NA | NA |
-| 2018 | Section | 74 | 36 | 15 | NA | NA | NA |
-| 2018 | Section | 76 | 3 | NA | NA | NA | NA |
-| 2018 | Section | 8 | 5 | 7 | NA | NA | NA |
-| 2018 | Section | 85 | 7 | 3 | NA | NA | NA |
-| 2018 | Section | 86 | 13 | 5 | NA | NA | NA |
-| 2018 | Section | 87 | 3 | 3 | NA | NA | NA |
-| 2018 | Section | 9 | 26 | 23 | NA | NA | NA |
-| 2019 | Section | 1 | 50 | 25 | NA | NA | NA |
-| 2019 | Section | 10 | 2 | 4 | NA | NA | NA |
-| 2019 | Section | 11 | 51 | 22 | NA | NA | NA |
-| 2019 | Section | 12 | 4 | NA | NA | NA | NA |
-| 2019 | Section | 13 | 2 | NA | NA | NA | NA |
-| 2019 | Section | 14 | 20 | 16 | NA | NA | NA |
-| 2019 | Section | 15 | 17 | 7 | NA | NA | NA |
-| 2019 | Section | 16 | 53 | 14 | NA | NA | NA |
-| 2019 | Section | 17 | 10 | 9 | NA | NA | NA |
-| 2019 | Section | 18 | 20 | 19 | NA | NA | NA |
-| 2019 | Section | 19 | 30 | 13 | NA | NA | NA |
-| 2019 | Section | 2 | 42 | 23 | NA | NA | NA |
-| 2019 | Section | 20 | 3 | 4 | NA | NA | NA |
-| 2019 | Section | 21 | 17 | 9 | NA | NA | NA |
-| 2019 | Section | 22 | 20 | 19 | NA | NA | NA |
-| 2019 | Section | 23 | 13 | 8 | NA | NA | NA |
-| 2019 | Section | 24 | 6 | 3 | NA | NA | NA |
-| 2019 | Section | 25 | 22 | 15 | NA | NA | NA |
-| 2019 | Section | 26 | 40 | 18 | NA | NA | NA |
-| 2019 | Section | 27 | 65 | 39 | NA | NA | NA |
-| 2019 | Section | 28 | 8 | 22 | NA | NA | NA |
-| 2019 | Section | 29 | 4 | 2 | NA | NA | NA |
-| 2019 | Section | 3 | 6 | 3 | NA | NA | NA |
-| 2019 | Section | 30 | 3 | 4 | NA | NA | NA |
-| 2019 | Section | 31 | 15 | 11 | NA | NA | NA |
-| 2019 | Section | 32 | 9 | 3 | NA | NA | NA |
-| 2019 | Section | 33 | 3 | 6 | NA | NA | NA |
-| 2019 | Section | 34 | 4 | 4 | NA | NA | NA |
-| 2019 | Section | 35 | 9 | 8 | NA | NA | NA |
-| 2019 | Section | 37 | 1 | 1 | NA | NA | NA |
-| 2019 | Section | 4 | 13 | 1 | NA | NA | NA |
-| 2019 | Section | 5 | 44 | 18 | NA | NA | NA |
-| 2019 | Section | 6 | 77 | 35 | NA | NA | NA |
-| 2019 | Section | 60 | 51 | 25 | NA | NA | NA |
-| 2019 | Section | 61 | 33 | 20 | NA | NA | NA |
-| 2019 | Section | 62 | 10 | 8 | NA | NA | NA |
-| 2019 | Section | 63 | 20 | 13 | NA | NA | NA |
-| 2019 | Section | 64 | 21 | 12 | NA | NA | NA |
-| 2019 | Section | 65 | 13 | 5 | NA | NA | NA |
-| 2019 | Section | 66 | 4 | 6 | NA | NA | NA |
-| 2019 | Section | 67 | 8 | 3 | NA | NA | NA |
-| 2019 | Section | 68 | 4 | 3 | NA | NA | NA |
-| 2019 | Section | 69 | 8 | 4 | NA | NA | NA |
-| 2019 | Section | 7 | 15 | 18 | NA | NA | NA |
-| 2019 | Section | 70 | 34 | 15 | NA | NA | NA |
-| 2019 | Section | 71 | 25 | 9 | NA | NA | NA |
-| 2019 | Section | 72 | 1 | 1 | NA | NA | NA |
-| 2019 | Section | 73 | 2 | 1 | NA | NA | NA |
-| 2019 | Section | 74 | 46 | 7 | NA | NA | NA |
-| 2019 | Section | 8 | 7 | 3 | NA | NA | NA |
-| 2019 | Section | 85 | 13 | 4 | NA | NA | NA |
-| 2019 | Section | 86 | 9 | 7 | NA | NA | NA |
-| 2019 | Section | 87 | 1 | 3 | NA | NA | NA |
-| 2019 | Section | 9 | 21 | 25 | NA | NA | NA |
-| 2019 | Section | 36 | NA | 2 | NA | NA | NA |
-| 2019 | Section | 76 | NA | 1 | NA | NA | NA |
-| 2020 | Section | 1 | 53 | 30 | NA | NA | NA |
-| 2020 | Section | 10 | 5 | NA | NA | NA | NA |
-| 2020 | Section | 11 | 53 | 21 | NA | NA | NA |
-| 2020 | Section | 12 | 6 | 2 | NA | NA | NA |
-| 2020 | Section | 13 | 4 | 2 | NA | NA | NA |
-| 2020 | Section | 14 | 18 | 13 | NA | NA | NA |
-| 2020 | Section | 15 | 15 | 12 | NA | NA | NA |
-| 2020 | Section | 16 | 46 | 18 | NA | NA | NA |
-| 2020 | Section | 17 | 18 | 12 | NA | NA | NA |
-| 2020 | Section | 18 | 29 | 12 | NA | NA | NA |
-| 2020 | Section | 19 | 26 | 14 | NA | NA | NA |
-| 2020 | Section | 2 | 40 | 15 | NA | NA | NA |
-| 2020 | Section | 20 | 5 | 5 | NA | NA | NA |
-| 2020 | Section | 21 | 14 | 13 | NA | NA | NA |
-| 2020 | Section | 22 | 32 | 21 | NA | NA | NA |
-| 2020 | Section | 23 | 24 | 12 | NA | NA | NA |
-| 2020 | Section | 24 | 2 | 2 | NA | NA | NA |
-| 2020 | Section | 25 | 25 | 9 | NA | NA | NA |
-| 2020 | Section | 26 | 41 | 20 | NA | NA | NA |
-| 2020 | Section | 27 | 71 | 41 | NA | NA | NA |
-| 2020 | Section | 28 | 15 | 19 | NA | NA | NA |
-| 2020 | Section | 29 | 4 | 6 | NA | NA | NA |
-| 2020 | Section | 3 | 5 | 1 | NA | NA | NA |
-| 2020 | Section | 30 | 3 | 3 | NA | NA | NA |
-| 2020 | Section | 31 | 12 | 13 | NA | NA | NA |
-| 2020 | Section | 32 | 9 | 5 | NA | NA | NA |
-| 2020 | Section | 33 | 10 | 6 | NA | NA | NA |
-| 2020 | Section | 35 | 18 | 7 | NA | NA | NA |
-| 2020 | Section | 36 | 4 | 4 | NA | NA | NA |
-| 2020 | Section | 37 | 1 | 6 | NA | NA | NA |
-| 2020 | Section | 4 | 15 | 5 | NA | NA | NA |
-| 2020 | Section | 5 | 43 | 25 | NA | NA | NA |
-| 2020 | Section | 6 | 79 | 20 | NA | NA | NA |
-| 2020 | Section | 60 | 39 | 33 | NA | NA | NA |
-| 2020 | Section | 61 | 33 | 16 | NA | NA | NA |
-| 2020 | Section | 62 | 15 | 12 | NA | NA | NA |
-| 2020 | Section | 63 | 28 | 22 | NA | NA | NA |
-| 2020 | Section | 64 | 24 | 13 | NA | NA | NA |
-| 2020 | Section | 65 | 21 | 10 | NA | NA | NA |
-| 2020 | Section | 66 | 6 | 2 | NA | NA | NA |
-| 2020 | Section | 67 | 12 | 4 | NA | NA | NA |
-| 2020 | Section | 68 | 1 | 4 | NA | NA | NA |
-| 2020 | Section | 69 | 4 | 3 | NA | NA | NA |
-| 2020 | Section | 7 | 26 | 18 | NA | NA | NA |
-| 2020 | Section | 70 | 30 | 17 | NA | NA | NA |
-| 2020 | Section | 71 | 28 | 9 | NA | NA | NA |
-| 2020 | Section | 72 | 2 | 1 | NA | NA | NA |
-| 2020 | Section | 73 | 1 | 2 | NA | NA | NA |
-| 2020 | Section | 74 | 40 | 13 | NA | NA | NA |
-| 2020 | Section | 8 | 7 | 4 | NA | NA | NA |
-| 2020 | Section | 85 | 3 | 4 | NA | NA | NA |
-| 2020 | Section | 86 | 17 | 4 | NA | NA | NA |
-| 2020 | Section | 87 | 11 | 6 | NA | NA | NA |
-| 2020 | Section | 9 | 24 | 27 | NA | NA | NA |
-| 2020 | Section | 90 | 1 | NA | NA | NA | NA |
-| 2020 | Section | 91 | 1 | 1 | NA | NA | NA |
-| 2020 | Section | 34 | NA | 1 | NA | NA | NA |
-| 2021 | Section | 1 | 39 | 29 | NA | NA | NA |
-| 2021 | Section | 10 | 6 | 7 | NA | NA | NA |
-| 2021 | Section | 11 | 44 | 18 | NA | NA | NA |
-| 2021 | Section | 12 | 3 | 5 | NA | NA | NA |
-| 2021 | Section | 13 | 1 | 1 | NA | NA | NA |
-| 2021 | Section | 14 | 20 | 16 | NA | NA | NA |
-| 2021 | Section | 15 | 20 | 5 | NA | NA | NA |
-| 2021 | Section | 16 | 45 | 24 | NA | NA | NA |
-| 2021 | Section | 17 | 5 | 13 | NA | NA | NA |
-| 2021 | Section | 18 | 30 | 11 | NA | NA | NA |
-| 2021 | Section | 19 | 15 | 17 | NA | NA | NA |
-| 2021 | Section | 2 | 33 | 21 | NA | NA | NA |
-| 2021 | Section | 20 | 4 | 7 | NA | NA | NA |
-| 2021 | Section | 21 | 17 | 16 | NA | NA | NA |
-| 2021 | Section | 22 | 18 | 18 | NA | NA | NA |
-| 2021 | Section | 23 | 25 | 14 | NA | NA | NA |
-| 2021 | Section | 24 | 5 | 3 | NA | NA | NA |
-| 2021 | Section | 25 | 24 | 18 | NA | NA | NA |
-| 2021 | Section | 26 | 40 | 18 | NA | NA | NA |
-| 2021 | Section | 27 | 70 | 37 | NA | NA | NA |
-| 2021 | Section | 28 | 18 | 14 | NA | NA | NA |
-| 2021 | Section | 29 | 4 | 5 | NA | NA | NA |
-| 2021 | Section | 3 | 10 | 2 | NA | NA | NA |
-| 2021 | Section | 30 | 4 | 4 | NA | NA | NA |
-| 2021 | Section | 31 | 10 | 14 | NA | NA | NA |
-| 2021 | Section | 32 | 11 | 7 | NA | NA | NA |
-| 2021 | Section | 33 | 8 | 8 | NA | NA | NA |
-| 2021 | Section | 34 | 3 | NA | NA | NA | NA |
-| 2021 | Section | 35 | 13 | 6 | NA | NA | NA |
-| 2021 | Section | 36 | 3 | 2 | NA | NA | NA |
-| 2021 | Section | 37 | 2 | 2 | NA | NA | NA |
-| 2021 | Section | 4 | 10 | 5 | NA | NA | NA |
-| 2021 | Section | 5 | 50 | 26 | NA | NA | NA |
-| 2021 | Section | 6 | 68 | 16 | NA | NA | NA |
-| 2021 | Section | 60 | 42 | 21 | NA | NA | NA |
-| 2021 | Section | 61 | 30 | 24 | NA | NA | NA |
-| 2021 | Section | 62 | 17 | 10 | NA | NA | NA |
-| 2021 | Section | 63 | 29 | 13 | NA | NA | NA |
-| 2021 | Section | 64 | 13 | 15 | NA | NA | NA |
-| 2021 | Section | 65 | 11 | 9 | NA | NA | NA |
-| 2021 | Section | 66 | 11 | 6 | NA | NA | NA |
-| 2021 | Section | 67 | 8 | 10 | NA | NA | NA |
-| 2021 | Section | 68 | 8 | 3 | NA | NA | NA |
-| 2021 | Section | 69 | 9 | 3 | NA | NA | NA |
-| 2021 | Section | 7 | 27 | 12 | NA | NA | NA |
-| 2021 | Section | 70 | 30 | 19 | NA | NA | NA |
-| 2021 | Section | 71 | 33 | 10 | NA | NA | NA |
-| 2021 | Section | 72 | 1 | 1 | NA | NA | NA |
-| 2021 | Section | 73 | 2 | NA | NA | NA | NA |
-| 2021 | Section | 74 | 35 | 11 | NA | NA | NA |
-| 2021 | Section | 77 | 1 | NA | NA | NA | NA |
-| 2021 | Section | 8 | 5 | 2 | NA | NA | NA |
-| 2021 | Section | 85 | 9 | 7 | NA | NA | NA |
-| 2021 | Section | 86 | 14 | 6 | NA | NA | NA |
-| 2021 | Section | 87 | 8 | 1 | NA | NA | NA |
-| 2021 | Section | 9 | 21 | 13 | NA | NA | NA |
-| 2021 | Section | 91 | 5 | NA | NA | NA | NA |
-| 2021 | Section | 90 | NA | 1 | NA | NA | NA |
-| 2022 | Section | 1 | 68 | 23 | NA | NA | NA |
-| 2022 | Section | 10 | 7 | 4 | NA | NA | NA |
-| 2022 | Section | 11 | 54 | 25 | NA | NA | NA |
-| 2022 | Section | 12 | 15 | 9 | NA | NA | NA |
-| 2022 | Section | 13 | 1 | 1 | NA | NA | NA |
-| 2022 | Section | 14 | 30 | 13 | NA | NA | NA |
-| 2022 | Section | 15 | 18 | 4 | NA | NA | NA |
-| 2022 | Section | 16 | 52 | 41 | NA | NA | NA |
-| 2022 | Section | 17 | 12 | 6 | NA | NA | NA |
-| 2022 | Section | 18 | 31 | 17 | NA | NA | NA |
-| 2022 | Section | 19 | 29 | 23 | NA | NA | NA |
-| 2022 | Section | 2 | 36 | 18 | NA | NA | NA |
-| 2022 | Section | 20 | 7 | 7 | NA | NA | NA |
-| 2022 | Section | 21 | 20 | 12 | NA | NA | NA |
-| 2022 | Section | 22 | 28 | 19 | NA | NA | NA |
-| 2022 | Section | 23 | 15 | 7 | NA | NA | NA |
-| 2022 | Section | 24 | 7 | 8 | NA | NA | NA |
-| 2022 | Section | 25 | 29 | 14 | NA | NA | NA |
-| 2022 | Section | 26 | 50 | 20 | NA | NA | NA |
-| 2022 | Section | 27 | 97 | 51 | NA | NA | NA |
-| 2022 | Section | 28 | 15 | 17 | NA | NA | NA |
-| 2022 | Section | 29 | 5 | 3 | NA | NA | NA |
-| 2022 | Section | 3 | 4 | 1 | NA | NA | NA |
-| 2022 | Section | 30 | 7 | 3 | NA | NA | NA |
-| 2022 | Section | 31 | 16 | 12 | NA | NA | NA |
-| 2022 | Section | 32 | 7 | 6 | NA | NA | NA |
-| 2022 | Section | 33 | 12 | 14 | NA | NA | NA |
-| 2022 | Section | 34 | 3 | 5 | NA | NA | NA |
-| 2022 | Section | 35 | 14 | 10 | NA | NA | NA |
-| 2022 | Section | 36 | 2 | 3 | NA | NA | NA |
-| 2022 | Section | 37 | 2 | 4 | NA | NA | NA |
-| 2022 | Section | 4 | 12 | 6 | NA | NA | NA |
-| 2022 | Section | 5 | 49 | 32 | NA | NA | NA |
-| 2022 | Section | 6 | 83 | 13 | NA | NA | NA |
-| 2022 | Section | 60 | 63 | 26 | NA | NA | NA |
-| 2022 | Section | 61 | 41 | 22 | NA | NA | NA |
-| 2022 | Section | 62 | 15 | 14 | NA | NA | NA |
-| 2022 | Section | 63 | 35 | 13 | NA | NA | NA |
-| 2022 | Section | 64 | 21 | 17 | NA | NA | NA |
-| 2022 | Section | 65 | 24 | 11 | NA | NA | NA |
-| 2022 | Section | 66 | 12 | 5 | NA | NA | NA |
-| 2022 | Section | 67 | 17 | 8 | NA | NA | NA |
-| 2022 | Section | 68 | 7 | 3 | NA | NA | NA |
-| 2022 | Section | 69 | 5 | 4 | NA | NA | NA |
-| 2022 | Section | 7 | 35 | 18 | NA | NA | NA |
-| 2022 | Section | 70 | 38 | 16 | NA | NA | NA |
-| 2022 | Section | 71 | 23 | 18 | NA | NA | NA |
-| 2022 | Section | 72 | 3 | 1 | NA | NA | NA |
-| 2022 | Section | 73 | 2 | 1 | NA | NA | NA |
-| 2022 | Section | 74 | 40 | 10 | NA | NA | NA |
-| 2022 | Section | 8 | 2 | 8 | NA | NA | NA |
-| 2022 | Section | 85 | 8 | 6 | NA | NA | NA |
-| 2022 | Section | 86 | 9 | 4 | NA | NA | NA |
-| 2022 | Section | 87 | 10 | 5 | NA | NA | NA |
-| 2022 | Section | 9 | 19 | 16 | NA | NA | NA |
-| 2022 | Section | 90 | 4 | 1 | NA | NA | NA |
-| 2022 | Section | 91 | 8 | 1 | NA | NA | NA |
-| 2022 | Section | 92 | 3 | NA | NA | NA | NA |
-| 2023 | Section | 1 | 73 | 19 | NA | NA | NA |
-| 2023 | Section | 10 | 6 | 2 | NA | NA | NA |
-| 2023 | Section | 11 | 58 | 31 | NA | NA | NA |
-| 2023 | Section | 12 | 14 | 2 | NA | NA | NA |
-| 2023 | Section | 13 | 3 | 1 | NA | NA | NA |
-| 2023 | Section | 14 | 27 | 11 | NA | NA | NA |
-| 2023 | Section | 15 | 21 | 5 | NA | NA | NA |
-| 2023 | Section | 16 | 80 | 23 | NA | NA | NA |
-| 2023 | Section | 17 | 8 | 10 | NA | NA | NA |
-| 2023 | Section | 18 | 35 | 12 | NA | NA | NA |
-| 2023 | Section | 19 | 28 | 21 | NA | NA | NA |
-| 2023 | Section | 2 | 43 | 18 | NA | NA | NA |
-| 2023 | Section | 20 | 12 | 2 | NA | NA | NA |
-| 2023 | Section | 21 | 23 | 22 | NA | NA | NA |
-| 2023 | Section | 22 | 29 | 23 | NA | NA | NA |
-| 2023 | Section | 23 | 30 | 9 | NA | NA | NA |
-| 2023 | Section | 24 | 6 | 6 | NA | NA | NA |
-| 2023 | Section | 25 | 30 | 18 | NA | NA | NA |
-| 2023 | Section | 26 | 46 | 25 | NA | NA | NA |
-| 2023 | Section | 27 | 113 | 40 | NA | NA | NA |
-| 2023 | Section | 28 | 19 | 18 | NA | NA | NA |
-| 2023 | Section | 29 | 5 | 5 | NA | NA | NA |
-| 2023 | Section | 3 | 6 | 1 | NA | NA | NA |
-| 2023 | Section | 30 | 10 | 6 | NA | NA | NA |
-| 2023 | Section | 31 | 19 | 9 | NA | NA | NA |
-| 2023 | Section | 32 | 15 | 5 | NA | NA | NA |
-| 2023 | Section | 33 | 13 | 11 | NA | NA | NA |
-| 2023 | Section | 34 | 1 | 2 | NA | NA | NA |
-| 2023 | Section | 35 | 13 | 14 | NA | NA | NA |
-| 2023 | Section | 36 | 6 | 1 | NA | NA | NA |
-| 2023 | Section | 37 | 6 | 2 | NA | NA | NA |
-| 2023 | Section | 4 | 21 | 2 | NA | NA | NA |
-| 2023 | Section | 5 | 45 | 31 | NA | NA | NA |
-| 2023 | Section | 6 | 103 | 22 | NA | NA | NA |
-| 2023 | Section | 60 | 74 | 41 | NA | NA | NA |
-| 2023 | Section | 61 | 48 | 22 | NA | NA | NA |
-| 2023 | Section | 62 | 22 | 13 | NA | NA | NA |
-| 2023 | Section | 63 | 36 | 19 | NA | NA | NA |
-| 2023 | Section | 64 | 32 | 16 | NA | NA | NA |
-| 2023 | Section | 65 | 21 | 6 | NA | NA | NA |
-| 2023 | Section | 66 | 15 | 11 | NA | NA | NA |
-| 2023 | Section | 67 | 15 | 5 | NA | NA | NA |
-| 2023 | Section | 68 | 4 | 2 | NA | NA | NA |
-| 2023 | Section | 69 | 6 | 3 | NA | NA | NA |
-| 2023 | Section | 7 | 39 | 9 | NA | NA | NA |
-| 2023 | Section | 70 | 55 | 15 | NA | NA | NA |
-| 2023 | Section | 71 | 40 | 4 | NA | NA | NA |
-| 2023 | Section | 72 | 1 | 1 | NA | NA | NA |
-| 2023 | Section | 73 | 1 | 2 | NA | NA | NA |
-| 2023 | Section | 74 | 45 | 8 | NA | NA | NA |
-| 2023 | Section | 76 | 1 | NA | NA | NA | NA |
-| 2023 | Section | 77 | 1 | NA | NA | NA | NA |
-| 2023 | Section | 8 | 7 | 1 | NA | NA | NA |
-| 2023 | Section | 85 | 9 | 2 | NA | NA | NA |
-| 2023 | Section | 86 | 11 | 4 | NA | NA | NA |
-| 2023 | Section | 87 | 11 | 5 | NA | NA | NA |
-| 2023 | Section | 9 | 21 | 21 | NA | NA | NA |
-| 2023 | Section | 90 | 2 | 1 | NA | NA | NA |
-| 2023 | Section | 91 | 6 | 2 | NA | NA | NA |
-| 2023 | Section | 92 | 3 | NA | NA | NA | NA |
-| 2024 | Section | 1 | 64 | 14 | NA | NA | NA |
-| 2024 | Section | 10 | 10 | 3 | NA | NA | NA |
-| 2024 | Section | 11 | 49 | 24 | NA | NA | NA |
-| 2024 | Section | 12 | 5 | 6 | NA | NA | NA |
-| 2024 | Section | 13 | 4 | 1 | NA | NA | NA |
-| 2024 | Section | 14 | 29 | 9 | NA | NA | NA |
-| 2024 | Section | 15 | 21 | 7 | NA | NA | NA |
-| 2024 | Section | 16 | 72 | 17 | NA | NA | NA |
-| 2024 | Section | 17 | 11 | 8 | NA | NA | NA |
-| 2024 | Section | 18 | 35 | 19 | NA | NA | NA |
-| 2024 | Section | 19 | 33 | 25 | NA | NA | NA |
-| 2024 | Section | 2 | 45 | 14 | NA | NA | NA |
-| 2024 | Section | 20 | 10 | 5 | NA | NA | NA |
-| 2024 | Section | 21 | 24 | 14 | NA | NA | NA |
-| 2024 | Section | 22 | 38 | 22 | NA | NA | NA |
-| 2024 | Section | 23 | 23 | 18 | NA | NA | NA |
-| 2024 | Section | 24 | 10 | 5 | NA | NA | NA |
-| 2024 | Section | 25 | 26 | 18 | NA | NA | NA |
-| 2024 | Section | 26 | 48 | 29 | NA | NA | NA |
-| 2024 | Section | 27 | 142 | 47 | NA | NA | NA |
-| 2024 | Section | 28 | 23 | 22 | NA | NA | NA |
-| 2024 | Section | 29 | 7 | 11 | NA | NA | NA |
-| 2024 | Section | 3 | 3 | 1 | NA | NA | NA |
-| 2024 | Section | 30 | 12 | 7 | NA | NA | NA |
-| 2024 | Section | 31 | 20 | 15 | NA | NA | NA |
-| 2024 | Section | 32 | 10 | 15 | NA | NA | NA |
-| 2024 | Section | 33 | 12 | 11 | NA | NA | NA |
-| 2024 | Section | 34 | 2 | 3 | NA | NA | NA |
-| 2024 | Section | 35 | 16 | 12 | NA | NA | NA |
-| 2024 | Section | 36 | 3 | 2 | NA | NA | NA |
-| 2024 | Section | 37 | 5 | 2 | NA | NA | NA |
-| 2024 | Section | 4 | 17 | 1 | NA | NA | NA |
-| 2024 | Section | 5 | 48 | 35 | NA | NA | NA |
-| 2024 | Section | 6 | 99 | 9 | NA | NA | NA |
-| 2024 | Section | 60 | 80 | 46 | NA | NA | NA |
-| 2024 | Section | 61 | 71 | 21 | NA | NA | NA |
-| 2024 | Section | 62 | 26 | 18 | NA | NA | NA |
-| 2024 | Section | 63 | 41 | 22 | NA | NA | NA |
-| 2024 | Section | 64 | 31 | 13 | NA | NA | NA |
-| 2024 | Section | 65 | 19 | 5 | NA | NA | NA |
-| 2024 | Section | 66 | 7 | 7 | NA | NA | NA |
-| 2024 | Section | 67 | 18 | 7 | NA | NA | NA |
-| 2024 | Section | 68 | 11 | 4 | NA | NA | NA |
-| 2024 | Section | 69 | 12 | 4 | NA | NA | NA |
-| 2024 | Section | 7 | 34 | 11 | NA | NA | NA |
-| 2024 | Section | 70 | 44 | 18 | NA | NA | NA |
-| 2024 | Section | 71 | 39 | 10 | NA | NA | NA |
-| 2024 | Section | 72 | 1 | NA | NA | NA | NA |
-| 2024 | Section | 73 | 1 | 1 | NA | NA | NA |
-| 2024 | Section | 74 | 54 | 13 | NA | NA | NA |
-| 2024 | Section | 76 | 2 | NA | NA | NA | NA |
-| 2024 | Section | 77 | 1 | NA | NA | NA | NA |
-| 2024 | Section | 8 | 3 | 2 | NA | NA | NA |
-| 2024 | Section | 85 | 12 | 6 | NA | NA | NA |
-| 2024 | Section | 86 | 19 | 10 | NA | NA | NA |
-| 2024 | Section | 87 | 14 | 2 | NA | NA | NA |
-| 2024 | Section | 9 | 19 | 19 | NA | NA | NA |
-| 2024 | Section | 90 | 5 | 1 | NA | NA | NA |
-| 2024 | Section | 91 | 8 | 1 | NA | NA | NA |
-| 2024 | Section | 92 | 9 | 1 | NA | NA | NA |
-| 2025 | Section | 1 | 38 | 5 | 35 | NA | NA |
-| 2025 | Section | 10 | 1 | 4 | 9 | NA | NA |
-| 2025 | Section | 11 | 33 | 9 | 32 | NA | NA |
-| 2025 | Section | 12 | 4 | 1 | 7 | NA | NA |
-| 2025 | Section | 13 | 4 | NA | 5 | NA | NA |
-| 2025 | Section | 14 | 14 | 3 | 22 | NA | NA |
-| 2025 | Section | 15 | 16 | 7 | 11 | NA | NA |
-| 2025 | Section | 16 | 30 | 12 | 46 | NA | NA |
-| 2025 | Section | 17 | 7 | 8 | 12 | NA | NA |
-| 2025 | Section | 18 | 18 | 9 | 26 | NA | NA |
-| 2025 | Section | 19 | 15 | 10 | 21 | NA | 1 |
-| 2025 | Section | 2 | 17 | 4 | 27 | 1 | NA |
-| 2025 | Section | 20 | 2 | NA | 7 | 1 | NA |
-| 2025 | Section | 21 | 10 | 9 | 22 | NA | NA |
-| 2025 | Section | 22 | 21 | 12 | 25 | NA | NA |
-| 2025 | Section | 23 | 16 | 15 | 11 | NA | NA |
-| 2025 | Section | 24 | 6 | 1 | 4 | NA | NA |
-| 2025 | Section | 25 | 15 | 16 | 5 | NA | NA |
-| 2025 | Section | 26 | 30 | 16 | 29 | NA | NA |
-| 2025 | Section | 27 | 81 | 26 | 49 | NA | NA |
-| 2025 | Section | 28 | 19 | 9 | 7 | NA | NA |
-| 2025 | Section | 29 | 10 | 4 | 3 | NA | NA |
-| 2025 | Section | 3 | 3 | 1 | 11 | NA | NA |
-| 2025 | Section | 30 | 7 | 3 | 1 | NA | NA |
-| 2025 | Section | 31 | 10 | 7 | 8 | NA | NA |
-| 2025 | Section | 32 | 10 | 11 | 8 | 1 | NA |
-| 2025 | Section | 33 | 9 | 4 | 7 | NA | NA |
-| 2025 | Section | 34 | 1 | NA | 1 | NA | NA |
-| 2025 | Section | 35 | 8 | 10 | 10 | NA | NA |
-| 2025 | Section | 36 | 1 | NA | 4 | 1 | NA |
-| 2025 | Section | 37 | NA | NA | 3 | NA | NA |
-| 2025 | Section | 4 | 8 | 1 | 15 | NA | NA |
-| 2025 | Section | 5 | 37 | 15 | 32 | NA | NA |
-| 2025 | Section | 6 | 71 | 7 | 31 | NA | NA |
-| 2025 | Section | 60 | 54 | 24 | 25 | NA | NA |
-| 2025 | Section | 61 | 24 | 11 | 23 | NA | NA |
-| 2025 | Section | 62 | 13 | 10 | 6 | NA | NA |
-| 2025 | Section | 63 | 20 | 10 | 15 | NA | NA |
-| 2025 | Section | 64 | 20 | 8 | 14 | NA | NA |
-| 2025 | Section | 65 | 18 | 3 | 11 | NA | NA |
-| 2025 | Section | 66 | 8 | 5 | 8 | NA | NA |
-| 2025 | Section | 67 | 6 | 4 | 16 | 1 | 2 |
-| 2025 | Section | 68 | 4 | 1 | 13 | NA | NA |
-| 2025 | Section | 69 | 4 | 1 | 5 | NA | NA |
-| 2025 | Section | 7 | 23 | 10 | 13 | NA | NA |
-| 2025 | Section | 70 | 18 | 7 | 11 | NA | NA |
-| 2025 | Section | 71 | 33 | 3 | 18 | NA | NA |
-| 2025 | Section | 72 | 1 | NA | 1 | NA | NA |
-| 2025 | Section | 73 | NA | NA | 1 | NA | NA |
-| 2025 | Section | 74 | 24 | 6 | 15 | NA | NA |
-| 2025 | Section | 76 | NA | NA | 1 | NA | NA |
-| 2025 | Section | 8 | 5 | 3 | 3 | NA | NA |
-| 2025 | Section | 85 | 6 | 3 | 5 | NA | NA |
-| 2025 | Section | 86 | 7 | 1 | 3 | NA | NA |
-| 2025 | Section | 87 | 5 | 3 | 3 | NA | NA |
-| 2025 | Section | 9 | 20 | 11 | 11 | NA | NA |
-| 2025 | Section | 77 | 1 | NA | NA | NA | NA |
-| 2025 | Section | 90 | 1 | 1 | NA | NA | NA |
-| 2025 | Section | 91 | 2 | NA | NA | NA | NA |
-| 2025 | Section | 92 | 3 | NA | NA | NA | NA |
+| 2025 | Ensemble | Ensemble | 636 | 1375 | 5 | 570 | 3 |
+| 2025 | Grande discipline | DEG | 134 | 261 | 1 | 59 | NA |
+| 2025 | Grande discipline | LLASHS | 262 | 496 | 1 | 212 | 1 |
+| 2025 | Grande discipline | Pharma | 8 | 25 | NA | 11 | NA |
+| 2025 | Grande discipline | ST | 232 | 575 | 3 | 286 | 2 |
+| 2025 | Grande discipline | Santé | NA | 15 | NA | NA | NA |
+| 2025 | Grande discipline | NA | NA | 3 | NA | 2 | NA |
+| 2025 | Groupe | 1 | 78 | 105 | 1 | 21 | NA |
+| 2025 | Groupe | 10 | 57 | 107 | 1 | 43 | 2 |
+| 2025 | Groupe | 11 | 8 | 25 | NA | 11 | NA |
+| 2025 | Groupe | 12 | 36 | 107 | NA | 25 | NA |
+| 2025 | Groupe | 2 | 56 | 156 | NA | 38 | NA |
+| 2025 | Groupe | 3 | 95 | 183 | NA | 69 | NA |
+| 2025 | Groupe | 4 | 130 | 205 | 1 | 118 | 1 |
+| 2025 | Groupe | 5 | 73 | 190 | NA | 87 | NA |
+| 2025 | Groupe | 6 | 9 | 45 | NA | 30 | NA |
+| 2025 | Groupe | 7 | 16 | 50 | 1 | 33 | NA |
+| 2025 | Groupe | 8 | 17 | 19 | 1 | 18 | NA |
+| 2025 | Groupe | 9 | 60 | 164 | NA | 75 | NA |
+| 2025 | Groupe | Théologie | 1 | 1 | NA | NA | NA |
+| 2025 | Groupe | Santé | NA | 15 | NA | NA | NA |
+| 2025 | Groupe | NA | NA | 3 | NA | 2 | NA |
+| 2025 | Section | 1 | 32 | 62 | NA | 11 | NA |
+| 2025 | Section | 10 | 6 | 5 | NA | 5 | NA |
+| 2025 | Section | 11 | 28 | 49 | NA | 14 | NA |
+| 2025 | Section | 12 | 6 | 8 | NA | 2 | NA |
+| 2025 | Section | 13 | 5 | 5 | NA | NA | NA |
+| 2025 | Section | 14 | 18 | 22 | NA | 6 | NA |
+| 2025 | Section | 15 | 9 | 21 | NA | 8 | NA |
+| 2025 | Section | 16 | 34 | 46 | NA | 20 | NA |
+| 2025 | Section | 17 | 8 | 12 | NA | 11 | NA |
+| 2025 | Section | 18 | 19 | 30 | NA | 14 | NA |
+| 2025 | Section | 19 | 16 | 24 | NA | 18 | 1 |
+| 2025 | Section | 2 | 24 | 26 | 1 | 6 | NA |
+| 2025 | Section | 20 | 3 | 3 | 1 | 1 | NA |
+| 2025 | Section | 21 | 19 | 19 | NA | 13 | NA |
+| 2025 | Section | 22 | 20 | 34 | NA | 21 | NA |
+| 2025 | Section | 23 | 8 | 26 | NA | 18 | NA |
+| 2025 | Section | 24 | 3 | 11 | NA | 2 | NA |
+| 2025 | Section | 25 | 4 | 21 | NA | 23 | NA |
+| 2025 | Section | 26 | 26 | 47 | NA | 27 | NA |
+| 2025 | Section | 27 | 43 | 122 | NA | 37 | NA |
+| 2025 | Section | 28 | 6 | 23 | NA | 15 | NA |
+| 2025 | Section | 29 | 2 | 13 | NA | 7 | NA |
+| 2025 | Section | 3 | 9 | 3 | NA | 2 | NA |
+| 2025 | Section | 30 | 1 | 9 | NA | 8 | NA |
+| 2025 | Section | 31 | 5 | 19 | NA | 10 | NA |
+| 2025 | Section | 32 | 6 | 17 | 1 | 16 | NA |
+| 2025 | Section | 33 | 5 | 14 | NA | 7 | NA |
+| 2025 | Section | 35 | 9 | 11 | NA | 15 | NA |
+| 2025 | Section | 36 | 5 | 2 | 1 | 1 | NA |
+| 2025 | Section | 37 | 3 | 3 | NA | 1 | NA |
+| 2025 | Section | 4 | 13 | 14 | NA | 2 | NA |
+| 2025 | Section | 5 | 29 | 59 | NA | 28 | NA |
+| 2025 | Section | 6 | 27 | 97 | NA | 10 | NA |
+| 2025 | Section | 60 | 23 | 75 | NA | 32 | NA |
+| 2025 | Section | 61 | 21 | 37 | NA | 17 | NA |
+| 2025 | Section | 62 | 4 | 21 | NA | 13 | NA |
+| 2025 | Section | 63 | 12 | 31 | NA | 13 | NA |
+| 2025 | Section | 64 | 11 | 29 | NA | 18 | NA |
+| 2025 | Section | 65 | 10 | 30 | NA | 5 | NA |
+| 2025 | Section | 66 | 7 | 20 | NA | 8 | NA |
+| 2025 | Section | 67 | 15 | 14 | 1 | 7 | 2 |
+| 2025 | Section | 68 | 10 | 9 | NA | 1 | NA |
+| 2025 | Section | 69 | 4 | 5 | NA | 4 | NA |
+| 2025 | Section | 7 | 11 | 36 | NA | 12 | NA |
+| 2025 | Section | 70 | 6 | 29 | NA | 11 | NA |
+| 2025 | Section | 71 | 17 | 46 | NA | 4 | NA |
+| 2025 | Section | 73 | 1 | NA | NA | 1 | NA |
+| 2025 | Section | 74 | 12 | 31 | NA | 8 | NA |
+| 2025 | Section | 76 | 1 | NA | NA | NA | NA |
+| 2025 | Section | 8 | 3 | 7 | NA | 3 | NA |
+| 2025 | Section | 85 | 4 | 6 | NA | 4 | NA |
+| 2025 | Section | 86 | 2 | 10 | NA | 3 | NA |
+| 2025 | Section | 87 | 2 | 9 | NA | 4 | NA |
+| 2025 | Section | 9 | 9 | 30 | NA | 19 | NA |
+| 2025 | Section | 34 | NA | 3 | NA | 1 | NA |
+| 2025 | Section | 72 | NA | 1 | NA | 1 | NA |
+| 2025 | Section | 77 | NA | 1 | NA | NA | NA |
+| 2025 | Section | 90 | NA | 3 | NA | 2 | NA |
+| 2025 | Section | 91 | NA | 11 | NA | NA | NA |
+| 2025 | Section | 92 | NA | 4 | NA | NA | NA |
 
 </details>
 
@@ -3254,7 +3268,7 @@ emploisEC
 | Ensemble | Ensemble | Ensemble | 2022 | 394 | 0.317 | 269 | 0.286 | 7338 | 45.2 | 5342 | 0.452 | 607 | 2011 | 0.356 | 569 | 0.402 | 1351 | 8230 | 0.450 | 1270 | 0.520 | NA | NA | NA | CNU | NA | NA | NA | NA | NA | NA | NA | 6.091784 | 0.1543135 | 6960 | 0.1730717 | 0.7279913 | 0.2377387 | 0.6710613 | NA |
 | Ensemble | Ensemble | Ensemble | 2023 | 361 | 0.285 | 247 | 0.263 | 7235 | 46.6 | 5358 | 0.463 | 631 | 1895 | 0.354 | 572 | 0.413 | 1567 | 8110 | 0.450 | 1436 | 0.460 | NA | NA | NA | CNU | NA | NA | NA | NA | NA | NA | NA | 5.175495 | 0.1770654 | 6674 | 0.1984796 | 0.7405667 | 0.2680105 | 0.6763235 | NA |
 | Ensemble | Ensemble | Ensemble | 2024 | NA | NA | NA | NA | NA | NA | NA | NA | 693 | NA | NA | NA | NA | 1557 | NA | NA | NA | NA | NA | NA | NA | Galaxie | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA |
-| Ensemble | Ensemble | Ensemble | 2025 | NA | NA | NA | NA | NA | NA | NA | NA | 364 | NA | NA | NA | NA | 892 | NA | NA | NA | NA | 767 | 5 | 3 | Galaxie | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA |
+| Ensemble | Ensemble | Ensemble | 2025 | NA | NA | NA | NA | NA | NA | NA | NA | 570 | NA | NA | NA | NA | 1375 | NA | NA | NA | NA | 636 | 5 | 3 | Odyssee | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA |
 | Grande discipline | DEG | Droit éco gestion | 2009 | 33 | 0.280 | 6 | 0.333 | 1352 | 46.0 | 555 | 0.474 | 177 | 140 | 0.321 | 107 | 0.299 | 372 | 1095 | 0.472 | 330 | 0.476 | NA | NA | NA | CNU | NA | NA | NA | NA | NA | NA | NA | 2.943548 | 0.3013699 | 765 | 0.2440828 | 0.4105030 | 0.5945946 | 0.2201566 | NA |
 | Grande discipline | LLASHS | Lettres et sciences humaines | 2009 | 709 | 0.415 | 484 | 0.438 | 3767 | 53.3 | 2345 | 0.548 | 441 | 695 | 0.424 | 345 | 0.400 | 724 | 3985 | 0.553 | 687 | 0.553 | NA | NA | NA | CNU | NA | NA | NA | NA | NA | NA | NA | 5.504144 | 0.1723965 | 3298 | 0.1823732 | 0.6225113 | 0.2929638 | 0.5383117 | NA |
 | Grande discipline | Pharma | Pharmacie | 2009 | 63 | 0.436 | 25 | 0.600 | 514 | 56.7 | 378 | 0.556 | 22 | 34 | 0.324 | 19 | 0.474 | 70 | 382 | 0.521 | 66 | 0.606 | NA | NA | NA | CNU | NA | NA | NA | NA | NA | NA | NA | 5.457143 | 0.1727749 | 316 | 0.1284047 | 0.7354086 | 0.1746032 | 0.6964286 | NA |
@@ -3321,12 +3335,12 @@ emploisEC
 | Grande discipline | ST | Sciences et techniques | 2024 | NA | NA | NA | NA | NA | NA | NA | NA | 341 | NA | NA | NA | NA | 642 | NA | NA | NA | NA | NA | NA | NA | Galaxie | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA |
 | Grande discipline | Santé | Santé | 2024 | NA | NA | NA | NA | NA | NA | NA | NA | 2 | NA | NA | NA | NA | 17 | NA | NA | NA | NA | NA | NA | NA | Galaxie | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA |
 | Grande discipline | NA | NA | 2024 | NA | NA | NA | NA | NA | NA | NA | NA | 1 | NA | NA | NA | NA | 5 | NA | NA | NA | NA | NA | NA | NA | Galaxie | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA |
-| Grande discipline | DEG | Droit éco gestion | 2025 | NA | NA | NA | NA | NA | NA | NA | NA | 33 | NA | NA | NA | NA | 174 | NA | NA | NA | NA | 151 | 1 | NA | Galaxie | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA |
-| Grande discipline | LLASHS | Lettres et sciences humaines | 2025 | NA | NA | NA | NA | NA | NA | NA | NA | 140 | NA | NA | NA | NA | 322 | NA | NA | NA | NA | 334 | 1 | 1 | Galaxie | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA |
-| Grande discipline | Pharma | Pharmacie | 2025 | NA | NA | NA | NA | NA | NA | NA | NA | 7 | NA | NA | NA | NA | 18 | NA | NA | NA | NA | 11 | NA | NA | Galaxie | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA |
-| Grande discipline | ST | Sciences et techniques | 2025 | NA | NA | NA | NA | NA | NA | NA | NA | 183 | NA | NA | NA | NA | 372 | NA | NA | NA | NA | 271 | 3 | 2 | Galaxie | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA |
-| Grande discipline | Santé | Santé | 2025 | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | 5 | NA | NA | NA | NA | NA | NA | NA | Galaxie | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA |
-| Grande discipline | NA | NA | 2025 | NA | NA | NA | NA | NA | NA | NA | NA | 1 | NA | NA | NA | NA | 1 | NA | NA | NA | NA | NA | NA | NA | Galaxie | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA |
+| Grande discipline | DEG | Droit éco gestion | 2025 | NA | NA | NA | NA | NA | NA | NA | NA | 59 | NA | NA | NA | NA | 261 | NA | NA | NA | NA | 134 | 1 | NA | Odyssee | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA |
+| Grande discipline | LLASHS | Lettres et sciences humaines | 2025 | NA | NA | NA | NA | NA | NA | NA | NA | 212 | NA | NA | NA | NA | 496 | NA | NA | NA | NA | 262 | 1 | 1 | Odyssee | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA |
+| Grande discipline | Pharma | Pharmacie | 2025 | NA | NA | NA | NA | NA | NA | NA | NA | 11 | NA | NA | NA | NA | 25 | NA | NA | NA | NA | 8 | NA | NA | Odyssee | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA |
+| Grande discipline | ST | Sciences et techniques | 2025 | NA | NA | NA | NA | NA | NA | NA | NA | 286 | NA | NA | NA | NA | 575 | NA | NA | NA | NA | 232 | 3 | 2 | Odyssee | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA |
+| Grande discipline | Santé | Santé | 2025 | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | 15 | NA | NA | NA | NA | NA | NA | NA | Odyssee | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA |
+| Grande discipline | NA | NA | 2025 | NA | NA | NA | NA | NA | NA | NA | NA | 2 | NA | NA | NA | NA | 3 | NA | NA | NA | NA | NA | NA | NA | Odyssee | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA |
 | Groupe | 1 | Droit et science politique | 2009 | 8 | 0.190 | 2 | 0.500 | 772 | 47.7 | 265 | 0.434 | 86 | 75 | 0.347 | 56 | 0.321 | 149 | 607 | 0.460 | 140 | 0.400 | NA | NA | NA | CNU | NA | NA | NA | NA | NA | NA | NA | 4.073825 | 0.2306425 | 467 | 0.1813472 | 0.3432642 | 0.5283019 | 0.1977848 | NA |
 | Groupe | 10 | Biologie et biochimie | 2009 | 420 | 0.396 | 291 | 0.392 | 1690 | 54.8 | 1346 | 0.560 | 96 | 192 | 0.333 | 80 | 0.400 | 192 | 1167 | 0.542 | 179 | 0.453 | NA | NA | NA | CNU | NA | NA | NA | NA | NA | NA | NA | 6.078125 | 0.1533847 | 988 | 0.1059172 | 0.7964497 | 0.1329866 | 0.7723362 | NA |
 | Groupe | 11 | Pharmacie | 2009 | 63 | 0.436 | 25 | 0.600 | 514 | 56.7 | 378 | 0.556 | 22 | 34 | 0.324 | 19 | 0.474 | 70 | 382 | 0.521 | 66 | 0.606 | NA | NA | NA | CNU | NA | NA | NA | NA | NA | NA | NA | 5.457143 | 0.1727749 | 316 | 0.1284047 | 0.7354086 | 0.1746032 | 0.6964286 | NA |
@@ -3537,21 +3551,21 @@ emploisEC
 | Groupe | Santé | Autres santé(mono-appartenants) | 2024 | NA | NA | NA | NA | NA | NA | NA | NA | 2 | NA | NA | NA | NA | 17 | NA | NA | NA | NA | NA | NA | NA | Galaxie | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA |
 | Groupe | Théologie | Théologie | 2024 | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | 3 | NA | NA | NA | NA | NA | NA | NA | Galaxie | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA |
 | Groupe | NA | NA | 2024 | NA | NA | NA | NA | NA | NA | NA | NA | 1 | NA | NA | NA | NA | 5 | NA | NA | NA | NA | NA | NA | NA | Galaxie | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA |
-| Groupe | 1 | Droit et science politique | 2025 | NA | NA | NA | NA | NA | NA | NA | NA | 11 | NA | NA | NA | NA | 66 | NA | NA | NA | NA | 88 | 1 | NA | Galaxie | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA |
-| Groupe | 10 | Biologie et biochimie | 2025 | NA | NA | NA | NA | NA | NA | NA | NA | 22 | NA | NA | NA | NA | 60 | NA | NA | NA | NA | 67 | 1 | 2 | Galaxie | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA |
-| Groupe | 11 | Pharmacie | 2025 | NA | NA | NA | NA | NA | NA | NA | NA | 7 | NA | NA | NA | NA | 18 | NA | NA | NA | NA | 11 | NA | NA | Galaxie | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA |
-| Groupe | 12 | Groupe interdisciplinaire et STAPS | 2025 | NA | NA | NA | NA | NA | NA | NA | NA | 16 | NA | NA | NA | NA | 76 | NA | NA | NA | NA | 46 | NA | NA | Galaxie | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA |
-| Groupe | 2 | Sciences économiques et de gestion | 2025 | NA | NA | NA | NA | NA | NA | NA | NA | 22 | NA | NA | NA | NA | 108 | NA | NA | NA | NA | 63 | NA | NA | Galaxie | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA |
-| Groupe | 3 | Littératures et Langues | 2025 | NA | NA | NA | NA | NA | NA | NA | NA | 48 | NA | NA | NA | NA | 120 | NA | NA | NA | NA | 113 | NA | NA | Galaxie | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA |
-| Groupe | 4 | Sciences humaines et Histoire-Géographie | 2025 | NA | NA | NA | NA | NA | NA | NA | NA | 76 | NA | NA | NA | NA | 125 | NA | NA | NA | NA | 174 | 1 | 1 | Galaxie | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA |
-| Groupe | 5 | Mathématiques et Informatique | 2025 | NA | NA | NA | NA | NA | NA | NA | NA | 58 | NA | NA | NA | NA | 126 | NA | NA | NA | NA | 83 | NA | NA | Galaxie | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA |
-| Groupe | 6 | Physique | 2025 | NA | NA | NA | NA | NA | NA | NA | NA | 16 | NA | NA | NA | NA | 36 | NA | NA | NA | NA | 11 | NA | NA | Galaxie | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA |
-| Groupe | 7 | Chimie | 2025 | NA | NA | NA | NA | NA | NA | NA | NA | 22 | NA | NA | NA | NA | 29 | NA | NA | NA | NA | 23 | 1 | NA | Galaxie | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA |
-| Groupe | 8 | Sciences de la Terre | 2025 | NA | NA | NA | NA | NA | NA | NA | NA | 10 | NA | NA | NA | NA | 10 | NA | NA | NA | NA | 18 | 1 | NA | Galaxie | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA |
-| Groupe | 9 | Mécanique, génie mécanique, génie informatique, énergétique | 2025 | NA | NA | NA | NA | NA | NA | NA | NA | 55 | NA | NA | NA | NA | 111 | NA | NA | NA | NA | 69 | NA | NA | Galaxie | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA |
-| Groupe | Santé | Autres santé(mono-appartenants) | 2025 | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | 5 | NA | NA | NA | NA | NA | NA | NA | Galaxie | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA |
-| Groupe | Théologie | Théologie | 2025 | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | 1 | NA | NA | NA | NA | 1 | NA | NA | Galaxie | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA |
-| Groupe | NA | NA | 2025 | NA | NA | NA | NA | NA | NA | NA | NA | 1 | NA | NA | NA | NA | 1 | NA | NA | NA | NA | NA | NA | NA | Galaxie | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA |
+| Groupe | 1 | Droit et science politique | 2025 | NA | NA | NA | NA | NA | NA | NA | NA | 21 | NA | NA | NA | NA | 105 | NA | NA | NA | NA | 78 | 1 | NA | Odyssee | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA |
+| Groupe | 10 | Biologie et biochimie | 2025 | NA | NA | NA | NA | NA | NA | NA | NA | 43 | NA | NA | NA | NA | 107 | NA | NA | NA | NA | 57 | 1 | 2 | Odyssee | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA |
+| Groupe | 11 | Pharmacie | 2025 | NA | NA | NA | NA | NA | NA | NA | NA | 11 | NA | NA | NA | NA | 25 | NA | NA | NA | NA | 8 | NA | NA | Odyssee | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA |
+| Groupe | 12 | Groupe interdisciplinaire et STAPS | 2025 | NA | NA | NA | NA | NA | NA | NA | NA | 25 | NA | NA | NA | NA | 107 | NA | NA | NA | NA | 36 | NA | NA | Odyssee | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA |
+| Groupe | 2 | Sciences économiques et de gestion | 2025 | NA | NA | NA | NA | NA | NA | NA | NA | 38 | NA | NA | NA | NA | 156 | NA | NA | NA | NA | 56 | NA | NA | Odyssee | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA |
+| Groupe | 3 | Littératures et Langues | 2025 | NA | NA | NA | NA | NA | NA | NA | NA | 69 | NA | NA | NA | NA | 183 | NA | NA | NA | NA | 95 | NA | NA | Odyssee | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA |
+| Groupe | 4 | Sciences humaines et Histoire-Géographie | 2025 | NA | NA | NA | NA | NA | NA | NA | NA | 118 | NA | NA | NA | NA | 205 | NA | NA | NA | NA | 130 | 1 | 1 | Odyssee | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA |
+| Groupe | 5 | Mathématiques et Informatique | 2025 | NA | NA | NA | NA | NA | NA | NA | NA | 87 | NA | NA | NA | NA | 190 | NA | NA | NA | NA | 73 | NA | NA | Odyssee | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA |
+| Groupe | 6 | Physique | 2025 | NA | NA | NA | NA | NA | NA | NA | NA | 30 | NA | NA | NA | NA | 45 | NA | NA | NA | NA | 9 | NA | NA | Odyssee | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA |
+| Groupe | 7 | Chimie | 2025 | NA | NA | NA | NA | NA | NA | NA | NA | 33 | NA | NA | NA | NA | 50 | NA | NA | NA | NA | 16 | 1 | NA | Odyssee | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA |
+| Groupe | 8 | Sciences de la Terre | 2025 | NA | NA | NA | NA | NA | NA | NA | NA | 18 | NA | NA | NA | NA | 19 | NA | NA | NA | NA | 17 | 1 | NA | Odyssee | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA |
+| Groupe | 9 | Mécanique, génie mécanique, génie informatique, énergétique | 2025 | NA | NA | NA | NA | NA | NA | NA | NA | 75 | NA | NA | NA | NA | 164 | NA | NA | NA | NA | 60 | NA | NA | Odyssee | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA |
+| Groupe | Santé | Autres santé(mono-appartenants) | 2025 | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | 15 | NA | NA | NA | NA | NA | NA | NA | Odyssee | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA |
+| Groupe | Théologie | Théologie | 2025 | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | 1 | NA | NA | NA | NA | 1 | NA | NA | Odyssee | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA |
+| Groupe | NA | NA | 2025 | NA | NA | NA | NA | NA | NA | NA | NA | 2 | NA | NA | NA | NA | 3 | NA | NA | NA | NA | NA | NA | NA | Odyssee | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA |
 | Section | 1 | Droit privé et sciences criminelles | 2009 | 4 | 0.250 | 1 | 0.000 | 275 | 56.3 | 92 | 0.478 | 37 | 35 | 0.400 | 27 | 0.407 | 65 | 225 | 0.516 | 63 | 0.429 | NA | NA | NA | CNU | NA | NA | NA | NA | NA | NA | NA | 3.461539 | 0.2800000 | 162 | 0.2290909 | 0.3345455 | 0.6847826 | 0.1367925 | NA |
 | Section | 10 | Littératures comparées | 2009 | 28 | 0.429 | 11 | 0.364 | 187 | 65.3 | 59 | 0.678 | 9 | 36 | 0.556 | 8 | 0.750 | 5 | 122 | 0.623 | 5 | 0.800 | NA | NA | NA | CNU | NA | NA | NA | NA | NA | NA | NA | 24.400000 | 0.0409836 | 117 | 0.0267380 | 0.3155080 | 0.0847458 | 0.2967033 | NA |
 | Section | 11 | Langues et littératures anglaises et anglo-saxonnes | 2009 | 39 | 0.681 | 32 | 0.656 | 211 | 63.6 | 123 | 0.667 | 56 | 69 | 0.536 | 37 | 0.568 | 96 | 344 | 0.669 | 92 | 0.761 | NA | NA | NA | CNU | NA | NA | NA | NA | NA | NA | NA | 3.583333 | 0.2674419 | 252 | 0.4360190 | 0.5829384 | 0.7479675 | 0.2605042 | NA |
@@ -4465,66 +4479,66 @@ emploisEC
 | Section | 90 | NA | 2024 | NA | NA | NA | NA | NA | NA | NA | NA | 1 | NA | NA | NA | NA | 5 | NA | NA | NA | NA | NA | NA | NA | Galaxie | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA |
 | Section | 91 | Sciences de la rééducation et de réadaptation | 2024 | NA | NA | NA | NA | NA | NA | NA | NA | 1 | NA | NA | NA | NA | 8 | NA | NA | NA | NA | NA | NA | NA | Galaxie | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA |
 | Section | 92 | Sciences infirmières | 2024 | NA | NA | NA | NA | NA | NA | NA | NA | 1 | NA | NA | NA | NA | 9 | NA | NA | NA | NA | NA | NA | NA | Galaxie | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA |
-| Section | 1 | Droit privé et sciences criminelles | 2025 | NA | NA | NA | NA | NA | NA | NA | NA | 5 | NA | NA | NA | NA | 38 | NA | NA | NA | NA | 35 | NA | NA | Galaxie | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA |
-| Section | 10 | Littératures comparées | 2025 | NA | NA | NA | NA | NA | NA | NA | NA | 4 | NA | NA | NA | NA | 1 | NA | NA | NA | NA | 9 | NA | NA | Galaxie | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA |
-| Section | 11 | Langues et littératures anglaises et anglo-saxonnes | 2025 | NA | NA | NA | NA | NA | NA | NA | NA | 9 | NA | NA | NA | NA | 33 | NA | NA | NA | NA | 32 | NA | NA | Galaxie | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA |
-| Section | 12 | Langues et littératures germaniques et scandinaves | 2025 | NA | NA | NA | NA | NA | NA | NA | NA | 1 | NA | NA | NA | NA | 4 | NA | NA | NA | NA | 7 | NA | NA | Galaxie | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA |
-| Section | 13 | Langues et littératures slaves | 2025 | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | 4 | NA | NA | NA | NA | 5 | NA | NA | Galaxie | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA |
-| Section | 14 | Langues et littératures romanes : espagnol, italien, portugais, autres langues romanes | 2025 | NA | NA | NA | NA | NA | NA | NA | NA | 3 | NA | NA | NA | NA | 14 | NA | NA | NA | NA | 22 | NA | NA | Galaxie | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA |
-| Section | 15 | Langues et littératures arabes, chinoises, japonaises, hébraïques, d’autres domaines linguistiques | 2025 | NA | NA | NA | NA | NA | NA | NA | NA | 7 | NA | NA | NA | NA | 16 | NA | NA | NA | NA | 11 | NA | NA | Galaxie | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA |
-| Section | 16 | Psychologie et Ergonomie | 2025 | NA | NA | NA | NA | NA | NA | NA | NA | 12 | NA | NA | NA | NA | 30 | NA | NA | NA | NA | 46 | NA | NA | Galaxie | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA |
-| Section | 17 | Philosophie | 2025 | NA | NA | NA | NA | NA | NA | NA | NA | 8 | NA | NA | NA | NA | 7 | NA | NA | NA | NA | 12 | NA | NA | Galaxie | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA |
-| Section | 18 | Architecture et Arts : plastiques, du spectacle, musique, musicologie, esthétique, sciences de l’art | 2025 | NA | NA | NA | NA | NA | NA | NA | NA | 9 | NA | NA | NA | NA | 18 | NA | NA | NA | NA | 26 | NA | NA | Galaxie | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA |
-| Section | 19 | Sociologie, démographie | 2025 | NA | NA | NA | NA | NA | NA | NA | NA | 10 | NA | NA | NA | NA | 15 | NA | NA | NA | NA | 21 | NA | 1 | Galaxie | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA |
-| Section | 2 | Droit public | 2025 | NA | NA | NA | NA | NA | NA | NA | NA | 4 | NA | NA | NA | NA | 17 | NA | NA | NA | NA | 27 | 1 | NA | Galaxie | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA |
-| Section | 20 | Anthropologie biologique, ethnologie, préhistoire | 2025 | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | 2 | NA | NA | NA | NA | 7 | 1 | NA | Galaxie | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA |
-| Section | 21 | Histoire et civilisations : histoire et archéologie des mondes anciens et des mondes médiévaux, de l’art | 2025 | NA | NA | NA | NA | NA | NA | NA | NA | 9 | NA | NA | NA | NA | 10 | NA | NA | NA | NA | 22 | NA | NA | Galaxie | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA |
-| Section | 22 | Histoire et civilisations : histoire des mondes modernes, histoire du monde contemporain, de l’art, de la musique | 2025 | NA | NA | NA | NA | NA | NA | NA | NA | 12 | NA | NA | NA | NA | 21 | NA | NA | NA | NA | 25 | NA | NA | Galaxie | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA |
-| Section | 23 | Géographie physique, humaine, économique et régionale | 2025 | NA | NA | NA | NA | NA | NA | NA | NA | 15 | NA | NA | NA | NA | 16 | NA | NA | NA | NA | 11 | NA | NA | Galaxie | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA |
-| Section | 24 | Aménagement de l’espace, urbanisme | 2025 | NA | NA | NA | NA | NA | NA | NA | NA | 1 | NA | NA | NA | NA | 6 | NA | NA | NA | NA | 4 | NA | NA | Galaxie | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA |
-| Section | 25 | Mathématiques | 2025 | NA | NA | NA | NA | NA | NA | NA | NA | 16 | NA | NA | NA | NA | 15 | NA | NA | NA | NA | 5 | NA | NA | Galaxie | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA |
-| Section | 26 | Mathématiques appliquées et applications des mathématiques | 2025 | NA | NA | NA | NA | NA | NA | NA | NA | 16 | NA | NA | NA | NA | 30 | NA | NA | NA | NA | 29 | NA | NA | Galaxie | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA |
-| Section | 27 | Informatique | 2025 | NA | NA | NA | NA | NA | NA | NA | NA | 26 | NA | NA | NA | NA | 81 | NA | NA | NA | NA | 49 | NA | NA | Galaxie | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA |
-| Section | 28 | Milieux denses et matériaux | 2025 | NA | NA | NA | NA | NA | NA | NA | NA | 9 | NA | NA | NA | NA | 19 | NA | NA | NA | NA | 7 | NA | NA | Galaxie | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA |
-| Section | 29 | Constituants élémentaires | 2025 | NA | NA | NA | NA | NA | NA | NA | NA | 4 | NA | NA | NA | NA | 10 | NA | NA | NA | NA | 3 | NA | NA | Galaxie | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA |
-| Section | 3 | Histoire du droit et des institutions | 2025 | NA | NA | NA | NA | NA | NA | NA | NA | 1 | NA | NA | NA | NA | 3 | NA | NA | NA | NA | 11 | NA | NA | Galaxie | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA |
-| Section | 30 | Milieux dilués et optique | 2025 | NA | NA | NA | NA | NA | NA | NA | NA | 3 | NA | NA | NA | NA | 7 | NA | NA | NA | NA | 1 | NA | NA | Galaxie | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA |
-| Section | 31 | Chimie théorique, physique, analytique | 2025 | NA | NA | NA | NA | NA | NA | NA | NA | 7 | NA | NA | NA | NA | 10 | NA | NA | NA | NA | 8 | NA | NA | Galaxie | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA |
-| Section | 32 | Chimie organique, inorganique, industrielle | 2025 | NA | NA | NA | NA | NA | NA | NA | NA | 11 | NA | NA | NA | NA | 10 | NA | NA | NA | NA | 8 | 1 | NA | Galaxie | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA |
-| Section | 33 | Chimie des matériaux | 2025 | NA | NA | NA | NA | NA | NA | NA | NA | 4 | NA | NA | NA | NA | 9 | NA | NA | NA | NA | 7 | NA | NA | Galaxie | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA |
-| Section | 34 | Astronomie, astrophysique | 2025 | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | 1 | NA | NA | NA | NA | 1 | NA | NA | Galaxie | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA |
-| Section | 35 | Structure et évolution de la Terre et des autres planètes | 2025 | NA | NA | NA | NA | NA | NA | NA | NA | 10 | NA | NA | NA | NA | 8 | NA | NA | NA | NA | 10 | NA | NA | Galaxie | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA |
-| Section | 36 | Terre solide : géodynamique des enveloppes supérieures, paléobiosphère | 2025 | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | 1 | NA | NA | NA | NA | 4 | 1 | NA | Galaxie | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA |
-| Section | 37 | Météorologie, océanographie physique et physique de l’environnement | 2025 | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | 3 | NA | NA | Galaxie | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA |
-| Section | 4 | Science politique | 2025 | NA | NA | NA | NA | NA | NA | NA | NA | 1 | NA | NA | NA | NA | 8 | NA | NA | NA | NA | 15 | NA | NA | Galaxie | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA |
-| Section | 5 | Sciences économiques | 2025 | NA | NA | NA | NA | NA | NA | NA | NA | 15 | NA | NA | NA | NA | 37 | NA | NA | NA | NA | 32 | NA | NA | Galaxie | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA |
-| Section | 6 | Sciences de gestion | 2025 | NA | NA | NA | NA | NA | NA | NA | NA | 7 | NA | NA | NA | NA | 71 | NA | NA | NA | NA | 31 | NA | NA | Galaxie | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA |
-| Section | 60 | Mécanique, génie mécanique, génie civil | 2025 | NA | NA | NA | NA | NA | NA | NA | NA | 24 | NA | NA | NA | NA | 54 | NA | NA | NA | NA | 25 | NA | NA | Galaxie | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA |
-| Section | 61 | Génie informatique, automatique et traitement du signal | 2025 | NA | NA | NA | NA | NA | NA | NA | NA | 11 | NA | NA | NA | NA | 24 | NA | NA | NA | NA | 23 | NA | NA | Galaxie | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA |
-| Section | 62 | Énergétique, génie des procédés | 2025 | NA | NA | NA | NA | NA | NA | NA | NA | 10 | NA | NA | NA | NA | 13 | NA | NA | NA | NA | 6 | NA | NA | Galaxie | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA |
-| Section | 63 | Génie Électrique, Électronique, optronique et systèmes | 2025 | NA | NA | NA | NA | NA | NA | NA | NA | 10 | NA | NA | NA | NA | 20 | NA | NA | NA | NA | 15 | NA | NA | Galaxie | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA |
-| Section | 64 | Biochimie et biologie moléculaire | 2025 | NA | NA | NA | NA | NA | NA | NA | NA | 8 | NA | NA | NA | NA | 20 | NA | NA | NA | NA | 14 | NA | NA | Galaxie | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA |
-| Section | 65 | Biologie cellulaire | 2025 | NA | NA | NA | NA | NA | NA | NA | NA | 3 | NA | NA | NA | NA | 18 | NA | NA | NA | NA | 11 | NA | NA | Galaxie | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA |
-| Section | 66 | Physiologie | 2025 | NA | NA | NA | NA | NA | NA | NA | NA | 5 | NA | NA | NA | NA | 8 | NA | NA | NA | NA | 8 | NA | NA | Galaxie | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA |
-| Section | 67 | Biologie des populations et écologie | 2025 | NA | NA | NA | NA | NA | NA | NA | NA | 4 | NA | NA | NA | NA | 6 | NA | NA | NA | NA | 16 | 1 | 2 | Galaxie | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA |
-| Section | 68 | Biologie des organismes | 2025 | NA | NA | NA | NA | NA | NA | NA | NA | 1 | NA | NA | NA | NA | 4 | NA | NA | NA | NA | 13 | NA | NA | Galaxie | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA |
-| Section | 69 | Neurosciences | 2025 | NA | NA | NA | NA | NA | NA | NA | NA | 1 | NA | NA | NA | NA | 4 | NA | NA | NA | NA | 5 | NA | NA | Galaxie | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA |
-| Section | 7 | Sciences du langage : linguistique et phonétique générales | 2025 | NA | NA | NA | NA | NA | NA | NA | NA | 10 | NA | NA | NA | NA | 23 | NA | NA | NA | NA | 13 | NA | NA | Galaxie | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA |
-| Section | 70 | Sciences de l’éducation | 2025 | NA | NA | NA | NA | NA | NA | NA | NA | 7 | NA | NA | NA | NA | 18 | NA | NA | NA | NA | 11 | NA | NA | Galaxie | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA |
-| Section | 71 | Sciences de l’information et de la communication | 2025 | NA | NA | NA | NA | NA | NA | NA | NA | 3 | NA | NA | NA | NA | 33 | NA | NA | NA | NA | 18 | NA | NA | Galaxie | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA |
-| Section | 72 | Épistémologie, histoire des sciences et des techniques | 2025 | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | 1 | NA | NA | NA | NA | 1 | NA | NA | Galaxie | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA |
-| Section | 73 | Cultures et langues régionales | 2025 | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | 1 | NA | NA | Galaxie | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA |
-| Section | 74 | Sciences et techniques des activités physiques et sportives | 2025 | NA | NA | NA | NA | NA | NA | NA | NA | 6 | NA | NA | NA | NA | 24 | NA | NA | NA | NA | 15 | NA | NA | Galaxie | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA |
-| Section | 76 | Théologie catholique | 2025 | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | 1 | NA | NA | Galaxie | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA |
-| Section | 77 | Théologie protestante | 2025 | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | 1 | NA | NA | NA | NA | NA | NA | NA | Galaxie | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA |
-| Section | 8 | Langues et littératures anciennes | 2025 | NA | NA | NA | NA | NA | NA | NA | NA | 3 | NA | NA | NA | NA | 5 | NA | NA | NA | NA | 3 | NA | NA | Galaxie | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA |
-| Section | 85 | Sciences physico-chimiques et ingénierie appliquée à la santé | 2025 | NA | NA | NA | NA | NA | NA | NA | NA | 3 | NA | NA | NA | NA | 6 | NA | NA | NA | NA | 5 | NA | NA | Galaxie | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA |
-| Section | 86 | Sciences du médicament et des autres produits de santé | 2025 | NA | NA | NA | NA | NA | NA | NA | NA | 1 | NA | NA | NA | NA | 7 | NA | NA | NA | NA | 3 | NA | NA | Galaxie | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA |
-| Section | 87 | Sciences biologiques, fondamentales et cliniques | 2025 | NA | NA | NA | NA | NA | NA | NA | NA | 3 | NA | NA | NA | NA | 5 | NA | NA | NA | NA | 3 | NA | NA | Galaxie | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA |
-| Section | 9 | Langue et littérature françaises | 2025 | NA | NA | NA | NA | NA | NA | NA | NA | 11 | NA | NA | NA | NA | 20 | NA | NA | NA | NA | 11 | NA | NA | Galaxie | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA |
-| Section | 90 | NA | 2025 | NA | NA | NA | NA | NA | NA | NA | NA | 1 | NA | NA | NA | NA | 1 | NA | NA | NA | NA | NA | NA | NA | Galaxie | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA |
-| Section | 91 | Sciences de la rééducation et de réadaptation | 2025 | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | 2 | NA | NA | NA | NA | NA | NA | NA | Galaxie | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA |
-| Section | 92 | Sciences infirmières | 2025 | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | 3 | NA | NA | NA | NA | NA | NA | NA | Galaxie | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA |
+| Section | 1 | Droit privé et sciences criminelles | 2025 | NA | NA | NA | NA | NA | NA | NA | NA | 11 | NA | NA | NA | NA | 62 | NA | NA | NA | NA | 32 | NA | NA | Odyssee | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA |
+| Section | 10 | Littératures comparées | 2025 | NA | NA | NA | NA | NA | NA | NA | NA | 5 | NA | NA | NA | NA | 5 | NA | NA | NA | NA | 6 | NA | NA | Odyssee | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA |
+| Section | 11 | Langues et littératures anglaises et anglo-saxonnes | 2025 | NA | NA | NA | NA | NA | NA | NA | NA | 14 | NA | NA | NA | NA | 49 | NA | NA | NA | NA | 28 | NA | NA | Odyssee | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA |
+| Section | 12 | Langues et littératures germaniques et scandinaves | 2025 | NA | NA | NA | NA | NA | NA | NA | NA | 2 | NA | NA | NA | NA | 8 | NA | NA | NA | NA | 6 | NA | NA | Odyssee | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA |
+| Section | 13 | Langues et littératures slaves | 2025 | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | 5 | NA | NA | NA | NA | 5 | NA | NA | Odyssee | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA |
+| Section | 14 | Langues et littératures romanes : espagnol, italien, portugais, autres langues romanes | 2025 | NA | NA | NA | NA | NA | NA | NA | NA | 6 | NA | NA | NA | NA | 22 | NA | NA | NA | NA | 18 | NA | NA | Odyssee | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA |
+| Section | 15 | Langues et littératures arabes, chinoises, japonaises, hébraïques, d’autres domaines linguistiques | 2025 | NA | NA | NA | NA | NA | NA | NA | NA | 8 | NA | NA | NA | NA | 21 | NA | NA | NA | NA | 9 | NA | NA | Odyssee | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA |
+| Section | 16 | Psychologie et Ergonomie | 2025 | NA | NA | NA | NA | NA | NA | NA | NA | 20 | NA | NA | NA | NA | 46 | NA | NA | NA | NA | 34 | NA | NA | Odyssee | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA |
+| Section | 17 | Philosophie | 2025 | NA | NA | NA | NA | NA | NA | NA | NA | 11 | NA | NA | NA | NA | 12 | NA | NA | NA | NA | 8 | NA | NA | Odyssee | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA |
+| Section | 18 | Architecture et Arts : plastiques, du spectacle, musique, musicologie, esthétique, sciences de l’art | 2025 | NA | NA | NA | NA | NA | NA | NA | NA | 14 | NA | NA | NA | NA | 30 | NA | NA | NA | NA | 19 | NA | NA | Odyssee | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA |
+| Section | 19 | Sociologie, démographie | 2025 | NA | NA | NA | NA | NA | NA | NA | NA | 18 | NA | NA | NA | NA | 24 | NA | NA | NA | NA | 16 | NA | 1 | Odyssee | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA |
+| Section | 2 | Droit public | 2025 | NA | NA | NA | NA | NA | NA | NA | NA | 6 | NA | NA | NA | NA | 26 | NA | NA | NA | NA | 24 | 1 | NA | Odyssee | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA |
+| Section | 20 | Anthropologie biologique, ethnologie, préhistoire | 2025 | NA | NA | NA | NA | NA | NA | NA | NA | 1 | NA | NA | NA | NA | 3 | NA | NA | NA | NA | 3 | 1 | NA | Odyssee | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA |
+| Section | 21 | Histoire et civilisations : histoire et archéologie des mondes anciens et des mondes médiévaux, de l’art | 2025 | NA | NA | NA | NA | NA | NA | NA | NA | 13 | NA | NA | NA | NA | 19 | NA | NA | NA | NA | 19 | NA | NA | Odyssee | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA |
+| Section | 22 | Histoire et civilisations : histoire des mondes modernes, histoire du monde contemporain, de l’art, de la musique | 2025 | NA | NA | NA | NA | NA | NA | NA | NA | 21 | NA | NA | NA | NA | 34 | NA | NA | NA | NA | 20 | NA | NA | Odyssee | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA |
+| Section | 23 | Géographie physique, humaine, économique et régionale | 2025 | NA | NA | NA | NA | NA | NA | NA | NA | 18 | NA | NA | NA | NA | 26 | NA | NA | NA | NA | 8 | NA | NA | Odyssee | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA |
+| Section | 24 | Aménagement de l’espace, urbanisme | 2025 | NA | NA | NA | NA | NA | NA | NA | NA | 2 | NA | NA | NA | NA | 11 | NA | NA | NA | NA | 3 | NA | NA | Odyssee | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA |
+| Section | 25 | Mathématiques | 2025 | NA | NA | NA | NA | NA | NA | NA | NA | 23 | NA | NA | NA | NA | 21 | NA | NA | NA | NA | 4 | NA | NA | Odyssee | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA |
+| Section | 26 | Mathématiques appliquées et applications des mathématiques | 2025 | NA | NA | NA | NA | NA | NA | NA | NA | 27 | NA | NA | NA | NA | 47 | NA | NA | NA | NA | 26 | NA | NA | Odyssee | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA |
+| Section | 27 | Informatique | 2025 | NA | NA | NA | NA | NA | NA | NA | NA | 37 | NA | NA | NA | NA | 122 | NA | NA | NA | NA | 43 | NA | NA | Odyssee | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA |
+| Section | 28 | Milieux denses et matériaux | 2025 | NA | NA | NA | NA | NA | NA | NA | NA | 15 | NA | NA | NA | NA | 23 | NA | NA | NA | NA | 6 | NA | NA | Odyssee | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA |
+| Section | 29 | Constituants élémentaires | 2025 | NA | NA | NA | NA | NA | NA | NA | NA | 7 | NA | NA | NA | NA | 13 | NA | NA | NA | NA | 2 | NA | NA | Odyssee | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA |
+| Section | 3 | Histoire du droit et des institutions | 2025 | NA | NA | NA | NA | NA | NA | NA | NA | 2 | NA | NA | NA | NA | 3 | NA | NA | NA | NA | 9 | NA | NA | Odyssee | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA |
+| Section | 30 | Milieux dilués et optique | 2025 | NA | NA | NA | NA | NA | NA | NA | NA | 8 | NA | NA | NA | NA | 9 | NA | NA | NA | NA | 1 | NA | NA | Odyssee | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA |
+| Section | 31 | Chimie théorique, physique, analytique | 2025 | NA | NA | NA | NA | NA | NA | NA | NA | 10 | NA | NA | NA | NA | 19 | NA | NA | NA | NA | 5 | NA | NA | Odyssee | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA |
+| Section | 32 | Chimie organique, inorganique, industrielle | 2025 | NA | NA | NA | NA | NA | NA | NA | NA | 16 | NA | NA | NA | NA | 17 | NA | NA | NA | NA | 6 | 1 | NA | Odyssee | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA |
+| Section | 33 | Chimie des matériaux | 2025 | NA | NA | NA | NA | NA | NA | NA | NA | 7 | NA | NA | NA | NA | 14 | NA | NA | NA | NA | 5 | NA | NA | Odyssee | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA |
+| Section | 34 | Astronomie, astrophysique | 2025 | NA | NA | NA | NA | NA | NA | NA | NA | 1 | NA | NA | NA | NA | 3 | NA | NA | NA | NA | NA | NA | NA | Odyssee | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA |
+| Section | 35 | Structure et évolution de la Terre et des autres planètes | 2025 | NA | NA | NA | NA | NA | NA | NA | NA | 15 | NA | NA | NA | NA | 11 | NA | NA | NA | NA | 9 | NA | NA | Odyssee | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA |
+| Section | 36 | Terre solide : géodynamique des enveloppes supérieures, paléobiosphère | 2025 | NA | NA | NA | NA | NA | NA | NA | NA | 1 | NA | NA | NA | NA | 2 | NA | NA | NA | NA | 5 | 1 | NA | Odyssee | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA |
+| Section | 37 | Météorologie, océanographie physique et physique de l’environnement | 2025 | NA | NA | NA | NA | NA | NA | NA | NA | 1 | NA | NA | NA | NA | 3 | NA | NA | NA | NA | 3 | NA | NA | Odyssee | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA |
+| Section | 4 | Science politique | 2025 | NA | NA | NA | NA | NA | NA | NA | NA | 2 | NA | NA | NA | NA | 14 | NA | NA | NA | NA | 13 | NA | NA | Odyssee | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA |
+| Section | 5 | Sciences économiques | 2025 | NA | NA | NA | NA | NA | NA | NA | NA | 28 | NA | NA | NA | NA | 59 | NA | NA | NA | NA | 29 | NA | NA | Odyssee | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA |
+| Section | 6 | Sciences de gestion | 2025 | NA | NA | NA | NA | NA | NA | NA | NA | 10 | NA | NA | NA | NA | 97 | NA | NA | NA | NA | 27 | NA | NA | Odyssee | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA |
+| Section | 60 | Mécanique, génie mécanique, génie civil | 2025 | NA | NA | NA | NA | NA | NA | NA | NA | 32 | NA | NA | NA | NA | 75 | NA | NA | NA | NA | 23 | NA | NA | Odyssee | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA |
+| Section | 61 | Génie informatique, automatique et traitement du signal | 2025 | NA | NA | NA | NA | NA | NA | NA | NA | 17 | NA | NA | NA | NA | 37 | NA | NA | NA | NA | 21 | NA | NA | Odyssee | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA |
+| Section | 62 | Énergétique, génie des procédés | 2025 | NA | NA | NA | NA | NA | NA | NA | NA | 13 | NA | NA | NA | NA | 21 | NA | NA | NA | NA | 4 | NA | NA | Odyssee | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA |
+| Section | 63 | Génie Électrique, Électronique, optronique et systèmes | 2025 | NA | NA | NA | NA | NA | NA | NA | NA | 13 | NA | NA | NA | NA | 31 | NA | NA | NA | NA | 12 | NA | NA | Odyssee | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA |
+| Section | 64 | Biochimie et biologie moléculaire | 2025 | NA | NA | NA | NA | NA | NA | NA | NA | 18 | NA | NA | NA | NA | 29 | NA | NA | NA | NA | 11 | NA | NA | Odyssee | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA |
+| Section | 65 | Biologie cellulaire | 2025 | NA | NA | NA | NA | NA | NA | NA | NA | 5 | NA | NA | NA | NA | 30 | NA | NA | NA | NA | 10 | NA | NA | Odyssee | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA |
+| Section | 66 | Physiologie | 2025 | NA | NA | NA | NA | NA | NA | NA | NA | 8 | NA | NA | NA | NA | 20 | NA | NA | NA | NA | 7 | NA | NA | Odyssee | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA |
+| Section | 67 | Biologie des populations et écologie | 2025 | NA | NA | NA | NA | NA | NA | NA | NA | 7 | NA | NA | NA | NA | 14 | NA | NA | NA | NA | 15 | 1 | 2 | Odyssee | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA |
+| Section | 68 | Biologie des organismes | 2025 | NA | NA | NA | NA | NA | NA | NA | NA | 1 | NA | NA | NA | NA | 9 | NA | NA | NA | NA | 10 | NA | NA | Odyssee | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA |
+| Section | 69 | Neurosciences | 2025 | NA | NA | NA | NA | NA | NA | NA | NA | 4 | NA | NA | NA | NA | 5 | NA | NA | NA | NA | 4 | NA | NA | Odyssee | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA |
+| Section | 7 | Sciences du langage : linguistique et phonétique générales | 2025 | NA | NA | NA | NA | NA | NA | NA | NA | 12 | NA | NA | NA | NA | 36 | NA | NA | NA | NA | 11 | NA | NA | Odyssee | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA |
+| Section | 70 | Sciences de l’éducation | 2025 | NA | NA | NA | NA | NA | NA | NA | NA | 11 | NA | NA | NA | NA | 29 | NA | NA | NA | NA | 6 | NA | NA | Odyssee | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA |
+| Section | 71 | Sciences de l’information et de la communication | 2025 | NA | NA | NA | NA | NA | NA | NA | NA | 4 | NA | NA | NA | NA | 46 | NA | NA | NA | NA | 17 | NA | NA | Odyssee | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA |
+| Section | 72 | Épistémologie, histoire des sciences et des techniques | 2025 | NA | NA | NA | NA | NA | NA | NA | NA | 1 | NA | NA | NA | NA | 1 | NA | NA | NA | NA | NA | NA | NA | Odyssee | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA |
+| Section | 73 | Cultures et langues régionales | 2025 | NA | NA | NA | NA | NA | NA | NA | NA | 1 | NA | NA | NA | NA | NA | NA | NA | NA | NA | 1 | NA | NA | Odyssee | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA |
+| Section | 74 | Sciences et techniques des activités physiques et sportives | 2025 | NA | NA | NA | NA | NA | NA | NA | NA | 8 | NA | NA | NA | NA | 31 | NA | NA | NA | NA | 12 | NA | NA | Odyssee | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA |
+| Section | 76 | Théologie catholique | 2025 | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | 1 | NA | NA | Odyssee | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA |
+| Section | 77 | Théologie protestante | 2025 | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | 1 | NA | NA | NA | NA | NA | NA | NA | Odyssee | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA |
+| Section | 8 | Langues et littératures anciennes | 2025 | NA | NA | NA | NA | NA | NA | NA | NA | 3 | NA | NA | NA | NA | 7 | NA | NA | NA | NA | 3 | NA | NA | Odyssee | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA |
+| Section | 85 | Sciences physico-chimiques et ingénierie appliquée à la santé | 2025 | NA | NA | NA | NA | NA | NA | NA | NA | 4 | NA | NA | NA | NA | 6 | NA | NA | NA | NA | 4 | NA | NA | Odyssee | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA |
+| Section | 86 | Sciences du médicament et des autres produits de santé | 2025 | NA | NA | NA | NA | NA | NA | NA | NA | 3 | NA | NA | NA | NA | 10 | NA | NA | NA | NA | 2 | NA | NA | Odyssee | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA |
+| Section | 87 | Sciences biologiques, fondamentales et cliniques | 2025 | NA | NA | NA | NA | NA | NA | NA | NA | 4 | NA | NA | NA | NA | 9 | NA | NA | NA | NA | 2 | NA | NA | Odyssee | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA |
+| Section | 9 | Langue et littérature françaises | 2025 | NA | NA | NA | NA | NA | NA | NA | NA | 19 | NA | NA | NA | NA | 30 | NA | NA | NA | NA | 9 | NA | NA | Odyssee | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA |
+| Section | 90 | NA | 2025 | NA | NA | NA | NA | NA | NA | NA | NA | 2 | NA | NA | NA | NA | 3 | NA | NA | NA | NA | NA | NA | NA | Odyssee | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA |
+| Section | 91 | Sciences de la rééducation et de réadaptation | 2025 | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | 11 | NA | NA | NA | NA | NA | NA | NA | Odyssee | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA |
+| Section | 92 | Sciences infirmières | 2025 | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | 4 | NA | NA | NA | NA | NA | NA | NA | Odyssee | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA |
 
 </details>
 
