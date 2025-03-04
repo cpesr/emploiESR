@@ -42,7 +42,16 @@ cnu.périmètres %>% spoiler_table("cnu.périmètres", trim=Inf)
 ### Enseignants
 
 ```{r load.ens, results='asis'}
-ens <- read.csv2("data/fr-esr-enseignants-titulaires-esr-public.csv") %>% 
+  # bind_rows(
+  #   read.csv2("data/fr-esr-enseignants-titulaires-esr-public.csv") %>%
+  #     filter(Code.categorie.personnels %in% c("MCF","PR")),
+  #   read.csv2("data/fr-esr-enseignants-nonpermanents-esr-public.csv") %>% 
+  #     filter(Code.categorie.personnels %in% c("ATER","DOCT AVEC ENS","DOCT SANS ENS")) %>%
+  #     mutate(Code.categorie.personnels = "DOC_ATER") %>%
+  #     mutate(Code.groupe.CNU = as.character(Code.groupe.CNU))) %>%
+
+ens <- 
+  read.csv2("data/fr-esr-enseignants-titulaires-esr-public.csv") %>%
   filter(Code.categorie.personnels %in% c("MCF","PR")) %>%
   group_by(Rentrée,code_section_cnu,Code.categorie.personnels) %>%
   summarise(effectif = sum(effectif,na.rm = TRUE)) %>%
@@ -52,10 +61,8 @@ ens <- read.csv2("data/fr-esr-enseignants-titulaires-esr-public.csv") %>%
     Année = Rentrée,
     SectionCNU.ID = code_section_cnu,
     Effectif.MCF = MCF,
-    Effectif.PR = PR
-    ) %>%
+    Effectif.PR = PR) %>%
   left_join(cnu.sections)
-
 
 ens <- bind_rows(
 ens %>%
@@ -169,7 +176,7 @@ dgrh %>% spoiler_table("dgrh", trim = 20)
 
 ### DPE
 
-```{r dpe, results='asis'}
+```{r dpe, results='asis', eval=FALSE}
 dpe.raw <- read.csv2("utils/dpe-excavator/cpesr-emplois-ec-dpe.csv") %>%
   select(-SectionCNU, -Concours.TauxCouverture.MCF, -Concours.TauxCouverture.PR) %>%
   mutate(Concours.Postes.PR = ifelse(SectionCNU.ID > 6, Concours.Postes.PR, NA)) %>% # Section à aggrégation
@@ -187,10 +194,16 @@ dir <- "utils/galaxie-excavator/"
 
 galaxie <- data.frame() 
 for(file in list.files(dir, pattern = "^galaxie......csv$")) {
-  an <- str_sub(file,9,12)
+  an <- as.numeric(str_sub(file,9,12))
   gal <- read.table(paste0(dir,file), header=TRUE, sep=",", quote='"') %>%
     mutate(Année = an) 
   galaxie <- bind_rows(galaxie,gal)
+}
+
+for(file in list.files(dir, pattern = "^odyssee......csv$")) {
+  an <- str_sub(file,9,12)
+  odd <- read.table(paste0(dir,file), header=TRUE, sep=",", quote='"') 
+  galaxie <- bind_rows(galaxie,odd)
 }
 
 galaxie <- galaxie %>% 
@@ -224,9 +237,9 @@ galaxie %>% spoiler_table("galaxie", trim=Inf)
 ```{r emploisEC, results='asis'}
 
 concours <- bind_rows(
-  dpe %>% 
-    mutate(Source = "DGRH") %>%
-    filter(Année < min(cnu.fd$Année)),
+  # dpe %>% 
+  #   mutate(Source = "DGRH") %>%
+  #   filter(Année < min(cnu.fd$Année)),
   cnu.fd %>%
     mutate(Source = "CNU"),
   galaxie %>%
@@ -251,6 +264,7 @@ emploisEC <- cnu.périmètres %>%
     Contexte.EvolNécessaire = (Effectif.ETU / first(Effectif.ETU) - 1) * first(Effectif.EC) 
   ) %>%
   mutate(
+    ## TODO : checker réussite vs. sélection
     kpi.MCF.TauxTension = Concours.Candidats.MCF / Concours.Postes.MCF,
     kpi.MCF.TauxRéussite = Concours.Recrutés.MCF / Concours.Candidats.MCF,
     kpi.MCF.SansPoste = Concours.Candidats.MCF - Concours.Recrutés.MCF,

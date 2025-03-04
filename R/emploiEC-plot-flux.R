@@ -1,7 +1,7 @@
 library(tidyverse)
 library(ggalluvial)
 library(gganimate)
-library(gifski)
+#library(gifski)
 library(ggcpesrthemes)
 
 # Qualification.Qualifié.Recruté

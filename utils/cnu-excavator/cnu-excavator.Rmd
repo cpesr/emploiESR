@@ -106,8 +106,8 @@ qualif <- bind_rows(
   clean_qualif("cnu-excavation-qualification-2013.csv") %>%
     left_join(qualif.ratio.recevabilité) %>%
     mutate(
-      Qualification.Candidats.MCF = Qualification.Candidats.MCF * ratio.MCF,
-      Qualification.Candidats.PR = Qualification.Candidats.PR * ratio.PR) %>%
+      Qualification.Candidats.MCF = round(Qualification.Candidats.MCF * ratio.MCF),
+      Qualification.Candidats.PR = round(Qualification.Candidats.PR * ratio.PR)) %>%
     select(-c(ratio.MCF,ratio.PR))
 ) %>% 
   slice_head(n=1, by=c(Périmètre, Périmètre.ID, Année)) %>%
