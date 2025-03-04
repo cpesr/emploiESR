@@ -29,16 +29,17 @@ csv_columns = [
     "dateOuvertureCandidatures",
     "dateFermetureCandidatures",
     "descriptionPoste",
-    "Concours",
-    "Mutation",
-    "Détachement",
-    "Recrutement étranger",
-    "Intégration directe",
-    "Recrutement sur contrat",
+    "typeCandidatureConcours",
+    "typeCandidatureMutation",
+    "typeCandidatureDétachement",
+    "typeCandidatureRecrutementEtranger",
+    "typeCandidatureIntégrationDirecte",
+    "typeCandidatureRecrutementSurContrat",
     "région",
     "etatPoste",
     "statutPoste",
-    "typeCampagne"
+    "typeCampagne",
+    "dateScraping"
 ]
 
 # Read the output file to update
@@ -64,6 +65,7 @@ def date_formater(date):
 
 # Iterate over each item in the JSON data
 print(f"Processing {len(data)} items")
+dateScraping = datetime.now().strftime('%Y-%m-%dT%H:%M:%SZ')
 rows = []
 for item in data:
     # Extract the required fields
@@ -81,17 +83,18 @@ for item in data:
         "datePriseDePoste": date_formater(item.get("datePriseDePoste", "NA")) if item.get("datePriseDePoste", "NA") is not None else "NA",
         "dateOuvertureCandidatures": date_formater(item.get("dateOuvertureCandidatures", "NA")),
         "dateFermetureCandidatures": date_formater(item.get("dateFermetureCandidatures", "NA")),
-        "descriptionPoste": item.get("descriptionPosteFrancais", "NA"),
-        "Concours": "Concours" in typeCandidatures,
-        "Mutation": "Mutation" in typeCandidatures,
-        "Détachement": "Détachement" in typeCandidatures,
-        "Recrutement étranger": "Recrutement étranger" in typeCandidatures,
-        "Intégration directe": "Intégration directe" in typeCandidatures,
-        "Recrutement sur contrat": "Recrutement sur contrat" in typeCandidatures,
+        "descriptionPoste": item.get("descriptionPosteFrancais", "NA").replace("\n", " ") if item.get("descriptionPosteFrancais", "NA") is not None else "NA",
+        "typeCandidatureConcours": "Concours" in typeCandidatures,
+        "typeCandidatureMutation": "Mutation" in typeCandidatures,
+        "typeCandidatureDétachement": "Détachement" in typeCandidatures,
+        "typeCandidatureRecrutementEtranger": "Recrutement étranger" in typeCandidatures,
+        "typeCandidatureIntégrationDirecte": "Intégration directe" in typeCandidatures,
+        "typeCandidatureRecrutementSurContrat": "Recrutement sur contrat" in typeCandidatures,
         "région": item.get("region", {}).get("libelle", "NA"),
         "etatPoste": item.get("etatPosteLibelle", "NA"),
         "statutPoste": item.get("statutPoste", {}).get("libelle", "NA"),
-        "typeCampagne": item.get("typeCampagne", "NA")
+        "typeCampagne": item.get("typeCampagne", "NA"),
+        "dateScraping": dateScraping
     }
     rows.append(row)
 
