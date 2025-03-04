@@ -59,6 +59,9 @@ print(f"Fetching data from {url}")
 response = requests.get(url)
 data = response.json()
 
+def date_formater(date):
+    return date[0:10].replace("/", "-")
+
 # Iterate over each item in the JSON data
 print(f"Processing {len(data)} items")
 rows = []
@@ -74,10 +77,10 @@ for item in data:
         "section": sections[0].get("code", "") if len(sections) > 0 else "NA",
         "section2": sections[1].get("code", "") if len(sections) > 1 else "NA",
         "section3": sections[2].get("code", "") if len(sections) > 2 else "NA",
-        "datePublicationPoste": item.get("datePublicationPoste", "NA")[0:10] if item.get("datePublicationPoste", "NA") is not None else "NA",
-        "datePriseDePoste": item.get("datePriseDePoste", "NA")[0:10] if item.get("datePriseDePoste", "NA") is not None else "NA",
-        "dateOuvertureCandidatures": item.get("dateOuvertureCandidatures", "NA")[0:10],
-        "dateFermetureCandidatures": item.get("dateFermetureCandidatures", "NA")[0:10],
+        "datePublicationPoste": date_formater(item.get("datePublicationPoste", "NA")) if item.get("datePublicationPoste", "NA") is not None else "NA",
+        "datePriseDePoste": date_formater(item.get("datePriseDePoste", "NA")) if item.get("datePriseDePoste", "NA") is not None else "NA",
+        "dateOuvertureCandidatures": date_formater(item.get("dateOuvertureCandidatures", "NA")),
+        "dateFermetureCandidatures": date_formater(item.get("dateFermetureCandidatures", "NA")),
         "descriptionPoste": item.get("descriptionPosteFrancais", "NA"),
         "Concours": "Concours" in typeCandidatures,
         "Mutation": "Mutation" in typeCandidatures,
