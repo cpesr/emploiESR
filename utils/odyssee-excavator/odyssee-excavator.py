@@ -42,17 +42,32 @@ csv_columns = [
     "dateScraping"
 ]
 
-# Read the output file to update
+# Determine and read the output file to update
 existing_rows = []
 if args.update:
     if not args.outfile:
         print("L'option --update nécessite un fichier de sortie préexistant")
         sys.exit(1)
     print(f"Reading existing data from {args.outfile}")
-    with open(args.outfile, mode='r', encoding='utf-8') as csvfile:
-        reader = csv.DictReader(csvfile)
-        for row in reader:
-            existing_rows.append(row)
+    try:
+        with open(args.outfile, mode='r', encoding='utf-8') as csvfile:
+            reader = csv.DictReader(csvfile)
+            for row in reader:
+                existing_rows.append(row)
+    except FileNotFoundError:
+        print(f"File {args.outfile} does not exist. It will be created.")
+        pass
+elif args.outfile:
+    try:
+        with open(args.outfile, 'r', encoding='utf-8') as f:
+            print(f"Error: The file {args.outfile} already exists. Please use --update or a different output file")
+            sys.exit(1)
+    except FileNotFoundError:
+        pass
+else:
+    current_date = datetime.now().strftime("%Y%m%d")
+    args.outfile = f"odyssee_{current_date}.csv"
+print(f"Writing data to {args.outfile}")
 
 
 # Fetch the JSON data
@@ -98,12 +113,6 @@ for item in data:
     }
     rows.append(row)
 
-
-# Determine the output file name
-print(f"Writing data to {args.outfile}")
-if not args.outfile:
-    current_date = datetime.now().strftime("%Y%m%d")
-    args.outfile = f"odyssee_{current_date}.csv"
 
 # Open the output file for writing
 with open(args.outfile, mode='w', encoding='utf-8', newline='') as csvfile:
