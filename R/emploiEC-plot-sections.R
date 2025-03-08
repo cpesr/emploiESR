@@ -37,7 +37,8 @@ plot_all_section <- function(sectionID, groupeID, grandedisciplineID, metriques,
       group_by(., Périmètre.ID,Métrique) %>% 
         mutate(val = val / first(val) * 100) %>%
         mutate(Périmètre.ID = paste(Périmètre.ID,"(base 100)"))
-      else . } 
+      else . } %>%
+    filter(Métrique != "Nombre de candidats sans poste" | Périmètre == "Section")
   
   df.lab <- df %>% 
     filter(Périmètre == "Section", !is.na(val)) %>%
@@ -45,7 +46,7 @@ plot_all_section <- function(sectionID, groupeID, grandedisciplineID, metriques,
     slice(c(1,n())) %>%
     mutate(lab = hacklabels(val))
     
-    ggplot(df, aes(x=Année,y=val,color=Métrique)) +
+  ggplot(df, aes(x=Année,y=val,color=Métrique)) +
     geom_line(aes(group=Périmètre, linetype=Périmètre), size=sizemult, se=FALSE) + 
     geom_point(aes(alpha=Périmètre), size=3*sizemult) +
     { if(labels) geom_label(data = df.lab, aes(label=lab), size=5*sizemult, fontface="bold", direction="y") } +
@@ -66,70 +67,25 @@ plot_all_section <- function(sectionID, groupeID, grandedisciplineID, metriques,
     guides(color="none")
 }
 
-plot_all_section("27","5","ST",
-                 metriques = c("kpi.PériodeRenouvellement","Qualification.Qualifiés.MCF",
-                   "Concours.Candidats.MCF","Concours.Recrutés.MCF"),
-                 labs = c("Candidats qualification","Candidats qualifiés",
-                          "Candidats concours","Candidats recrutés"),
-                 facet_nrow = 2,
-                 #norm=TRUE,
-                 colors = séries.MCF.palette)
+# plot_all_section("27","5","ST",
+#                  metriques = c("kpi.PériodeRenouvellement","Qualification.Qualifiés.MCF",
+#                    "Concours.Candidats.MCF","Concours.Recrutés.MCF"),
+#                  labs = c("Candidats qualification","Candidats qualifiés",
+#                           "Candidats concours","Candidats recrutés"),
+#                  facet_nrow = 2,
+#                  #norm=TRUE,
+#                  colors = séries.MCF.palette)
 
 # metriques <- bind_rows(kpis)
 # 
-# sous_metriques <- bind_rows(kpis) %>%
-#   filter(percentlab) %>%
-#   filter(nom %in% c("kpi.MCF.TauxRéussite","kpi.MCF.TauxSélection"))
-# 
-# 
-# 
-# 
-# plot_all_section("27","ST", 
-#                  metriques = sous_metriques$nom,
-#                  labs = sous_metriques$lab,
-#                  percentlab = TRUE,
-#                  facet_nrow = 1,
-#                  norm=FALSE)
-# 
-# plot_all_section("27","ST", 
-#                  metriques = sous_metriques$nom,
-#                  labs = sous_metriques$lab,
-#                  facet_nrow = 1,
-#                  norm=TRUE)
-# 
-# 
-# plot_all_section("76","LLASHS", 
+# plot_all_section("27","5","ST",
 #                  metriques = metriques$nom,
-#                  egd = TRUE,
 #                  labs = metriques$lab,
-#                  percentlab = TRUE,
-#                  facet_nrow = 1,
-#                  norm=FALSE)
-# 
-# plot_metriques_sections <- function(sectionID, grandedisciplineID, ...) {
-#   metriques <- bind_rows(kpis)
-# 
-#   cowplot::plot_grid(nrow = 2,
-#     plot_all_section(sectionID, grandedisciplineID,
-#                      metriques = metriques$nom,
-#                      labs = metriques$lab,
-#                      facet_nrow = 1,
-#                      norm=FALSE,
-#                      ...) + theme(legend.position = "none"),
-#     
-#     plot_all_section(sectionID, grandedisciplineID,
-#                      metriques = metriques$nom,
-#                      egd = TRUE,
-#                      labs = metriques$lab,
-#                      percentlab = TRUE,
-#                      facet_nrow = 1,
-#                      norm=TRUE,
-#                      ...) + theme(legend.position = "none")
-#   )
-#   
-# }
-# 
-# plot_metriques_sections("27","ST")
+#                  facet_nrow = 2,
+#                  norm=FALSE,
+#                  sizemult = 0.5,
+#                  zeroing = FALSE)  + theme_rapport_small()
+
 
 plot_volume_section <- function(sectionID,grandedisciplineID) {
   emploisEC_section(sectionID,grandedisciplineID) %>%

@@ -42,13 +42,12 @@ plot_all_groupe <- function(groupeID, grandedisciplineID, metriques,
       else . }
   
   df.lab <- df %>% 
-    filter(!is.na(val)) %>%
+    filter(!is.na(val), Périmètre=="Groupe") %>%
     group_by(Métrique) %>%
     slice(c(1,n())) %>%
     mutate(lab = hacklabels(val))
   
     
-        
     ggplot(df, aes(x=Année,y=val,color=Métrique)) +
     geom_line(aes(group=paste(Périmètre,Périmètre.ID), linetype=Périmètre, alpha=Périmètre), se=FALSE) + 
     geom_point(aes(size=Périmètre)) +
@@ -83,6 +82,22 @@ plot_all_groupe <- function(groupeID, grandedisciplineID, metriques,
 
 # metriques <- bind_rows(kpis)
 # 
+# cnu.gd <- cnu.sections %>% select(GrandeDisciplineCNU.ID,GrandeDisciplineCNU, GroupeCNU.ID,GroupeCNU) %>% unique() %>% arrange(as.numeric(GroupeCNU.ID))
+# 
+# s <- 5
+# gd <- cnu.gd[s,"GrandeDisciplineCNU.ID"]
+# gd.lab <- cnu.gd[s,"GrandeDisciplineCNU"]
+# groupe <- cnu.gd[s,"GroupeCNU.ID"]
+# groupe.lab <- cnu.gd[s,"GroupeCNU"]
+#   
+# 
+# plot_all_groupe(groupe, gd,
+#                 metriques = metriques$nom,
+#                 labs = metriques$lab,
+#                 facet_nrow = 2,
+#                 norm=FALSE,
+#                 sizemult = 0.5)  + theme_rapport_small()
+
 # sous_metriques <- bind_rows(kpis) %>%
 #   filter(percentlab) %>%
 #   filter(nom %in% c("kpi.MCF.TauxRéussite","kpi.MCF.TauxSélection"))
@@ -90,7 +105,7 @@ plot_all_groupe <- function(groupeID, grandedisciplineID, metriques,
 # 
 # 
 # 
-# plot_all_section("27","ST", 
+# plot_all_section("27","ST",
 #                  metriques = sous_metriques$nom,
 #                  labs = sous_metriques$lab,
 #                  percentlab = TRUE,

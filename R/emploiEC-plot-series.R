@@ -39,7 +39,7 @@ plot_series <- function(métriques, métriqueslab, périm=NULL, périmid=NULL, n
     theme(axis.text.x = element_text(angle = 45, vjust = 1, hjust=1))
 }
 
-#plot_series(levels_context, labs_context, périm="Grande discipline",norm=TRUE, colors=palette_context) + theme_cpesr()
+# plot_series(levels_context, labs_context, périm="Grande discipline",norm=TRUE, colors=palette_context) + theme_cpesr()
 
 
 # plot_series(séries.MCF,séries.MCF.lab, périm="Grande discipline",norm=TRUE)

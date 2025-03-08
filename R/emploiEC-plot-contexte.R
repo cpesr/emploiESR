@@ -55,7 +55,6 @@ plot_emplois_long <- function() {
 
   postes <- emploisEC %>%
     filter(Périmètre %in% c("Grande discipline")) %>%
-    mutate(Données = ifelse(Source == "CNU", "Consolidées","Non consolidées")) %>%
     mutate(Année = as.character(Année)) 
     
   postes.tot <- postes %>%

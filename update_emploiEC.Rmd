@@ -262,12 +262,12 @@ concours <- bind_rows(
   #   mutate(Source = "DGRH") %>%
   #   filter(Année < min(cnu.fd$Année)),
   cnu.fd %>%
-    mutate(Source = "CNU"),
+    mutate(Source = "CNU", Données = "Consolidées"),
   galaxie %>%
-    mutate(Source = "Galaxie") %>%
+    mutate(Source = "Galaxie", Données = "Non consolidées") %>%
     filter(Année > max(cnu.fd$Année)),
   odyssee %>%
-    mutate(Source = "Odyssee") %>%
+    mutate(Source = "Odyssée", Données = "Non consolidées") %>%
     filter(Année > max(galaxie$Année))
 ) %>%
   select(-Source, everything(), Source)
@@ -287,11 +287,14 @@ emploisEC <- cnu.périmètres %>%
     Contexte.EvolRéelle = Effectif.EC - first(Effectif.EC),
     Contexte.EvolNécessaire = (Effectif.ETU / first(Effectif.ETU) - 1) * first(Effectif.EC) 
   ) %>%
+  fill(Effectif.MCF,.direction = "down") %>%
+  fill(Effectif.PR,.direction = "down") %>%
   mutate(
     ## TODO : checker réussite vs. sélection
     kpi.MCF.TauxTension = Concours.Candidats.MCF / Concours.Postes.MCF,
     kpi.MCF.TauxRéussite = Concours.Recrutés.MCF / Concours.Candidats.MCF,
     kpi.MCF.SansPoste = Concours.Candidats.MCF - Concours.Recrutés.MCF,
+    kpi.MCF.TauxPostesNonPourvus = (Concours.Postes.MCF - Concours.Recrutés.MCF) / Concours.Postes.MCF,
     kpi.MCF.TauxSélection = Concours.Recrutés.MCF / Qualification.Candidats.MCF,
     kpi.MCF.TauxSélection.Qualification = Qualification.Qualifiés.MCF / Qualification.Candidats.MCF,
     kpi.MCF.TauxSélection.Concours = Concours.Recrutés.MCF / Qualification.Qualifiés.MCF,

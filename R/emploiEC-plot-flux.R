@@ -14,7 +14,7 @@ library(ggcpesrthemes)
 plot_flux_col <- function(périm=NULL, périmid=NULL, année=NA, sizemult=1, facetting = TRUE) {
   
   if(is.na(année)) {
-    df <- emploisEC %>% filter(Source != "Galaxie")
+    df <- emploisEC %>% filter(Données == "Consolidées")
     année <- max(as.character(df$Année))
   }
   
@@ -62,7 +62,7 @@ names(palette_alluvial) <- c("Echec","Réussite","Qualifiés","Candidats","Recru
 plot_flux_alluvial <- function(périm=NULL, périmid=NULL, année=NA, sizemult = 1, facetting = TRUE) {
   
   if(is.na(année)) {
-    df <- emploisEC %>% filter(Source != "Galaxie")
+    df <- emploisEC %>% filter(Données == "Consolidées")
     année <- max(as.character(df$Année))
   }
   

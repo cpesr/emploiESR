@@ -19,8 +19,8 @@ classoption: landscape, legalpaper
 ```{r setup, include=FALSE, warning = FALSE}
 knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message=FALSE)
 knitr::opts_chunk$set(fig.width = 10, fig.height = 7.5, out.width = "100%", fig.align = "center")
-knitr::opts_chunk$set(dev = "cairo_pdf")
-knitr::opts_chunk$set(pdf.options(encoding = "CP1250"))
+knitr::opts_chunk$set(dev = "cairo_pdf", pdf.options(encoding = "CP1250"))
+knitr::opts_chunk$set(cache=FALSE)
 
 library(kableExtra)
 library(tidyverse)
@@ -51,7 +51,7 @@ theme_rapport_small <- function() { theme(
 
 theme_set(theme_rapport())
 
-année.ref <- emploisEC %>% filter(Source != "Galaxie") %>% tail(n = 1) %>% pull(Année)
+année.ref <- emploisEC %>% filter(Données == "Consolidées") %>% tail(n = 1) %>% pull(Année)
 ```
 
 
@@ -410,7 +410,9 @@ cat("
 ```
 
 
-
+```{r, eval=FALSE}
+knitr::knit_exit()
+```
 
 # Groupes CNU
 
@@ -451,7 +453,8 @@ plot_groupes <- function(groupe,gd) {
                    labs = metriques$lab,
                    facet_nrow = 2,
                    norm=FALSE,
-                   sizemult = 0.5)  + theme_rapport_small()
+                   sizemult = 0.5,
+                   zeroing = TRUE)  + theme_rapport_small()
 
   p_legend1 <- get_legend(p_séries + theme(legend.position = "top", legend.direction = "horizontal"))
   p_legend2 <- get_legend(p_metriques + theme(legend.position = "top", legend.direction = "horizontal", legend.spacing.x = unit(0.3, "cm")))
@@ -471,8 +474,7 @@ plot_groupes <- function(groupe,gd) {
 
 ```
 
-```{r groupes, results='asis', cache=TRUE}
-
+```{r groupes, results='asis'}
 # Ancien format:
 ## Groupe ",groupe," - ", groupe.lab," (",gd,")
 
@@ -517,7 +519,7 @@ cat(sep = '', "
 ")
 
 cat(emploisEC %>% 
-  filter(Périmètre == "Groupe", Périmètre.ID == groupe, Source == "Galaxie") %>%
+  filter(Périmètre == "Groupe", Périmètre.ID == groupe, Données == "Non consolidées") %>%
   select(Année, `Postes MCF`=Concours.Postes.MCF) %>%
   kableExtra::kable("latex", booktabs = T)
 ) 
@@ -557,6 +559,9 @@ cat("
 ```
 
 
+```{r, eval=FALSE}
+knitr::knit_exit()
+```
 
 
 
@@ -597,7 +602,8 @@ plot_sections <- function(section,groupe,gd) {
                    labs = metriques$lab,
                    facet_nrow = 2,
                    norm=FALSE,
-                   sizemult = 0.5)  + theme_rapport_small()
+                   sizemult = 0.5,
+                   zeroing = FALSE)  + theme_rapport_small()
 
   p_legend1 <- get_legend(p_séries + theme(legend.position = "top", legend.direction = "horizontal"))
   p_legend2 <- get_legend(p_metriques + theme(legend.position = "top", legend.direction = "horizontal", legend.spacing.x = unit(0.3, "cm")))
@@ -617,8 +623,7 @@ plot_sections <- function(section,groupe,gd) {
 
 ```
 
-```{r sections, results='asis', cache=TRUE}
-
+```{r sections, results='asis'}
 # Ancien format :
 ## Section ",section," - ",section.lab," (Groupe ",groupe," - ", groupe.lab," - ",gd,")
 
@@ -668,7 +673,7 @@ cat(sep = '', "
 ")
 
 cat(emploisEC %>% 
-  filter(Périmètre == "Section", Périmètre.ID == section, Source == "Galaxie") %>%
+  filter(Périmètre == "Section", Périmètre.ID == section, Données == "Non consolidées") %>%
   select(Année, `Postes MCF`=Concours.Postes.MCF) %>%
   kableExtra::kable("latex", booktabs = T)
 ) 

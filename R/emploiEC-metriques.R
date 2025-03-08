@@ -60,6 +60,17 @@ Les mêmes observations s'appliquent qu'au Taux de tension.
 Il varie en fonction de l'attractivité des carrières et du nombre de postes ouverts
 au concours, mais aussi des opportunités d'embauche en dehors du milieu académique.
 "),
+
+  "MCFTauxPostesNonPourvus"=list(
+    "nom"="kpi.MCF.TauxPostesNonPourvus",
+    "titre"="Taux de postes n'ayant pas été pourvus au concours d'enseignant-chercheur",
+    "lab"="Taux de postes non pourvus",
+    "percentlab" = TRUE,
+    "def"="différence entre postes publiés et postes pourvus, divisé par les postes publiés.",
+    "desc"="Le taux de postes non pourvus mesure les difficultés de recrutement.
+Il varie en fonction de l'attractivité des carrières et du nombre de postes ouverts
+au concours, mais aussi des opportunités d'embauche en dehors du milieu académique.
+"),
   
   
   "kpi.MCF.TauxSélection"=list(
@@ -97,16 +108,16 @@ recandidatent.
     "desc"="Le taux de sélection par le concours mesure la part des lauréats lors de cette étape de sélection.
 "),
   
-  "kpi.MCF.TauxSélection.QualifVsConcours"=list(
-    "nom"="kpi.MCF.TauxSélection.QualifVsConcours",
-    "titre"="Equilibre de la sélection qualification/concours à l'entrée dans la carrière d'enseignant-chercheur",
-    "lab"="Taux d'équilibre",
-    "percentlab" = TRUE,
-    "def"="nombre de qualifiés évincés par le concours par le nombre de candidats évincés par la qualification et le concours.",
-    "desc"="Ce taux mesure la part relative de la qualification et du concours dans la sélection
-à l'entrée de la carrière d'enseignant-chercheur : à 50%, qualification et concours 
-ont la même part ; plus le taux est élevé, plus le concours occupe une grande part.
-"),
+#   "kpi.MCF.TauxSélection.QualifVsConcours"=list(
+#     "nom"="kpi.MCF.TauxSélection.QualifVsConcours",
+#     "titre"="Equilibre de la sélection qualification/concours à l'entrée dans la carrière d'enseignant-chercheur",
+#     "lab"="Taux d'équilibre",
+#     "percentlab" = TRUE,
+#     "def"="nombre de qualifiés évincés par le concours par le nombre de candidats évincés par la qualification et le concours.",
+#     "desc"="Ce taux mesure la part relative de la qualification et du concours dans la sélection
+# à l'entrée de la carrière d'enseignant-chercheur : à 50%, qualification et concours 
+# ont la même part ; plus le taux est élevé, plus le concours occupe une grande part.
+# "),
   
   
   "kpi.PériodeRenouvellement"=list(
@@ -118,9 +129,9 @@ ont la même part ; plus le taux est élevé, plus le concours occupe une grande
     "desc"="Cette période mesure le nombre d'années nécessaires au renouvellement de la 
 totalité des effectifs actuels, au rythme de recrutement actuel.
 
-Un seuil peut être grossièrement défini autour de 29 ans, correspondant à la 
+Un seuil peut être grossièrement défini autour de 28 ans, correspondant à la 
 différence entre l'âge moyen de recrutement des MCF 
-(34 ans)
+(35 ans)
 et l'âge moyen de départ à la retraite 
 (63 ans).
 En dessous, le renouvellement se fait plus vite que de nécessaire pour conserver 
