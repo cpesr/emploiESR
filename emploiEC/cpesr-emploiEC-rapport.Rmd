@@ -490,6 +490,7 @@ for (s in 1:12) {
   gd.lab <- cnu.gd[s,"GrandeDisciplineCNU"]
   groupe <- cnu.gd[s,"GroupeCNU.ID"]
   groupe.lab <- cnu.gd[s,"GroupeCNU"]
+  sections <- cnu.sections %>% filter(groupe == GroupeCNU.ID) %>% pull(SectionCNU.ID) %>% range() %>% paste(collapse = " à ")
 
 cat(sep = '',"
 :::::: {.datapage data-latex='[Groupes de ", gd.lab, " (",gd,")]'} 
@@ -497,6 +498,7 @@ cat(sep = '',"
 ::: {.datapagecom data-latex=''}
 \\section[Groupe ",groupe," — ",groupe.lab,"]{Groupe ",groupe,"}
 \\subsection*{",groupe.lab,"}
+Sections ",sections,"
 \\vspace{1cm}
 \\footnotesize
 \\subsubsection*{Année de référence : ",année.ref,"}
