@@ -36,7 +36,7 @@ n'est pas traité dans ce document.
 - Données originales :
   - [Fiches démographiques du CNU](https://www.enseignementsup-recherche.gouv.fr/fr/fiches-demographiques-des-sections-du-conseil-national-des-universites-cnu-83047)
   - [Bilans de campagne de recrutement](https://www.enseignementsup-recherche.gouv.fr/cid118435/personnels-enseignants-du-superieur-bilans-et-statistiques.html#recrutement)
-  - [Galaxie](https://www.galaxie.enseignementsup-recherche.gouv.fr/ensup/ListesPostesPublies/Emplois_publies_TrieParCorps.html)
+  - [Galaxie](https://www.galaxie.enseignementsup-recherche.gouv.fr/ensup/ListesPostesPublies/Emplois_publies_TrieParCorps.html), [Odyssée](https://odyssee.enseignementsup-recherche.gouv.fr/)^[Les auteurs tiennent à remercier vivement [Rémy Grünblatt](https://social.sciences.re/@RGrunblatt) pour son interface https://sciences.re/postes/]
 
 - Données agrégées : 
   - [cpesr-emplois-ec.csv](https://github.com/cpesr/emploiESR/tree/main/data/cpesr-emplois-ec.csv)
@@ -44,7 +44,8 @@ n'est pas traité dans ce document.
 - Autres données :
   - [Les enseignants titulaires dans les établissements publics de l'ESR](https://data.enseignementsup-recherche.gouv.fr/explore/dataset/fr-esr-enseignants-titulaires-esr-public/export/?flg=fr&disjunctive.annee)
   - [Statistiques sur les effectifs d'étudiants inscrits](https://data.enseignementsup-recherche.gouv.fr/explore/dataset/fr-esr-statistiques-sur-les-effectifs-d-etudiants-inscrits-par-etablissement-hcp/)
-
+  - [Effectifs d'étudiants inscrits dans les établissements et les formations de l'enseignement supérieur (données agrégeables)](https://data.enseignementsup-recherche.gouv.fr/explore/dataset/fr-esr-atlas_regional-effectifs-d-etudiants-inscrits_agregeables)
+  
 ## Acquisition et traitement des données
 
 1. Acquisition manuelle d'un sous-ensemble des données provenant des `fiches démographiques du CNU` ;
@@ -54,11 +55,9 @@ n'est pas traité dans ce document.
 1. Acquisition automatisée des données provenant des `fiches démographiques du CNU` par le script [cnu-excavator](https://github.com/cpesr/emploiESR/tree/main/utils/cnu-excavator), pour les années 2013, 2015 et 2021, des tableaux :
     + `3.1 - Qualification aux fonctions d'enseignant-chercheur` ;
     + `3.2 - Recrutement des enseignants-chercheurs` ;
-1. Acquisition automatisée données provenant des postes en ligne sur `Galaxie` par le script [galaxie-excavator](https://github.com/cpesr/emploiESR/tree/main/utils/galaxie-excavator), pour les années suivantes :
+1. Acquisition automatisée données provenant des postes en ligne sur `Galaxie` par les scripts [galaxie-excavator](https://github.com/cpesr/emploiESR/tree/main/utils/galaxie-excavator) et [odysee-excavator](https://github.com/cpesr/emploiESR/tree/main/utils/odyssee-excavator), pour les années suivantes :
     + Ces données sont marquées comme `temporaires`.
 1. Correction des erreurs détectées :
-    + Inversion du nombre de candidats en 2019 entre les groupes Pharma. et ST ;
-    + Erreur manifeste dans le nombre de candidats en 2018 pour le groupe 10 ;
     + Changement de méthodologie pour les candidats à la qualification entre les fiches 2013 (candidatures totales) et 2015 (candidatures recevables seulement) :
         - Calcul d'un ratio moyen candidatures recevables / candidatures sur les années 2011 à 2013, pour chaque section indépendamment ;
         - Application de ce ratio aux données de la fiche 2013 (donc pour les années 2009 et 2010, les suivantes étant dans la fiche 2015) ;

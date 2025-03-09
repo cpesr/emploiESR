@@ -36,6 +36,7 @@ plot_evolution_EC <- function(périm="Ensemble") {
     mutate(val = round(val)) %>%
     mutate(Série = factor(Série,labels = c("Evolution nécessaire", "Evolution réelle"))) %>%
     mutate(nudge = ifelse(val >= 0,-0.2,1.2)) %>%
+    mutate(val = ifelse(Série == "Evolution réelle" & Année == 2017,NA,val)) %>%
     ggplot(aes(x=Année,y=val,fill=Série)) + 
     geom_col(position="dodge") + 
     geom_text(aes(label=val, vjust = nudge), position = position_dodge(width = .9)) +
@@ -44,7 +45,7 @@ plot_evolution_EC <- function(périm="Ensemble") {
     xlab("") + ylab("Evolution annuelle des effectifs EC") +
     scale_y_continuous(breaks = seq(0,12500,2500))
 }
-plot_evolution_EC() 
+# plot_evolution_EC() 
 
 p_contexte.evol <- plot_evolution_EC() 
 p_contexte.evol.disc <- plot_evolution_EC(périm="Grande discipline") 

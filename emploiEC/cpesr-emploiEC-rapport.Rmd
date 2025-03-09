@@ -20,7 +20,7 @@ classoption: landscape, legalpaper
 knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message=FALSE)
 knitr::opts_chunk$set(fig.width = 10, fig.height = 7.5, out.width = "100%", fig.align = "center")
 knitr::opts_chunk$set(dev = "cairo_pdf", pdf.options(encoding = "CP1250"))
-knitr::opts_chunk$set(cache=FALSE)
+knitr::opts_chunk$set(cache=TRUE)
 
 library(kableExtra)
 library(tidyverse)
@@ -55,7 +55,7 @@ année.ref <- emploisEC %>% filter(Données == "Consolidées") %>% tail(n = 1) %
 ```
 
 
-## Avant-propos {-}
+## Synthèse {-}
 
 
 ```{=latex}
@@ -95,6 +95,10 @@ année.ref <- emploisEC %>% filter(Données == "Consolidées") %>% tail(n = 1) %
 
 
 ## Méthodologie
+
+```{=latex}
+\footnotesize
+```
 
 ```{r, child="emploiEC-methodologie.md"}
 ```
@@ -160,9 +164,9 @@ plot_emplois_long()  + theme(legend.position = "top")
 
 ::: {.datapageviz data-latex=""}
 ```{r contexte.ec.etu}
-l <- get_legend(p_contexte_ec +
+l <- cowplot::get_legend(p_contexte_ec +
                   guides(color = guide_legend(nrow = 1)) +
-                  theme(legend.position = "bottom", legend.direction = "horizontal"))
+                  theme(legend.position = "right", legend.direction = "horizontal"))
 
 cowplot::plot_grid(ncol = 1, rel_heights = c(1,10), l,
   cowplot::plot_grid(ncol = 2, 
@@ -190,11 +194,11 @@ cowplot::plot_grid(ncol = 1, rel_heights = c(1,10), l,
 ```{r contexte.te}
 l1 <- get_legend(p_contexte_te +
                   guides(color = guide_legend(nrow = 1)) +
-                  theme(legend.position = "bottom", legend.direction = "horizontal"))
+                  theme(legend.position = "right", legend.direction = "horizontal"))
 
 l2 <- get_legend(p_contexte_ec.etu.te +
                   guides(color = guide_legend(nrow = 1)) +
-                  theme(legend.position = "bottom", legend.direction = "horizontal"))
+                  theme(legend.position = "right", legend.direction = "horizontal"))
 
 
 cowplot::plot_grid(ncol = 1, rel_heights = c(1,5,1,5), 
@@ -274,7 +278,7 @@ p4 <- plot_series(séries.MCF, séries.MCF.lab, périm="Grande discipline",norm=
 
 l <- get_legend(p1 +
                   guides(color = guide_legend(nrow = 1)) +
-                  theme(legend.position = "bottom", legend.direction = "horizontal"))
+                  theme(legend.position = "right", legend.direction = "horizontal"))
 
 cowplot::plot_grid(ncol = 1, rel_heights = c(1,10), l,
   cowplot::plot_grid(ncol = 2, 
@@ -456,8 +460,8 @@ plot_groupes <- function(groupe,gd) {
                    sizemult = 0.5,
                    zeroing = TRUE)  + theme_rapport_small()
 
-  p_legend1 <- get_legend(p_séries + theme(legend.position = "top", legend.direction = "horizontal"))
-  p_legend2 <- get_legend(p_metriques + theme(legend.position = "top", legend.direction = "horizontal", legend.spacing.x = unit(0.3, "cm")))
+  p_legend1 <- get_legend(p_séries + theme(legend.position = "right", legend.direction = "horizontal"))
+  p_legend2 <- get_legend(p_metriques + theme(legend.position = "right", legend.direction = "horizontal", legend.spacing.x = unit(0.3, "cm")))
   
 
         
@@ -605,8 +609,8 @@ plot_sections <- function(section,groupe,gd) {
                    sizemult = 0.5,
                    zeroing = FALSE)  + theme_rapport_small()
 
-  p_legend1 <- get_legend(p_séries + theme(legend.position = "top", legend.direction = "horizontal"))
-  p_legend2 <- get_legend(p_metriques + theme(legend.position = "top", legend.direction = "horizontal", legend.spacing.x = unit(0.3, "cm")))
+  p_legend1 <- get_legend(p_séries + theme(legend.position = "right", legend.direction = "horizontal"))
+  p_legend2 <- get_legend(p_metriques + theme(legend.position = "right", legend.direction = "horizontal", legend.spacing.x = unit(0.3, "cm")))
   
 
         

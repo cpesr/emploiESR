@@ -108,7 +108,7 @@ ens %>% spoiler_table("ens", trim=Inf)
 ### Etudiants
 
 ```{r load.etu, results='asis'}
-etu <- read.csv2("data/fr-esr-statistiques-sur-les-effectifs-d-etudiants-inscrits-par-etablissement-hcp.csv") %>%
+etuold <- read.csv2("data/fr-esr-statistiques-sur-les-effectifs-d-etudiants-inscrits-par-etablissement-hcp.csv") %>%
   filter(Attention == "Sans double compte des établissements-composantes pour les EPE") %>%
   #filter(Type.d.établissement == "Université" ) %>%
   transmute(
@@ -129,6 +129,20 @@ etu <- read.csv2("data/fr-esr-statistiques-sur-les-effectifs-d-etudiants-inscrit
     Périmètre=ifelse(Périmètre.ID == "Ensemble", "Ensemble","Grande discipline")) %>%
   filter(Année > 2009) %>%
   filter(Année <= max(ens$Année))
+
+etunew <- read.csv2("data/fr-esr-atlas_regional-effectifs-d-etudiants-inscrits-detail_etablissements.csv") %>%
+  filter(catégorie.d.établissement %in% c("Universités","Autre établissements d'enseignement universitaire"), secteur.d.établissement == "Public") %>% 
+  rename(Année = Rentrée.universitaire) %>%
+  summarise(Effectif.ETU = sum(nombre.total.d.étudiants.inscrits.hors.doubles.inscriptions.université.CPGE), .by=Année) %>%
+  mutate(
+    Périmètre = "Ensemble",
+    Périmètre.ID = "Ensemble")
+
+etu <- bind_rows(
+  etuold %>% filter(Périmètre != "Ensemble"),
+  etuold %>% filter(Périmètre == "Ensemble", Année < min(etunew$Année)),
+  etunew) %>%
+  arrange(Périmètre,Périmètre.ID,Année)
 
 etu %>% spoiler_table("etu", trim=Inf)
 ```
