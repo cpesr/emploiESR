@@ -1,7 +1,7 @@
 EmploiEC: update data
 ================
 CPESR
-2025-03-08
+2025-03-12
 
 ## Chargement des données sources
 
@@ -3473,82 +3473,82 @@ odyssee
 
 | Année | Périmètre | Périmètre.ID | Concours.Postes.ATER | Concours.Postes.MCF | Concours.Postes.MCMU | Concours.Postes.PR | Concours.Postes.PRMU |
 |---:|:---|:---|---:|---:|---:|---:|---:|
-| 2025 | Ensemble | Ensemble | 677 | 1376 | 5 | 571 | 3 |
-| 2025 | Grande discipline | DEG | 141 | 261 | 1 | 56 | NA |
-| 2025 | Grande discipline | LLASHS | 276 | 496 | 1 | 213 | 1 |
+| 2025 | Ensemble | Ensemble | 787 | 1384 | 5 | 574 | 3 |
+| 2025 | Grande discipline | DEG | 161 | 266 | 1 | 57 | NA |
+| 2025 | Grande discipline | LLASHS | 326 | 498 | 1 | 213 | 1 |
 | 2025 | Grande discipline | Pharma | 8 | 25 | NA | 11 | NA |
-| 2025 | Grande discipline | ST | 252 | 576 | 3 | 289 | 2 |
+| 2025 | Grande discipline | ST | 292 | 577 | 3 | 291 | 2 |
 | 2025 | Grande discipline | Santé | NA | 15 | NA | NA | NA |
 | 2025 | Grande discipline | NA | NA | 3 | NA | 2 | NA |
-| 2025 | Groupe | 1 | 82 | 105 | 1 | 21 | NA |
-| 2025 | Groupe | 10 | 59 | 107 | 1 | 43 | 2 |
+| 2025 | Groupe | 1 | 93 | 108 | 1 | 22 | NA |
+| 2025 | Groupe | 10 | 69 | 107 | 1 | 43 | 2 |
 | 2025 | Groupe | 11 | 8 | 25 | NA | 11 | NA |
-| 2025 | Groupe | 12 | 42 | 108 | NA | 25 | NA |
-| 2025 | Groupe | 2 | 59 | 156 | NA | 35 | NA |
-| 2025 | Groupe | 3 | 99 | 183 | NA | 69 | NA |
-| 2025 | Groupe | 4 | 134 | 204 | 1 | 119 | 1 |
-| 2025 | Groupe | 5 | 78 | 191 | NA | 88 | NA |
-| 2025 | Groupe | 6 | 9 | 45 | NA | 30 | NA |
-| 2025 | Groupe | 7 | 20 | 50 | 1 | 34 | NA |
-| 2025 | Groupe | 8 | 18 | 19 | 1 | 19 | NA |
-| 2025 | Groupe | 9 | 68 | 164 | NA | 75 | NA |
+| 2025 | Groupe | 12 | 53 | 108 | NA | 25 | NA |
+| 2025 | Groupe | 2 | 68 | 158 | NA | 35 | NA |
+| 2025 | Groupe | 3 | 113 | 184 | NA | 69 | NA |
+| 2025 | Groupe | 4 | 159 | 205 | 1 | 119 | 1 |
+| 2025 | Groupe | 5 | 93 | 192 | NA | 89 | NA |
+| 2025 | Groupe | 6 | 10 | 45 | NA | 30 | NA |
+| 2025 | Groupe | 7 | 23 | 50 | 1 | 34 | NA |
+| 2025 | Groupe | 8 | 20 | 19 | 1 | 19 | NA |
+| 2025 | Groupe | 9 | 77 | 164 | NA | 76 | NA |
 | 2025 | Groupe | Théologie | 1 | 1 | NA | NA | NA |
 | 2025 | Groupe | Santé | NA | 15 | NA | NA | NA |
 | 2025 | Groupe | NA | NA | 3 | NA | 2 | NA |
-| 2025 | Section | 1 | 34 | 62 | NA | 11 | NA |
+| 2025 | Section | 1 | 39 | 63 | NA | 11 | NA |
 | 2025 | Section | 10 | 6 | 5 | NA | 5 | NA |
-| 2025 | Section | 11 | 28 | 49 | NA | 14 | NA |
+| 2025 | Section | 11 | 36 | 49 | NA | 14 | NA |
 | 2025 | Section | 12 | 6 | 8 | NA | 2 | NA |
 | 2025 | Section | 13 | 5 | 5 | NA | NA | NA |
-| 2025 | Section | 14 | 19 | 22 | NA | 6 | NA |
+| 2025 | Section | 14 | 23 | 23 | NA | 6 | NA |
 | 2025 | Section | 15 | 9 | 21 | NA | 8 | NA |
-| 2025 | Section | 16 | 34 | 45 | NA | 21 | NA |
-| 2025 | Section | 17 | 8 | 12 | NA | 11 | NA |
-| 2025 | Section | 18 | 19 | 30 | NA | 14 | NA |
-| 2025 | Section | 19 | 17 | 24 | NA | 18 | 1 |
-| 2025 | Section | 2 | 25 | 26 | 1 | 6 | NA |
-| 2025 | Section | 20 | 3 | 3 | 1 | 1 | NA |
-| 2025 | Section | 21 | 19 | 19 | NA | 13 | NA |
-| 2025 | Section | 22 | 20 | 34 | NA | 21 | NA |
-| 2025 | Section | 23 | 11 | 26 | NA | 18 | NA |
-| 2025 | Section | 24 | 3 | 11 | NA | 2 | NA |
-| 2025 | Section | 25 | 4 | 21 | NA | 23 | NA |
-| 2025 | Section | 26 | 27 | 48 | NA | 28 | NA |
-| 2025 | Section | 27 | 47 | 122 | NA | 37 | NA |
-| 2025 | Section | 28 | 6 | 23 | NA | 15 | NA |
+| 2025 | Section | 16 | 41 | 45 | NA | 21 | NA |
+| 2025 | Section | 17 | 9 | 12 | NA | 11 | NA |
+| 2025 | Section | 18 | 21 | 31 | NA | 14 | NA |
+| 2025 | Section | 19 | 21 | 24 | NA | 18 | 1 |
+| 2025 | Section | 2 | 28 | 28 | 1 | 7 | NA |
+| 2025 | Section | 20 | 5 | 3 | 1 | 1 | NA |
+| 2025 | Section | 21 | 20 | 19 | NA | 13 | NA |
+| 2025 | Section | 22 | 24 | 34 | NA | 21 | NA |
+| 2025 | Section | 23 | 13 | 26 | NA | 18 | NA |
+| 2025 | Section | 24 | 5 | 11 | NA | 2 | NA |
+| 2025 | Section | 25 | 5 | 21 | NA | 23 | NA |
+| 2025 | Section | 26 | 33 | 48 | NA | 29 | NA |
+| 2025 | Section | 27 | 55 | 123 | NA | 37 | NA |
+| 2025 | Section | 28 | 7 | 23 | NA | 15 | NA |
 | 2025 | Section | 29 | 2 | 13 | NA | 7 | NA |
-| 2025 | Section | 3 | 9 | 3 | NA | 2 | NA |
+| 2025 | Section | 3 | 11 | 3 | NA | 2 | NA |
 | 2025 | Section | 30 | 1 | 9 | NA | 8 | NA |
-| 2025 | Section | 31 | 5 | 19 | NA | 11 | NA |
+| 2025 | Section | 31 | 7 | 19 | NA | 11 | NA |
 | 2025 | Section | 32 | 9 | 17 | 1 | 16 | NA |
-| 2025 | Section | 33 | 6 | 14 | NA | 7 | NA |
-| 2025 | Section | 35 | 10 | 11 | NA | 16 | NA |
-| 2025 | Section | 36 | 5 | 2 | 1 | 1 | NA |
+| 2025 | Section | 33 | 7 | 14 | NA | 7 | NA |
+| 2025 | Section | 35 | 11 | 11 | NA | 16 | NA |
+| 2025 | Section | 36 | 6 | 2 | 1 | 1 | NA |
 | 2025 | Section | 37 | 3 | 3 | NA | 1 | NA |
-| 2025 | Section | 4 | 14 | 14 | NA | 2 | NA |
-| 2025 | Section | 5 | 31 | 59 | NA | 28 | NA |
-| 2025 | Section | 6 | 28 | 97 | NA | 7 | NA |
+| 2025 | Section | 4 | 15 | 14 | NA | 2 | NA |
+| 2025 | Section | 5 | 33 | 61 | NA | 28 | NA |
+| 2025 | Section | 6 | 35 | 97 | NA | 7 | NA |
 | 2025 | Section | 60 | 26 | 75 | NA | 32 | NA |
-| 2025 | Section | 61 | 21 | 37 | NA | 17 | NA |
+| 2025 | Section | 61 | 26 | 37 | NA | 18 | NA |
 | 2025 | Section | 62 | 7 | 21 | NA | 13 | NA |
-| 2025 | Section | 63 | 14 | 31 | NA | 13 | NA |
-| 2025 | Section | 64 | 11 | 29 | NA | 18 | NA |
+| 2025 | Section | 63 | 18 | 31 | NA | 13 | NA |
+| 2025 | Section | 64 | 17 | 29 | NA | 18 | NA |
 | 2025 | Section | 65 | 10 | 30 | NA | 5 | NA |
 | 2025 | Section | 66 | 7 | 20 | NA | 8 | NA |
-| 2025 | Section | 67 | 17 | 14 | 1 | 7 | 2 |
-| 2025 | Section | 68 | 10 | 9 | NA | 1 | NA |
+| 2025 | Section | 67 | 19 | 14 | 1 | 7 | 2 |
+| 2025 | Section | 68 | 12 | 9 | NA | 1 | NA |
 | 2025 | Section | 69 | 4 | 5 | NA | 4 | NA |
-| 2025 | Section | 7 | 14 | 36 | NA | 12 | NA |
-| 2025 | Section | 70 | 6 | 29 | NA | 11 | NA |
+| 2025 | Section | 7 | 15 | 36 | NA | 12 | NA |
+| 2025 | Section | 70 | 10 | 29 | NA | 11 | NA |
 | 2025 | Section | 71 | 18 | 47 | NA | 4 | NA |
 | 2025 | Section | 73 | 1 | NA | NA | 1 | NA |
-| 2025 | Section | 74 | 17 | 31 | NA | 8 | NA |
+| 2025 | Section | 74 | 24 | 31 | NA | 8 | NA |
 | 2025 | Section | 76 | 1 | NA | NA | NA | NA |
 | 2025 | Section | 8 | 3 | 7 | NA | 3 | NA |
 | 2025 | Section | 85 | 4 | 6 | NA | 4 | NA |
 | 2025 | Section | 86 | 2 | 10 | NA | 3 | NA |
 | 2025 | Section | 87 | 2 | 9 | NA | 4 | NA |
-| 2025 | Section | 9 | 9 | 30 | NA | 19 | NA |
+| 2025 | Section | 9 | 10 | 30 | NA | 19 | NA |
 | 2025 | Section | 34 | NA | 3 | NA | 1 | NA |
 | 2025 | Section | 72 | NA | 1 | NA | 1 | NA |
 | 2025 | Section | 77 | NA | 1 | NA | NA | NA |
@@ -3587,7 +3587,7 @@ emploisEC
 | Ensemble | Ensemble | Ensemble | 2022 | 394 | 0.317 | 269 | 0.286 | 7338 | 45.2 | 5342 | 0.452 | 607 | 2011 | 0.356 | 569 | 0.402 | 1351 | 8230 | 0.450 | 1270 | 0.520 | Consolidées | NA | NA | NA | CNU | 34296 | 20809 | 1638295 | 55105 | 3.363558 | NA | NA | 6.091784 | 0.1543135 | 6960 | 0.0599556 | 0.1730717 | 0.7279913 | 0.2377387 | 0.6710613 | 43.38976 |
 | Ensemble | Ensemble | Ensemble | 2023 | 361 | 0.285 | 247 | 0.263 | 7235 | 46.6 | 5358 | 0.463 | 631 | 1895 | 0.354 | 572 | 0.413 | 1567 | 8110 | 0.450 | 1436 | 0.460 | Consolidées | NA | NA | NA | CNU | 33890 | 21302 | 1645760 | 55192 | 3.353587 | NA | NA | 5.175495 | 0.1770654 | 6674 | 0.0835992 | 0.1984796 | 0.7405667 | 0.2680105 | 0.6763235 | 38.43454 |
 | Ensemble | Ensemble | Ensemble | 2024 | NA | NA | NA | NA | NA | NA | NA | NA | 693 | NA | NA | NA | NA | 1557 | NA | NA | NA | NA | Non consolidées | NA | NA | NA | Galaxie | 33890 | 21302 | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA |
-| Ensemble | Ensemble | Ensemble | 2025 | NA | NA | NA | NA | NA | NA | NA | NA | 571 | NA | NA | NA | NA | 1376 | NA | NA | NA | NA | Non consolidées | 677 | 5 | 3 | Odyssée | 33890 | 21302 | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA |
+| Ensemble | Ensemble | Ensemble | 2025 | NA | NA | NA | NA | NA | NA | NA | NA | 574 | NA | NA | NA | NA | 1384 | NA | NA | NA | NA | Non consolidées | 787 | 5 | 3 | Odyssée | 33890 | 21302 | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA |
 | Grande discipline | DEG | Droit éco gestion | 2009 | 33 | 0.280 | 6 | 0.333 | 1352 | 46.0 | 555 | 0.474 | 177 | 140 | 0.321 | 107 | 0.299 | 372 | 1095 | 0.472 | 330 | 0.476 | Consolidées | NA | NA | NA | CNU | NA | NA | NA | NA | NA | NA | NA | 2.943548 | 0.3013699 | 765 | 0.1129032 | 0.2440828 | 0.4105030 | 0.5945946 | 0.2201566 | NA |
 | Grande discipline | LLASHS | Lettres et sciences humaines | 2009 | 709 | 0.415 | 484 | 0.438 | 3767 | 53.3 | 2345 | 0.548 | 441 | 695 | 0.424 | 345 | 0.400 | 724 | 3985 | 0.553 | 687 | 0.553 | Consolidées | NA | NA | NA | CNU | NA | NA | NA | NA | NA | NA | NA | 5.504144 | 0.1723965 | 3298 | 0.0511050 | 0.1823732 | 0.6225113 | 0.2929638 | 0.5383117 | NA |
 | Grande discipline | Pharma | Pharmacie | 2009 | 63 | 0.436 | 25 | 0.600 | 514 | 56.7 | 378 | 0.556 | 22 | 34 | 0.324 | 19 | 0.474 | 70 | 382 | 0.521 | 66 | 0.606 | Consolidées | NA | NA | NA | CNU | NA | NA | NA | NA | NA | NA | NA | 5.457143 | 0.1727749 | 316 | 0.0571429 | 0.1284047 | 0.7354086 | 0.1746032 | 0.6964286 | NA |
@@ -3654,10 +3654,10 @@ emploisEC
 | Grande discipline | ST | Sciences et techniques | 2024 | NA | NA | NA | NA | NA | NA | NA | NA | 341 | NA | NA | NA | NA | 642 | NA | NA | NA | NA | Non consolidées | NA | NA | NA | Galaxie | 15449 | 8588 | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA |
 | Grande discipline | Santé | Santé | 2024 | NA | NA | NA | NA | NA | NA | NA | NA | 2 | NA | NA | NA | NA | 17 | NA | NA | NA | NA | Non consolidées | NA | NA | NA | Galaxie | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA |
 | Grande discipline | NA | NA | 2024 | NA | NA | NA | NA | NA | NA | NA | NA | 1 | NA | NA | NA | NA | 5 | NA | NA | NA | NA | Non consolidées | NA | NA | NA | Galaxie | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA |
-| Grande discipline | DEG | Droit éco gestion | 2025 | NA | NA | NA | NA | NA | NA | NA | NA | 56 | NA | NA | NA | NA | 261 | NA | NA | NA | NA | Non consolidées | 141 | 1 | NA | Odyssée | 5156 | 2688 | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA |
-| Grande discipline | LLASHS | Lettres et sciences humaines | 2025 | NA | NA | NA | NA | NA | NA | NA | NA | 213 | NA | NA | NA | NA | 496 | NA | NA | NA | NA | Non consolidées | 276 | 1 | 1 | Odyssée | 9967 | 4515 | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA |
+| Grande discipline | DEG | Droit éco gestion | 2025 | NA | NA | NA | NA | NA | NA | NA | NA | 57 | NA | NA | NA | NA | 266 | NA | NA | NA | NA | Non consolidées | 161 | 1 | NA | Odyssée | 5156 | 2688 | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA |
+| Grande discipline | LLASHS | Lettres et sciences humaines | 2025 | NA | NA | NA | NA | NA | NA | NA | NA | 213 | NA | NA | NA | NA | 498 | NA | NA | NA | NA | Non consolidées | 326 | 1 | 1 | Odyssée | 9967 | 4515 | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA |
 | Grande discipline | Pharma | Pharmacie | 2025 | NA | NA | NA | NA | NA | NA | NA | NA | 11 | NA | NA | NA | NA | 25 | NA | NA | NA | NA | Non consolidées | 8 | NA | NA | Odyssée | 1103 | 614 | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA |
-| Grande discipline | ST | Sciences et techniques | 2025 | NA | NA | NA | NA | NA | NA | NA | NA | 289 | NA | NA | NA | NA | 576 | NA | NA | NA | NA | Non consolidées | 252 | 3 | 2 | Odyssée | 15449 | 8588 | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA |
+| Grande discipline | ST | Sciences et techniques | 2025 | NA | NA | NA | NA | NA | NA | NA | NA | 291 | NA | NA | NA | NA | 577 | NA | NA | NA | NA | Non consolidées | 292 | 3 | 2 | Odyssée | 15449 | 8588 | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA |
 | Grande discipline | Santé | Santé | 2025 | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | 15 | NA | NA | NA | NA | Non consolidées | NA | NA | NA | Odyssée | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA |
 | Grande discipline | NA | NA | 2025 | NA | NA | NA | NA | NA | NA | NA | NA | 2 | NA | NA | NA | NA | 3 | NA | NA | NA | NA | Non consolidées | NA | NA | NA | Odyssée | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA |
 | Groupe | 1 | Droit et science politique | 2009 | 8 | 0.190 | 2 | 0.500 | 772 | 47.7 | 265 | 0.434 | 86 | 75 | 0.347 | 56 | 0.321 | 149 | 607 | 0.460 | 140 | 0.400 | Consolidées | NA | NA | NA | CNU | NA | NA | NA | NA | NA | NA | NA | 4.073825 | 0.2306425 | 467 | 0.0604027 | 0.1813472 | 0.3432642 | 0.5283019 | 0.1977848 | NA |
@@ -3870,18 +3870,18 @@ emploisEC
 | Groupe | Santé | Autres santé(mono-appartenants) | 2024 | NA | NA | NA | NA | NA | NA | NA | NA | 2 | NA | NA | NA | NA | 17 | NA | NA | NA | NA | Non consolidées | NA | NA | NA | Galaxie | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA |
 | Groupe | Théologie | Théologie | 2024 | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | 3 | NA | NA | NA | NA | Non consolidées | NA | NA | NA | Galaxie | 23 | 22 | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA |
 | Groupe | NA | NA | 2024 | NA | NA | NA | NA | NA | NA | NA | NA | 1 | NA | NA | NA | NA | 5 | NA | NA | NA | NA | Non consolidées | NA | NA | NA | Galaxie | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA |
-| Groupe | 1 | Droit et science politique | 2025 | NA | NA | NA | NA | NA | NA | NA | NA | 21 | NA | NA | NA | NA | 105 | NA | NA | NA | NA | Non consolidées | 82 | 1 | NA | Odyssée | 2402 | 1474 | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA |
-| Groupe | 10 | Biologie et biochimie | 2025 | NA | NA | NA | NA | NA | NA | NA | NA | 43 | NA | NA | NA | NA | 107 | NA | NA | NA | NA | Non consolidées | 59 | 1 | 2 | Odyssée | 2969 | 1409 | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA |
+| Groupe | 1 | Droit et science politique | 2025 | NA | NA | NA | NA | NA | NA | NA | NA | 22 | NA | NA | NA | NA | 108 | NA | NA | NA | NA | Non consolidées | 93 | 1 | NA | Odyssée | 2402 | 1474 | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA |
+| Groupe | 10 | Biologie et biochimie | 2025 | NA | NA | NA | NA | NA | NA | NA | NA | 43 | NA | NA | NA | NA | 107 | NA | NA | NA | NA | Non consolidées | 69 | 1 | 2 | Odyssée | 2969 | 1409 | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA |
 | Groupe | 11 | Pharmacie | 2025 | NA | NA | NA | NA | NA | NA | NA | NA | 11 | NA | NA | NA | NA | 25 | NA | NA | NA | NA | Non consolidées | 8 | NA | NA | Odyssée | 1103 | 614 | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA |
-| Groupe | 12 | Groupe interdisciplinaire et STAPS | 2025 | NA | NA | NA | NA | NA | NA | NA | NA | 25 | NA | NA | NA | NA | 108 | NA | NA | NA | NA | Non consolidées | 42 | NA | NA | Odyssée | 1856 | 681 | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA |
-| Groupe | 2 | Sciences économiques et de gestion | 2025 | NA | NA | NA | NA | NA | NA | NA | NA | 35 | NA | NA | NA | NA | 156 | NA | NA | NA | NA | Non consolidées | 59 | NA | NA | Odyssée | 2754 | 1214 | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA |
-| Groupe | 3 | Littératures et Langues | 2025 | NA | NA | NA | NA | NA | NA | NA | NA | 69 | NA | NA | NA | NA | 183 | NA | NA | NA | NA | Non consolidées | 99 | NA | NA | Odyssée | 3812 | 1620 | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA |
-| Groupe | 4 | Sciences humaines et Histoire-Géographie | 2025 | NA | NA | NA | NA | NA | NA | NA | NA | 119 | NA | NA | NA | NA | 204 | NA | NA | NA | NA | Non consolidées | 134 | 1 | 1 | Odyssée | 4276 | 2192 | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA |
-| Groupe | 5 | Mathématiques et Informatique | 2025 | NA | NA | NA | NA | NA | NA | NA | NA | 88 | NA | NA | NA | NA | 191 | NA | NA | NA | NA | Non consolidées | 78 | NA | NA | Odyssée | 4139 | 2207 | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA |
-| Groupe | 6 | Physique | 2025 | NA | NA | NA | NA | NA | NA | NA | NA | 30 | NA | NA | NA | NA | 45 | NA | NA | NA | NA | Non consolidées | 9 | NA | NA | Odyssée | 1331 | 946 | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA |
-| Groupe | 7 | Chimie | 2025 | NA | NA | NA | NA | NA | NA | NA | NA | 34 | NA | NA | NA | NA | 50 | NA | NA | NA | NA | Non consolidées | 20 | 1 | NA | Odyssée | 1913 | 1137 | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA |
-| Groupe | 8 | Sciences de la Terre | 2025 | NA | NA | NA | NA | NA | NA | NA | NA | 19 | NA | NA | NA | NA | 19 | NA | NA | NA | NA | Non consolidées | 18 | 1 | NA | Odyssée | 806 | 454 | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA |
-| Groupe | 9 | Mécanique, génie mécanique, génie informatique, énergétique | 2025 | NA | NA | NA | NA | NA | NA | NA | NA | 75 | NA | NA | NA | NA | 164 | NA | NA | NA | NA | Non consolidées | 68 | NA | NA | Odyssée | 4291 | 2435 | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA |
+| Groupe | 12 | Groupe interdisciplinaire et STAPS | 2025 | NA | NA | NA | NA | NA | NA | NA | NA | 25 | NA | NA | NA | NA | 108 | NA | NA | NA | NA | Non consolidées | 53 | NA | NA | Odyssée | 1856 | 681 | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA |
+| Groupe | 2 | Sciences économiques et de gestion | 2025 | NA | NA | NA | NA | NA | NA | NA | NA | 35 | NA | NA | NA | NA | 158 | NA | NA | NA | NA | Non consolidées | 68 | NA | NA | Odyssée | 2754 | 1214 | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA |
+| Groupe | 3 | Littératures et Langues | 2025 | NA | NA | NA | NA | NA | NA | NA | NA | 69 | NA | NA | NA | NA | 184 | NA | NA | NA | NA | Non consolidées | 113 | NA | NA | Odyssée | 3812 | 1620 | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA |
+| Groupe | 4 | Sciences humaines et Histoire-Géographie | 2025 | NA | NA | NA | NA | NA | NA | NA | NA | 119 | NA | NA | NA | NA | 205 | NA | NA | NA | NA | Non consolidées | 159 | 1 | 1 | Odyssée | 4276 | 2192 | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA |
+| Groupe | 5 | Mathématiques et Informatique | 2025 | NA | NA | NA | NA | NA | NA | NA | NA | 89 | NA | NA | NA | NA | 192 | NA | NA | NA | NA | Non consolidées | 93 | NA | NA | Odyssée | 4139 | 2207 | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA |
+| Groupe | 6 | Physique | 2025 | NA | NA | NA | NA | NA | NA | NA | NA | 30 | NA | NA | NA | NA | 45 | NA | NA | NA | NA | Non consolidées | 10 | NA | NA | Odyssée | 1331 | 946 | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA |
+| Groupe | 7 | Chimie | 2025 | NA | NA | NA | NA | NA | NA | NA | NA | 34 | NA | NA | NA | NA | 50 | NA | NA | NA | NA | Non consolidées | 23 | 1 | NA | Odyssée | 1913 | 1137 | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA |
+| Groupe | 8 | Sciences de la Terre | 2025 | NA | NA | NA | NA | NA | NA | NA | NA | 19 | NA | NA | NA | NA | 19 | NA | NA | NA | NA | Non consolidées | 20 | 1 | NA | Odyssée | 806 | 454 | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA |
+| Groupe | 9 | Mécanique, génie mécanique, génie informatique, énergétique | 2025 | NA | NA | NA | NA | NA | NA | NA | NA | 76 | NA | NA | NA | NA | 164 | NA | NA | NA | NA | Non consolidées | 77 | NA | NA | Odyssée | 4291 | 2435 | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA |
 | Groupe | Santé | Autres santé(mono-appartenants) | 2025 | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | 15 | NA | NA | NA | NA | Non consolidées | NA | NA | NA | Odyssée | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA |
 | Groupe | Théologie | Théologie | 2025 | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | 1 | NA | NA | NA | NA | Non consolidées | 1 | NA | NA | Odyssée | 23 | 22 | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA |
 | Groupe | NA | NA | 2025 | NA | NA | NA | NA | NA | NA | NA | NA | 2 | NA | NA | NA | NA | 3 | NA | NA | NA | NA | Non consolidées | NA | NA | NA | Odyssée | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA |
@@ -4798,63 +4798,63 @@ emploisEC
 | Section | 90 | NA | 2024 | NA | NA | NA | NA | NA | NA | NA | NA | 1 | NA | NA | NA | NA | 5 | NA | NA | NA | NA | Non consolidées | NA | NA | NA | Galaxie | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA |
 | Section | 91 | Sciences de la rééducation et de réadaptation | 2024 | NA | NA | NA | NA | NA | NA | NA | NA | 1 | NA | NA | NA | NA | 8 | NA | NA | NA | NA | Non consolidées | NA | NA | NA | Galaxie | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA |
 | Section | 92 | Sciences infirmières | 2024 | NA | NA | NA | NA | NA | NA | NA | NA | 1 | NA | NA | NA | NA | 9 | NA | NA | NA | NA | Non consolidées | NA | NA | NA | Galaxie | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA |
-| Section | 1 | Droit privé et sciences criminelles | 2025 | NA | NA | NA | NA | NA | NA | NA | NA | 11 | NA | NA | NA | NA | 62 | NA | NA | NA | NA | Non consolidées | 34 | NA | NA | Odyssée | 1183 | 679 | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA |
+| Section | 1 | Droit privé et sciences criminelles | 2025 | NA | NA | NA | NA | NA | NA | NA | NA | 11 | NA | NA | NA | NA | 63 | NA | NA | NA | NA | Non consolidées | 39 | NA | NA | Odyssée | 1183 | 679 | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA |
 | Section | 10 | Littératures comparées | 2025 | NA | NA | NA | NA | NA | NA | NA | NA | 5 | NA | NA | NA | NA | 5 | NA | NA | NA | NA | Non consolidées | 6 | NA | NA | Odyssée | 118 | 82 | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA |
-| Section | 11 | Langues et littératures anglaises et anglo-saxonnes | 2025 | NA | NA | NA | NA | NA | NA | NA | NA | 14 | NA | NA | NA | NA | 49 | NA | NA | NA | NA | Non consolidées | 28 | NA | NA | Odyssée | 1151 | 413 | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA |
+| Section | 11 | Langues et littératures anglaises et anglo-saxonnes | 2025 | NA | NA | NA | NA | NA | NA | NA | NA | 14 | NA | NA | NA | NA | 49 | NA | NA | NA | NA | Non consolidées | 36 | NA | NA | Odyssée | 1151 | 413 | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA |
 | Section | 12 | Langues et littératures germaniques et scandinaves | 2025 | NA | NA | NA | NA | NA | NA | NA | NA | 2 | NA | NA | NA | NA | 8 | NA | NA | NA | NA | Non consolidées | 6 | NA | NA | Odyssée | 244 | 82 | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA |
 | Section | 13 | Langues et littératures slaves | 2025 | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | 5 | NA | NA | NA | NA | Non consolidées | 5 | NA | NA | Odyssée | 81 | 35 | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA |
-| Section | 14 | Langues et littératures romanes : espagnol, italien, portugais, autres langues romanes | 2025 | NA | NA | NA | NA | NA | NA | NA | NA | 6 | NA | NA | NA | NA | 22 | NA | NA | NA | NA | Non consolidées | 19 | NA | NA | Odyssée | 662 | 259 | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA |
+| Section | 14 | Langues et littératures romanes : espagnol, italien, portugais, autres langues romanes | 2025 | NA | NA | NA | NA | NA | NA | NA | NA | 6 | NA | NA | NA | NA | 23 | NA | NA | NA | NA | Non consolidées | 23 | NA | NA | Odyssée | 662 | 259 | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA |
 | Section | 15 | Langues et littératures arabes, chinoises, japonaises, hébraïques, d’autres domaines linguistiques | 2025 | NA | NA | NA | NA | NA | NA | NA | NA | 8 | NA | NA | NA | NA | 21 | NA | NA | NA | NA | Non consolidées | 9 | NA | NA | Odyssée | 320 | 106 | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA |
-| Section | 16 | Psychologie et Ergonomie | 2025 | NA | NA | NA | NA | NA | NA | NA | NA | 21 | NA | NA | NA | NA | 45 | NA | NA | NA | NA | Non consolidées | 34 | NA | NA | Odyssée | 931 | 462 | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA |
-| Section | 17 | Philosophie | 2025 | NA | NA | NA | NA | NA | NA | NA | NA | 11 | NA | NA | NA | NA | 12 | NA | NA | NA | NA | Non consolidées | 8 | NA | NA | Odyssée | 225 | 161 | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA |
-| Section | 18 | Architecture et Arts : plastiques, du spectacle, musique, musicologie, esthétique, sciences de l’art | 2025 | NA | NA | NA | NA | NA | NA | NA | NA | 14 | NA | NA | NA | NA | 30 | NA | NA | NA | NA | Non consolidées | 19 | NA | NA | Odyssée | 513 | 220 | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA |
-| Section | 19 | Sociologie, démographie | 2025 | NA | NA | NA | NA | NA | NA | NA | NA | 18 | NA | NA | NA | NA | 24 | NA | NA | NA | NA | Non consolidées | 17 | NA | 1 | Odyssée | 631 | 271 | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA |
-| Section | 2 | Droit public | 2025 | NA | NA | NA | NA | NA | NA | NA | NA | 6 | NA | NA | NA | NA | 26 | NA | NA | NA | NA | Non consolidées | 25 | 1 | NA | Odyssée | 785 | 534 | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA |
-| Section | 20 | Anthropologie biologique, ethnologie, préhistoire | 2025 | NA | NA | NA | NA | NA | NA | NA | NA | 1 | NA | NA | NA | NA | 3 | NA | NA | NA | NA | Non consolidées | 3 | 1 | NA | Odyssée | 139 | 77 | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA |
-| Section | 21 | Histoire et civilisations : histoire et archéologie des mondes anciens et des mondes médiévaux, de l’art | 2025 | NA | NA | NA | NA | NA | NA | NA | NA | 13 | NA | NA | NA | NA | 19 | NA | NA | NA | NA | Non consolidées | 19 | NA | NA | Odyssée | 452 | 262 | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA |
-| Section | 22 | Histoire et civilisations : histoire des mondes modernes, histoire du monde contemporain, de l’art, de la musique | 2025 | NA | NA | NA | NA | NA | NA | NA | NA | 21 | NA | NA | NA | NA | 34 | NA | NA | NA | NA | Non consolidées | 20 | NA | NA | Odyssée | 644 | 374 | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA |
-| Section | 23 | Géographie physique, humaine, économique et régionale | 2025 | NA | NA | NA | NA | NA | NA | NA | NA | 18 | NA | NA | NA | NA | 26 | NA | NA | NA | NA | Non consolidées | 11 | NA | NA | Odyssée | 577 | 272 | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA |
-| Section | 24 | Aménagement de l’espace, urbanisme | 2025 | NA | NA | NA | NA | NA | NA | NA | NA | 2 | NA | NA | NA | NA | 11 | NA | NA | NA | NA | Non consolidées | 3 | NA | NA | Odyssée | 164 | 93 | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA |
-| Section | 25 | Mathématiques | 2025 | NA | NA | NA | NA | NA | NA | NA | NA | 23 | NA | NA | NA | NA | 21 | NA | NA | NA | NA | Non consolidées | 4 | NA | NA | Odyssée | 770 | 467 | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA |
-| Section | 26 | Mathématiques appliquées et applications des mathématiques | 2025 | NA | NA | NA | NA | NA | NA | NA | NA | 28 | NA | NA | NA | NA | 48 | NA | NA | NA | NA | Non consolidées | 27 | NA | NA | Odyssée | 1137 | 651 | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA |
-| Section | 27 | Informatique | 2025 | NA | NA | NA | NA | NA | NA | NA | NA | 37 | NA | NA | NA | NA | 122 | NA | NA | NA | NA | Non consolidées | 47 | NA | NA | Odyssée | 2232 | 1089 | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA |
-| Section | 28 | Milieux denses et matériaux | 2025 | NA | NA | NA | NA | NA | NA | NA | NA | 15 | NA | NA | NA | NA | 23 | NA | NA | NA | NA | Non consolidées | 6 | NA | NA | Odyssée | 772 | 525 | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA |
+| Section | 16 | Psychologie et Ergonomie | 2025 | NA | NA | NA | NA | NA | NA | NA | NA | 21 | NA | NA | NA | NA | 45 | NA | NA | NA | NA | Non consolidées | 41 | NA | NA | Odyssée | 931 | 462 | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA |
+| Section | 17 | Philosophie | 2025 | NA | NA | NA | NA | NA | NA | NA | NA | 11 | NA | NA | NA | NA | 12 | NA | NA | NA | NA | Non consolidées | 9 | NA | NA | Odyssée | 225 | 161 | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA |
+| Section | 18 | Architecture et Arts : plastiques, du spectacle, musique, musicologie, esthétique, sciences de l’art | 2025 | NA | NA | NA | NA | NA | NA | NA | NA | 14 | NA | NA | NA | NA | 31 | NA | NA | NA | NA | Non consolidées | 21 | NA | NA | Odyssée | 513 | 220 | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA |
+| Section | 19 | Sociologie, démographie | 2025 | NA | NA | NA | NA | NA | NA | NA | NA | 18 | NA | NA | NA | NA | 24 | NA | NA | NA | NA | Non consolidées | 21 | NA | 1 | Odyssée | 631 | 271 | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA |
+| Section | 2 | Droit public | 2025 | NA | NA | NA | NA | NA | NA | NA | NA | 7 | NA | NA | NA | NA | 28 | NA | NA | NA | NA | Non consolidées | 28 | 1 | NA | Odyssée | 785 | 534 | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA |
+| Section | 20 | Anthropologie biologique, ethnologie, préhistoire | 2025 | NA | NA | NA | NA | NA | NA | NA | NA | 1 | NA | NA | NA | NA | 3 | NA | NA | NA | NA | Non consolidées | 5 | 1 | NA | Odyssée | 139 | 77 | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA |
+| Section | 21 | Histoire et civilisations : histoire et archéologie des mondes anciens et des mondes médiévaux, de l’art | 2025 | NA | NA | NA | NA | NA | NA | NA | NA | 13 | NA | NA | NA | NA | 19 | NA | NA | NA | NA | Non consolidées | 20 | NA | NA | Odyssée | 452 | 262 | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA |
+| Section | 22 | Histoire et civilisations : histoire des mondes modernes, histoire du monde contemporain, de l’art, de la musique | 2025 | NA | NA | NA | NA | NA | NA | NA | NA | 21 | NA | NA | NA | NA | 34 | NA | NA | NA | NA | Non consolidées | 24 | NA | NA | Odyssée | 644 | 374 | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA |
+| Section | 23 | Géographie physique, humaine, économique et régionale | 2025 | NA | NA | NA | NA | NA | NA | NA | NA | 18 | NA | NA | NA | NA | 26 | NA | NA | NA | NA | Non consolidées | 13 | NA | NA | Odyssée | 577 | 272 | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA |
+| Section | 24 | Aménagement de l’espace, urbanisme | 2025 | NA | NA | NA | NA | NA | NA | NA | NA | 2 | NA | NA | NA | NA | 11 | NA | NA | NA | NA | Non consolidées | 5 | NA | NA | Odyssée | 164 | 93 | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA |
+| Section | 25 | Mathématiques | 2025 | NA | NA | NA | NA | NA | NA | NA | NA | 23 | NA | NA | NA | NA | 21 | NA | NA | NA | NA | Non consolidées | 5 | NA | NA | Odyssée | 770 | 467 | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA |
+| Section | 26 | Mathématiques appliquées et applications des mathématiques | 2025 | NA | NA | NA | NA | NA | NA | NA | NA | 29 | NA | NA | NA | NA | 48 | NA | NA | NA | NA | Non consolidées | 33 | NA | NA | Odyssée | 1137 | 651 | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA |
+| Section | 27 | Informatique | 2025 | NA | NA | NA | NA | NA | NA | NA | NA | 37 | NA | NA | NA | NA | 123 | NA | NA | NA | NA | Non consolidées | 55 | NA | NA | Odyssée | 2232 | 1089 | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA |
+| Section | 28 | Milieux denses et matériaux | 2025 | NA | NA | NA | NA | NA | NA | NA | NA | 15 | NA | NA | NA | NA | 23 | NA | NA | NA | NA | Non consolidées | 7 | NA | NA | Odyssée | 772 | 525 | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA |
 | Section | 29 | Constituants élémentaires | 2025 | NA | NA | NA | NA | NA | NA | NA | NA | 7 | NA | NA | NA | NA | 13 | NA | NA | NA | NA | Non consolidées | 2 | NA | NA | Odyssée | 212 | 167 | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA |
-| Section | 3 | Histoire du droit et des institutions | 2025 | NA | NA | NA | NA | NA | NA | NA | NA | 2 | NA | NA | NA | NA | 3 | NA | NA | NA | NA | Non consolidées | 9 | NA | NA | Odyssée | 158 | 113 | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA |
+| Section | 3 | Histoire du droit et des institutions | 2025 | NA | NA | NA | NA | NA | NA | NA | NA | 2 | NA | NA | NA | NA | 3 | NA | NA | NA | NA | Non consolidées | 11 | NA | NA | Odyssée | 158 | 113 | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA |
 | Section | 30 | Milieux dilués et optique | 2025 | NA | NA | NA | NA | NA | NA | NA | NA | 8 | NA | NA | NA | NA | 9 | NA | NA | NA | NA | Non consolidées | 1 | NA | NA | Odyssée | 347 | 254 | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA |
-| Section | 31 | Chimie théorique, physique, analytique | 2025 | NA | NA | NA | NA | NA | NA | NA | NA | 11 | NA | NA | NA | NA | 19 | NA | NA | NA | NA | Non consolidées | 5 | NA | NA | Odyssée | 636 | 362 | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA |
+| Section | 31 | Chimie théorique, physique, analytique | 2025 | NA | NA | NA | NA | NA | NA | NA | NA | 11 | NA | NA | NA | NA | 19 | NA | NA | NA | NA | Non consolidées | 7 | NA | NA | Odyssée | 636 | 362 | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA |
 | Section | 32 | Chimie organique, inorganique, industrielle | 2025 | NA | NA | NA | NA | NA | NA | NA | NA | 16 | NA | NA | NA | NA | 17 | NA | NA | NA | NA | Non consolidées | 9 | 1 | NA | Odyssée | 761 | 421 | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA |
-| Section | 33 | Chimie des matériaux | 2025 | NA | NA | NA | NA | NA | NA | NA | NA | 7 | NA | NA | NA | NA | 14 | NA | NA | NA | NA | Non consolidées | 6 | NA | NA | Odyssée | 516 | 354 | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA |
+| Section | 33 | Chimie des matériaux | 2025 | NA | NA | NA | NA | NA | NA | NA | NA | 7 | NA | NA | NA | NA | 14 | NA | NA | NA | NA | Non consolidées | 7 | NA | NA | Odyssée | 516 | 354 | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA |
 | Section | 34 | Astronomie, astrophysique | 2025 | NA | NA | NA | NA | NA | NA | NA | NA | 1 | NA | NA | NA | NA | 3 | NA | NA | NA | NA | Non consolidées | NA | NA | NA | Odyssée | 105 | 82 | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA |
-| Section | 35 | Structure et évolution de la Terre et des autres planètes | 2025 | NA | NA | NA | NA | NA | NA | NA | NA | 16 | NA | NA | NA | NA | 11 | NA | NA | NA | NA | Non consolidées | 10 | NA | NA | Odyssée | 325 | 183 | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA |
-| Section | 36 | Terre solide : géodynamique des enveloppes supérieures, paléobiosphère | 2025 | NA | NA | NA | NA | NA | NA | NA | NA | 1 | NA | NA | NA | NA | 2 | NA | NA | NA | NA | Non consolidées | 5 | 1 | NA | Odyssée | 251 | 127 | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA |
+| Section | 35 | Structure et évolution de la Terre et des autres planètes | 2025 | NA | NA | NA | NA | NA | NA | NA | NA | 16 | NA | NA | NA | NA | 11 | NA | NA | NA | NA | Non consolidées | 11 | NA | NA | Odyssée | 325 | 183 | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA |
+| Section | 36 | Terre solide : géodynamique des enveloppes supérieures, paléobiosphère | 2025 | NA | NA | NA | NA | NA | NA | NA | NA | 1 | NA | NA | NA | NA | 2 | NA | NA | NA | NA | Non consolidées | 6 | 1 | NA | Odyssée | 251 | 127 | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA |
 | Section | 37 | Météorologie, océanographie physique et physique de l’environnement | 2025 | NA | NA | NA | NA | NA | NA | NA | NA | 1 | NA | NA | NA | NA | 3 | NA | NA | NA | NA | Non consolidées | 3 | NA | NA | Odyssée | 125 | 62 | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA |
-| Section | 4 | Science politique | 2025 | NA | NA | NA | NA | NA | NA | NA | NA | 2 | NA | NA | NA | NA | 14 | NA | NA | NA | NA | Non consolidées | 14 | NA | NA | Odyssée | 276 | 148 | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA |
-| Section | 5 | Sciences économiques | 2025 | NA | NA | NA | NA | NA | NA | NA | NA | 28 | NA | NA | NA | NA | 59 | NA | NA | NA | NA | Non consolidées | 31 | NA | NA | Odyssée | 1116 | 624 | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA |
-| Section | 6 | Sciences de gestion | 2025 | NA | NA | NA | NA | NA | NA | NA | NA | 7 | NA | NA | NA | NA | 97 | NA | NA | NA | NA | Non consolidées | 28 | NA | NA | Odyssée | 1638 | 590 | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA |
+| Section | 4 | Science politique | 2025 | NA | NA | NA | NA | NA | NA | NA | NA | 2 | NA | NA | NA | NA | 14 | NA | NA | NA | NA | Non consolidées | 15 | NA | NA | Odyssée | 276 | 148 | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA |
+| Section | 5 | Sciences économiques | 2025 | NA | NA | NA | NA | NA | NA | NA | NA | 28 | NA | NA | NA | NA | 61 | NA | NA | NA | NA | Non consolidées | 33 | NA | NA | Odyssée | 1116 | 624 | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA |
+| Section | 6 | Sciences de gestion | 2025 | NA | NA | NA | NA | NA | NA | NA | NA | 7 | NA | NA | NA | NA | 97 | NA | NA | NA | NA | Non consolidées | 35 | NA | NA | Odyssée | 1638 | 590 | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA |
 | Section | 60 | Mécanique, génie mécanique, génie civil | 2025 | NA | NA | NA | NA | NA | NA | NA | NA | 32 | NA | NA | NA | NA | 75 | NA | NA | NA | NA | Non consolidées | 26 | NA | NA | Odyssée | 1502 | 833 | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA |
-| Section | 61 | Génie informatique, automatique et traitement du signal | 2025 | NA | NA | NA | NA | NA | NA | NA | NA | 17 | NA | NA | NA | NA | 37 | NA | NA | NA | NA | Non consolidées | 21 | NA | NA | Odyssée | 1085 | 597 | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA |
+| Section | 61 | Génie informatique, automatique et traitement du signal | 2025 | NA | NA | NA | NA | NA | NA | NA | NA | 18 | NA | NA | NA | NA | 37 | NA | NA | NA | NA | Non consolidées | 26 | NA | NA | Odyssée | 1085 | 597 | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA |
 | Section | 62 | Énergétique, génie des procédés | 2025 | NA | NA | NA | NA | NA | NA | NA | NA | 13 | NA | NA | NA | NA | 21 | NA | NA | NA | NA | Non consolidées | 7 | NA | NA | Odyssée | 660 | 407 | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA |
-| Section | 63 | Génie Électrique, Électronique, optronique et systèmes | 2025 | NA | NA | NA | NA | NA | NA | NA | NA | 13 | NA | NA | NA | NA | 31 | NA | NA | NA | NA | Non consolidées | 14 | NA | NA | Odyssée | 1044 | 598 | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA |
-| Section | 64 | Biochimie et biologie moléculaire | 2025 | NA | NA | NA | NA | NA | NA | NA | NA | 18 | NA | NA | NA | NA | 29 | NA | NA | NA | NA | Non consolidées | 11 | NA | NA | Odyssée | 709 | 330 | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA |
+| Section | 63 | Génie Électrique, Électronique, optronique et systèmes | 2025 | NA | NA | NA | NA | NA | NA | NA | NA | 13 | NA | NA | NA | NA | 31 | NA | NA | NA | NA | Non consolidées | 18 | NA | NA | Odyssée | 1044 | 598 | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA |
+| Section | 64 | Biochimie et biologie moléculaire | 2025 | NA | NA | NA | NA | NA | NA | NA | NA | 18 | NA | NA | NA | NA | 29 | NA | NA | NA | NA | Non consolidées | 17 | NA | NA | Odyssée | 709 | 330 | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA |
 | Section | 65 | Biologie cellulaire | 2025 | NA | NA | NA | NA | NA | NA | NA | NA | 5 | NA | NA | NA | NA | 30 | NA | NA | NA | NA | Non consolidées | 10 | NA | NA | Odyssée | 701 | 331 | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA |
 | Section | 66 | Physiologie | 2025 | NA | NA | NA | NA | NA | NA | NA | NA | 8 | NA | NA | NA | NA | 20 | NA | NA | NA | NA | Non consolidées | 7 | NA | NA | Odyssée | 505 | 227 | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA |
-| Section | 67 | Biologie des populations et écologie | 2025 | NA | NA | NA | NA | NA | NA | NA | NA | 7 | NA | NA | NA | NA | 14 | NA | NA | NA | NA | Non consolidées | 17 | 1 | 2 | Odyssée | 492 | 222 | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA |
-| Section | 68 | Biologie des organismes | 2025 | NA | NA | NA | NA | NA | NA | NA | NA | 1 | NA | NA | NA | NA | 9 | NA | NA | NA | NA | Non consolidées | 10 | NA | NA | Odyssée | 309 | 165 | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA |
+| Section | 67 | Biologie des populations et écologie | 2025 | NA | NA | NA | NA | NA | NA | NA | NA | 7 | NA | NA | NA | NA | 14 | NA | NA | NA | NA | Non consolidées | 19 | 1 | 2 | Odyssée | 492 | 222 | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA |
+| Section | 68 | Biologie des organismes | 2025 | NA | NA | NA | NA | NA | NA | NA | NA | 1 | NA | NA | NA | NA | 9 | NA | NA | NA | NA | Non consolidées | 12 | NA | NA | Odyssée | 309 | 165 | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA |
 | Section | 69 | Neurosciences | 2025 | NA | NA | NA | NA | NA | NA | NA | NA | 4 | NA | NA | NA | NA | 5 | NA | NA | NA | NA | Non consolidées | 4 | NA | NA | Odyssée | 253 | 134 | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA |
-| Section | 7 | Sciences du langage : linguistique et phonétique générales | 2025 | NA | NA | NA | NA | NA | NA | NA | NA | 12 | NA | NA | NA | NA | 36 | NA | NA | NA | NA | Non consolidées | 14 | NA | NA | Odyssée | 526 | 250 | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA |
-| Section | 70 | Sciences de l’éducation | 2025 | NA | NA | NA | NA | NA | NA | NA | NA | 11 | NA | NA | NA | NA | 29 | NA | NA | NA | NA | Non consolidées | 6 | NA | NA | Odyssée | 501 | 202 | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA |
+| Section | 7 | Sciences du langage : linguistique et phonétique générales | 2025 | NA | NA | NA | NA | NA | NA | NA | NA | 12 | NA | NA | NA | NA | 36 | NA | NA | NA | NA | Non consolidées | 15 | NA | NA | Odyssée | 526 | 250 | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA |
+| Section | 70 | Sciences de l’éducation | 2025 | NA | NA | NA | NA | NA | NA | NA | NA | 11 | NA | NA | NA | NA | 29 | NA | NA | NA | NA | Non consolidées | 10 | NA | NA | Odyssée | 501 | 202 | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA |
 | Section | 71 | Sciences de l’information et de la communication | 2025 | NA | NA | NA | NA | NA | NA | NA | NA | 4 | NA | NA | NA | NA | 47 | NA | NA | NA | NA | Non consolidées | 18 | NA | NA | Odyssée | 599 | 200 | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA |
 | Section | 72 | Épistémologie, histoire des sciences et des techniques | 2025 | NA | NA | NA | NA | NA | NA | NA | NA | 1 | NA | NA | NA | NA | 1 | NA | NA | NA | NA | Non consolidées | NA | NA | NA | Odyssée | 66 | 27 | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA |
 | Section | 73 | Cultures et langues régionales | 2025 | NA | NA | NA | NA | NA | NA | NA | NA | 1 | NA | NA | NA | NA | NA | NA | NA | NA | NA | Non consolidées | 1 | NA | NA | Odyssée | 31 | 17 | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA |
-| Section | 74 | Sciences et techniques des activités physiques et sportives | 2025 | NA | NA | NA | NA | NA | NA | NA | NA | 8 | NA | NA | NA | NA | 31 | NA | NA | NA | NA | Non consolidées | 17 | NA | NA | Odyssée | 659 | 235 | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA |
+| Section | 74 | Sciences et techniques des activités physiques et sportives | 2025 | NA | NA | NA | NA | NA | NA | NA | NA | 8 | NA | NA | NA | NA | 31 | NA | NA | NA | NA | Non consolidées | 24 | NA | NA | Odyssée | 659 | 235 | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA |
 | Section | 76 | Théologie catholique | 2025 | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | Non consolidées | 1 | NA | NA | Odyssée | 16 | 13 | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA |
 | Section | 77 | Théologie protestante | 2025 | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | 1 | NA | NA | NA | NA | Non consolidées | NA | NA | NA | Odyssée | 5 | 12 | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA |
 | Section | 8 | Langues et littératures anciennes | 2025 | NA | NA | NA | NA | NA | NA | NA | NA | 3 | NA | NA | NA | NA | 7 | NA | NA | NA | NA | Non consolidées | 3 | NA | NA | Odyssée | 175 | 97 | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA |
 | Section | 85 | Sciences physico-chimiques et ingénierie appliquée à la santé | 2025 | NA | NA | NA | NA | NA | NA | NA | NA | 4 | NA | NA | NA | NA | 6 | NA | NA | NA | NA | Non consolidées | 4 | NA | NA | Odyssée | 313 | 140 | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA |
 | Section | 86 | Sciences du médicament et des autres produits de santé | 2025 | NA | NA | NA | NA | NA | NA | NA | NA | 3 | NA | NA | NA | NA | 10 | NA | NA | NA | NA | Non consolidées | 2 | NA | NA | Odyssée | 432 | 268 | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA |
 | Section | 87 | Sciences biologiques, fondamentales et cliniques | 2025 | NA | NA | NA | NA | NA | NA | NA | NA | 4 | NA | NA | NA | NA | 9 | NA | NA | NA | NA | Non consolidées | 2 | NA | NA | Odyssée | 358 | 206 | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA |
-| Section | 9 | Langue et littérature françaises | 2025 | NA | NA | NA | NA | NA | NA | NA | NA | 19 | NA | NA | NA | NA | 30 | NA | NA | NA | NA | Non consolidées | 9 | NA | NA | Odyssée | 535 | 296 | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA |
+| Section | 9 | Langue et littérature françaises | 2025 | NA | NA | NA | NA | NA | NA | NA | NA | 19 | NA | NA | NA | NA | 30 | NA | NA | NA | NA | Non consolidées | 10 | NA | NA | Odyssée | 535 | 296 | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA |
 | Section | 90 | NA | 2025 | NA | NA | NA | NA | NA | NA | NA | NA | 2 | NA | NA | NA | NA | 3 | NA | NA | NA | NA | Non consolidées | NA | NA | NA | Odyssée | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA |
 | Section | 91 | Sciences de la rééducation et de réadaptation | 2025 | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | 11 | NA | NA | NA | NA | Non consolidées | NA | NA | NA | Odyssée | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA |
 | Section | 92 | Sciences infirmières | 2025 | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | 4 | NA | NA | NA | NA | Non consolidées | NA | NA | NA | Odyssée | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA |

@@ -73,7 +73,32 @@ plot_emplois_long <- function() {
     scale_alpha_manual(values = c(1,0.6)) 
 }
 
-# plot_emplois_long()
+plot_emplois_long()
+
+
+plot_emplois_candidatures <- function() {
+  emploisEC %>% 
+    mutate(Année = as.numeric(as.character(Année))) %>%
+    #filter(Périmètre == "Grande discipline") %>%
+    filter(Périmètre == "Ensemble") %>%
+    #filter(Périmètre.ID == "27") %>%
+    mutate(Concours.NonPourvus.MCF = Concours.Postes.MCF - Concours.Recrutés.MCF) %>%
+    pivot_longer(cols=c(Concours.Postes.MCF,Concours.Candidats.MCF,kpi.MCF.TauxPostesNonPourvus), names_to = "Série", values_to = "Valeur") %>%
+    mutate(Série = factor(Série, 
+                          levels=c("Concours.Postes.MCF","Concours.Candidats.MCF","kpi.MCF.TauxPostesNonPourvus"),
+                          labels=c("Postes MCF","Candidats","Postes non pourvus") )) %>%
+    filter(Année > 2018, Année < 2024) %>%
+    mutate(Valeur100 = Valeur/first(Valeur)*100, .by=c(Série,Périmètre.ID)) %>%
+    ggplot(aes(x=Année, y=Valeur100, color=Série)) +
+    geom_line(linewidth = 1) + geom_point(shape = 21, stroke = 1.5, size = 1.5, fill="white") +
+    scale_x_continuous(breaks = scales::pretty_breaks(6)) +
+    scale_color_brewer(palette="Set1", direction = -1) +
+    facet_wrap(~Périmètre.ID) +
+    labs(title="Concours MCF : Postes ouverts et nombre de candidats", 
+         y = "Valeur 100 en 2015") 
+}
+
+# plot_emplois_candidatures()
 
 ### Descriptions
 

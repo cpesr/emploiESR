@@ -155,11 +155,18 @@ plot_emplois_long()  + theme(legend.position = "top")
 
 `r description.contexte$ec``
 
-\ 
+\  
 
 ### Effectifs étudiants 
 
 `r description.contexte$etu`
+
+\ 
+
+Note :
+
+Les effectifs étudiants en Pharmacie à partir de 2021 sont sujets à caution. Un changement de périmètre des données explique probablement la hausse constatée sur ces graphiques.
+
 :::
 
 ::: {.datapageviz data-latex=""}
@@ -187,6 +194,12 @@ cowplot::plot_grid(ncol = 1, rel_heights = c(1,10), l,
 ### Taux d'encadrement
 
 `r description.contexte$te`
+
+\ 
+
+Note :
+
+Les effectifs étudiants en Pharmacie à partir de 2021 sont sujets à caution. Un changement de périmètre des données explique probablement la baisse constatée sur ces graphiques.
 
 :::
 
