@@ -36,7 +36,7 @@ n'est pas traité dans ce document.
 - Données originales :
   - [Fiches démographiques du CNU](https://www.enseignementsup-recherche.gouv.fr/fr/fiches-demographiques-des-sections-du-conseil-national-des-universites-cnu-83047)
   - [Bilans de campagne de recrutement](https://www.enseignementsup-recherche.gouv.fr/cid118435/personnels-enseignants-du-superieur-bilans-et-statistiques.html#recrutement)
-  - [Galaxie](https://www.galaxie.enseignementsup-recherche.gouv.fr/ensup/ListesPostesPublies/Emplois_publies_TrieParCorps.html), [Odyssée](https://odyssee.enseignementsup-recherche.gouv.fr/)^[Les auteurs tiennent à remercier vivement [Rémy Grünblatt](https://social.sciences.re/@RGrunblatt) pour son interface https://sciences.re/postes/]
+  - [Galaxie](https://www.galaxie.enseignementsup-recherche.gouv.fr/ensup/ListesPostesPublies/Emplois_publies_TrieParCorps.html), [Odyssée](https://odyssee.enseignementsup-recherche.gouv.fr/)
 
 - Données agrégées : 
   - [cpesr-emplois-ec.csv](https://github.com/cpesr/emploiESR/tree/main/data/cpesr-emplois-ec.csv)
@@ -56,7 +56,7 @@ n'est pas traité dans ce document.
     + `3.1 - Qualification aux fonctions d'enseignant-chercheur` ;
     + `3.2 - Recrutement des enseignants-chercheurs` ;
 1. Acquisition automatisée données provenant des postes en ligne sur `Galaxie` par les scripts [galaxie-excavator](https://github.com/cpesr/emploiESR/tree/main/utils/galaxie-excavator) et [odysee-excavator](https://github.com/cpesr/emploiESR/tree/main/utils/odyssee-excavator), pour les années suivantes :
-    + Ces données sont marquées comme `temporaires`.
+    + Ces données sont marquées comme `provisoire`.
 1. Correction des erreurs détectées :
     + Changement de méthodologie pour les candidats à la qualification entre les fiches 2013 (candidatures totales) et 2015 (candidatures recevables seulement) :
         - Calcul d'un ratio moyen candidatures recevables / candidatures sur les années 2011 à 2013, pour chaque section indépendamment ;
@@ -79,6 +79,9 @@ au nombre de candidats par grande discipline et dans l'ensemble.
 En revanche, les postes ne sont comptabilisés que pour une seule section, et les
 sommes sont cohérentes.
 
+## Remerciements
 
+Les auteurs tiennent à remercier vivement [Rémy Grünblatt](https://social.sciences.re/@RGrunblatt) pour son interface https://sciences.re/postes/ et l'aide pour l'accès aux données Odyssée, 
+ainsi que le SIES pour l'ouverture des données administratives de l'ESR.
 
 
