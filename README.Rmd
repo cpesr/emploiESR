@@ -6,13 +6,13 @@ output: github_document
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE)
 
-descdata <- function(file, source = "non indiquée", maj = "non indiquée") {
+descdata <- function(file, source = "non indiquée") {
 
-  df <- read.csv2(paste0("data/",file,".csv"))
+  df <- read.csv2(paste0(file,".csv"))
 
-  cat("- Données : [",file,"](data/",file,".csv)\n", sep='') 
+  cat("- Données : [",file,"](",file,".csv)\n", sep='') 
   cat("- Source : ", source,"\n", sep='')
-  cat("- Mise à jour :", maj,"\n", sep='')
+  cat("- Mise à jour : ", as.character(file.info(paste0(file,".csv"))$ctime),"\n", sep='')
   
   cat("- Nombre d'observations : ",nrow(df),"\n")
   if("Annee" %in% names(df)) cat("- Période : ",range(df$Annee),"\n")
@@ -25,61 +25,37 @@ descdata <- function(file, source = "non indiquée", maj = "non indiquée") {
 }
 ```
 
-## Organisation
-
-- [data](data/) : jeux de données
-- [galaxie-excavator](galaxie-excavator/) : outil d'extraction des données de Galaxie
+- [cpesr-emplois-ec.csv](data/cpesr-emplois-ec.csv) : données agrégées sur les emplois EC dans l'ESR
+- [data](data/) : tous les jeux de données
+- [odyssee-excavator](utils/odyssee-excavator/) : outil d'extraction des données de Odyssee
 
 ## Jeux de données 
 
-
 ### Extraction des fiches démographiques du CNU 
 ```{r results='asis'}
-descdata("cpesr-emplois-cnu-qualification-concours",
-         "https://www.enseignementsup-recherche.gouv.fr/pid24672-cid85019/fiches-demographiques-des-sections-du-cnu.html",
-         "19-10-2021")
+descdata("data/cpesr-emplois-ec-cnu",
+         "https://www.enseignementsup-recherche.gouv.fr/pid24672-cid85019/fiches-demographiques-des-sections-du-cnu.html")
 ```
-
-### Qualifications et recrutements MCF par section CNU
-
-```{r results='asis'}
-descdata("cpesr-emplois-cnu-mcf-qualification-recrutement",
-         "https://www.enseignementsup-recherche.gouv.fr/cid118435/personnels-enseignants-du-superieur-bilans-et-statistiques.html",
-         "23-11-2020")
-```
-
-### Mutations régionales entrantes et sortantes
-
-```{r results='asis'}
-descdata("cpesr-emplois-mutations-ES",
-         "https://www.enseignementsup-recherche.gouv.fr/cid118435/personnels-enseignants-du-superieur-bilans-et-statistiques.html",
-         "23-11-2020")
-```
-
-### Mutations régionales flux
-
-```{r results='asis'}
-descdata("cpesr-emplois-mutations-flux",
-         "https://www.enseignementsup-recherche.gouv.fr/cid118435/personnels-enseignants-du-superieur-bilans-et-statistiques.html",
-         "23-11-2020")
-```
-
 
 ### Extraction des données Galaxie
 
 ```{r results='asis'}
-descdata("cpesr-emplois-galaxie",
-         "https://www.galaxie.enseignementsup-recherche.gouv.fr/ensup/ListesPostesPublies/Emplois_publies_TrieParCorps.html",
-         "26-02-2021")
+descdata("utils/galaxie-excavator/galaxie",
+         "https://www.galaxie.enseignementsup-recherche.gouv.fr/ensup/ListesPostesPublies/Emplois_publies_TrieParCorps.html")
 ```
 
+### Extraction des données Odyssée
+
+```{r results='asis'}
+descdata("utils/odyssee-excavator/odyssee",
+         "https://www.galaxie.enseignementsup-recherche.gouv.fr/ensup/ListesPostesPublies/Emplois_publies_TrieParCorps.html")
+```
 
 ### Sections CNU
 
 ```{r results='asis'}
-descdata("cpesr-cnu-sections",
-         "manuelle",
-         "27-07-0201")
+descdata("data/cpesr-cnu-sections",
+         "manuelle")
 ```
 
 ### Effectifs enseignants titulaires
