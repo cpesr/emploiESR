@@ -6,6 +6,10 @@ Nombre de postes depuis 2002 pour les sections CNU
     - twurl:https://cpesr.fr/lentree-dans-la-carriere-des-enseignants-chercheurs/
     - url:https://cpesr.fr/lentree-dans-la-carriere-des-enseignants-chercheurs/
 
+## Evolution du nombre de postes de Maîtres de conférences
+
+<img src="emploiEC-graphiques_files/figure-gfm/emploislong-1.png" width="672" />
+
 ## Evolution du nombre de postes Enseignants-Chercheurs — Ensemble des sections CNU
 
 <img src="emploiEC-graphiques_files/figure-gfm/batch-1.png" width="672" /><img src="emploiEC-graphiques_files/figure-gfm/batch-2.png" width="672" />

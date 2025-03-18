@@ -19,12 +19,12 @@ emploisEC <- read.csv2("../data/cpesr-emplois-ec.csv", stringsAsFactors = TRUE)
 theme_set(theme_cpesr())
 
 source("../R/emploiEC-metriques.R")
-# source("../R/emploiEC-plot-series.R")
-# source("../R/emploiEC-plot-metrique.R")
+source("../R/emploiEC-plot-series.R")
+source("../R/emploiEC-plot-metrique.R")
 source("../R/emploiEC-plot-flux.R")
 # source("../R/emploiEC-plot-sections.R")
 # source("../R/emploiEC-plot-groupes.R")
-# source("../R/emploiEC-plot-contexte.R")
+source("../R/emploiEC-plot-contexte.R")
 
 année.ref <- emploisEC %>% filter(Données == "Consolidées") %>% tail(n = 1) %>% pull(Année)
 
@@ -37,6 +37,11 @@ année.ref <- emploisEC %>% filter(Données == "Consolidées") %>% tail(n = 1) %
 - url:https://cpesr.fr/lentree-dans-la-carriere-des-enseignants-chercheurs/
 ```
 
+## Evolution du nombre de postes de Maîtres de conférences
+
+```{r emploislong, fig.asp=9/16}
+plot_emplois_long()
+```
 
 ```{r pnp, eval=FALSE}
 emploisEC %>% 
