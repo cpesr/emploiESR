@@ -10,6 +10,8 @@ Nombre de postes depuis 2002 pour les sections CNU
 
 <img src="emploiEC-graphiques_files/figure-gfm/emploislong-1.png" width="672" />
 
+<img src="emploiEC-graphiques_files/figure-gfm/pnp-1.png" width="672" />
+
 ## Evolution du nombre de postes Enseignants-Chercheurs — Ensemble des sections CNU
 
 <img src="emploiEC-graphiques_files/figure-gfm/batch-1.png" width="672" /><img src="emploiEC-graphiques_files/figure-gfm/batch-2.png" width="672" />
@@ -299,24 +301,20 @@ nombre fini
 
 ## Evolution du nombre de postes Enseignants-Chercheurs — Section CNU 76 - Théologie catholique
 
-<img src="emploiEC-graphiques_files/figure-gfm/batch-141.png" width="672" />Error
-in ans\[ypos\] \<- rep(yes, length.out = len)\[ypos\] : l’argument de
-remplacement est de longueur nulle
+<img src="emploiEC-graphiques_files/figure-gfm/batch-141.png" width="672" /><img src="emploiEC-graphiques_files/figure-gfm/batch-142.png" width="672" />
 
 ## Evolution du nombre de postes Enseignants-Chercheurs — Section CNU 77 - Théologie protestante
 
-<img src="emploiEC-graphiques_files/figure-gfm/batch-142.png" width="672" />Error
-in ans\[ypos\] \<- rep(yes, length.out = len)\[ypos\] : l’argument de
-remplacement est de longueur nulle
+<img src="emploiEC-graphiques_files/figure-gfm/batch-143.png" width="672" /><img src="emploiEC-graphiques_files/figure-gfm/batch-144.png" width="672" />
 
 ## Evolution du nombre de postes Enseignants-Chercheurs — Section CNU 85 - Sciences physico-chimiques et ingénierie appliquée à la santé
 
-<img src="emploiEC-graphiques_files/figure-gfm/batch-143.png" width="672" /><img src="emploiEC-graphiques_files/figure-gfm/batch-144.png" width="672" />
+<img src="emploiEC-graphiques_files/figure-gfm/batch-145.png" width="672" /><img src="emploiEC-graphiques_files/figure-gfm/batch-146.png" width="672" />
 
 ## Evolution du nombre de postes Enseignants-Chercheurs — Section CNU 86 - Sciences du médicament et des autres produits de santé
 
-<img src="emploiEC-graphiques_files/figure-gfm/batch-145.png" width="672" /><img src="emploiEC-graphiques_files/figure-gfm/batch-146.png" width="672" />
+<img src="emploiEC-graphiques_files/figure-gfm/batch-147.png" width="672" /><img src="emploiEC-graphiques_files/figure-gfm/batch-148.png" width="672" />
 
 ## Evolution du nombre de postes Enseignants-Chercheurs — Section CNU 87 - Sciences biologiques, fondamentales et cliniques
 
-<img src="emploiEC-graphiques_files/figure-gfm/batch-147.png" width="672" /><img src="emploiEC-graphiques_files/figure-gfm/batch-148.png" width="672" />
+<img src="emploiEC-graphiques_files/figure-gfm/batch-149.png" width="672" /><img src="emploiEC-graphiques_files/figure-gfm/batch-150.png" width="672" />

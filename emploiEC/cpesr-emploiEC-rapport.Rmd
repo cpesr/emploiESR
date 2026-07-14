@@ -1,5 +1,5 @@
 ---
-author: "Julien Gossa et Florent Figon \n gossa@unistra.fr"
+author: "Julien Gossa\n gossa@unistra.fr"
 date: "30/07/2021"
 output:
   pdf_document:

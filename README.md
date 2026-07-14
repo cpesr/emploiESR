@@ -14,8 +14,8 @@ Emploi dans l’ESR
 - Données : [data/cpesr-emplois-ec-cnu](data/cpesr-emplois-ec-cnu.csv)
 - Source :
   <https://www.enseignementsup-recherche.gouv.fr/pid24672-cid85019/fiches-demographiques-des-sections-du-cnu.html>
-- Mise à jour : 2024-11-05 23:47:51.322564
-- Nombre d’observations : 1123
+- Mise à jour : 2026-03-03 22:31:37.830197
+- Nombre d’observations : 1198
 - Variables :
   - Périmètre
   - Périmètre.ID
@@ -73,8 +73,8 @@ Emploi dans l’ESR
   [utils/odyssee-excavator/odyssee](utils/odyssee-excavator/odyssee.csv)
 - Source :
   <https://www.galaxie.enseignementsup-recherche.gouv.fr/ensup/ListesPostesPublies/Emplois_publies_TrieParCorps.html>
-- Mise à jour : 2025-03-12 21:09:14.538248
-- Nombre d’observations : 2800
+- Mise à jour : 2025-03-21 22:07:53.495819
+- Nombre d’observations : 3260
 - Variables :
   - etablissementLibelle.id.articleReference.corps.chaire.section.section2.section3.datePublicationPoste.datePriseDePoste.dateOuvertureCandidatures.dateFermetureCandidatures.descriptionPoste.typeCandidatureConcours.typeCandidatureMutation.typeCandidatureDétachement.typeCandidatureRecrutementEtranger.typeCandidatureIntégrationDirecte.typeCandidatureRecrutementSurContrat.région.etatPoste.statutPoste.typeCampagne.dateScraping
 

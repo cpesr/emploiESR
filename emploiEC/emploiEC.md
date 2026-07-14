@@ -58,83 +58,60 @@ L’âge moyen de départ à la retraite est de 63 ans[^5].
 
 ### Points clés
 
-Ce document présente les évolutions de différents indicateurs relatifs à
-l’entrée dans la carrière des enseignants-chercheurs (EC), notamment au
-niveau national et par grands secteurs disciplinaires : Droit, Economie,
-Gestion (DEG), Lettres, Langues, Arts et Sciences Humaines et Sociales
-(LLA-SHS), Sciences et Technologies (ST) et Pharmacie.
-
-Les principales observations sont :
-
-- Le nombre de postes mis au concours semble avoir été atteint **un
-  creux dans la période 2019-2021 autour de 1 100 postes**, puis être
-  reparti à la hausse vers les 1 500 postes en 2023.
-  - La suite des observations se concentrent sur la période 2010-2021,
+- Le nombre de postes de Maîtres⋅ses de conférences (MCF) mis au
+  concours semble avoir été atteint un creux dans la période 2019-2021
+  autour de 1 100 postes, puis être **reparti à la hausse avec 1 351
+  postes en 2022, 1567 en 2023 et 1557 en 2024, avant de retomber à 1367
+  en 2025**.
+  - La suite des observations se concentrent sur la période 2009-2023,
     pour laquelle les données sont complètes et consolidées.
-- **Entre 2010 et 2021, le nombre de néo-recrutés a été divisé par
-  deux**, passant d’environ 2 000 à 1 000.
-  - Le secteur **ST est le plus fortement touché, avec près de 60% de
-    recrutements en moins**, particulièrement en Chimie qui accuse une
-    baisse de près de 70%.
-  - Le groupe le moins touché est interdisciplinaire et STAPS, avec une
-    baisse de 14%.
+- **Entre 2009 et 2023, le nombre de néo-recrutés a baissé de 30 %**,
+  passant de 2 036 à 1 436.
+  - Le secteur **ST est le plus fortement touché, avec une réduction de
+    45 % des recrutements**, particulièrement en Chimie qui accuse une
+    baisse de 65 %.
+  - Seuls deux groupes montrent une augmentation du nombre de postes :
+    Droit et science politique (+ 4 %) et Interdisciplinaire et STAPS (+
+    3 %).
   - La section 67 - Biologie des populations et écologie est parmi
-    celles où les recrutements baissent le plus, seulement 8 en 2021,
+    celles où les recrutements baissent le plus, seulement 15 en 2023,
     alors qu’il y en avait plus de 30 dans les années 2000. La section
     37 - Météorologie, océanographie physique et physique de
-    l’environnement n’a ouvert que 2 postes.
-- Sur la même période, le nombre de candidats est passé d’environ 10 000
-  à 8 500.
-  - Cette baisse est concentrée sur Pharmacie (-20%), mais aussi et
-    surtout **ST, qui accuse 30% de baisse des candidats à la
-    qualification et 40% de baisse des candidats aux concours**.
+    l’environnement n’a recruté que 6 EC en 2023.
+- Sur la même période, le nombre de candidats est passé d’environ 9 756
+  à 8 110.
+  - Cette baisse est concentrée sur Pharmacie (-58 %), mais aussi et
+    surtout **ST, qui accuse 41 % de baisse des candidats à la
+    qualification et de 48 % de baisse des candidats aux concours**.
 - Du point des vue des candidats, le nombre global de concurrents par
-  poste est passé de 4,6 à 7,7, soit **une augmentation de la tension à
-  l’entrée dans la carrière de près de 70%**.
+  poste est passé de 4,4 à 5,2, après un pic à 7,7 en 2021, soit **une
+  appaisement de la tension à l’entrée dans la carrière à une
+  augmentation de seulement +16 %, après un pic à + 70 %**.
   - Cette augmentation concerne tous les groupes et pratiquement toutes
     les sections. Elle est particulièrement marquée en DEG et LLA-SHS,
     où elle a pratiquement doublé.
-  - En LLA-SHS, la tension dépasse désormais 10 candidats par poste, et
-    même **37 candidats par poste en Section 19 - Sociologie et
-    Démographie**, qui détient le record de 2021.
+  - En LLA-SHS, la tension est désormais de 7,4, après un pic à 10
+    candidats par poste, et même **32 candidats par poste en Section
+    17 - Philosophie** , qui détient le record de 2023.
     - NB : il s’agit bien du nombre de candidats, et non de candidatures
       ; chaque candidats ayant pu faire plusieurs candidatures.
 - La taux de sélection par la qualification est resté stable, avec un
-  taux de réussite autour de 70% (allant de 45% en DEG et 80% en ST).
+  taux de réussite autour de 74 % (allant de 48 % en DEG et 80 % en ST).
   - C’est donc le faible nombre de postes qui porte essentiellement la
-    tension, avec **un taux de réussite au concours passant de 32% à
-    18%** (allant de 36% en DEG à 13% en ST).
+    tension, avec **un taux de réussite au concours passant de 29 % à 27
+    %** (allant de 50 % en DEG à 20 % en ST).
 - Du point de vue démographique, il en résulte un vieillissement du
   corps des EC, caractérisé par **la période de temps nécessaire pour
   renouveler entièrement les effectifs au rythme de recrutement annuel :
-  alors qu’il fallait 29 ans en 2010, il en faut 52 au rythme de 2021**.
+  alors qu’il fallait 29 ans en 2010, il en faut 38 au rythme de 2023**.
   - La période de renouvellement dépasse désormais la durée des
-    carrières, ce qui porte le risque d’une attrition de la corporation.
-  - ST est particulièrement touché, avec une période passant de 28 à 62
-    ans, soit plus qu’un doublement.
+    carrières, ce qui porte le risque d’une attrition de la profession.
+  - ST est particulièrement touché, avec une période passant de 28 à 46
+    ans.
   - Cette période de renouvellement montre de très grande disparités,
     avec des sections qui se renouvellent en une vingtaine d’années,
-    alors qu’**il faudrait plus de 150 ans pour renouveler la section
-    30 - Milieux dilués et optique**.
-- De point de vue des missions, entre 2010 et 2021, **le nombre d’EC
-  titulaires a baissé d’environ 2%, passant de 56 200 en 2010 à 55
-  300**. Dans le même temps, **les effectifs étudiants augmentaient de
-  près de 20%**.
-  - **La baisse des effectifs EC concerne en particulier ST, près de 4%,
-    soit plus de 600 postes**. Les Sections 87 - Sciences biologiques,
-    fondamentales et cliniques et 12 - Langues et littératures
-    germaniques et scandinaves ont perdu 30% de leur effectif.
-  - Une minorité de sections voient leur effectif EC augmenter,
-    notamment la section 4 - Science politique, qui gagne une
-    cinquantaine de postes (+22%).
-  - Il en résulte globalement **une baisse du taux d’encadrement
-    pédagogique de 17%, passant sur la période de 3,7 titulaires pour
-    100 étudiants à 3,1**.
-  - La baisse du taux d’encadrement est particulièrement marquée **en
-    LLA-SHS et ST, où le nombre d’EC par étudiant a baissé de près d’un
-    quart en 10 ans**.
-  - Au global, **il faudrait désormais ouvrir plus de 11 000 postes pour
-    retrouver les taux d’encadrement de 2010**.
+    alors qu’**il faudrait plus de 187 ans pour renouveler la section
+    34 - Astronomie, astrophysique**.
 
 ### Méthodologie
 
@@ -177,7 +154,8 @@ différent qui n’est pas traité dans ce document.
     CNU](https://www.enseignementsup-recherche.gouv.fr/fr/fiches-demographiques-des-sections-du-conseil-national-des-universites-cnu-83047)
   - [Bilans de campagne de
     recrutement](https://www.enseignementsup-recherche.gouv.fr/cid118435/personnels-enseignants-du-superieur-bilans-et-statistiques.html#recrutement)
-  - [Galaxie](https://www.galaxie.enseignementsup-recherche.gouv.fr/ensup/ListesPostesPublies/Emplois_publies_TrieParCorps.html)
+  - [Galaxie](https://www.galaxie.enseignementsup-recherche.gouv.fr/ensup/ListesPostesPublies/Emplois_publies_TrieParCorps.html),
+    [Odyssée](https://odyssee.enseignementsup-recherche.gouv.fr/)
 - Données agrégées :
   - [cpesr-emplois-ec.csv](https://github.com/cpesr/emploiESR/tree/main/data/cpesr-emplois-ec.csv)
 - Autres données :
@@ -185,6 +163,9 @@ différent qui n’est pas traité dans ce document.
     l’ESR](https://data.enseignementsup-recherche.gouv.fr/explore/dataset/fr-esr-enseignants-titulaires-esr-public/export/?flg=fr&disjunctive.annee)
   - [Statistiques sur les effectifs d’étudiants
     inscrits](https://data.enseignementsup-recherche.gouv.fr/explore/dataset/fr-esr-statistiques-sur-les-effectifs-d-etudiants-inscrits-par-etablissement-hcp/)
+  - [Effectifs d’étudiants inscrits dans les établissements et les
+    formations de l’enseignement supérieur (données
+    agrégeables)](https://data.enseignementsup-recherche.gouv.fr/explore/dataset/fr-esr-atlas_regional-effectifs-d-etudiants-inscrits_agregeables)
 
 ## Acquisition et traitement des données
 
@@ -207,15 +188,13 @@ différent qui n’est pas traité dans ce document.
     - `3.1 - Qualification aux fonctions d'enseignant-chercheur` ;
     - `3.2 - Recrutement des enseignants-chercheurs` ;
 5.  Acquisition automatisée données provenant des postes en ligne sur
-    `Galaxie` par le script
-    [galaxie-excavator](https://github.com/cpesr/emploiESR/tree/main/utils/galaxie-excavator),
+    `Galaxie` par les scripts
+    [galaxie-excavator](https://github.com/cpesr/emploiESR/tree/main/utils/galaxie-excavator)
+    et
+    [odysee-excavator](https://github.com/cpesr/emploiESR/tree/main/utils/odyssee-excavator),
     pour les années suivantes :
-    - Ces données sont marquées comme `temporaires`.
+    - Ces données sont marquées comme `provisoire`.
 6.  Correction des erreurs détectées :
-    - Inversion du nombre de candidats en 2019 entre les groupes Pharma.
-      et ST ;
-    - Erreur manifeste dans le nombre de candidats en 2018 pour le
-      groupe 10 ;
     - Changement de méthodologie pour les candidats à la qualification
       entre les fiches 2013 (candidatures totales) et 2015 (candidatures
       recevables seulement) :
@@ -245,6 +224,14 @@ et dans l’ensemble.
 
 En revanche, les postes ne sont comptabilisés que pour une seule
 section, et les sommes sont cohérentes.
+
+## Remerciements
+
+Les auteurs tiennent à remercier vivement [Rémy
+Grünblatt](https://social.sciences.re/@RGrunblatt) pour son interface
+<https://sciences.re/postes/> et l’aide pour l’accès aux données
+Odyssée, ainsi que le SIES pour l’ouverture des données administratives
+de l’ESR.
 
     - twtexte:[#DataESR] L'entrée dans la carrière des enseignants-chercheurs en chiffres
     - twalt:@ffigon @juliengossa LO 2.0 www.cpesr.fr
@@ -301,10 +288,10 @@ l’autre du nombre d’enseignants-chercheurs titulaires sur l’ensemble du
 périmètre MESRI.
 
 Une deuxième série indique l’évolution qui aurait été nécessaire pour
-conserver le taux d’encadrement global de 2010, et donc le nombre de
-recrutements qu’il aurait fallu faire, en plus des renouvellements de
-départ, pour conserver les conditions de travail et d’étude sur la
-dernière décennie.
+conserver le taux d’encadrement global de 2011, et donc le nombre de
+postes qu’il aurait fallu créer en plus des renouvellements de départs,
+pour conserver les conditions de travail et d’étude sur la dernière
+décennie.
 
 <img src="emploiEC_files/figure-gfm/contexte.evol.etu-1.png" width="768" />
 
@@ -439,6 +426,19 @@ d’embauche en dehors du milieu académique.
 <img src="emploiEC_files/figure-gfm/metriques-11.png" width="768" />
 <img src="emploiEC_files/figure-gfm/metriques-12.png" width="768" />
 
+### Taux de postes n’ayant pas été pourvus au concours d’enseignant-chercheur
+
+Définition : différence entre postes publiés et postes pourvus, divisé
+par les postes publiés. Le taux de postes non pourvus mesure les
+difficultés de recrutement. Il varie en fonction de l’attractivité des
+carrières et du nombre de postes ouverts au concours, mais aussi des
+opportunités d’embauche en dehors du milieu académique.
+
+<img src="emploiEC_files/figure-gfm/metriques-13.png" width="768" />
+<img src="emploiEC_files/figure-gfm/metriques-14.png" width="768" />
+<img src="emploiEC_files/figure-gfm/metriques-15.png" width="768" />
+<img src="emploiEC_files/figure-gfm/metriques-16.png" width="768" />
+
 ### Taux de sélection à l’entrée dans la carrière d’enseignant-chercheur
 
 Définition : nombre de recrutés par candidats à la qualification. Le
@@ -451,10 +451,10 @@ l’année, et les candidats ne sont pas forcément qualifiés dans l’année,
 mais cette mesure est moins sensible à l’accumulation de candidats sans
 postes qui recandidatent.
 
-<img src="emploiEC_files/figure-gfm/metriques-13.png" width="768" />
-<img src="emploiEC_files/figure-gfm/metriques-14.png" width="768" />
-<img src="emploiEC_files/figure-gfm/metriques-15.png" width="768" />
-<img src="emploiEC_files/figure-gfm/metriques-16.png" width="768" />
+<img src="emploiEC_files/figure-gfm/metriques-17.png" width="768" />
+<img src="emploiEC_files/figure-gfm/metriques-18.png" width="768" />
+<img src="emploiEC_files/figure-gfm/metriques-19.png" width="768" />
+<img src="emploiEC_files/figure-gfm/metriques-20.png" width="768" />
 
 ### Taux de sélection par la qualification à l’entrée dans la carrière d’enseignant-chercheur
 
@@ -462,30 +462,16 @@ Définition : nombre de qualifiés par candidats à la qualification. Le
 taux de sélection par la qualification mesure la part des lauréats lors
 de cette étape de sélection.
 
-<img src="emploiEC_files/figure-gfm/metriques-17.png" width="768" />
-<img src="emploiEC_files/figure-gfm/metriques-18.png" width="768" />
-<img src="emploiEC_files/figure-gfm/metriques-19.png" width="768" />
-<img src="emploiEC_files/figure-gfm/metriques-20.png" width="768" />
+<img src="emploiEC_files/figure-gfm/metriques-21.png" width="768" />
+<img src="emploiEC_files/figure-gfm/metriques-22.png" width="768" />
+<img src="emploiEC_files/figure-gfm/metriques-23.png" width="768" />
+<img src="emploiEC_files/figure-gfm/metriques-24.png" width="768" />
 
 ### Taux de sélection par le concours à l’entrée dans la carrière d’enseignant-chercheur
 
 Définition : nombre de recrutés par qualifiés. Le taux de sélection par
 le concours mesure la part des lauréats lors de cette étape de
 sélection.
-
-<img src="emploiEC_files/figure-gfm/metriques-21.png" width="768" />
-<img src="emploiEC_files/figure-gfm/metriques-22.png" width="768" />
-<img src="emploiEC_files/figure-gfm/metriques-23.png" width="768" />
-<img src="emploiEC_files/figure-gfm/metriques-24.png" width="768" />
-
-### Equilibre de la sélection qualification/concours à l’entrée dans la carrière d’enseignant-chercheur
-
-Définition : nombre de qualifiés évincés par le concours par le nombre
-de candidats évincés par la qualification et le concours. Ce taux mesure
-la part relative de la qualification et du concours dans la sélection à
-l’entrée de la carrière d’enseignant-chercheur : à 50%, qualification et
-concours ont la même part ; plus le taux est élevé, plus le concours
-occupe une grande part.
 
 <img src="emploiEC_files/figure-gfm/metriques-25.png" width="768" />
 <img src="emploiEC_files/figure-gfm/metriques-26.png" width="768" />
@@ -499,8 +485,8 @@ publié. Cette période mesure le nombre d’années nécessaires au
 renouvellement de la totalité des effectifs actuels, au rythme de
 recrutement actuel.
 
-Un seuil peut être grossièrement défini autour de 29 ans, correspondant
-à la différence entre l’âge moyen de recrutement des MCF (34 ans) et
+Un seuil peut être grossièrement défini autour de 28 ans, correspondant
+à la différence entre l’âge moyen de recrutement des MCF (35 ans) et
 l’âge moyen de départ à la retraite (63 ans). En dessous, le
 renouvellement se fait plus vite que de nécessaire pour conserver les
 mêmes effectifs, au dessus le renouvellement se fait plus lentement que

@@ -76,6 +76,8 @@ response = requests.get(url)
 data = response.json()
 
 def date_formater(date):
+    if date is None:
+        return "NA"
     return date[0:10].replace("/", "-")
 
 # Iterate over each item in the JSON data

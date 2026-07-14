@@ -1,31 +1,42 @@
 
 context_sizemul <- 0.7
 p_contexte_ec <- plot_metrique("Effectif.EC", métriquelab = "Enseignants-chercheurs titulaire", périm = c("Ensemble","Grande discipline"), norm = FALSE, facetting = FALSE, sizemul=context_sizemul)
+# p_contexte_ec
 
 p_contexte_ec.norm <-plot_metrique("Effectif.EC", métriquelab = "Enseignants-chercheurs titulaire\n(base 100)", périm = c("Ensemble","Grande discipline"), norm = TRUE, facetting = FALSE, sizemul=context_sizemul)
+# p_contexte_ec.norm
 
 emploisEC <- emploisEC %>%
   mutate(Effectif.ETU.k = Effectif.ETU / 1000)
 
 p_contexte_etu <- plot_metrique("Effectif.ETU.k", métriquelab = "Etudiants (milliers)", périm = c("Ensemble","Grande discipline"), norm = FALSE, facetting = FALSE, sizemul=context_sizemul)
+# p_contexte_etu
+
 p_contexte_etu.norm <- plot_metrique("Effectif.ETU.k", métriquelab = "Etudiants (base 100)", périm = c("Ensemble","Grande discipline"), norm = TRUE, facetting = FALSE, sizemul=context_sizemul)
+# p_contexte_etu.norm
 
 p_contexte_te <- plot_metrique("Contexte.TauxEncadrement", métriquelab = "Taux d'encadrement", périm = c("Ensemble","Grande discipline"), norm = FALSE, facetting = FALSE, sizemul=context_sizemul)
-p_contexte_te.norm <- plot_metrique("Contexte.TauxEncadrement", métriquelab = "Taux d'encadrement (base 100)", périm = c("Ensemble","Grande discipline"), norm = TRUE, facetting = FALSE, sizemul=context_sizemul)
+# p_contexte_te
 
+p_contexte_te.norm <- plot_metrique("Contexte.TauxEncadrement", métriquelab = "Taux d'encadrement (base 100)", périm = c("Ensemble","Grande discipline"), norm = TRUE, facetting = FALSE, sizemul=context_sizemul)
+# p_contexte_te.norm
 
 levels_context <- c("Effectif.EC","Effectif.ETU","Contexte.TauxEncadrement")
 labs_context <- c("Effectif EC","Effectif étudiant","Taux d'encadrement")
 palette_context <- setNames(RColorBrewer::brewer.pal(3, "Set2"), labs_context)
 
-p_contexte_ec.etu.te <- plot_series(levels_context, labs_context, périm="Ensemble",norm=TRUE, colors=palette_context, normbreaks = seq(50,150,5), sizemul=1, minannée = "2010")
-p_contexte_ec.etu.te.disc <- plot_series(levels_context, labs_context, périm="Grande discipline",norm=TRUE, colors=palette_context, sizemul=context_sizemul*0.8, minannée = "2010")
+p_contexte_ec.etu.te <- plot_series(levels_context, labs_context, périm="Ensemble",norm=TRUE, colors=palette_context, normbreaks = seq(50,150,5), sizemul=1, minannée = "2011")
+# p_contexte_ec.etu.te
+
+p_contexte_ec.etu.te.disc <- plot_series(levels_context, labs_context, périm="Grande discipline",norm=TRUE, colors=palette_context, sizemul=context_sizemul*0.8, minannée = "2011")
+# p_contexte_ec.etu.te.disc
 
 plot_evolution_EC <- function(périm="Ensemble") {
   emploisEC %>%
     mutate(Année = as.character(Année)) %>%
     filter(Périmètre == périm) %>%
     filter(!is.na(Effectif.EC)) %>%
+    arrange(Année) %>%
     group_by(Périmètre.ID) %>%
     mutate(
       Evolution.réelle = Effectif.EC - lag(Effectif.EC),
@@ -73,7 +84,7 @@ plot_emplois_long <- function() {
     scale_alpha_manual(values = c(1,0.6)) 
 }
 
-plot_emplois_long()
+# plot_emplois_long()
 
 
 plot_emplois_candidatures <- function() {
@@ -141,8 +152,8 @@ ne permet pas de détecter les données.
 du nombre d'enseignants-chercheurs titulaires sur l'ensemble du périmètre MESRI.
 
 Une deuxième série indique l'évolution qui aurait été nécessaire pour conserver 
-le taux d'encadrement global de 2010, et donc le nombre de recrutements qu'il aurait fallu faire,
-en plus des renouvellements de départ, pour conserver les conditions de travail et 
+le taux d'encadrement global de 2011, et donc le nombre de postes qu'il aurait fallu créer
+en plus des renouvellements de départs, pour conserver les conditions de travail et 
 d'étude sur la dernière décennie.
 "
 )
