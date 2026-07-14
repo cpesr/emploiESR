@@ -43,18 +43,19 @@ année.ref <- emploisEC %>% filter(Données == "Consolidées") %>% tail(n = 1) %
 plot_emplois_long()
 ```
 
-```{r pnp, eval=FALSE}
+```{r pnp, eval=TRUE}
 emploisEC %>% 
   filter(Périmètre == "Grande discipline") %>% 
   mutate(
     `Postes MCF` = Concours.Postes.MCF,
-    `Postes non pourvus` = Concours.Postes.MCF - Concours.Recrutés.MCF,
-    `Part des postes non pourvus` = 1-(Concours.Recrutés.MCF/Concours.Postes.MCF)) %>% 
+    `Candidat⋅es MCF` = Concours.Candidats.MCF,
+    `Postes non pourvus` = Concours.Postes.MCF - Concours.Recrutés.MCF) %>%
+    #`Part des postes non pourvus` = 1-(Concours.Recrutés.MCF/Concours.Postes.MCF)) %>% 
   arrange(Année) %>%
   #select(Périmètre.ID,Année,Concours.Postes.MCF, Concours.Recrutés.MCF, pnp, tpnp) %>% 
   filter(!is.na(Périmètre.ID), Périmètre.ID != "Pharma", Périmètre.ID != "Santé") %>%
-  pivot_longer(c(`Postes MCF`,`Postes non pourvus`,`Part des postes non pourvus`)) %>%
-  mutate(name = factor(name, levels=c("Postes MCF","Postes non pourvus","Part des postes non pourvus"))) %>%
+  pivot_longer(c(`Postes MCF`,`Candidat⋅es MCF`,`Postes non pourvus`)) %>%
+  mutate(name = factor(name, levels=c("Postes MCF","Candidat⋅es MCF","Postes non pourvus"))) %>%
   ggplot(aes(x=Année,y=value,color=Périmètre.ID)) + 
   geom_line() + geom_point() + 
   ylab("") + 
@@ -69,7 +70,6 @@ plot_postes <- function(corps, périm="Ensemble", périm.id="Ensemble") {
   df <- emploisEC %>%
     filter(Périmètre == périm, Périmètre.ID == périm.id) %>%
     mutate(Données = case_match(Source,
-                                "Galaxie" ~ "Temporaires\n(Galaxie/Odyssée)",
                                 "Odyssée" ~ "Temporaires\n(Galaxie/Odyssée)",
                                 "CNU" ~ "Définitives (CNU)")) %>% 
     select(Année, Données, 

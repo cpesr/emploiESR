@@ -50,15 +50,14 @@ cnu.périmètres %>% spoiler_table("cnu.périmètres", trim=Inf)
   #     mutate(Code.categorie.personnels = "DOC_ATER") %>%
   #     mutate(Code.groupe.CNU = as.character(Code.groupe.CNU))) %>%
 
-ens <- 
-  read.csv2("data/fr-esr-enseignants-titulaires-esr-public.csv") %>%
+ens <- read.csv2("data/fr-esr-enseignants-titulaires-esr-public.csv") %>%
   filter(Code.categorie.personnels %in% c("MCF","PR")) %>%
   group_by(Rentrée,code_section_cnu,Code.categorie.personnels) %>%
   summarise(effectif = sum(effectif,na.rm = TRUE)) %>%
   pivot_wider(names_from = Code.categorie.personnels, values_from = effectif) %>%
   ungroup() %>%
   transmute(
-    Année = Rentrée,
+    Année = Rentrée + 1,
     SectionCNU.ID = code_section_cnu,
     Effectif.MCF = MCF,
     Effectif.PR = PR) %>%
@@ -107,7 +106,7 @@ ens %>% spoiler_table("ens", trim=Inf)
 
 ### Etudiants
 
-```{r load.etu, results='asis'}
+```{r load.etu, results='asis', eval=FALSE}
 etuold <- read.csv2("data/fr-esr-statistiques-sur-les-effectifs-d-etudiants-inscrits-par-etablissement-hcp.csv") %>%
   filter(Attention == "Sans double compte des établissements-composantes pour les EPE") %>%
   #filter(Type.d.établissement == "Université" ) %>%
@@ -142,7 +141,37 @@ etu <- bind_rows(
   etuold %>% filter(Périmètre != "Ensemble"),
   etuold %>% filter(Périmètre == "Ensemble", Année < min(etunew$Année)),
   etunew) %>%
-  arrange(Périmètre,Périmètre.ID,Année)
+  arrange(Périmètre,Périmètre.ID,Année) 
+
+etu %>% spoiler_table("etu", trim=Inf)
+```
+
+
+
+```{r load.etu.stat, results='asis'}
+#  [98] "Grande.discipline...Droit..sciences.économiques..AES"                                                        
+#  [99] "Grande.discipline...Lettres..langues.et.sciences.humaines"                                                   
+# [100] "Grande.discipline...Théologie"                                                                               
+# [101] "Grande.discipline...Sciences.et.sciences.de.l.ingénieur"                                                     
+# [102] "Grande.discipline...STAPS"                                                                                   
+# [103] "Grande.discipline...Santé"                                                                                   
+# [104] "Grande.discipline...Interdisciplinaire"                                                                      
+# [105] "Grande.discipline...Non.défini"      
+etu <- read.csv2("data/fr-esr-statistiques-sur-les-effectifs-d-etudiants-inscrits-par-etablissement-hcp.csv", dec='.')  %>%
+  filter(Attention == "Sans double compte des établissements-composantes pour les EPE") %>%
+  summarise(
+    Ensemble = sum(Nombre.d.étudiants.inscrits..inscriptions.principales..hors.doubles.inscriptions.CPGE),
+    DEG = sum(Grande.discipline...Droit..sciences.économiques..AES, na.rm=TRUE),
+    LLASHS = sum(Grande.discipline...Lettres..langues.et.sciences.humaines, na.rm=TRUE),
+    Pharma = sum(Secteur.disciplinaire...Pharmacie, na.rm=TRUE),
+    ST = sum(Grande.discipline...Sciences.et.sciences.de.l.ingénieur, na.rm=TRUE),
+    Santé = sum(Grande.discipline...Santé, na.rm=TRUE),
+    Théologie = sum(Grande.discipline...Théologie, na.rm=TRUE),
+    .by = annee
+  ) %>%
+  rename(Année = annee) %>%
+  pivot_longer(-Année, names_to = "Périmètre.ID", values_to = "Effectif.ETU") %>%
+  mutate(Périmètre=ifelse(Périmètre.ID == "Ensemble", "Ensemble","Grande discipline"))
 
 etu %>% spoiler_table("etu", trim=Inf)
 ```
@@ -243,10 +272,17 @@ galaxie %>% spoiler_table("galaxie", trim=Inf)
 ```{r odyssee, results='asis'}
 dir <- "utils/odyssee-excavator/"
 
-odyssee <- read.csv(paste0(dir,"odyssee.csv")) %>% 
+odyssee <- bind_rows(
+    read.csv(paste0(dir,"odyssee_20250304.csv")),
+    read.csv(paste0(dir,"odyssee_20260303.csv"))) %>% 
   rename(SectionCNU.ID = section, Corps = corps) %>%
   left_join(cnu.sections) %>%
   mutate(Année = as.integer(str_sub(dateOuvertureCandidatures,1,4)))
+
+odyssee %>%
+  filter(dateScraping != max(dateScraping), .by=Année) %>%
+  filter(Corps %in% c("PR","MCF")) %>%
+  spoiler_table("MCF PR supprimés", trim=Inf)
 
 odyssee <- bind_rows(
   odyssee %>%
@@ -289,7 +325,7 @@ concours <- bind_rows(
 emploisEC <- cnu.périmètres %>%
   right_join(concours) %>%
   left_join(ens) %>%
-  left_join(etu) %>%
+  left_join(etu %>% filter(Année %in% unique(ens$Année))) %>%
   mutate(
     Année = as.factor(Année),
     Périmètre = factor(Périmètre, levels=c("Ensemble","Grande discipline","Groupe","Section"))) %>%
@@ -301,8 +337,8 @@ emploisEC <- cnu.périmètres %>%
     Contexte.EvolRéelle = Effectif.EC - first(Effectif.EC),
     Contexte.EvolNécessaire = (Effectif.ETU / first(Effectif.ETU) - 1) * first(Effectif.EC) 
   ) %>%
-  fill(Effectif.MCF,.direction = "down") %>%
-  fill(Effectif.PR,.direction = "down") %>%
+  #fill(Effectif.MCF,.direction = "down") %>%
+  #fill(Effectif.PR,.direction = "down") %>%
   mutate(
     ## TODO : checker réussite vs. sélection
     kpi.MCF.TauxTension = Concours.Candidats.MCF / Concours.Postes.MCF,
@@ -345,3 +381,4 @@ write.csv2(emploisEC, "data/cpesr-emplois-ec.csv", row.names = FALSE)
 ```{r clearcache}
 unlink("emploiEC/cpesr-emploiEC-rapport_cache/*", recursive = TRUE)
 ```
+

@@ -97,6 +97,7 @@ spoiler_table(qualif.ratio.recevabilité)
 
 ```{r qualif.bind, results='asis'}
 qualif <- bind_rows(
+  clean_qualif("cnu-excavation-qualification-2024.csv"),
   clean_qualif("cnu-excavation-qualification-2023.csv"),
   #clean_qualif("cnu-excavation-qualification-2022.csv"),
   #clean_qualif("cnu-excavation-qualification-2021.csv"),
@@ -157,6 +158,7 @@ clean_recrut <- function(csvfile) {
 
 ```{r rec.bind, results='asis'}
 recrut <- bind_rows(
+  clean_recrut("cnu-excavation-recrutement-2024.csv"),
   clean_recrut("cnu-excavation-recrutement-2023.csv"),
   #clean_recrut("cnu-excavation-recrutement-2021.csv"),
   clean_recrut("cnu-excavation-recrutement-2020.csv"),
